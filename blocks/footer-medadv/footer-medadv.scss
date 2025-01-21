@@ -1,0 +1,419 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.footer-medadv-wrapper {
+  background-color: $--blue-50;
+  max-width: unset !important;
+  margin: 0 !important;
+  padding-top: 72px;
+  .footer-medadv {
+    > .logo-social-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1275px;
+      margin: auto;
+      @include for-mobile {
+        padding: 0 20px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
+      > .social-div {
+        display: flex;
+        gap: 11px;
+        > p {
+          display: flex;
+          gap: 12px;
+          margin: 0;
+          > a > span {
+            border: 1.5px solid #4d4d4f;
+            height: 21px;
+            width: 21px;
+            display: inline-block;
+            padding: 8.25px;
+            border-radius: 5px;
+            i {
+              font-size: 24px;
+              color: #4d4d4f;
+              height: 100%;
+              width: 100%;
+              // border: 1px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 5px;
+            }
+          }
+        }
+        @include for-mobile {
+          display: none;
+        }
+        @include for-tablet {
+          display: none;
+        }
+      }
+    }
+    > .contact-div {
+      max-width: 1275px;
+      margin: auto;
+      @include for-mobile {
+        padding: 36px 20px 0px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 0px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 0px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 0px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        border-bottom: 2px solid $--gray-225;
+        padding-bottom: 36px;
+      }
+      > div ul li .icon-toprigthtarrow {
+        height: 16px;
+        width: 16px;
+        vertical-align: text-top;
+        padding-left: 4px;
+      }
+      > div ul li span i {
+        vertical-align: text-bottom;
+        padding-left: 4px;
+        font-size: 16px;
+      }
+    }
+    > .adobe-div {
+      max-width: 1275px;
+      margin: auto;
+      @include for-mobile {
+        padding: 36px 20px 0px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 0px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 0px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 0px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        border-bottom: 2px solid $--gray-225;
+        padding-bottom: 36px;
+      }
+    }
+    > .language-div {
+      max-width: 1275px;
+      margin: auto;
+      @include for-mobile {
+        padding: 36px 20px 24px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 24px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 24px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 24px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 24px 36px;
+      }
+      > div ul {
+        padding-bottom: 24px;
+      }
+      > div h4 {
+        padding-bottom: 4px;
+        opacity: 1;
+        color: $--gray-700;
+        font-family: $--font-roboto;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        text-align: left;
+        line-height: 20px;
+        margin: 0;
+      }
+      > div h3 {
+        margin: 0;
+        opacity: 1;
+        color: $--primary-675;
+        font-family: $--font-roboto;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0px;
+      }
+    }
+    > .attention-div {
+      max-width: 1275px;
+      margin: auto;
+      @include for-mobile {
+        padding: 0 20px 52px 20px;
+      }
+      @include for-tablet {
+        padding: 0 36px 52px 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px 52px 52px;
+      }
+      @include for-large {
+        padding: 0 52px 52px 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px 52px 36px;
+      }
+      > div p {
+        opacity: 1;
+        color: $--gray-700;
+        font-family: $--font-roboto;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0px;
+        text-align: left;
+        line-height: 24px;
+      }
+      > .social-div {
+        display: flex;
+        gap: 11px;
+        padding-top: 36px;
+        > p {
+          display: flex;
+          gap: 12px;
+          margin: 0;
+          > a > span {
+            border: 1.5px solid #4d4d4f;
+            height: 21px;
+            width: 21px;
+            display: inline-block;
+            padding: 8.25px;
+            border-radius: 5px;
+            i {
+              font-size: 24px;
+              color: #4d4d4f;
+              height: 100%;
+              width: 100%;
+              // border: 1px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              // border-radius: 5px;
+            }
+          }
+        }
+        @include for-mobile {
+          display: flex;
+        }
+        @include for-tablet {
+          display: flex;
+        }
+        @include for-xlarge {
+          display: none;
+        }
+        @include for-large {
+          display: none;
+        }
+        @include for-laptop {
+          display: none;
+        }
+      }
+    }
+    > .copyright-div {
+      opacity: 1;
+      background-color: $--blue-100;
+      @include for-mobile {
+        padding: 36px 20px 52px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 52px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 52px 36px;
+      }
+      > div {
+        max-width: 1275px;
+        margin: auto;
+        > p {
+          padding-bottom: 24px;
+          opacity: 1;
+          color: $--gray-700;
+          font-family: $--font-roboto;
+          font-size: 12px;
+          font-weight: 400;
+          font-style: Regular;
+          letter-spacing: 0px;
+          text-align: left;
+          line-height: 20px;
+          margin: 0;
+          &:last-child {
+            padding-top: 24px;
+            padding-bottom: 0px;
+            font-size: 12px;
+          }
+          @include for-mobile {
+            font-size: 14px;
+            color: #545454;
+          }
+          @include for-tablet {
+            font-size: 14px;
+            color: #545454;
+          }
+        }
+        > ul {
+          @include for-laptop {
+            gap: 0;
+          }
+          @include for-xlarge {
+            gap: 0;
+          }
+          @include for-large {
+            gap: 0;
+          }
+          li {
+            font-size: 12px;
+            > .icon-pdf {
+              height: 14px;
+              width: 13.68px;
+              padding-left: 4.58px;
+              vertical-align: sub;
+            }
+            span i {
+              font-size: 14px;
+              padding-left: 4.5px;
+            }
+            @include for-laptop {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span {
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
+                }
+              }
+            }
+            @include for-xlarge {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span {
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
+                }
+              }
+            }
+            @include for-large {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+              &:nth-child(3) {
+                a {
+                  padding-right: 0;
+                  border-right: none;
+                }
+                span {
+                  padding-right: 22px;
+                  border-right: 1px solid $--gray-700;
+                }
+              }
+            }
+            > a {
+              @include for-laptop {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+              @include for-xlarge {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+              @include for-large {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+            }
+          }
+        }
+      }
+    }
+    > div > div > ul {
+      list-style: none;
+      margin: 0px;
+      display: flex;
+      gap: 52px;
+      padding: 0px;
+      @include for-mobile {
+        flex-direction: column;
+        gap: 24px;
+      }
+      @include for-tablet {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+    > div > div > ul > li {
+      font-size: 16px;
+      font-weight: 500;
+      color: $--primary-675;
+      opacity: 1;
+      font-family: $--font-roboto;
+      letter-spacing: 0px;
+    }
+  }
+}

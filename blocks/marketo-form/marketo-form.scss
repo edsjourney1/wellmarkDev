@@ -1,0 +1,121 @@
+@import '../../styles/include/tokens.scss';
+@import '../../styles/include/mq.scss';
+
+.marketo-form.block{
+    >div{
+        >div{
+            p{
+                display: none;
+            }
+        }
+    }
+}
+
+form.eds-mkto-form {
+    &.mktoForm{
+        width: 1275px !important;
+        margin: auto;
+        padding: 114px 0 112px 0;
+        @include for-xlarge{
+            width: 1275px !important;
+            margin: auto;
+            padding: 114px 0 112px 0;
+        }
+        @include for-large{
+            width: 1275px !important;
+            margin: auto;
+            padding: 114px 0 112px 0;
+        }
+        @include for-laptop{
+            width: 100% !important;
+            padding: 67px 20px 105px 20px;
+        }
+        @include for-tablet{
+            width: 100% !important;
+            padding: 67px 20px 105px 20px;
+        }
+        @include for-mobile{
+            width: 100% !important;
+            padding: 67px 20px 105px 20px;
+        }
+        .mktoFormRow{
+            width: calc(((100% / 12) * 5) - 15px);
+            display: flex;
+            flex-direction: column;
+            .mktoOffset{
+                display: none;
+            }
+            @include for-tablet{
+                width: 100% !important;
+            }
+            @include for-mobile{
+                width: 100% !important;
+            }
+            div{
+                &:nth-last-child(2){
+                    margin-bottom: 33px;
+                }
+                &:first-child{
+                    margin-bottom: 0;
+                }
+            }
+             div {
+                div {
+                    width: 100%;
+                    label{
+                        width: 100% !important;
+                        font-weight: 500;
+                        color: $--gray-700;
+                        font-family: $--font-roboto;
+                        font-size: 16px;
+                        line-height: 32px;
+                        .mktoAsterix{
+                            display: none;
+                        }
+                    }
+                    input{
+                        width: 100% !important;
+                        font-weight: 400;
+                        color: $--gray-700;
+                        font-family: $--font-roboto;
+                        font-size: 16px;
+                        line-height: 32px;
+                        padding: 10px 21px 8px 20px;
+                    }
+                    select{
+                        width: 100% !important;
+                        padding: 9px 133px 9px 20px;
+                    }
+                    .mktoError{
+                        right: 0 !important;
+                        bottom: 0 !important;
+                    }
+                }
+            }
+            .mktoRadioList {
+                width: 100% !important;
+                display: flex;
+                align-items: center;
+                input.mktoField{
+                    width: 22px !important;
+                    height: 22px;
+                }
+                label{
+                    margin-left: 9px;
+                }
+            }
+        }
+        .mktoButtonRow{
+            .mktoButton{
+                height: unset;
+                text-shadow: unset;
+                box-shadow: unset;
+                color: $--white;
+                border-radius: 2px;
+                background: $--blue-675;
+                background-color: $--blue-675;
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.article-heading-wrapper {
+  @include for-xlarge {
+    padding: 120px 52px;
+  }
+  @include for-large {
+    padding: 120px 52px;
+  }
+  @include for-laptop {
+    padding: 120px 36px;
+  }
+  @include for-mobile {
+    padding: 72px 16px;
+  }
+  @include for-tablet {
+    padding: 96px 36px;
+  }
+  > .article-heading {
+    > div {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      @include for-xlarge {
+        width: calc(66.66% - 10px);
+        //yet to find
+      }
+      @include for-large {
+        width: calc(66.66% - 10px);
+        //yet to find
+      }
+      @include for-laptop {
+        width: calc(90% - 15px);
+        //yet to find
+      }
+      @include for-mobile {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
+      > .description {
+        opacity: 1;
+        color: $--gray-700;
+        font-family: $--font-roboto;
+        font-size: 16px;
+        font-weight: 400;
+        font-style: Regular;
+        letter-spacing: 0px;
+        text-align: left;
+        line-height: 24px;
+        margin: 0;
+        opacity: 1;
+      }
+
+      > .title {
+        opacity: 1;
+        color: $--blue-550;
+        font-family: $--font-museo;
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: 0px;
+        text-align: left;
+        padding-bottom: 24px;
+        margin: 0;
+        opacity: 1;
+        @include for-mobile {
+          padding-bottom: 16px;
+          font-size: 28px;
+        }
+        @include for-tablet {
+          padding-bottom: 16px;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}

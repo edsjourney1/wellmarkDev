@@ -1,3 +1,20 @@
 {
-  "extends": ["stylelint-config-standard"]
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "no-descending-specificity": null,
+    "rule-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "color-hex-length": null,
+    "at-rule-empty-line-before": null,
+    "selector-attribute-quotes": null,
+    "shorthand-property-no-redundant-values": null,
+    "length-zero-no-unit": null,
+    "declaration-block-no-duplicate-properties": null,
+    "color-function-notation": null,
+    "alpha-value-notation": null,
+    "value-keyword-case": null,
+    "number-max-precision": null,
+    "selector-class-pattern": null
+  },
+  "ignoreFiles": ["styles/all.min.css"]
 }

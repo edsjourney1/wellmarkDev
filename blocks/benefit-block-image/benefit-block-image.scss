@@ -1,0 +1,178 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.benefit-block-image-container {
+  .benefit-block-image-wrapper {
+    @include for-large {
+      width: calc(100% - 104px);
+    }
+    .benefit-block-image {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+      @include for-xlarge {
+        padding: $--spacing-max 0;
+      }
+      @include for-large {
+        padding: $--spacing-max 0;
+      }
+      @include for-laptop {
+        padding: $--spacing-max $--spacing-xl;
+      }
+      @include for-tablet {
+        flex-direction: column-reverse;
+        padding: $--spacing-jumbo $--spacing-xl;
+        gap: unset;
+      }
+      @include for-mobile {
+        flex-direction: column-reverse;
+        padding: $--spacing-huge $--spacing-m;
+        gap: unset;
+      }
+      .block-left {
+        width: calc((100% - 60px) / 12 * 4);
+        height: 100%;
+        @include for-tablet {
+          width: 100%;
+          margin-top: $--spacing-xxl;
+        }
+        @include for-mobile {
+          width: 100%;
+          margin-top: $--spacing-xxl;
+        }
+        > div {
+          > div {
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+      .block-right {
+        width: calc((100% / 12) * 7);
+        @include for-tablet {
+          width: 100%;
+        }
+        @include for-mobile {
+          width: 100%;
+        }
+        > div {
+          display: flex;
+          gap: calc(((100% - (6 * 30px)) / 7) + 60px);
+          @include for-tablet {
+            gap: 30px;
+          }
+          @include for-mobile {
+            flex-direction: column;
+            gap: unset;
+          }
+          &:first-child {
+            display: unset;
+            padding: 0;
+            > div {
+              width: 100%;
+              padding: 0;
+              h2 {
+                color: $--blue-550;
+                font-family: $--font-museo;
+                font-size: 32px;
+                line-height: 38px;
+                font-weight: 700;
+                text-decoration: none;
+                margin-bottom: 20px;
+                @include for-tablet {
+                  margin: 0;
+                  font-size: 28px;
+                  line-height: 33px;
+                }
+                @include for-mobile {
+                  margin: 0;
+                  font-size: 28px;
+                  line-height: 33px;
+                }
+              }
+            }
+          }
+          > div {
+            width: calc((100% / 7) * 3);
+            padding-top: $--spacing-xxl;
+            @include for-tablet {
+              width: calc(100% / 2);
+            }
+            @include for-mobile {
+              width: 100%;
+            }
+            &:nth-child(2) {
+              @include for-mobile {
+                padding-top: $--spacing-xxl;
+              }
+            }
+            .icon-benefit-icon {
+              width: 64px;
+              height: 64px;
+              margin-bottom: 24px;
+            }
+            h2:has(span) {
+              margin: 0;
+              span {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 24px;
+                i {
+                  font-size: 64px;
+                }
+              }
+            }
+            h2 {
+              color: $--blue-675;
+              font-family: $--font-roboto;
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 700;
+              text-decoration: underline;
+              cursor: pointer;
+              margin: 0;
+              @include for-tablet {
+                text-decoration: none;
+                color: $--blue-550;
+              }
+              @include for-mobile {
+                text-decoration: none;
+                color: $--blue-550;
+              }
+            }
+            h4 {
+              color: $--blue-675;
+              font-family: $--font-roboto;
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 700;
+              text-decoration: underline;
+              cursor: pointer;
+              margin: 0;
+              @include for-tablet {
+                text-decoration: none;
+                color: $--blue-550;
+              }
+              @include for-mobile {
+                text-decoration: none;
+                color: $--blue-550;
+              }
+            }
+            p {
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0;
+              padding-top: $--spacing-s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.image-text-with-icon-container {
+  .image-text-with-icon-wrapper {
+    @include for-large{
+      width: calc(100% - 104px);
+    }
+    .image-text-with-icon {
+      &.block {
+        &.columns-2-cols {
+          padding: $--spacing-huge $--spacing-m;
+          @include for-tablet {
+            padding: $--spacing-jumbo $--spacing-xl;
+          }
+          @include for-laptop {
+            padding: $--spacing-max $--spacing-xl;
+          }
+          @include for-large {
+            padding: $--spacing-max 0;
+          }
+          @include for-xlarge {
+            padding: $--spacing-max 0;
+          }
+          >div {
+            display: flex;
+            flex-direction: column;
+            @include for-nonmobile {
+              align-items: center;
+              flex-direction: row;
+            }
+            @include for-tablet {
+              width: calc(((100%* 5) / 6) - 4px);
+            }
+            @include for-laptop {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            @include for-large {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            @include for-xlarge {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            >div {
+              order: 1;
+              display: flex;
+              flex-flow: row wrap;
+              @include for-nonmobile {
+                flex: 1;
+                order: unset;
+                text-align: left;
+                column-gap: 24px;
+              }
+              @include for-tablet{
+                min-width: calc((100% - 30px) / 2);
+                width: calc((100% - 30px) / 2);
+              }
+              @include for-laptop {
+                max-width: calc((100% - 30px) / 2);
+              }
+              @include for-large {
+                max-width: calc((100% - 30px) / 12* 5);
+              }
+              @include for-xlarge {
+                max-width: calc((100% - 30px) / 12* 5);
+              }
+            }
+            >.columns-img-col {
+              order: 0;
+              align-self: flex-start;
+              @include for-mobile{
+                display: none;
+              }
+              @include for-tablet{
+                display: none;
+              }
+              @include for-laptop{
+                min-width: calc((100% - 30px) / 2);
+                width: calc((100% - 30px) / 2);
+              }
+              @include for-large{
+                min-width: calc((100% - 30px) / 2);
+                width: calc((100% - 30px) / 2);
+              }
+              @include for-xlarge{
+                min-width: calc((100% - 30px) / 2);
+                width: calc((100% - 30px) / 2);
+              }
+            }
+            >.columns-col img {
+              display: block;
+            }
+          }
+          img {
+            width: 100%;
+            display: flex;
+            border-radius: 5px;
+          }
+          &.block {
+            h2 {
+              color: $--blue-550;
+              width: 100%;
+              margin: 0;
+              .icon-promoimage{
+                margin-bottom: $--spacing-l;
+                width: 64px;
+                height: 64px;
+              }
+              span {
+                margin-bottom: $--spacing-l;
+                width: 64px;
+                height: 64px;
+                i {
+                  font-size: 64px;
+                }
+              }
+              @include for-tablet {
+                font-size: 32px;
+              }
+              @include for-mobile {
+                font-size: 32px;
+              }
+            }
+            p {
+              color: $--gray-700;
+              width: 100%;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: 0px;
+              text-align: left;
+              line-height: 24px;
+              margin: $--spacing-l 0 20px 0;
+              &.button-container {
+                margin-top: 0;
+                margin-bottom: 0;
+                @include for-nonmobile {
+                  width: max-content;
+                }
+                a.button {
+                  margin-top: $--spacing-m;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
