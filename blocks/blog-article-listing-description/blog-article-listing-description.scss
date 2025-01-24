@@ -95,9 +95,11 @@
       display: flex;
       width: 100%;
       gap: 30px;
+      border-bottom: 2px solid $--gray-225;
       > img {
         width: calc(25% - 23px);
         border-radius: 4px;
+        padding-bottom: 34px;
       }
       > .content-div {
         width: 100%;

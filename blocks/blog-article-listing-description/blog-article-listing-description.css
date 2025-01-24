@@ -121,10 +121,12 @@
   display: flex;
   width: 100%;
   gap: 30px;
+  border-bottom: 2px solid #c2c2c3;
 }
 .blog-article-listing-description .cards-div > .card-div > img {
   width: calc(25% - 23px);
   border-radius: 4px;
+  padding-bottom: 34px;
 }
 .blog-article-listing-description .cards-div > .card-div > .content-div {
   width: 100%;
