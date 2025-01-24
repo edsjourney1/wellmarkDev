@@ -225,6 +225,13 @@
     padding-top: 12px;
   }
 }
+.promo-no-image-container .promo-no-image > .promo-no-image-4-column > li .cards-card-body p > span {
+  height: 100%;
+  width: 100%;
+}
+.promo-no-image-container .promo-no-image > .promo-no-image-4-column > li .cards-card-body p > span > i {
+  font-size: 84px;
+}
 .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
   list-style: none;
   display: flex;

@@ -176,6 +176,13 @@
             @include for-mobile {
               padding-top: 12px;
             }
+            > span {
+              height: 100%;
+              width: 100%;
+              > i {
+                font-size: 84px;
+              }
+            }
           }
         }
       }
