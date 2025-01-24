@@ -144,19 +144,14 @@
               width: 100%;
             }
             h4 {
-              color: $--blue-675;
               font-family: $--font-roboto;
               font-size: 20px;
               line-height: 24px;
               font-weight: 700;
-              text-decoration: underline;
-              cursor: pointer;
               margin: 0;
-              @include for-tablet {
-                color: $--blue-550;
-              }
-              @include for-mobile {
-                color: $--blue-550;
+              color: $--gray-700;
+              &:has(a){
+                color: $--blue-675;
               }
             }
             h2 {

@@ -17,16 +17,16 @@ export default function decorate(block) {
     block.append(blockRight);
     blockRight.append(...innerrightDivs);
 
-    // Change all the second <h2> to <h4>
     const divs = blockRight.querySelectorAll('div');
     divs.forEach((div) => {
       const h2s = div.querySelectorAll('h2');
-      if (h2s.length > 1) {
-        const secondH2 = h2s[1];
-        const h4 = document.createElement('h4');
-        h4.innerHTML = secondH2.innerHTML; // Copy the inner HTML
-        secondH2.replaceWith(h4); // Replace the <h2> with <h4>
-      }
+      h2s.forEach((h2, index) => {
+        if (index > 0 && h2.childNodes.length >= 1 && h2.textContent !== '') {
+          const h4 = document.createElement('h4');
+          h4.innerHTML = h2.innerHTML; // Copy the inner HTML
+          h2.replaceWith(h4); // Replace the <h2> with <h4>
+        }
+      });
     });
 
     // Remove empty divs

@@ -43,7 +43,6 @@
             width: calc((100% * 5) / 6);
           }
           .tbnr-textcont {
-            order: 1;
             display: flex;
             flex-flow: row wrap;
             @include for-tablet{
@@ -185,6 +184,7 @@
         .tbnr-textcont{
           @include for-xlarge{
             max-width: calc((100% - 30px) / 12* 6);
+            flex: unset;
           }
           @include for-tablet{
             min-width: calc(((100% / 6) * 5) - 90px);

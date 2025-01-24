@@ -2,18 +2,8 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.title-banner-container.blue-550 {
-  background-image: linear-gradient(180deg, rgb(166, 198, 221) 0%, rgb(148, 182, 206) 0%, rgb(73, 115, 144) 100%);
-}
-@media (min-width: 1380px) {
-  .title-banner-container.blue-550 {
-    background-image: linear-gradient(180deg, rgb(166, 198, 221) 0%, rgb(148, 182, 206) 0%, rgb(73, 115, 144) 100%);
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .title-banner-container.blue-550 {
-    background-image: linear-gradient(270deg, rgb(166, 198, 221) 0%, rgb(148, 182, 206) 0%, rgb(73, 115, 144) 100%);
-  }
+.title-banner-container {
+  background-image: linear-gradient(270deg, rgb(166, 198, 221) 0%, rgb(148, 182, 206) 0%, rgb(73, 115, 144) 100%);
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .title-banner-container {
@@ -28,8 +18,8 @@
 .title-banner-container .title-banner-wrapper .title-banner.block {
   padding: 50px 52px;
 }
-@media (min-width: 1380px) {
-  .title-banner-container.blue-550 .title-banner-wrapper .title-banner.block {
+@media (min-width: 1379px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block {
     padding: 50px 0 0 0;
   }
 }
@@ -64,8 +54,8 @@
     flex-direction: row;
   }
 }
-@media (min-width: 1380px) {
-  .title-banner-container.blue-550 .title-banner-wrapper .title-banner.block .tbnr-maindiv {
+@media (min-width: 1379px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv {
     gap: calc((100% - 330px) / 12 + 60px);
   }
 }
@@ -75,7 +65,6 @@
   }
 }
 .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-textcont {
-  order: 1;
   display: flex;
   flex-flow: row wrap;
 }
@@ -95,8 +84,8 @@
     max-width: calc((100% - 30px) / 12 * 5);
   }
 }
-@media (min-width: 1380px) {
-  .title-banner-container.blue-550 .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-textcont {
+@media (min-width: 1379px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-textcont {
     max-width: calc((100% - 30px) / 12 * 5);
   }
 }
@@ -117,8 +106,8 @@
   margin-top: 0;
   margin-bottom: 24px;
 }
-@media (min-width: 1380px) {
-  .title-banner-container.blue-550 .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-textcont p.title {
+@media (min-width: 1379px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-textcont p.title {
     margin-bottom: 0;
   }
 }
@@ -189,8 +178,8 @@
     max-width: calc((100% - 30px) / 12 * 6);
   }
 }
-@media (min-width: 1380px) {
-  .title-banner-container.blue-550 .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-pic {
+@media (min-width: 1379px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-pic {
     max-width: calc((100% - 30px) / 12 * 6);
   }
 }
@@ -210,8 +199,8 @@
   width: 100%;
   display: flex;
 }
-@media (min-width: 1380px) {
-  .title-banner-container.blue-550 .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-pic img {
+@media (min-width: 1379px) {
+  .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-pic img {
     min-width: calc((100% - 30px) / 2);
   }
 }
@@ -248,9 +237,10 @@
     gap: 30px;
   }
 }
-@media (min-width: 1380px) {
-  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont {
+@media (min-width: 1379px) {
+  .one-btn-banner.title-banner-container .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont {
     max-width: calc((100% - 30px) / 12 * 6);
+    flex: unset;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -267,8 +257,8 @@
   font-weight: 300 !important;
   color: #4b4c4d !important;
 }
-@media (min-width: 1380px) {
-  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont .title {
+@media (min-width: 1379px) {
+  .one-btn-banner.title-banner-container .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont .title {
     margin-bottom: 16px !important;
     line-height: 72px !important;
   }
@@ -299,8 +289,8 @@
   opacity: 1;
   color: #4b4c4d !important;
 }
-@media (min-width: 1380px) {
-  .one-btn-banner.title-banner-container.blue-550 .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont .description {
+@media (min-width: 1379px) {
+  .one-btn-banner.title-banner-container .title-banner-wrapper .block .tbnr-maindiv .tbnr-textcont .description {
     margin-bottom: 36px !important;
   }
 }

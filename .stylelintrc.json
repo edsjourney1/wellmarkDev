@@ -14,7 +14,9 @@
     "alpha-value-notation": null,
     "value-keyword-case": null,
     "number-max-precision": null,
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+	"media-feature-range-notation": null,
+	"declaration-block-no-redundant-longhand-properties" : null
   },
   "ignoreFiles": ["styles/all.min.css"]
 }
