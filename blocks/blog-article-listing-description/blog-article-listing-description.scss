@@ -38,22 +38,23 @@
     }
     > .title {
       opacity: 1;
-      color: $--gray-700;
-      font-family: $--font-museo;
-      font-size: 32px;
+      font-size: 40px;
       font-weight: 600;
       font-style: 700;
       letter-spacing: 0px;
       text-align: left;
+      opacity: 1;
+      color: $--gray-700;
+      font-family: $--font-museo;
       margin: 0;
       @include for-xlarge {
-        width: calc(75% - 6px);
+        width: calc(50% - 15px);
       }
       @include for-large {
-        width: calc(75% - 6px);
+        width: calc(50% - 15px);
       }
       @include for-laptop {
-        width: calc(70% - 10px);
+        width: calc(66.66% - 10px);
       }
       @include for-mobile {
         width: 100%;
@@ -61,29 +62,6 @@
       }
       @include for-tablet {
         width: 100%;
-      }
-    }
-    > .text-icon {
-      > p {
-        opacity: 1;
-        color: $--blue-675;
-        font-family: $--font-roboto;
-        font-size: 16px;
-        font-weight: 500;
-        font-style: Medium;
-        letter-spacing: 0px;
-        text-align: right;
-        text-decoration: underline;
-        margin: 0;
-        > span {
-          height: unset;
-          width: unset;
-          > i {
-            color: $--blue-675;
-            font-size: 15px;
-            padding-left: 6px;
-          }
-        }
       }
     }
   }

@@ -104,16 +104,12 @@ const myJson = [
 ];
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
-  const inlinewithIcon = block.children[0].children[1].innerHTML;
-  const headingSpam = document.createElement('h2');
+  const headingSpam = document.createElement('h1');
   headingSpam.classList.add('title');
-  const iconwithtext = document.createElement('span');
-  iconwithtext.classList.add('text-icon');
-  iconwithtext.innerHTML = inlinewithIcon;
   headingSpam.append(heading);
   const headDiv = document.createElement('div');
   headDiv.classList.add('heading-div');
-  headDiv.append(headingSpam, iconwithtext);
+  headDiv.append(headingSpam);
   block.innerHTML = '';
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
