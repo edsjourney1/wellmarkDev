@@ -76,9 +76,11 @@
       border-bottom: 2px solid $--gray-225;
       @include for-tablet {
         flex-direction: column;
+        gap: 0px;
       }
       @include for-mobile {
         flex-direction: column;
+        gap: 0px;
       }
       > img {
         width: calc(25% - 23px);
