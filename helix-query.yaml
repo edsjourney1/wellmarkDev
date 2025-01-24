@@ -1,0 +1,13 @@
+indices:
+  mysite:
+    include:
+      - /article-page/**
+    exclude:
+      - /documents/snippets/**
+    target: /query-index.json
+    properties:
+      url:
+        select: head > meta[property="og:url"]
+        value: |
+          value: attribute(el, "content")
+      
