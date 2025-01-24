@@ -24,7 +24,7 @@
       padding-top: 120px;
     }
     @include for-laptop {
-      padding-top: 120px;
+      padding-top: 103px;
     }
     @include for-mobile {
       padding-top: 96px;
@@ -74,10 +74,24 @@
       width: 100%;
       gap: 30px;
       border-bottom: 2px solid $--gray-225;
+      @include for-tablet {
+        flex-direction: column;
+      }
+      @include for-mobile {
+        flex-direction: column;
+      }
       > img {
         width: calc(25% - 23px);
         border-radius: 4px;
         padding-bottom: 34px;
+        @include for-tablet {
+          width: 100%;
+          padding-bottom: 24px;
+        }
+        @include for-mobile {
+          width: 100%;
+          padding-bottom: 24px;
+        }
       }
       > .content-div {
         width: 100%;
@@ -157,6 +171,12 @@
           display: flex;
           gap: 12px;
           flex-wrap: wrap;
+          @include for-tablet {
+            padding-bottom: 38px;
+          }
+          @include for-mobile {
+            padding-bottom: 38px;
+          }
           > a {
             opacity: 1;
             color: $--blue-675;
