@@ -1,0 +1,113 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.promo-text-focus-container {
+  @include for-mobile{
+    background: $--blue-550;
+  }
+  @include for-tablet{
+    background: $--blue-550;
+  }
+  .promo-text-focus-wrapper {
+    @include for-mobile{
+      background-image: none !important;
+    }
+    @include for-tablet{
+      background-image: none !important;
+    }
+    @include for-laptop{
+      padding: 0 $--spacing-xl;
+      height: 575px;
+      background-position: 9%;
+    }
+    @include for-large{
+      padding: 0 $--spacing-xxl;
+      height: 575px;
+      background-position: 22%;
+    }
+    @include for-xlarge{
+      height: 575px;
+      background-position: 22%;
+      max-width: unset;
+    }
+    .promo-text-focus {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      @include for-xlarge{
+        max-width: 1275px;
+        margin: 0 auto;
+      }
+      &.block {
+        .promo-focus-block{
+          background: $--blue-550;
+          border-radius: 0 0 5px 5px;
+          @include for-laptop{
+            width: calc((100% / 2) - 15px);
+          }
+          @include for-large{
+            width: calc((100% - 30px) / 12* 5);
+          }
+          @include for-xlarge{
+            width: calc((100% - 30px) / 12* 5);
+          }
+          >div {
+            padding: $--spacing-huge $--spacing-m;
+            @include for-tablet{
+              padding: $--spacing-jumbo $--spacing-xl 48px $--spacing-xl;
+            }
+            @include for-laptop{
+              padding: $--spacing-huge $--spacing-xxl;
+            }
+            @include for-large{
+              padding: $--spacing-huge $--spacing-xxl;
+            }
+            @include for-xlarge{
+              padding: $--spacing-huge $--spacing-xxl;
+            }
+            >div {
+              h2{
+                color: $--white;
+                width: 100%;
+                margin: 0;
+                .icon-whitepromoicon{
+                  margin-bottom: $--spacing-l;
+                  width: 64px;
+                  height: 64px;
+                }
+                span {
+                  margin-bottom: $--spacing-l;
+                  width: 64px;
+                  height: 64px;
+                  i {
+                    font-size: 64px;
+                    color: $--white;
+                  }
+                }
+                @include for-mobile {
+                  font-size: 32px;
+                }
+              }
+              p{
+                color: $--white;
+                width: 100%;
+                margin: 0;
+                margin: $--spacing-m 0 $--spacing-l 0;
+                @include for-mobile{
+                  margin: $--spacing-l 0 $--spacing-xl 0;
+                }
+                &.button-container {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  @include for-nonmobile {
+                    width: max-content;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

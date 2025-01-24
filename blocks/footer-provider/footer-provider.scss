@@ -1,0 +1,324 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.footer-provider-wrapper {
+  max-width: unset !important;
+  margin: 0 !important;
+  background-color: $--blue-50;
+  padding-top: 72px;
+  .footer-provider {
+    > .logo-social-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1275px;
+      margin: auto;
+      @include for-mobile {
+        padding: 0 20px;
+      }
+      @include for-tablet {
+        padding: 0 36px;
+      }
+      @include for-xlarge {
+        padding: 0 52px;
+      }
+      @include for-large {
+        padding: 0 52px;
+      }
+      @include for-laptop {
+        padding: 0 36px;
+      }
+      > .social-div {
+        display: flex;
+        gap: 12px;
+        > p {
+          display: flex;
+          gap: 12px;
+          margin: 0;
+          > a > span {
+            border: 1.5px solid #4d4d4f;
+            height: 21px;
+            width: 21px;
+            display: inline-block;
+            padding: 8.25px;
+            border-radius: 5px;
+            i {
+              font-size: 24px;
+              color: #4d4d4f;
+              height: 100%;
+              width: 100%;
+              // border: 1px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              // border-radius: 5px;
+            }
+          }
+        }
+        @include for-mobile {
+          display: none;
+        }
+        @include for-tablet {
+          display: none;
+        }
+      }
+    }
+    > .claims-div {
+      max-width: 1275px;
+      margin: auto;
+      @include for-mobile {
+        padding: 36px 20px 0px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 0px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 0px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 0px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        padding-bottom: 36px;
+        border-bottom: 2px solid $--gray-225;
+      }
+      > div ul li .icon-lock {
+        height: 19px;
+        width: 16.29px;
+        vertical-align: sub;
+        padding-left: 4px;
+      }
+      > div ul li span i {
+        padding-left: 4px;
+        font-size: 19px;
+      }
+    }
+    > .wellmarkdrug-div {
+      max-width: 1275px;
+      margin: auto;
+      @include for-mobile {
+        padding: 36px 20px 0px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 0px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 0px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 0px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 36px 0px 36px;
+      }
+      > div {
+        @include for-xlarge {
+          padding-bottom: 52px;
+        }
+        @include for-large {
+          padding-bottom: 52px;
+        }
+        @include for-laptop {
+          padding-bottom: 52px;
+        }
+      }
+      > div ul li .icon-pdf {
+        height: 19px;
+        width: 18.57px;
+        vertical-align: sub;
+        padding-left: 4px;
+      }
+      > div ul li span i {
+        padding-left: 4px;
+        font-size: 19px;
+      }
+      > .social-div {
+        display: flex;
+        gap: 12px;
+        > p {
+          display: flex;
+          gap: 12px;
+          margin: 0;
+          padding-top: 36px;
+          > a > span {
+            border: 1.5px solid #4d4d4f;
+            height: 21px;
+            width: 21px;
+            display: inline-block;
+            padding: 8.25px;
+            border-radius: 5px;
+            i {
+              font-size: 24px;
+              color: #4d4d4f;
+              height: 100%;
+              width: 100%;
+              // border: 1px solid black;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              // border-radius: 5px;
+            }
+          }
+        }
+        @include for-mobile {
+          display: flex;
+          padding-bottom: 52px;
+        }
+        @include for-tablet {
+          display: flex;
+          padding-bottom: 52px;
+        }
+        @include for-xlarge {
+          display: none;
+        }
+        @include for-large {
+          display: none;
+        }
+        @include for-laptop {
+          display: none;
+        }
+      }
+    }
+    > .copyright-div {
+      opacity: 1;
+      background-color: $--blue-100;
+      @include for-mobile {
+        padding: 36px 20px 52px 20px;
+      }
+      @include for-tablet {
+        padding: 36px 36px 52px 36px;
+      }
+      @include for-xlarge {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-large {
+        padding: 36px 52px 52px 52px;
+      }
+      @include for-laptop {
+        padding: 36px 52px 52px 52px;
+      }
+      > div {
+        max-width: 1275px;
+        margin: auto;
+        > p {
+          padding-bottom: 24px;
+          opacity: 1;
+          color: $--gray-700;
+          font-family: $--font-roboto;
+          font-size: 12px;
+          font-weight: 400;
+          font-style: Regular;
+          letter-spacing: 0px;
+          text-align: left;
+          line-height: 20px;
+          margin: 0;
+          @include for-mobile {
+            font-size: 14px;
+            color: #545454;
+          }
+          @include for-tablet {
+            font-size: 14px;
+            color: #545454;
+          }
+        }
+        > ul {
+          @include for-laptop {
+            gap: 0;
+          }
+          @include for-xlarge {
+            gap: 0;
+          }
+          @include for-large {
+            gap: 0;
+          }
+          li {
+            font-size: 12px;
+            @include for-laptop {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            @include for-xlarge {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            @include for-large {
+              &:first-child {
+                a {
+                  padding-left: 0;
+                }
+              }
+              &:last-child {
+                a {
+                  padding-right: 0;
+                  border: none;
+                }
+              }
+            }
+            > a {
+              @include for-laptop {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+              @include for-xlarge {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+              @include for-large {
+                padding: 0 22px;
+                border-right: 1px solid $--gray-700;
+              }
+            }
+          }
+        }
+      }
+    }
+    > div > div > ul {
+      list-style: none;
+      margin: 0px;
+      display: flex;
+      gap: 52px;
+      padding: 0px;
+      row-gap: 24px;
+      @include for-laptop {
+        flex-wrap: wrap;
+      }
+      @include for-mobile {
+        flex-direction: column;
+        gap: 24px;
+      }
+      @include for-tablet {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+    > div > div > ul > li {
+      font-size: 16px;
+      font-weight: 500;
+      color: $--primary-675;
+      opacity: 1;
+      font-family: $--font-roboto;
+      letter-spacing: 0px;
+    }
+  }
+}

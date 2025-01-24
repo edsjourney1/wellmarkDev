@@ -1,0 +1,224 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.blog-article-listing {
+  @include for-laptop {
+    padding: 0 36px;
+  }
+  @include for-mobile {
+    padding: 0 16px;
+  }
+  @include for-tablet {
+    padding: 0 36px;
+  }
+  .heading-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 120px;
+    padding-bottom: 52px;
+    @include for-xlarge {
+      padding-top: 120px;
+    }
+    @include for-large {
+      padding-top: 120px;
+    }
+    @include for-laptop {
+      padding-top: 120px;
+    }
+    @include for-mobile {
+      padding-top: 96px;
+      flex-direction: column;
+      gap: 24px;
+    }
+    @include for-tablet {
+      padding-top: 72px;
+      flex-direction: column;
+      gap: 24px;
+    }
+    > .title {
+      opacity: 1;
+      color: $--gray-700;
+      font-family: $--font-museo;
+      font-size: 32px;
+      font-weight: 600;
+      font-style: 700;
+      letter-spacing: 0px;
+      text-align: left;
+      margin: 0;
+      @include for-xlarge {
+        width: calc(75% - 6px);
+      }
+      @include for-large {
+        width: calc(75% - 6px);
+      }
+      @include for-laptop {
+        width: calc(70% - 10px);
+      }
+      @include for-mobile {
+        width: 100%;
+        font-size: 28px;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
+    }
+    > .text-icon {
+      > p {
+        opacity: 1;
+        color: $--blue-675;
+        font-family: $--font-roboto;
+        font-size: 16px;
+        font-weight: 500;
+        font-style: Medium;
+        letter-spacing: 0px;
+        text-align: right;
+        text-decoration: underline;
+        margin: 0;
+        > span {
+          height: unset;
+          width: unset;
+          > i {
+            color: $--blue-675;
+            font-size: 15px;
+            padding-left: 6px;
+          }
+        }
+      }
+    }
+  }
+  .cards-div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 36px;
+    padding-bottom: 58px;
+    @include for-laptop {
+      padding-bottom: 52px;
+    }
+    @include for-mobile {
+      flex-direction: column;
+      padding-bottom: 52px;
+    }
+    @include for-tablet {
+      flex-direction: column;
+      padding-bottom: 52px;
+    }
+    > .card-div {
+      @include for-xlarge {
+        width: calc((100% / 3) - 20px);
+      }
+      @include for-large {
+        width: calc((100% / 3) - 20px);
+      }
+      @include for-laptop {
+        width: calc((100% / 3) - 20px);
+      }
+      @include for-mobile {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
+      > img {
+        width: 100%;
+        border-radius: 4px;
+      }
+      > .content-div {
+        > .card-title {
+          opacity: 1;
+          color: $--blue-675;
+          font-family: $--font-roboto;
+          font-size: 24px;
+          font-weight: 700;
+          font-style: Bold;
+          letter-spacing: 0px;
+          text-align: left;
+          text-decoration: underline;
+          margin: 0;
+          padding-bottom: 8px;
+          padding-top: 29px;
+        }
+        > .date-div {
+          display: flex;
+          position: relative;
+          gap: 13px;
+          padding-bottom: 12px;
+          > .date {
+            margin: 0;
+            opacity: 1;
+            color: $--gray-700;
+            font-family: $--font-roboto;
+            font-size: 16px;
+            font-weight: 400;
+            font-style: Regular;
+            letter-spacing: 0px;
+            text-align: left;
+            line-height: 24px;
+            &::after {
+              content: "•";
+              position: absolute;
+              @include for-xlarge {
+                right: 310px;
+              }
+              @include for-large {
+                right: 310px;
+              }
+              @include for-laptop {
+                right: 204px;
+              }
+              @include for-mobile {
+                left: 88px;
+              }
+              @include for-tablet {
+                left: 88px;
+              }
+              top: 35%;
+              transform: translateY(-50%);
+              font-size: 16px;
+              color: $--gray-700;
+            }
+          }
+          > .read-time {
+            margin: 0;
+            opacity: 1;
+            color: $--gray-700;
+            font-family: $--font-roboto;
+            font-size: 16px;
+            font-weight: 400;
+            font-style: Regular;
+            letter-spacing: 0px;
+            text-align: left;
+            line-height: 24px;
+          }
+        }
+        > .category-list {
+          margin: 0;
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          @include for-xlarge {
+            width: 209px;
+          }
+          @include for-large {
+            width: 209px;
+          }
+          @include for-laptop {
+            width: 209px;
+          }
+          > a {
+            opacity: 1;
+            color: $--blue-675;
+            font-family: $--font-roboto;
+            font-size: 16px;
+            font-weight: 500;
+            font-style: Medium;
+            letter-spacing: 0px;
+            text-align: left;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

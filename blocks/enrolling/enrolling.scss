@@ -1,0 +1,730 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+.enrolling-container {
+  .enrolling-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include for-mobile {
+      padding: 0 16px;
+    }
+    @include for-xlarge {
+      padding: 0 52px;
+    }
+    @include for-large {
+      padding: 0 52px;
+    }
+    @include for-laptop {
+      padding: 0 36px;
+    }
+    @include for-tablet {
+      padding: 0 36px;
+    }
+
+    .enrolling-heading {
+      color: $--blue-550;
+      font-family: $--font-museo;
+      padding: 120px 0 52px 0;
+      width: 100%;
+      opacity: 1;
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 38px;
+      margin: 0;
+      @include for-mobile {
+        padding: 72px 0 52px 0;
+        font-size: 28px;
+        width: 345px;
+      }
+      @include for-xlarge {
+        padding: 120px 0 52px 0;
+      }
+      @include for-large {
+        padding: 120px 0 52px 0;
+      }
+      @include for-laptop {
+        padding: 120px 0 52px 0;
+      }
+      @include for-tablet {
+        padding: 96px 0 52px 0;
+        font-size: 28px;
+        width: 345px;
+      }
+    }
+    > .enrolling {
+      max-width: 1275px;
+      margin: 0;
+      > .column-3-variation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        @include for-mobile {
+          padding-bottom: 72px;
+          flex-direction: column;
+          gap: 52px;
+        }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
+        @include for-tablet {
+          padding-bottom: 96px;
+          flex-direction: column;
+          gap: 52px;
+        }
+        > .enrolling-1-column {
+          width: fit-content;
+          @include for-xlarge {
+            padding-right: 80px;
+          }
+          @include for-large {
+            padding-right: 80px;
+          }
+          @include for-laptop {
+            padding-right: 36px;
+          }
+          > .cards-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            flex-direction: column;
+            > p {
+              margin: 0;
+              color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
+              }
+              > .icon-mobile {
+                height: 64px;
+                width: 64px;
+                text-align: center;
+                > img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              > .icon-search-icon-enrolling {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-promoimage {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-cell-enrolling {
+                height: 24px;
+                width: 22px;
+                vertical-align: middle;
+              }
+              &:last-child {
+                padding-top: 12px;
+                opacity: 1;
+                font-family: $--font-roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
+                }
+              }
+              > span > i {
+                font-size: 64px;
+              }
+            }
+            > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
+              a {
+                padding: 10px 22px;
+              }
+            }
+            > h3 {
+              margin: 0;
+              padding: 24px 0px 12px 0;
+              line-height: 28px;
+              opacity: 1;
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 24px;
+              font-weight: 700;
+              font-style: Bold;
+              letter-spacing: 0px;
+              text-align: center;
+              @include for-tablet {
+                padding: 24px 6px 12px 6px;
+              }
+              @include for-mobile {
+                padding: 24px 6px 12px 6px;
+              }
+            }
+          }
+        }
+        > .enrolling-2-column {
+          width: fit-content;
+          @include for-xlarge {
+            border-left: 2px solid $--gray-225;
+            padding: 0 80px;
+            border-right: 2px solid $--gray-225;
+          }
+          @include for-large {
+            border-left: 2px solid $--gray-225;
+            padding: 0 80px;
+            border-right: 2px solid $--gray-225;
+          }
+          @include for-laptop {
+            border-left: 2px solid $--gray-225;
+            padding: 0 36px;
+            border-right: 2px solid $--gray-225;
+          }
+          > .cards-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            flex-direction: column;
+            > p {
+              margin: 0;
+              color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
+              > .icon-mobile {
+                height: 64px;
+                width: 64px;
+                text-align: center;
+                > img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
+              }
+              > .icon-search-icon-enrolling {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-promoimage {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-cell-enrolling {
+                height: 24px;
+                width: 22px;
+                vertical-align: middle;
+              }
+              > span > i {
+                font-size: 64px;
+              }
+              &:last-child {
+                padding-top: 12px;
+                opacity: 1;
+                font-family: $--font-roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
+                }
+              }
+            }
+            > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
+              a {
+                padding: 10px 22px;
+              }
+            }
+            > h3 {
+              margin: 0;
+              padding: 24px 0px 12px 0;
+              line-height: 28px;
+              opacity: 1;
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 24px;
+              font-weight: 700;
+              font-style: Bold;
+              letter-spacing: 0px;
+              text-align: center;
+              @include for-tablet {
+                padding: 24px 6px 12px 6px;
+              }
+              @include for-mobile {
+                padding: 24px 6px 12px 6px;
+              }
+            }
+          }
+        }
+        > .enrolling-3-column {
+          width: fit-content;
+          @include for-xlarge {
+            padding-left: 80px;
+          }
+          @include for-large {
+            padding-left: 80px;
+          }
+          @include for-laptop {
+            padding-left: 36px;
+          }
+          > .cards-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            flex-direction: column;
+            > p {
+              margin: 0;
+              color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
+              > .icon-mobile {
+                height: 64px;
+                width: 64px;
+                text-align: center;
+                > img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
+              }
+              > .icon-search-icon-enrolling {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-promoimage {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-cell-enrolling {
+                height: 24px;
+                width: 22px;
+                vertical-align: middle;
+              }
+              &:last-child {
+                padding-top: 12px;
+                opacity: 1;
+                font-family: $--font-roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
+                }
+              }
+              > span > i {
+                font-size: 64px;
+              }
+            }
+            > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
+              a {
+                padding: 10px 22px;
+              }
+            }
+            > h3 {
+              margin: 0;
+              padding: 24px 0px 12px 0;
+              line-height: 28px;
+              opacity: 1;
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 24px;
+              font-weight: 700;
+              font-style: Bold;
+              letter-spacing: 0px;
+              text-align: center;
+              @include for-tablet {
+                padding: 24px 6px 12px 6px;
+              }
+              @include for-mobile {
+                padding: 24px 6px 12px 6px;
+              }
+            }
+          }
+        }
+      }
+      > .column-2-variation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        @include for-mobile {
+          padding-bottom: 72px;
+          flex-direction: column;
+          gap: 52px;
+        }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
+        @include for-tablet {
+          padding-bottom: 96px;
+          flex-direction: column;
+          gap: 52px;
+        }
+        > .enrolling-1-column {
+          width: fit-content;
+          @include for-xlarge {
+            padding-right: 72px;
+          }
+          @include for-large {
+            padding-right: 72px;
+          }
+          @include for-laptop {
+            padding-right: 72px;
+          }
+          > .cards-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            > p {
+              margin: 0;
+              color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
+              > .icon-mobile {
+                height: 64px;
+                width: 64px;
+                text-align: center;
+                > img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
+              }
+              > .icon-search-icon-enrolling {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-promoimage {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-cell-enrolling {
+                height: 24px;
+                width: 22px;
+                vertical-align: middle;
+              }
+              &:last-child {
+                padding-top: 12px;
+                opacity: 1;
+                font-family: $--font-roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
+                }
+              }
+              > span > i {
+                font-size: 64px;
+              }
+            }
+            > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
+              a {
+                padding: 10px 22px;
+              }
+            }
+            > h3 {
+              margin: 0;
+              padding: 24px 0px 12px 0;
+              opacity: 1;
+              color: $--gray-700;
+              line-height: 28px;
+              font-family: $--font-roboto;
+              font-size: 24px;
+              font-weight: 700;
+              font-style: Bold;
+              letter-spacing: 0px;
+              text-align: center;
+            }
+          }
+        }
+        > .enrolling-2-column {
+          width: fit-content;
+          @include for-xlarge {
+            border-left: 2px solid $--gray-225;
+            padding-left: 72px;
+          }
+          @include for-large {
+            border-left: 2px solid $--gray-225;
+            padding-left: 72px;
+          }
+          @include for-laptop {
+            border-left: 2px solid $--gray-225;
+            padding-left: 72px;
+          }
+          > .cards-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            > p {
+              margin: 0;
+              color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
+              > .icon-mobile {
+                height: 64px;
+                width: 64px;
+                text-align: center;
+                > img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
+              }
+              > .icon-search-icon-enrolling {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-promoimage {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-cell-enrolling {
+                height: 24px;
+                width: 22px;
+                vertical-align: middle;
+              }
+              &:last-child {
+                padding-top: 12px;
+                opacity: 1;
+                font-family: $--font-roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
+                }
+              }
+              > span > i {
+                font-size: 64px;
+              }
+            }
+            > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
+              a {
+                padding: 10px 22px;
+              }
+            }
+            > h3 {
+              margin: 0;
+              padding: 24px 0px 12px 0;
+              opacity: 1;
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              line-height: 28px;
+              font-size: 24px;
+              font-weight: 700;
+              font-style: Bold;
+              letter-spacing: 0px;
+              text-align: center;
+            }
+          }
+        }
+      }
+      > .column-1-variation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        @include for-mobile {
+          padding-bottom: 72px;
+        }
+        @include for-xlarge {
+          padding-bottom: 120px;
+        }
+        @include for-large {
+          padding-bottom: 120px;
+        }
+        @include for-laptop {
+          padding-bottom: 120px;
+        }
+        @include for-tablet {
+          padding-bottom: 96px;
+        }
+        > .enrolling-1-column {
+          width: fit-content;
+          > .cards-card-body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            flex-direction: column;
+            > p {
+              margin: 0;
+              color: $--gray-700;
+              text-align: center;
+              &:has(span):not(:has(a)) {
+                span {
+                  width: 100%;
+                }
+              }
+              > .icon-mobile {
+                height: 64px;
+                width: 64px;
+                text-align: center;
+                > img {
+                  height: 100%;
+                  width: 100%;
+                }
+              }
+              > .icon-shopbag {
+                height: 64px;
+                width: 72px;
+              }
+              > .icon-search-icon-enrolling {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-promoimage {
+                height: 64px;
+                width: 64px;
+              }
+              > .icon-cell-enrolling {
+                height: 24px;
+                width: 22px;
+                vertical-align: middle;
+              }
+              &:last-child {
+                padding-top: 12px;
+                opacity: 1;
+                font-family: $--font-roboto;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0px;
+                span > i {
+                  font-size: 24px;
+                  vertical-align: middle;
+                }
+                &:has(.icon) {
+                  a {
+                    padding: 0 12px;
+                  }
+                }
+              }
+              > span > i {
+                font-size: 64px;
+              }
+            }
+            > .button-container {
+              @include for-mobile {
+                width: unset;
+              }
+              a {
+                padding: 10px 22px;
+              }
+            }
+            > h3 {
+              margin: 0;
+              padding: 24px 0px 12px 0;
+              opacity: 1;
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 24px;
+              font-weight: 700;
+              font-style: Bold;
+              letter-spacing: 0px;
+              text-align: center;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

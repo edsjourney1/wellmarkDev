@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://dev1--wmlocal--sonalcognizant.hlx.live/sitemap.xml
+Disallow: /tools/*

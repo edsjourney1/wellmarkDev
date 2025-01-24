@@ -1,0 +1,144 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+@media (max-width: 480px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper {
+    padding: 72px 16px 72px 16px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper {
+    padding: 96px 36px 96px 36px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper {
+    padding: 120px 52px 120px 52px;
+  }
+}
+@media (min-width: 1379px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper {
+    padding: 120px 0 120px 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper {
+    padding: 120px 36px 120px 36px;
+  }
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .title {
+  opacity: 1;
+  color: #4a7390;
+  font-family: museo, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: 700;
+  letter-spacing: 0px;
+  text-align: left;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper .title {
+    padding-bottom: 52px;
+    font-size: 28px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper .title {
+    padding-bottom: 52px;
+    font-size: 28px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper .title {
+    padding-bottom: 72px;
+  }
+}
+@media (min-width: 1379px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper .title {
+    padding-bottom: 72px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper .title {
+    padding-bottom: 72px;
+  }
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  column-gap: 30px;
+  row-gap: 52px;
+}
+@media (max-width: 480px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul {
+    flex-direction: column;
+  }
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li {
+  width: calc(25% - 22.5px);
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 480px) {
+  .multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li {
+    width: 100%;
+  }
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li > .block-div > h4 {
+  opacity: 1;
+  color: #4a7390;
+  font-family: roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: Bold;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-bottom: 12px;
+  margin: 0;
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li > .block-div > p {
+  opacity: 1;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: Regular;
+  letter-spacing: 0px;
+  text-align: left;
+  line-height: 24px;
+  margin: 0;
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li > .block-div > p:has(a) {
+  padding-top: 24px;
+  width: fit-content;
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li > .block-div > p a {
+  opacity: 1;
+  color: #005589;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: Medium;
+  letter-spacing: 0px;
+  text-align: left;
+  text-decoration: underline;
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li > .block-div > p span {
+  padding-left: 6px;
+  height: 15px;
+  width: 15px;
+  vertical-align: text-top;
+}
+.multiple-textblocks-container .multiple-textblocks-wrapper .multiple-textblocks > ul > li > .block-div > p span i {
+  font-size: 100%;
+  vertical-align: text-top;
+  color: #005589;
+}

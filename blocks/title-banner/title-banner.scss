@@ -1,0 +1,250 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.title-banner-container {
+  background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
+  @include for-tablet{
+    background: $--blue-550;
+  }
+  @include for-mobile{
+    background: $--blue-550;
+  }
+  .title-banner-wrapper {
+    .title-banner {
+      &.block {
+          padding: 50px $--spacing-xxl;
+          @include for-xlarge{
+            padding: 50px 0 0 0;
+          }
+          @include for-large {
+            padding: 50px $--spacing-xl 0 $--spacing-xl;
+          }
+          @include for-tablet {
+            padding: $--spacing-huge $--spacing-xl;
+          }
+          @include for-laptop {
+            padding: $--spacing-jumbo $--spacing-xl 0 $--spacing-xl;
+          }
+          @include for-mobile{
+            padding: $--spacing-xxl $--spacing-m;
+          }
+        .tbnr-maindiv {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          @include for-nonmobile {
+            align-items: center;
+            flex-direction: row;
+          }
+          @include for-xlarge {
+            gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+          }
+          @include for-tablet{
+            width: calc((100% * 5) / 6);
+          }
+          .tbnr-textcont {
+            display: flex;
+            flex-flow: row wrap;
+            @include for-tablet{
+              flex-direction: column;
+            }
+            @include for-laptop {
+              max-width: calc((100% - 30px) / 12 * 6);
+              padding-bottom: $--spacing-jumbo;
+            }
+            @include for-large {
+              max-width: calc((100% - 30px) / 12* 5);
+            }
+            @include for-xlarge {
+              max-width: calc((100% - 30px) / 12* 5);
+            }
+            @include for-nonmobile {
+              flex: 1;
+              order: unset;
+              text-align: left;
+              column-gap: 12px;
+            }
+            p {
+              &.title {
+                color: $--white;
+                font-family: $--font-museo;
+                font-size: 60px;
+                line-height: 66px;
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: $--spacing-l;
+                @include for-xlarge{
+                  margin-bottom: 0;
+                }
+                @include for-tablet {
+                  font-size: 60px;
+                  line-height: 66px;
+                  margin-bottom: $--spacing-xs;
+                }
+                @include for-mobile {
+                  margin-bottom: $--spacing-xs;
+                  font-size: 40px;
+                  line-height: 48px;
+                }
+                @include for-laptop{
+                  margin-bottom: $--spacing-xs;
+                }
+              }
+              &.description{
+                color: $--white;
+                font-family: $--font-museo;
+                font-size: 60px;
+                line-height: 66px;
+                font-weight: 300;
+                font-style: normal;
+                margin-bottom: $--spacing-l;
+                margin-top: 0;
+                @include for-mobile{
+                  font-size: 40px;
+                  line-height: 48px;
+                }
+              }
+            }
+            .tbnr-btn{
+              display: flex;
+              .button-container{
+                margin: 0;
+                &:last-child{
+                  margin-left: 24px;
+                }
+              }
+              @include for-mobile{
+                width: 100%;
+                flex-direction: column;
+                .button-container{
+                  &:last-child{
+                    margin: $--spacing-m 0 0 0;
+                  }
+                }
+              }
+            }
+          }
+          .tbnr-pic{
+            @include for-laptop{
+              max-width: calc((100% - 30px) / 12* 6);
+              min-height: 446px;
+              img{
+                min-height: 446px;
+              }
+            }
+              @include for-large {
+                max-width: calc((100% - 30px) / 12* 6);
+              }
+              @include for-xlarge {
+                max-width: calc((100% - 30px) / 12* 6);
+              }
+              @include for-tablet{
+                display: none;
+              }
+              @include for-mobile{
+                display: none;
+              }
+              img {
+                order: 0;
+                align-self: flex-start;
+                width: 100%;
+                display: flex;
+                @include for-xlarge{
+                  min-width: calc((100% - 30px) / 2);
+                }
+                @include for-large{
+                  align-self: flex-end;
+                  min-width: calc((100% - 30px) / 2);
+                }
+                @include for-laptop{
+                  align-self: flex-end;
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+}
+.one-btn-banner.title-banner-container{
+  background-image: linear-gradient(135deg, rgba(214, 229, 241, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  .title-banner-wrapper{
+    .block{
+      @include for-laptop{
+        padding: 67px $--spacing-xl 0 $--spacing-xl;
+      }
+      @include for-tablet{
+        padding: 74px 36px 68px 35px;
+      }
+      .tbnr-maindiv{
+        gap: 30px;
+        @include for-laptop{
+          gap: 30px;
+        }
+        .tbnr-textcont{
+          @include for-xlarge{
+            max-width: calc((100% - 30px) / 12* 6);
+            flex: unset;
+          }
+          @include for-tablet{
+            min-width: calc(((100% / 6) * 5) - 90px);
+          }
+          @include for-laptop{
+            gap: unset;
+          }
+          .title{
+            font-weight: 300 !important;
+            color: $--gray-700 !important;
+            @include for-xlarge{
+              margin-bottom: $--spacing-m !important;
+              line-height: 72px !important;
+            }
+            @include for-laptop{
+              margin-bottom: $--spacing-m !important;
+              line-height: 72px !important;
+            }
+            @include for-tablet{
+              margin-bottom: $--spacing-m !important;
+              line-height: 72px !important;
+            }
+            @include for-mobile{
+              margin-bottom: $--spacing-m !important;
+            }
+          }
+          .description{
+            width: 100%;
+            font-family: $--font-roboto !important;
+            font-weight: 400 !important;
+            font-size: 16px !important;
+            line-height: 24px !important;
+            opacity: 1;
+            color: $--gray-700 !important;
+            @include for-xlarge{
+              margin-bottom: $--spacing-xl !important;
+            }
+            @include for-laptop{
+              margin-bottom: $--spacing-xl !important;
+            }
+            @include for-tablet{
+              margin-bottom: $--spacing-xl !important;
+            }
+            @include for-mobile{
+              margin-bottom: $--spacing-xl !important;
+            }
+          }
+          p{
+            margin: 0;
+            @include for-mobile{
+              width: unset;
+            }
+          }
+          .tbnr-btn{
+            @include for-mobile{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
