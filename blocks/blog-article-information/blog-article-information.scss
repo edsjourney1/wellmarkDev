@@ -10,7 +10,7 @@
                 width: 1275px;
             }
             @include for-large{
-                width: calc(100% - 72px);
+                width: calc(100% - 104px);
             }
             @include for-laptop{
                 width: calc(100% - 72px);
@@ -185,9 +185,6 @@
                 }
                 @include for-mobile{
                     padding-bottom: 12px;
-                }
-                @media (min-width: 481px) and (max-width: 492px) {
-                    padding-top: 12px;
                 }
                 p{
                     display: flex;

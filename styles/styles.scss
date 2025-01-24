@@ -84,6 +84,26 @@ header.megamenu-wrapper {
   }
 }
 
+header.blog-menu {
+  height: 60px;
+
+  @include for-tablet {
+    height: 60px;
+  }
+  
+  @include for-laptop {
+    height: 313px;
+  }
+  
+  @include for-large {
+    height: 313px;
+  }
+  
+  @include for-xlarge {
+    height: 313px;
+  }
+}
+
 header .header,
 footer .footer {
   visibility: hidden;
