@@ -88,6 +88,9 @@
     }
   }
   .cards-div {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
     > .card-div {
       display: flex;
       width: 100%;
@@ -112,6 +115,11 @@
           padding-bottom: 8px;
           padding-top: 29px;
         }
+        > .description {
+          margin: 0;
+          padding-bottom: 8px;
+        }
+
         > .date-div {
           display: flex;
           position: relative;
@@ -132,10 +140,10 @@
               content: "•";
               position: absolute;
               @include for-xlarge {
-                right: 310px;
+                left: 90px;
               }
               @include for-large {
-                right: 310px;
+                left: 90px;
               }
               @include for-laptop {
                 right: 204px;
