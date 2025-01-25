@@ -22,6 +22,14 @@
     width: calc(100% - 32px);
   }
 }
+.section.pagination-container .pagination-wrapper .pagination.block .cards-div {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.section.pagination-container .pagination-wrapper .pagination.block .cards-div .card-div {
+  width: 31.5%;
+}
 .section.pagination-container .pagination-wrapper .pagination.block .pagination-container {
   display: flex;
   align-items: center;
@@ -82,6 +90,10 @@
 .section.pagination-container .pagination-wrapper .pagination.block .pagination-container .count-result button:last-of-type {
   margin-right: 0;
 }
+.section.pagination-container .pagination-wrapper .pagination.block .pagination-container .count-result button.active {
+  background-color: #005589;
+  color: #ffffff;
+}
 .section.pagination-container .pagination-wrapper .pagination.block .pagination-container .count-result p i {
   color: #005589;
   font-size: 20px;
@@ -93,4 +105,10 @@
 }
 .section.pagination-container .pagination-wrapper .pagination.block .pagination-container .count-result p:last-child i {
   padding: 0;
+}
+.section.pagination-container .pagination-wrapper .pagination.block .pagination-container .count-result .dp-none {
+  display: none;
+}
+.section.pagination-container .pagination-wrapper .pagination.block .pagination-container .count-result .dp-blur i {
+  color: #c2c2c3;
 }
