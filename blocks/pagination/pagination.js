@@ -606,7 +606,7 @@ export default async function decorate(block) {
   paginationDiv.append(paginationContainer);
   block.append(headDiv, blockDiv, paginationDiv);
 
-  const itemsPerPage = 9;
+  const itemsPerPage = 5;
   let currentPage = 1;
   function renderItems() {
     blockDiv.innerHTML = '';
