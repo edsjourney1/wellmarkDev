@@ -784,7 +784,13 @@ export default async function decorate(block) {
 
     // Get the first button
     const firstButton = document.querySelector('.count-result button');
+    // Get all buttons
+    const buttons = document.querySelectorAll('.count-result button');
+    // get last button
     const lastButton = document.querySelector('.count-result button:last-of-type');
+    // get the second & last before button
+    const secondButton = buttons[1];
+    const lastButtonBeforeLast = buttons[buttons.length - 2];
 
     // Check if the first button has the class "active"
     if (firstButton.classList.contains('active')) {
@@ -796,7 +802,7 @@ export default async function decorate(block) {
     }
 
     // Check if the first button has the class "active"
-    if (firstButton.classList.contains('active')) {
+    if (firstButton.classList.contains('active') || secondButton.classList.contains('active')) {
       // Add the class "dp-none" to the p tag
       doublePreviousPageButton.classList.add('dp-none');
     } else {
@@ -813,7 +819,7 @@ export default async function decorate(block) {
     }
 
     // Check if the first button has the class "active"
-    if (lastButton.classList.contains('active')) {
+    if (lastButton.classList.contains('active') || lastButtonBeforeLast.classList.contains('active')) {
       // Add the class "dp-none" to the p tag
       doubleforwardPageButton.classList.add('dp-none');
     } else {
