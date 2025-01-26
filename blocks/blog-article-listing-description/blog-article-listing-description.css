@@ -190,7 +190,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .blog-article-listing-description .cards-div > .card-div > .content-div > .date-div > .date::after {
-    right: 204px;
+    left: 90px;
   }
 }
 @media (max-width: 480px) {
