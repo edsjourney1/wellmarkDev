@@ -570,8 +570,7 @@ const myJson = [
 
 export default async function decorate(block) {
   // Query all <p> tags inside the .pagination block
-  const paginationBlock = document.querySelector('.pagination.block');
-  const pTags = paginationBlock.querySelectorAll('p');
+  const pTags = block.querySelectorAll('p');
 
   // Loop through each <p> tag
   pTags.forEach((p) => {
@@ -729,28 +728,26 @@ export default async function decorate(block) {
       for (let i = 1; i <= totalPages; i += 1) {
         countResult.appendChild(createButton(i, i));
       }
-    } else {
-      if (currentPage <= 3) {
-        for (let i = 1; i <= 3; i += 1) {
-          countResult.appendChild(createButton(i, i));
-        }
-        countResult.appendChild(createEllipsis());
-        countResult.appendChild(createButton(totalPages, totalPages));
-      } else if (currentPage >= totalPages - 2) {
-        countResult.appendChild(createButton(1, 1));
-        countResult.appendChild(createEllipsis());
-        for (let i = totalPages - 2; i <= totalPages; i += 1) {
-          countResult.appendChild(createButton(i, i));
-        }
-      } else {
-        countResult.appendChild(createButton(1, 1));
-        countResult.appendChild(createEllipsis());
-        for (let i = currentPage - 1; i <= currentPage + 1; i += 1) {
-          countResult.appendChild(createButton(i, i));
-        }
-        countResult.appendChild(createEllipsis());
-        countResult.appendChild(createButton(totalPages, totalPages));
+    } else if (currentPage <= 3) {
+      for (let i = 1; i <= 3; i += 1) {
+        countResult.appendChild(createButton(i, i));
       }
+      countResult.appendChild(createEllipsis());
+      countResult.appendChild(createButton(totalPages, totalPages));
+    } else if (currentPage >= totalPages - 2) {
+      countResult.appendChild(createButton(1, 1));
+      countResult.appendChild(createEllipsis());
+      for (let i = totalPages - 2; i <= totalPages; i += 1) {
+        countResult.appendChild(createButton(i, i));
+      }
+    } else {
+      countResult.appendChild(createButton(1, 1));
+      countResult.appendChild(createEllipsis());
+      for (let i = currentPage - 1; i <= currentPage + 1; i += 1) {
+        countResult.appendChild(createButton(i, i));
+      }
+      countResult.appendChild(createEllipsis());
+      countResult.appendChild(createButton(totalPages, totalPages));
     }
 
     // Create next page button
@@ -777,17 +774,17 @@ export default async function decorate(block) {
 
     renderItems();
     // Get the p tag with the i tag that has the class "fa-chevrons-left"
-    const doublePreviousPageButton = document.querySelector('.count-result p i.fa-chevrons-left').parentElement;
-    const doubleforwardPageButton = document.querySelector('.count-result p i.fa-chevrons-right').parentElement;
-    const PreviousPageButton = document.querySelector('.count-result p i.fa-chevron-left').parentElement;
-    const forwardPageButton = document.querySelector('.count-result p i.fa-chevron-right').parentElement;
+    const doublePreviousPageButton = block.querySelector('.count-result p i.fa-chevrons-left').parentElement;
+    const doubleforwardPageButton = block.querySelector('.count-result p i.fa-chevrons-right').parentElement;
+    const PreviousPageButton = block.querySelector('.count-result p i.fa-chevron-left').parentElement;
+    const forwardPageButton = block.querySelector('.count-result p i.fa-chevron-right').parentElement;
 
     // Get the first button
-    const firstButton = document.querySelector('.count-result button');
+    const firstButton = block.querySelector('.count-result button');
     // Get all buttons
-    const buttons = document.querySelectorAll('.count-result button');
+    const buttons = block.querySelectorAll('.count-result button');
     // get last button
-    const lastButton = document.querySelector('.count-result button:last-of-type');
+    const lastButton = block.querySelector('.count-result button:last-of-type');
     // get the second & last before button
     const secondButton = buttons[1];
     const lastButtonBeforeLast = buttons[buttons.length - 2];
