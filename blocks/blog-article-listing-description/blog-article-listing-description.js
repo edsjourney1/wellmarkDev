@@ -434,6 +434,7 @@ const myJson = [
 ];
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
+  const itemsPerPage = block.children[0].children[1].innerText;
   const headingSpam = document.createElement('h1');
   headingSpam.classList.add('title');
   headingSpam.append(heading);
@@ -498,8 +499,6 @@ export default async function decorate(block) {
   paginationContainer.append(countList, countResult);
   paginationDiv.append(paginationContainer);
   block.append(headDiv, blockDiv, paginationDiv);
-
-  const itemsPerPage = 9;
   let currentPage = 1;
   function renderItems() {
     blockDiv.innerHTML = '';

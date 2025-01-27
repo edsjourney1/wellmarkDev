@@ -3,6 +3,11 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .blog-article-listing-description {
+    padding: 0 52px;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
   .blog-article-listing-description {
     padding: 0 36px;
