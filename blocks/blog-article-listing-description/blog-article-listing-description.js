@@ -444,49 +444,6 @@ export default async function decorate(block) {
   block.innerHTML = '';
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
-  // eslint-disable-next-line object-curly-newline
-  myJson.forEach(({ ImageUrl, category, publishedDate, articleReadTime, title, description }) => {
-    const imageURL = ImageUrl;
-    const categoryList = category;
-    const publishDate = publishedDate;
-    const articleTime = articleReadTime;
-    const titleofCard = title;
-    const cardDescription = description;
-    const mainDiv = document.createElement('div');
-    mainDiv.classList.add('card-div');
-    const contentDiv = document.createElement('div');
-    contentDiv.classList.add('content-div');
-    const image = document.createElement('img');
-    const desc = document.createElement('p');
-    desc.classList.add('description');
-    desc.append(cardDescription);
-    image.src = `${imageURL}`;
-    image.alt = 'thumbnail';
-    const categoryPara = document.createElement('p');
-    categoryPara.classList.add('category-list');
-    categoryList.forEach((item) => {
-      const value = item;
-      const anchors = document.createElement('a');
-      anchors.href = 'www.google.com';
-      anchors.append(value);
-      categoryPara.append(anchors);
-    });
-    const datetimeDiv = document.createElement('div');
-    datetimeDiv.classList.add('date-div');
-    const pubDate = document.createElement('p');
-    pubDate.append(publishDate);
-    pubDate.classList.add('date');
-    const arcretime = document.createElement('p');
-    arcretime.append(articleTime);
-    arcretime.classList.add('read-time');
-    datetimeDiv.append(pubDate, arcretime);
-    const mainTitle = document.createElement('h3');
-    mainTitle.classList.add('card-title');
-    mainTitle.append(titleofCard);
-    contentDiv.append(mainTitle, desc, datetimeDiv, categoryPara);
-    mainDiv.append(image, contentDiv);
-    blockDiv.append(mainDiv);
-  });
   block.append(headDiv, blockDiv);
   const paginationDiv = document.createElement('div');
   paginationDiv.classList.add('pagination');
@@ -506,7 +463,7 @@ export default async function decorate(block) {
     const endIndex = startIndex + itemsPerPage;
     const jsonVar = myJson.slice(startIndex, endIndex);
     jsonVar.forEach(({
-      ImageUrl, category, publishedDate, articleReadTime, title,
+      ImageUrl, category, publishedDate, articleReadTime, title, description,
     }) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('card-div');
@@ -524,6 +481,11 @@ export default async function decorate(block) {
       mainTitle.classList.add('card-title');
       mainTitle.textContent = title;
       contentDiv.appendChild(mainTitle);
+
+      const desc = document.createElement('p');
+      desc.classList.add('description');
+      desc.append(description);
+      contentDiv.appendChild(desc);
 
       const datetimeDiv = document.createElement('div');
       datetimeDiv.classList.add('date-div');
