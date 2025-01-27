@@ -1101,29 +1101,18 @@ header {
                     overflow-y: auto;
                     height: 100%;
                 }
-                @include for-laptop {
-                    &.menu-sticky{
-                        position: fixed;
-                        width: 100%;
-                    }
-                }
-                @include for-large {
-                    &.menu-sticky{
-                        position: fixed;
-                        width: 100%;
-                    }
-                }
-                @include for-xlarge {
-                    &.menu-sticky{
-                        position: fixed;
-                        width: 100%;
-                    }
+                &.menu-sticky{
+                    position: fixed;
+                    width: 100%;
                 }
                 .blog-header-nav{
                     background-color: $--blue-675;
                     padding: 24px 36px;
                     @include for-large {
                         padding: 24px 52px;
+                    }
+                    @include for-xlarge {
+                        padding: 26px 0 25px 0;
                     }
                     .blog-menu-block{
                         max-width: 1275px;
@@ -1175,6 +1164,20 @@ header {
                                 display: flex;
                                 justify-content: flex-end;
                             }
+                            &.button-container{
+                                .secondary{
+                                    padding: 10px 23px;
+                                    @include for-tablet{
+                                        padding: 10px 36px;
+                                    }
+                                    @include for-tablet-smallest{
+                                        padding: 10px 34px;
+                                    }
+                                    @include for-mobile{
+                                        padding: 10px 34px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -1215,6 +1218,10 @@ header {
                                 font-family: roboto, sans-serif;
                                 font-weight: 500;
                                 margin: 16px 52px 15px 0;
+                                line-height: 19px;
+                                &:nth-last-of-type(2){
+                                    margin-right: 15px;
+                                }
                                 @include for-mobile {
                                     padding: 16px 52px;
                                     margin: 0;
@@ -1239,12 +1246,15 @@ header {
                                     .blogbarpara{
                                         margin: 0;
                                         color: $--white;
+                                        margin-left: 37px;
                                         cursor: pointer;
                                         @include for-mobile {
                                             cursor: unset;
+                                            margin: 0;
                                         }
                                         @include for-tablet {
                                             cursor: unset;
+                                            margin: 0;
                                         }
                                     }
                                 }
@@ -1255,7 +1265,7 @@ header {
                                         background-color: $--blue-675;
                                         left: 0;
                                         width: 100%;  
-                                        margin-top: 16px;                                      
+                                        margin-top: 15px;                                      
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
@@ -1279,7 +1289,7 @@ header {
                                         background-color: $--blue-675;
                                         left: 0;
                                         width: 100%;  
-                                        margin-top: 16px;                                      
+                                        margin-top: 15px;                                      
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
@@ -1301,7 +1311,7 @@ header {
                                         display: none;
                                         position: absolute;
                                         background-color: #014169;
-                                        top: 54px;
+                                        top: 49px;
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
@@ -1323,7 +1333,7 @@ header {
                                         display: none;
                                         position: absolute;
                                         background-color: #014169;
-                                        top: 54px;
+                                        top: 49px;
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
@@ -1345,7 +1355,7 @@ header {
                                         display: none;
                                         position: absolute;
                                         background-color: #014169;
-                                        top: 54px;
+                                        top: 49px;
                                         border-radius: 0px 0px 2px 2px;
                                         box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.2);
                                         .blog-submenu-ul {
@@ -1371,14 +1381,36 @@ header {
                                     }
                                     .blog-down-arrow{
                                         display: inline-block;
+                                        width: 16px;
                                         padding-left: 9px;
-                                        margin-bottom: 1px;
+                                        margin-bottom: -1px;
+                                        @include for-mobile{
+                                            width: 12px;
+                                            padding-left: 7px;
+                                            margin-bottom: 0px;
+                                        }
+                                        @include for-tablet{
+                                            width: 12px;
+                                            padding-left: 7px;
+                                            margin-bottom: 0px;
+                                        }
                                     }
                                     &.show-blog-menu{
                                         .blog-up-arrow{
                                             display: inline-block;
+                                            width: 16px;
                                             padding-left: 9px;
-                                            margin-bottom: 1px;
+                                            margin-bottom: -1px;
+                                            @include for-mobile{
+                                                width: 12px;
+                                                padding-left: 7px;
+                                                margin-bottom: 0px;
+                                            }
+                                            @include for-tablet{
+                                                width: 12px;
+                                                padding-left: 7px;
+                                                margin-bottom: 0px;
+                                            }
                                         }
                                         .blog-down-arrow{
                                             display: none;
@@ -1392,29 +1424,35 @@ header {
                 .blog-mobile-menu{
                     background-color: #014169;
                     padding: 20px 36px 21px 36px;
-                    color: $--white;
-                    opacity: 1;
-                    font-family: roboto, sans-serif;
-                    font-size: 16px;
-                    font-weight: 500;
-                    letter-spacing: 0px;
-                    text-align: left;
-                    line-height: 18px;
                     border-top: 1px solid #4A7390;
-                    border-bottom: 1px solid #4A7390;
-                    .mobile-up-arrow{
-                        display: none;
-                    }
-                    .mobile-down-arrow{
-                        display: inline-block;
-                        padding-left: 9px;
-                        margin-bottom: 1px;
+                    .blog-topics-label{
+                        color: $--white;
+                        opacity: 1;
+                        font-family: roboto, sans-serif;
+                        font-size: 16px;
+                        font-weight: 500;
+                        letter-spacing: 0px;
+                        text-align: left;
+                        line-height: 18px; 
+                        margin: 0; 
+                        .mobile-up-arrow{
+                            display: none;
+                        }
+                        .mobile-down-arrow{
+                            display: inline-block;
+                            padding-left: 10px;
+                            margin-bottom: 1px;
+                            width: 12px;
+                            height: 7px;
+                        }                      
                     }
                     &.mobile-arrow{
                         .mobile-up-arrow{
                             display: inline-block;
-                            padding-left: 9px;
+                            padding-left: 10px;
                             margin-bottom: 1px;
+                            width: 12px;
+                            height: 7px;
                         }
                         .mobile-down-arrow{
                             display: none;
