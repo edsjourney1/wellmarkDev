@@ -307,6 +307,10 @@
 .blog-article-listing-description .pagination .pagination-container .count-result button:last-of-type {
   margin-right: 0;
 }
+.blog-article-listing-description .pagination .pagination-container .count-result button.active {
+  background-color: #005589;
+  color: #ffffff;
+}
 .blog-article-listing-description .pagination .pagination-container .count-result p i {
   color: #005589;
   font-size: 20px;
@@ -318,4 +322,10 @@
 }
 .blog-article-listing-description .pagination .pagination-container .count-result p:last-child i {
   padding: 0;
+}
+.blog-article-listing-description .pagination .pagination-container .count-result .dp-none {
+  display: none;
+}
+.blog-article-listing-description .pagination .pagination-container .count-result .dp-blur i {
+  color: #c2c2c3;
 }

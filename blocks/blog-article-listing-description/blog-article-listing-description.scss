@@ -247,6 +247,10 @@
           &:last-of-type {
             margin-right: 0;
           }
+          &.active {
+            background-color: $--blue-675;
+            color: $--white;
+          }
         }
         p {
           i {
@@ -264,6 +268,14 @@
             i {
               padding: 0;
             }
+          }
+        }
+        .dp-none {
+          display: none;
+        }
+        .dp-blur {
+          i {
+            color: $--gray-225;
           }
         }
       }

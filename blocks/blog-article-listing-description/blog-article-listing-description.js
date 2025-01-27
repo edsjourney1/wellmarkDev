@@ -1,6 +1,3 @@
-// import { getMetadata } from '../../scripts/aem.js';
-// import { loadFragment } from '../fragment/fragment.js';
-
 const myJson = [
   {
     publishedDate: '10/02/1999',
@@ -434,8 +431,8 @@ const myJson = [
 ];
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
-  const itemsPerPage = block.children[0].children[1].innerText;
-  const headingSpam = document.createElement('h1');
+  const itemsPerPage = Number(block.children[0].children[1].innerText);
+  const headingSpam = document.createElement('h2');
   headingSpam.classList.add('title');
   headingSpam.append(heading);
   const headDiv = document.createElement('div');
@@ -444,7 +441,6 @@ export default async function decorate(block) {
   block.innerHTML = '';
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
-  block.append(headDiv, blockDiv);
   const paginationDiv = document.createElement('div');
   paginationDiv.classList.add('pagination');
   const paginationContainer = document.createElement('div');
@@ -482,10 +478,10 @@ export default async function decorate(block) {
       mainTitle.textContent = title;
       contentDiv.appendChild(mainTitle);
 
-      const desc = document.createElement('p');
-      desc.classList.add('description');
-      desc.append(description);
-      contentDiv.appendChild(desc);
+      const cardDesc = document.createElement('p');
+      cardDesc.classList.add('description');
+      cardDesc.textContent = description;
+      contentDiv.appendChild(cardDesc);
 
       const datetimeDiv = document.createElement('div');
       datetimeDiv.classList.add('date-div');
@@ -532,71 +528,152 @@ export default async function decorate(block) {
   function renderPagination() {
     const totalPages = Math.ceil(myJson.length / itemsPerPage);
     countResult.innerHTML = '';
-    function newFunction(i) {
-      currentPage = i;
-      renderItems();
+
+    // Function to create a pagination button
+    function createButton(text, page) {
+      const button = document.createElement('button');
+      button.textContent = text;
+      button.addEventListener('click', () => {
+        currentPage = page;
+        renderItems();
+        renderPagination();
+      });
+      if (page === currentPage) {
+        button.classList.add('active');
+      }
+      return button;
     }
 
-    // Always show the first three pages
-    for (let i = 1; i <= Math.min(3, totalPages); i += 1) {
-      const button = document.createElement('button');
-      button.textContent = i;
-      button.addEventListener('click', () => {
-        newFunction(i);
-      });
-      countResult.appendChild(button);
-    }
-    // Add ellipsis if there are more than 3 pages
-    if (totalPages > 3) {
+    // Function to create an ellipsis button
+    function createEllipsis() {
       const ellipsis = document.createElement('button');
       ellipsis.textContent = '...';
-      countResult.appendChild(ellipsis);
+      ellipsis.disabled = true;
+      return ellipsis;
     }
 
-    // Always show the last page
-    if (totalPages > 3) {
-      const lastButton = document.createElement('button');
-      lastButton.textContent = totalPages;
-      lastButton.addEventListener('click', () => {
-        currentPage = totalPages;
-        renderItems();
-      });
-      countResult.appendChild(lastButton);
-    }
-    const firstPageButton = document.createElement('p');
-    firstPageButton.innerHTML = '<i class="fa-regular fa-chevrons-left"></i>';
-    firstPageButton.addEventListener('click', () => {
+    // Create previous page button
+    const previousPageButton = document.createElement('p');
+    previousPageButton.innerHTML = '<i class="fa-regular fa-chevrons-left"></i>';
+    previousPageButton.addEventListener('click', () => {
       currentPage = 1;
       renderItems();
+      renderPagination();
     });
-    countResult.insertBefore(firstPageButton, countResult.firstChild);
-    const previousPageButton = document.createElement('p');
-    previousPageButton.innerHTML = '<i class="fa-regular fa-chevron-left"></i>';
-    previousPageButton.addEventListener('click', () => {
+    countResult.appendChild(previousPageButton);
+
+    // Create first page button
+    const firstPageButton = document.createElement('p');
+    firstPageButton.innerHTML = '<i class="fa-regular fa-chevron-left"></i>';
+    firstPageButton.addEventListener('click', () => {
       if (currentPage > 1) {
         currentPage -= 1;
         renderItems();
+        renderPagination();
       }
     });
-    countResult.insertBefore(previousPageButton, countResult.firstChild);
+    countResult.appendChild(firstPageButton);
+
+    // Create pagination buttons
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i += 1) {
+        countResult.appendChild(createButton(i, i));
+      }
+    } else if (currentPage <= 3) {
+      for (let i = 1; i <= 3; i += 1) {
+        countResult.appendChild(createButton(i, i));
+      }
+      countResult.appendChild(createEllipsis());
+      countResult.appendChild(createButton(totalPages, totalPages));
+    } else if (currentPage >= totalPages - 2) {
+      countResult.appendChild(createButton(1, 1));
+      countResult.appendChild(createEllipsis());
+      for (let i = totalPages - 2; i <= totalPages; i += 1) {
+        countResult.appendChild(createButton(i, i));
+      }
+    } else {
+      countResult.appendChild(createButton(1, 1));
+      countResult.appendChild(createEllipsis());
+      for (let i = currentPage - 1; i <= currentPage + 1; i += 1) {
+        countResult.appendChild(createButton(i, i));
+      }
+      countResult.appendChild(createEllipsis());
+      countResult.appendChild(createButton(totalPages, totalPages));
+    }
+
+    // Create next page button
     const nextPageButton = document.createElement('p');
     nextPageButton.innerHTML = '<i class="fa-regular fa-chevron-right"></i>';
     nextPageButton.addEventListener('click', () => {
       if (currentPage < totalPages) {
         currentPage += 1;
         renderItems();
+        renderPagination();
       }
     });
     countResult.appendChild(nextPageButton);
+
+    // Create last page button
     const lastPageButton = document.createElement('p');
     lastPageButton.innerHTML = '<i class="fa-regular fa-chevrons-right"></i>';
     lastPageButton.addEventListener('click', () => {
       currentPage = totalPages;
       renderItems();
+      renderPagination();
     });
     countResult.appendChild(lastPageButton);
-    renderItems();
-  }
 
+    renderItems();
+    // Get the p tag with the i tag that has the class "fa-chevrons-left"
+    const doublePreviousPageButton = block.querySelector('.count-result p i.fa-chevrons-left').parentElement;
+    const doubleforwardPageButton = block.querySelector('.count-result p i.fa-chevrons-right').parentElement;
+    const PreviousPageButton = block.querySelector('.count-result p i.fa-chevron-left').parentElement;
+    const forwardPageButton = block.querySelector('.count-result p i.fa-chevron-right').parentElement;
+
+    // Get the first button
+    const firstButton = block.querySelector('.count-result button');
+    // Get all buttons
+    const buttons = block.querySelectorAll('.count-result button');
+    // get last button
+    const lastButton = block.querySelector('.count-result button:last-of-type');
+    // get the second & last before button
+    const secondButton = buttons[1];
+    const lastButtonBeforeLast = buttons[buttons.length - 2];
+
+    // Check if the first button has the class "active"
+    if (firstButton.classList.contains('active')) {
+      // Add the class "dp-blur" to the p tag
+      PreviousPageButton.classList.add('dp-blur');
+    } else {
+      // Remove the class "dp-blur" from the p tag
+      PreviousPageButton.classList.remove('dp-blur');
+    }
+
+    // Check if the first button has the class "active"
+    if (firstButton.classList.contains('active') || secondButton.classList.contains('active')) {
+      // Add the class "dp-none" to the p tag
+      doublePreviousPageButton.classList.add('dp-none');
+    } else {
+      // Remove the class "dp-none" from the p tag
+      doublePreviousPageButton.classList.remove('dp-none');
+    }
+    // Check if the last button has the class "active"
+    if (lastButton.classList.contains('active')) {
+      // Add the class "dp-blur" to the p tag
+      forwardPageButton.classList.add('dp-blur');
+    } else {
+      // Remove the class "dp-blur" from the p tag
+      forwardPageButton.classList.remove('dp-blur');
+    }
+
+    // Check if the first button has the class "active"
+    if (lastButton.classList.contains('active') || lastButtonBeforeLast.classList.contains('active')) {
+      // Add the class "dp-none" to the p tag
+      doubleforwardPageButton.classList.add('dp-none');
+    } else {
+      // Remove the class "dp-none" from the p tag
+      doubleforwardPageButton.classList.remove('dp-none');
+    }
+  }
   renderPagination();
 }
