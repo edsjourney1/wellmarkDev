@@ -569,27 +569,8 @@ const myJson = [
 ];
 
 export default async function decorate(block) {
-  // Query all <p> tags inside the .pagination block
-  const pTags = block.querySelectorAll('p');
-
-  // Loop through each <p> tag
-  pTags.forEach((p) => {
-    // Check if the innerText is "pagination" or "true"
-    if (p.innerText.toLowerCase() === 'pagination' || p.innerText.toLowerCase() === 'true') {
-      p.remove(); // Remove the <p> tag
-    }
-  });
-  const heading = block.children[0].children[0].innerText;
-  const inlinewithIcon = block.children[0].children[1].innerHTML;
-  const headingSpam = document.createElement('h2');
-  headingSpam.classList.add('title');
-  const iconwithtext = document.createElement('span');
-  iconwithtext.classList.add('text-icon');
-  iconwithtext.innerHTML = inlinewithIcon;
-  headingSpam.append(heading);
-  const headDiv = document.createElement('div');
-  headDiv.classList.add('heading-div');
-  headDiv.append(headingSpam, iconwithtext);
+  const innertextH2 = block.children[0].children[0].innerText;
+  const innertextP = Number(block.children[0].children[1].innerText);
   block.innerHTML = '';
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
@@ -603,9 +584,9 @@ export default async function decorate(block) {
   countResult.classList.add('count-result');
   paginationContainer.append(countList, countResult);
   paginationDiv.append(paginationContainer);
-  block.append(headDiv, blockDiv, paginationDiv);
+  block.append(blockDiv, paginationDiv);
 
-  const itemsPerPage = 5;
+  const itemsPerPage = innertextP;
   let currentPage = 1;
   function renderItems() {
     blockDiv.innerHTML = '';
@@ -661,7 +642,7 @@ export default async function decorate(block) {
     });
     countList.innerHTML = '';
     const showingText = document.createElement('p');
-    showingText.textContent = 'Showing';
+    showingText.textContent = innertextH2;
     countList.appendChild(showingText);
     const showingSpan = document.createElement('span');
     showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, myJson.length)}`;
