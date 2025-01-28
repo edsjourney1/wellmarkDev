@@ -1,6 +1,6 @@
 const myJson = [
   {
-    publishedDate: '10/02/1999',
+    publishedDate: '10/02/1901',
     ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
@@ -11,7 +11,7 @@ const myJson = [
     categoryTitle: 'Medi-Assistance',
   },
   {
-    publishedDate: '10/02/1999',
+    publishedDate: '10/02/1998',
     ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
@@ -22,7 +22,7 @@ const myJson = [
     categoryTitle: 'Medi-Assistance',
   },
   {
-    publishedDate: '10/02/1999',
+    publishedDate: '10/02/1997',
     ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
@@ -33,7 +33,7 @@ const myJson = [
     categoryTitle: 'Medi-Assistance',
   },
   {
-    publishedDate: '10/02/1999',
+    publishedDate: '10/01/1900',
     ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
@@ -458,7 +458,12 @@ export default async function decorate(block) {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const jsonVar = myJson.slice(startIndex, endIndex);
-    jsonVar.forEach(({
+    const sortedJSON = jsonVar.sort((a, b) => {
+      const dateA = new Date(a.publishedDate?.split('/').reverse().join('/'));
+      const dateB = new Date(b.publishedDate?.split('/').reverse().join('/'));
+      return dateA - dateB;
+    });
+    sortedJSON.forEach(({
       ImageUrl, category, publishedDate, articleReadTime, title, description,
     }) => {
       const mainDiv = document.createElement('div');
