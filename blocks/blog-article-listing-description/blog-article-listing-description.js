@@ -675,5 +675,9 @@ export default async function decorate(block) {
       doubleforwardPageButton.classList.remove('dp-none');
     }
   }
-  renderPagination();
+  if (myJson.length > 10) {
+    renderPagination();
+  } else {
+    renderItems();
+  }
 }
