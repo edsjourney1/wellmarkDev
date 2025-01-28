@@ -18,6 +18,9 @@ export default function decorate(block) {
     button.classList.add('button', 'secondary');
     div.append(div2, paragraph, button);
   }
+  if (block.children[2] === '' || block.children[2] === undefined) {
+    svg.classList.add('svg');
+  }
   block.innerHTML = '';
   block.append(div);
 }
