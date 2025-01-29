@@ -131,6 +131,15 @@
             }
           }
         }
+        .svg {
+          bottom: -175px;
+          @include for-tablet {
+            bottom: -155px;
+          }
+          @include for-mobile {
+            display: none;
+          }
+        }
       }
       > .button {
         margin: 0;
