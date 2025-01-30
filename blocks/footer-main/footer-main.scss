@@ -113,23 +113,28 @@
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px 24px 20px;
+        // padding: 36px 20px 24px 20px;
+        padding: 36px 20px 30px 20px;
       }
       @include for-tablet {
-        padding: 36px 36px 24px 36px;
+        // padding: 36px 36px 24px 36px;
+        padding: 36px 36px 30px 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px 30px 52px;
+        // padding: 36px 52px 30px 52px;
+        padding: 36px 52px 36px 52px;
       }
       @include for-large {
-        padding: 36px 52px 30px 52px;
+        // padding: 36px 52px 30px 52px;
+        padding: 36px 52px 36px 52px;
       }
       @include for-laptop {
-        padding: 36px 36px 24px 36px;
+        // padding: 36px 36px 24px 36px;
+        padding: 36px 36px 30px 36px;
       }
-      > div ul {
-        padding-bottom: 24px;
-      }
+      // > div ul {
+      //   padding-bottom: 24px;
+      // }
       > div h4 {
         // padding-bottom: 4px;
         padding-bottom: 10px;
@@ -158,6 +163,7 @@
           flex-wrap: wrap;
           row-gap: 14px;
           column-gap: 16px;
+          flex-direction: row;
         }
         li {
           line-height: 1;
@@ -165,6 +171,9 @@
             display: none;
           }
         }
+      }
+      .language-desc-div {
+        padding: 12px 0 16px 0;
       }
     }
     > .attention-div {
@@ -174,17 +183,19 @@
         padding: 0 20px 52px 20px;
       }
       @include for-tablet {
-        padding: 0 36px 64px 36px;
-      }
-      @include for-xlarge {
-        padding: 0 52px 52px 52px;
-      }
-      @include for-large {
-        padding: 0 52px 52px 52px;
-      }
-      @include for-laptop {
+        // padding: 0 36px 64px 36px;
         padding: 0 36px 52px 36px;
       }
+      padding: 0;
+      // @include for-xlarge {
+      //   padding: 0 52px 52px 52px;
+      // }
+      // @include for-large {
+      //   padding: 0 52px 52px 52px;
+      // }
+      // @include for-laptop {
+      //   padding: 0 36px 52px 36px;
+      // }
       > div p {
         opacity: 1;
         color: $--gray-700;
@@ -199,7 +210,7 @@
       > .social-div {
         display: flex;
         gap: 12px;
-        padding-top: 36px;
+        padding-top: 0px;
         > p {
           display: flex;
           gap: 12px;
