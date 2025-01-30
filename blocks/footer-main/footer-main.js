@@ -21,10 +21,10 @@ export default function decorate(block) {
   const attentionDiv = block.children[5];
   attentionDiv.append(socialDiv2);
 
-  const icon = block.children[6].querySelector("em");
+  const icon = block.children[6].querySelector('em');
   if (icon) {
     const iconParent = icon.parentNode;
-    const iconEl = document.createElement("span");
+    const iconEl = document.createElement('span');
     iconEl.className = `fa-solid fa-${icon.innerHTML.substr(1)}`;
     iconParent.insertBefore(iconEl, icon);
     icon.remove();
@@ -43,7 +43,7 @@ export default function decorate(block) {
         e.preventDefault();
         langLinks.forEach((l) => l.classList.remove('active'));
         link.classList.add('active');
-        languageDescDiv.innerHTML = link.parentNode.querySelector("em")?.innerHTML;
+        languageDescDiv.innerHTML = link.parentNode.querySelector('em')?.innerHTML;
       });
     });
   }
