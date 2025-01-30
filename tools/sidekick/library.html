@@ -38,34 +38,34 @@
           tags: {
             src: '/tools/sidekick/plugins/tags/tags.js',
           },
-          blocks: {
-            encodeImages: true,
-            viewPorts: [
-            {
-              width: '480px',
-              label: 'Mobile',
-              icon: 'device-phone',
-            },
-            {
-              width: '1023px',
-              label: 'Tablet',
-              icon: 'device-tablet',
-            },
-            {
-              width: '1024px',
-              label: 'Laptop',
-              icon: 'device-desktop',
-              default: true,
-            },
-            {
-              width: '1900px',
-              label: 'Large',
-              icon: 'device-desktop',
-              default: true,
-            },
-            ],
-          }
-        }
+			blocks: {
+			  encodeImages: true,
+			  viewPorts: [
+				{
+				  width: '480px',
+				  label: 'Mobile',
+				  icon: 'device-phone',
+				},
+				{
+				  width: '1023px',
+				  label: 'Tablet',
+				  icon: 'device-tablet',
+				},
+				{
+				  width: '1024px',
+				  label: 'Laptop',
+				  icon: 'device-desktop',
+				  default: true,
+				},
+        {
+				  width: '1900px',
+				  label: 'Large',
+				  icon: 'device-desktop',
+				  default: true,
+				},
+			  ],
+			}
+		  }
       }
 
       document.body.prepend(library)
