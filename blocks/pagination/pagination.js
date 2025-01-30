@@ -567,6 +567,7 @@ const myJson = [
     articleUrl: 'https://abcd.com',
   },
 ];
+
 export default async function decorate(block) {
   const innertextH2 = block.children[0].children[0].innerText;
   const innertextP = Number(block.children[0].children[1].innerText);
@@ -653,9 +654,11 @@ export default async function decorate(block) {
     ofSpan.textContent = myJson.length;
     countList.appendChild(ofSpan);
   }
+
   function renderPagination() {
     const totalPages = Math.ceil(myJson.length / itemsPerPage);
     countResult.innerHTML = '';
+
     // Function to create a pagination button
     function createButton(text, page) {
       const button = document.createElement('button');
@@ -769,19 +772,19 @@ export default async function decorate(block) {
 
     // Check if the first button has the class "active"
     if (firstButton.classList.contains('active')) {
-    // Add the class "dp-blur" to the p tag
+      // Add the class "dp-blur" to the p tag
       PreviousPageButton.classList.add('dp-blur');
     } else {
-    // Remove the class "dp-blur" from the p tag
+      // Remove the class "dp-blur" from the p tag
       PreviousPageButton.classList.remove('dp-blur');
     }
 
     // Check if the first button has the class "active"
     if (firstButton.classList.contains('active') || secondButton.classList.contains('active')) {
-    // Add the class "dp-none" to the p tag
+      // Add the class "dp-none" to the p tag
       doublePreviousPageButton.classList.add('dp-none');
     } else {
-    // Remove the class "dp-none" from the p tag
+      // Remove the class "dp-none" from the p tag
       doublePreviousPageButton.classList.remove('dp-none');
     }
     // Check if the last button has the class "active"
@@ -795,10 +798,10 @@ export default async function decorate(block) {
 
     // Check if the first button has the class "active"
     if (lastButton.classList.contains('active') || lastButtonBeforeLast.classList.contains('active')) {
-    // Add the class "dp-none" to the p tag
+      // Add the class "dp-none" to the p tag
       doubleforwardPageButton.classList.add('dp-none');
     } else {
-    // Remove the class "dp-none" from the p tag
+      // Remove the class "dp-none" from the p tag
       doubleforwardPageButton.classList.remove('dp-none');
     }
   }

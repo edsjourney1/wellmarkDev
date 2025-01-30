@@ -1249,9 +1249,14 @@ header .main-header-wrapper .main-header .blog-header-section .blog-header-nav {
   background-color: #005589;
   padding: 24px 36px;
 }
+@media (min-width: 1024px) and (max-width: 1200px) {
+  header .main-header-wrapper .main-header .blog-header-section .blog-header-nav {
+    padding: 26px 36px 25px 36px;
+  }
+}
 @media (min-width: 1201px) and (max-width: 1379px) {
   header .main-header-wrapper .main-header .blog-header-section .blog-header-nav {
-    padding: 24px 52px;
+    padding: 26px 52px 25px 52px;
   }
 }
 @media (min-width: 1379px) {

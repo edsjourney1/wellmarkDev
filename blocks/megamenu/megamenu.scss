@@ -1112,8 +1112,11 @@ header {
                 .blog-header-nav{
                     background-color: $--blue-675;
                     padding: 24px 36px;
+                    @include for-laptop {
+                        padding: 26px 36px 25px 36px;
+                    }
                     @include for-large {
-                        padding: 24px 52px;
+                        padding: 26px 52px 25px 52px;
                     }
                     @include for-xlarge {
                         padding: 26px 0 25px 0;
