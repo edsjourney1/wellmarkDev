@@ -1094,12 +1094,16 @@ header {
             }
             .blog-header-section{
                 @include for-mobile {
-                    overflow-y: auto;
-                    height: 100%;
+                    &.blog-submenu-list:has(.mobile-arrow){
+                        height: 100vh;
+                        overflow-y: auto;
+                    }
                 }
                 @include for-tablet {
-                    overflow-y: auto;
-                    height: 100%;
+                    &.blog-submenu-list:has(.mobile-arrow){
+                        height: 100vh;
+                        overflow-y: auto;
+                    }
                 }
                 &.menu-sticky{
                     position: fixed;
@@ -1225,11 +1229,17 @@ header {
                                 @include for-mobile {
                                     padding: 16px 52px;
                                     margin: 0;
+                                    &:nth-last-of-type(2){
+                                        margin: 0;
+                                    }
                                     border-top: 1px solid #4A7390;
                                 }
                                 @include for-tablet {
                                     padding: 16px 52px;
                                     margin: 0;
+                                    &:nth-last-of-type(2){
+                                        margin: 0;
+                                    }
                                     border-top: 1px solid #4A7390;
                                 }
                                 a{
@@ -1489,12 +1499,16 @@ header {
                     }
                     .main-header{
                         @include for-mobile {
-                            height: 100vh;
-                            overflow-y: auto;
+                            &.blog-submenu-list{
+                                height: 100vh;
+                                overflow-y: auto;
+                            }
                         }
                         @include for-tablet {
-                            height: 100vh;
-                            overflow-y: auto;
+                            &.blog-submenu-list{
+                                height: 100vh;
+                                overflow-y: auto;
+                            }
                         }
                         .main-header-menu{
                             .header-menu-block{
