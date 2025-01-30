@@ -789,10 +789,10 @@ export default async function decorate(block) {
     }
     // Check if the last button has the class "active"
     if (lastButton.classList.contains('active')) {
-    // Add the class "dp-blur" to the p tag
+      // Add the class "dp-blur" to the p tag
       forwardPageButton.classList.add('dp-blur');
     } else {
-    // Remove the class "dp-blur" from the p tag
+      // Remove the class "dp-blur" from the p tag
       forwardPageButton.classList.remove('dp-blur');
     }
 
