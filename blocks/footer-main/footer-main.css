@@ -198,8 +198,7 @@
   list-style: none;
   flex-wrap: wrap;
   row-gap: 14px;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
+  column-gap: 16px;
   flex-direction: row;
 }
 .footer-main-wrapper .footer-main > .language-div + .language-div li {
