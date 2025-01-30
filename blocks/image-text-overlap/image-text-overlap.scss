@@ -20,6 +20,14 @@
           margin: 0;
           margin-bottom: 24px;
         }
+        .icon{
+          height: auto;
+          width: auto;
+          i{
+            font-size: 16px;
+            color: $--blue-675;
+          }
+        }
         &.columns-2-cols {
           >div {
             display: flex;

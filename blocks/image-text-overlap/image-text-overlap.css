@@ -21,6 +21,14 @@
   margin: 0;
   margin-bottom: 24px;
 }
+.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block .icon {
+  height: auto;
+  width: auto;
+}
+.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block .icon i {
+  font-size: 16px;
+  color: #005589;
+}
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols > div {
   display: flex;
   flex-direction: column;
