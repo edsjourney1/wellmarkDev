@@ -593,11 +593,6 @@ a:any-link {
   width: max-content;
   margin-bottom: 16px;
 }
-.section .default-content-wrapper p.button-container:has(img) {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
 @media (max-width: 480px) {
   .section .default-content-wrapper p.button-container {
     width: 100%;
