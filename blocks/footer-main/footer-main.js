@@ -35,7 +35,7 @@ export default function decorate(block) {
     languageList.classList.add('language-list');
     const languageDescDiv = document.createElement('div');
     languageDescDiv.classList.add('language-desc-div');
-    block.children[4].append(languageDescDiv)
+    block.children[4].append(languageDescDiv);
 
     const langLinks = languageList.querySelectorAll('a');
     langLinks.forEach((link) => {
