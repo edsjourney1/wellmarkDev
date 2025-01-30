@@ -182,24 +182,15 @@ function renderBlogMenu(nav) {
           blogmenuli.addEventListener('click', (e) => {
             const blogbarselect = e.target?.closest('.blog-menu-link');
             const blogcheck = blogbarselect != null;
-            // const blogsubmenucls = document.querySelectorAll('.blog-header-section');
-            // const blogsubmenuadd = blogsubmenucls[0];
-            // const mainsubmenucls = document.querySelectorAll('.main-header');
-            // const mainsubmenuadd = mainsubmenucls[0];
-
             if (blogcheck) {
               if (blogbarselect?.classList.contains('show-blog-menu')) {
                 blogbarselect?.classList.remove('show-blog-menu');
-                // blogsubmenuadd?.classList.remove('blog-submenu-list');
-                // mainsubmenuadd?.classList.remove('blog-submenu-list');
               } else {
                 const bloganchoractive = document.querySelectorAll('.blog-menu-link');
                 bloganchoractive.forEach((bloganchor) => {
                   bloganchor.classList.remove('show-blog-menu');
                 });
                 blogbarselect?.classList.add('show-blog-menu');
-                // blogsubmenuadd?.classList.add('blog-submenu-list');
-                // mainsubmenuadd?.classList.add('blog-submenu-list');
               }
             }
           });
