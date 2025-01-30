@@ -9,6 +9,17 @@
     }
     .image-text-overlap {
       &.block {
+        h3{
+          margin: 12px 0;
+        }
+        ul{
+          margin: 0;
+          margin-bottom: 24px;
+        }
+        ol{
+          margin: 0;
+          margin-bottom: 24px;
+        }
         &.columns-2-cols {
           >div {
             display: flex;

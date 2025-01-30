@@ -10,6 +10,17 @@
     width: calc(100% - 104px);
   }
 }
+.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block h3 {
+  margin: 12px 0;
+}
+.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block ul {
+  margin: 0;
+  margin-bottom: 24px;
+}
+.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block ol {
+  margin: 0;
+  margin-bottom: 24px;
+}
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols > div {
   display: flex;
   flex-direction: column;
