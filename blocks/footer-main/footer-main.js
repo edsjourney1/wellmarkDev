@@ -29,7 +29,6 @@ export default function decorate(block) {
     iconParent.insertBefore(iconEl, icon);
     icon.remove();
   }
-  // <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
   const languageList = block.children[4].querySelector('ul');
   if (languageList) {
