@@ -34,10 +34,6 @@
       padding: 0;
     }
     h1,
-    h2{
-      color: $--blue-550;
-    }
-    h1,
     h2,
     h3,
     h4,
@@ -194,7 +190,7 @@
                   i{
                     font-size: 15px;
                     color: #fff;
-                    margin: 0 $--spacing-s 0 0;
+                    margin: 0;
                   }
                 }
               }
@@ -206,7 +202,7 @@
                   i{
                     font-size: 15px;
                     color: $--blue-675;
-                    margin: 0 $--spacing-s 0 0;
+                    margin: 0;
                   }
                 }
                 &:hover{
