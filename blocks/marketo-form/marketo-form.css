@@ -130,8 +130,11 @@ form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap .mktoHtmlText .required 
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap:has(h1) {
   display: none;
 }
-form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap:has(script) {
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap:has(.mktoHtmlText:not(p)) {
   display: none;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap:has(p:not(:empty)) {
+  display: block;
 }
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap label:has(.mktoAsterix) {
   display: inline-flex;
@@ -148,7 +151,10 @@ form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap label:has(.mktoAsterix) 
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoFormCol {
   margin: 0 !important;
 }
-form.eds-mkto-form.mktoForm .mktoFormRow .mktoFormCol:has(.mktoFieldWrap) {
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFormCol:has(.mktoFieldWrap:empty) {
+  min-height: 0;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFormCol:has(.mktoHtmlText:not(p)) {
   min-height: 0;
 }
 form.eds-mkto-form.mktoForm .mktoButtonRow .mktoButton {
