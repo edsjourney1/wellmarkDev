@@ -274,6 +274,15 @@
       > div {
         max-width: 1275px;
         margin: auto;
+        span {
+          height: inherit;
+          width: inherit;
+          margin-right: 5px;
+        }
+        i {
+          font-size: inherit;
+          color: inherit;
+        }
         > p {
           padding-bottom: 24px;
           opacity: 1;

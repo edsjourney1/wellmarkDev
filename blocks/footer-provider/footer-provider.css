@@ -231,6 +231,15 @@
   opacity: 1;
   background-color: #d6e5f1;
 }
+.footer-provider-wrapper .footer-provider > .copyright-div i {
+  font-size: inherit;
+  color: inherit;
+}
+.footer-provider-wrapper .footer-provider > .copyright-div span {
+  height: inherit;
+  width: inherit;
+  margin-right: 5px;
+}
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .copyright-div {
     padding: 36px 20px 52px 20px;

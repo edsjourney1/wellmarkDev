@@ -198,7 +198,8 @@
   list-style: none;
   flex-wrap: wrap;
   row-gap: 14px;
-  column-gap: 16px;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
   flex-direction: row;
 }
 .footer-main-wrapper .footer-main > .language-div + .language-div li {
@@ -320,6 +321,15 @@
 .footer-main-wrapper .footer-main > .copyright-div > div {
   max-width: 1275px;
   margin: auto;
+}
+.footer-main-wrapper .footer-main > .copyright-div > div span {
+  height: inherit;
+  width: inherit;
+  margin-right: 5px;
+}
+.footer-main-wrapper .footer-main > .copyright-div > div i {
+  font-size: inherit;
+  color: inherit;
 }
 .footer-main-wrapper .footer-main > .copyright-div > div > p {
   padding-bottom: 24px;
