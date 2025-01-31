@@ -67,13 +67,13 @@
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px 0px 20px;
+        padding: 36px 20px 0 20px;
       }
       @include for-tablet {
-        padding: 36px 36px 0px 36px;
+        padding: 36px 36px 0 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px 0px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-large {
         padding: 36px 52px 0 52px;
@@ -82,31 +82,31 @@
         padding: 36px 36px 0 36px;
       }
       > div {
-        padding-bottom: 36px;
         border-bottom: 2px solid $--gray-225;
+        padding-bottom: 36px;
       }
     }
     > .adobe-div {
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px 0px 20px;
+        padding: 36px 20px 0 20px;
       }
       @include for-tablet {
-        padding: 36px 36px 0px 36px;
+        padding: 36px 36px 0 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px 0px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-large {
-        padding: 36px 52px 0px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-laptop {
-        padding: 36px 36px 0px 36px;
+        padding: 36px 36px 0 36px;
       }
       > div {
-        padding-bottom: 36px;
         border-bottom: 2px solid $--gray-225;
+        padding-bottom: 36px;
       }
     }
     > .language-div {
@@ -144,7 +144,8 @@
         font-size: 16px;
         font-weight: 700;
         letter-spacing: 0px;
-        line-height: 24px;
+        text-align: left;
+        line-height: 20px;
         margin: 0;
       }
       > div h3 {
@@ -253,7 +254,6 @@
       }
     }
     > .copyright-div {
-      // padding-top: 36px;
       opacity: 1;
       background-color: $--blue-100;
       @include for-mobile {
@@ -274,6 +274,15 @@
       > div {
         max-width: 1275px;
         margin: auto;
+        span {
+          height: inherit;
+          width: inherit;
+          margin-right: 5px;
+        }
+        i {
+          font-size: inherit;
+          color: inherit;
+        }
         > p {
           padding-bottom: 24px;
           opacity: 1;

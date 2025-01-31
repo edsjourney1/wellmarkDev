@@ -21,15 +21,6 @@ export default function decorate(block) {
   const attentionDiv = block.children[5];
   attentionDiv.append(socialDiv2);
 
-  const icon = block.children[6].querySelector('em');
-  if (icon) {
-    const iconParent = icon.parentNode;
-    const iconEl = document.createElement('span');
-    iconEl.className = `fa-solid fa-${icon.innerHTML.substr(1)}`;
-    iconParent.insertBefore(iconEl, icon);
-    icon.remove();
-  }
-
   const languageList = block.children[4].querySelector('ul');
   if (languageList) {
     languageList.classList.add('language-list');
