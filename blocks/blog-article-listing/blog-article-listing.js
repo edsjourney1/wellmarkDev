@@ -778,7 +778,6 @@ export default async function decorate(block) {
       const categoryPara = document.createElement('p');
       categoryPara.classList.add('category-list');
       contentDiv.appendChild(categoryPara);
-      console.log(category);
       categoryPara.append(category);
       // category.forEach((item) => {
       //   const anchor = document.createElement('a');
