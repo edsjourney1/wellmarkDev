@@ -24,9 +24,11 @@ export default async function decorate(block) {
     const figcaptionEl = document.createElement('figcaption');
     const str1 = `${author ? author.innerHTML : ''}`;
     const str2 = source ? `<cite title='${source.innerHTML}'>${source.innerHTML}</cite>` : '';
-    let str = str1 ? str1 : '';
-    str2 && str1 && (str += ' in ');
-    str += str2 ? str2 : '';
+    let str = str1;
+    if (str1 && str2) {
+      str += ' in ';
+    }
+    str += str2;
     figcaptionEl.innerHTML = str;
     figureEl.append(figcaptionEl);
   }
