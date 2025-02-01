@@ -1,18 +1,14 @@
 export default async function decorate(block) {
   const children = block.children;
-  let quoteEl;
-  let infoEl;
+  let [quoteEl, infoEl] = children;
   let quote;
   let authorEl;
   let sourceEl;
   if (children.length === 1) {
-    quoteEl = children[0];
     quote = quoteEl.querySelector('p');
     quoteEl.remove();
   }
   if (children.length === 2) {
-    quoteEl = children[0];
-    infoEl = children[1];
     quote = quoteEl.querySelector('p');
     authorEl = infoEl.querySelector('div:first-child');
     sourceEl = infoEl.querySelector('div:last-child');
