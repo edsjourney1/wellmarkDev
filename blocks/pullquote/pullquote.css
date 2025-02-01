@@ -1,0 +1,135 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.pullquote {
+  max-width: 790px;
+}
+.pullquote-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+}
+.pullquote-wrapper .pullquote-bar {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+}
+.pullquote-wrapper .pullquote-bar::before, .pullquote-wrapper .pullquote-bar::after {
+  display: block;
+  height: 8px;
+  content: "";
+  width: 100%;
+  background-color: #d6e5f1;
+}
+.pullquote-wrapper .pullquote-bar span {
+  height: auto;
+  width: auto;
+  line-height: 1;
+}
+.pullquote-wrapper .pullquote-bar .icon > i {
+  color: #d6e5f1;
+  font-size: 57.14px;
+}
+.pullquote-wrapper figure {
+  margin: 30px 0;
+}
+.pullquote-wrapper figcaption {
+  margin-top: 24px;
+  text-align: center;
+}
+.pullquote-wrapper blockquote {
+  margin: 0;
+  text-align: center;
+}
+.pullquote-wrapper blockquote p {
+  font-family: museo, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 24px 0;
+}
+.pullquote-wrapper blockquote p:last-child {
+  margin: 0;
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .pullquote-wrapper {
+    padding: 24px 36px;
+  }
+  .pullquote-wrapper .pullquote-bar {
+    gap: 52px;
+  }
+  .pullquote-wrapper figure {
+    margin: 40px 73px;
+  }
+  .pullquote-wrapper blockquote p {
+    font-size: 32px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .pullquote-wrapper {
+    padding: 24px 36px;
+  }
+  .pullquote-wrapper .pullquote-bar {
+    gap: 52px;
+  }
+  .pullquote-wrapper figure {
+    margin: 40px 73px;
+  }
+  .pullquote-wrapper blockquote p {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .pullquote {
+    max-width: 838px;
+  }
+  .pullquote-wrapper {
+    padding: 24px 36px;
+  }
+  .pullquote-wrapper .pullquote-bar {
+    gap: 52px;
+  }
+  .pullquote-wrapper figure {
+    margin: 40px 82px;
+  }
+  .pullquote-wrapper blockquote p {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .pullquote {
+    max-width: 838px;
+  }
+  .pullquote-wrapper {
+    padding: 24px 36px;
+  }
+  .pullquote-wrapper .pullquote-bar {
+    gap: 52px;
+  }
+  .pullquote-wrapper figure {
+    margin: 40px 107px;
+  }
+  .pullquote-wrapper blockquote p {
+    font-size: 32px;
+  }
+}
+@media (min-width: 1379px) {
+  .pullquote {
+    max-width: 838px;
+  }
+  .pullquote-wrapper {
+    padding: 24px 36px;
+  }
+  .pullquote-wrapper .pullquote-bar {
+    gap: 52px;
+  }
+  .pullquote-wrapper figure {
+    margin: 40px 107px;
+  }
+  .pullquote-wrapper blockquote p {
+    font-size: 32px;
+  }
+}
