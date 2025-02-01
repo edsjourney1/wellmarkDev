@@ -32,8 +32,10 @@
 .alert-wrapper .alert > div:first-child {
   left: 34px;
   position: absolute;
-  top: 24px p;
-  top-line-height: 1;
+  top: 24px;
+}
+.alert-wrapper .alert > div:first-child p {
+  line-height: 1;
 }
 .alert-warning {
   background-color: #fffaee;
