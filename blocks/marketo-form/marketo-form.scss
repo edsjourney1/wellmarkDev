@@ -129,8 +129,11 @@ form.eds-mkto-form {
                 &:has(h1){
                     display: none;
                 }
-                &:has(script){
+                &:has(.mktoHtmlText:not(p)){
                     display: none;
+                }
+                &:has(p:not(:empty)) {
+                    display: block;
                 }
                 label:has(.mktoAsterix){
                     display: inline-flex;
@@ -147,7 +150,10 @@ form.eds-mkto-form {
             }
             .mktoFormCol{
                 margin: 0 !important;
-                &:has(.mktoFieldWrap){
+                &:has(.mktoFieldWrap:empty){
+                    min-height: 0;
+                }
+                &:has(.mktoHtmlText:not(p)){
                     min-height: 0;
                 }
             }

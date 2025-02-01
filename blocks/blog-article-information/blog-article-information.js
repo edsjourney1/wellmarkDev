@@ -36,6 +36,14 @@ export default function decorate(block) {
   if (author) {
     author.parentElement.classList.add('author');
   }
+  const authorPtag = document.querySelector('.author p');
+  const authorName = document.querySelector('meta[name="author-name"]').content;
+  const authorSpantag = document.createElement('p');
+  const nameofAuthor = document.createTextNode(authorName);
+  if (authorPtag) {
+    authorSpantag.appendChild(nameofAuthor);
+    authorPtag.appendChild(authorSpantag);
+  }
   const linkPara = block.children[1].children[0].querySelector('p');
   if (linkPara) {
     linkPara.parentElement.classList.add('article-link');
