@@ -1,14 +1,13 @@
 export default async function decorate(block) {
-  const children = block.children;
-  let [quoteEl, infoEl] = children;
+  const [quoteEl, infoEl] = block.children;
   let quote;
   let authorEl;
   let sourceEl;
-  if (children.length === 1) {
+  if (quoteEl && !infoEl) {
     quote = quoteEl.querySelector('p');
     quoteEl.remove();
   }
-  if (children.length === 2) {
+  if (quoteEl && infoEl) {
     quote = quoteEl.querySelector('p');
     authorEl = infoEl.querySelector('div:first-child');
     sourceEl = infoEl.querySelector('div:last-child');
@@ -26,7 +25,7 @@ export default async function decorate(block) {
     const str1 = `${author ? author.innerHTML : ''}`;
     const str2 = source ? `<cite title='${source.innerHTML}'>${source.innerHTML}</cite>` : '';
     let str = str1 ? str1 : '';
-    str += str2 && str1 ? ' in ' : '';
+    str2 && str1 && (str += ' in ');
     str += str2 ? str2 : '';
     figcaptionEl.innerHTML = str;
     figureEl.append(figcaptionEl);
