@@ -584,7 +584,7 @@ export default async function decorate(block) {
   countResult.classList.add('count-result');
   paginationContainer.append(countList, countResult);
   paginationDiv.append(paginationContainer);
-  block.append(blockDiv, paginationDiv);
+  block.append(paginationDiv);
 
   const itemsPerPage = innertextP;
   let currentPage = 1;
