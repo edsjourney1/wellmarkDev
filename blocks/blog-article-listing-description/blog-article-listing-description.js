@@ -1,7 +1,8 @@
 const myJson = [
   {
     publishedDate: '10/02/1901',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -12,7 +13,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1998',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -23,7 +25,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1997',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -34,7 +37,8 @@ const myJson = [
   },
   {
     publishedDate: '10/01/1900',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -45,7 +49,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -56,7 +61,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -67,7 +73,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -78,7 +85,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -89,7 +97,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -100,7 +109,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -111,7 +121,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -122,7 +133,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -133,7 +145,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -144,7 +157,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -155,7 +169,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -166,7 +181,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -177,7 +193,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -188,7 +205,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -199,7 +217,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -210,7 +229,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -221,7 +241,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -232,7 +253,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -243,7 +265,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -254,7 +277,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -265,7 +289,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -276,7 +301,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -287,7 +313,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -298,7 +325,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -309,7 +337,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -320,7 +349,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -331,7 +361,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -342,7 +373,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -353,7 +385,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -364,7 +397,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -375,7 +409,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -386,7 +421,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -397,7 +433,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -408,7 +445,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -419,7 +457,8 @@ const myJson = [
   },
   {
     publishedDate: '10/02/1999',
-    ImageUrl: 'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
     title: 'Type something',
     category: ['category one', 'category two', 'category three'],
     articleReadTime: '5 min read',
@@ -463,58 +502,58 @@ export default async function decorate(block) {
       const dateB = new Date(b.publishedDate?.split('/').reverse().join('/'));
       return dateA - dateB;
     });
-    sortedJSON.forEach(({
-      ImageUrl, category, publishedDate, articleReadTime, title, description,
-    }) => {
-      const mainDiv = document.createElement('div');
-      mainDiv.classList.add('card-div');
+    sortedJSON.forEach(
+      ({ ImageUrl, category, publishedDate, articleReadTime, title, description }) => {
+        const mainDiv = document.createElement('div');
+        mainDiv.classList.add('card-div');
 
-      const image = document.createElement('img');
-      image.src = ImageUrl;
-      image.alt = 'thumbnail';
-      mainDiv.appendChild(image);
+        const image = document.createElement('img');
+        image.src = ImageUrl;
+        image.alt = 'thumbnail';
+        mainDiv.appendChild(image);
 
-      const contentDiv = document.createElement('div');
-      contentDiv.classList.add('content-div');
-      mainDiv.appendChild(contentDiv);
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('content-div');
+        mainDiv.appendChild(contentDiv);
 
-      const mainTitle = document.createElement('h3');
-      mainTitle.classList.add('card-title');
-      mainTitle.textContent = title;
-      contentDiv.appendChild(mainTitle);
+        const mainTitle = document.createElement('h3');
+        mainTitle.classList.add('card-title');
+        mainTitle.textContent = title;
+        contentDiv.appendChild(mainTitle);
 
-      const cardDesc = document.createElement('p');
-      cardDesc.classList.add('description');
-      cardDesc.textContent = description;
-      contentDiv.appendChild(cardDesc);
+        const cardDesc = document.createElement('p');
+        cardDesc.classList.add('description');
+        cardDesc.textContent = description;
+        contentDiv.appendChild(cardDesc);
 
-      const datetimeDiv = document.createElement('div');
-      datetimeDiv.classList.add('date-div');
-      contentDiv.appendChild(datetimeDiv);
+        const datetimeDiv = document.createElement('div');
+        datetimeDiv.classList.add('date-div');
+        contentDiv.appendChild(datetimeDiv);
 
-      const pubDate = document.createElement('p');
-      pubDate.classList.add('date');
-      pubDate.textContent = publishedDate;
-      datetimeDiv.appendChild(pubDate);
+        const pubDate = document.createElement('p');
+        pubDate.classList.add('date');
+        pubDate.textContent = publishedDate;
+        datetimeDiv.appendChild(pubDate);
 
-      const arcretime = document.createElement('p');
-      arcretime.classList.add('read-time');
-      arcretime.textContent = articleReadTime;
-      datetimeDiv.appendChild(arcretime);
+        const arcretime = document.createElement('p');
+        arcretime.classList.add('read-time');
+        arcretime.textContent = articleReadTime;
+        datetimeDiv.appendChild(arcretime);
 
-      const categoryPara = document.createElement('p');
-      categoryPara.classList.add('category-list');
-      contentDiv.appendChild(categoryPara);
+        const categoryPara = document.createElement('p');
+        categoryPara.classList.add('category-list');
+        contentDiv.appendChild(categoryPara);
 
-      category.forEach((item) => {
-        const anchor = document.createElement('a');
-        anchor.href = 'www.google.com';
-        anchor.textContent = item;
-        categoryPara.appendChild(anchor);
-      });
+        category.forEach((item) => {
+          const anchor = document.createElement('a');
+          anchor.href = 'www.google.com';
+          anchor.textContent = item;
+          categoryPara.appendChild(anchor);
+        });
 
-      blockDiv.appendChild(mainDiv);
-    });
+        blockDiv.appendChild(mainDiv);
+      },
+    );
     countList.innerHTML = '';
     const showingText = document.createElement('p');
     showingText.textContent = 'Showing';
@@ -630,10 +669,18 @@ export default async function decorate(block) {
 
     renderItems();
     // Get the p tag with the i tag that has the class "fa-chevrons-left"
-    const doublePreviousPageButton = block.querySelector('.count-result p i.fa-chevrons-left').parentElement;
-    const doubleforwardPageButton = block.querySelector('.count-result p i.fa-chevrons-right').parentElement;
-    const PreviousPageButton = block.querySelector('.count-result p i.fa-chevron-left').parentElement;
-    const forwardPageButton = block.querySelector('.count-result p i.fa-chevron-right').parentElement;
+    const doublePreviousPageButton = block.querySelector(
+      '.count-result p i.fa-chevrons-left',
+    ).parentElement;
+    const doubleforwardPageButton = block.querySelector(
+      '.count-result p i.fa-chevrons-right',
+    ).parentElement;
+    const PreviousPageButton = block.querySelector(
+      '.count-result p i.fa-chevron-left',
+    ).parentElement;
+    const forwardPageButton = block.querySelector(
+      '.count-result p i.fa-chevron-right',
+    ).parentElement;
 
     // Get the first button
     const firstButton = block.querySelector('.count-result button');
@@ -672,7 +719,10 @@ export default async function decorate(block) {
     }
 
     // Check if the first button has the class "active"
-    if (lastButton.classList.contains('active') || lastButtonBeforeLast.classList.contains('active')) {
+    if (
+      lastButton.classList.contains('active') ||
+      lastButtonBeforeLast.classList.contains('active')
+    ) {
       // Add the class "dp-none" to the p tag
       doubleforwardPageButton.classList.add('dp-none');
     } else {

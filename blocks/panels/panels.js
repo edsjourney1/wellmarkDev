@@ -22,8 +22,7 @@ export default async function decorate(block) {
     col.parentNode.insertBefore(wrapper, col);
     wrapper.appendChild(col);
 
-    const [topSection, bottomSection, labelSection, collapsibleSection] =
-      col.children;
+    const [topSection, bottomSection, labelSection, collapsibleSection] = col.children;
     topSection?.classList.add('panels-top-section');
     bottomSection?.classList.add('panels-bottom-section');
     collapsibleSection?.classList.add('panels-toggle-section');
@@ -56,9 +55,7 @@ export default async function decorate(block) {
     }
   });
   const topSections = Array.from(block.querySelectorAll('.panels-top-section'));
-  const bottomSections = Array.from(
-    block.querySelectorAll('.panels-bottom-section'),
-  );
+  const bottomSections = Array.from(block.querySelectorAll('.panels-bottom-section'));
   [...topSections, ...bottomSections].forEach((el) => {
     el.removeAttribute('style');
   });

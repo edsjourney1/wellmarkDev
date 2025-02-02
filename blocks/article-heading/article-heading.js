@@ -1,6 +1,7 @@
 export default function decorate(block) {
-  const title = block.children[0].textContent;
-  const description = block.children[1].textContent;
+  const thisBlock = block;
+  const title = thisBlock.children[0].textContent;
+  const description = thisBlock.children[1].textContent;
   const div = document.createElement('div');
   const heading = document.createElement('h2');
   heading.append(title);
@@ -9,6 +10,6 @@ export default function decorate(block) {
   paragraph.classList.add('description');
   paragraph.append(description);
   div.append(heading, paragraph);
-  block.innerHTML = '';
-  block.append(div);
+  thisBlock.innerHTML = '';
+  thisBlock.append(div);
 }
