@@ -17,8 +17,7 @@
   background-color: #005589;
   border-radius: 50px;
   color: #ffffff;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
   display: inline-flex;
   font-size: 18px;
   font-weight: 500;
