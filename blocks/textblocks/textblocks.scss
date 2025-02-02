@@ -23,16 +23,37 @@
     &-4-col {
         > div {
             width: 25%;
+            @include for-tablet {
+                width: 50%;
+            }
+            @include for-tablet-smallest {
+                width: 50%;
+            }
+            @include for-mobile {
+                width: 100%;
+            }
         }
     }
     &-3-col {
         > div {
             width: 33.3333%;
+            @include for-tablet {
+                width: 50%;
+            }
+            @include for-tablet-smallest {
+                width: 50%;
+            }
+            @include for-mobile {
+                width: 100%;
+            }
         }
     }
     &-2-col {
         > div {
             width: 50%;
+            @include for-mobile {
+                width: 100%;
+            }
         }
     }
     &-1-col {

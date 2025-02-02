@@ -25,11 +25,46 @@
 .textblocks-4-col > div {
   width: 25%;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .textblocks-4-col > div {
+    width: 50%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .textblocks-4-col > div {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .textblocks-4-col > div {
+    width: 100%;
+  }
+}
 .textblocks-3-col > div {
   width: 33.3333%;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .textblocks-3-col > div {
+    width: 50%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .textblocks-3-col > div {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .textblocks-3-col > div {
+    width: 100%;
+  }
+}
 .textblocks-2-col > div {
   width: 50%;
+}
+@media (max-width: 480px) {
+  .textblocks-2-col > div {
+    width: 100%;
+  }
 }
 .textblocks-1-col > div {
   width: 100%;
