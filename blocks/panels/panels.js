@@ -9,7 +9,7 @@ const scrollToCol = (col) => {
     const boxTop = col.getBoundingClientRect().top;
     window.scrollTo({
       behavior: 'smooth',
-      top: boxTop + window.scrollY - 80
+      top: boxTop + window.scrollY - 80,
     });
   }, 250);
 };
