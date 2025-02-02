@@ -1,0 +1,92 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.textblocks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    row-gap: 52px;
+    width: calc(100% + 30px);
+    h4 {
+        margin: 0 0 12px 0;
+    }
+    h5 {
+        margin: 0 0 12px 0;
+    }
+    p + h5 {
+        margin: 24px 0 12px 0;
+    }
+    > div {
+        box-sizing: border-box;
+        padding: 0 15px;
+    }
+    &-4-col {
+        > div {
+            width: 25%;
+        }
+    }
+    &-3-col {
+        > div {
+            width: 33.3333%;
+        }
+    }
+    &-2-col {
+        > div {
+            width: 50%;
+        }
+    }
+    &-1-col {
+        > div {
+            width: 100%;
+        }
+    }
+    a.button {
+        align-items: center;
+        display: flex;
+        margin-top: 15px;
+        .icon {
+            line-height: inherit;
+            i {
+                padding: 0;
+            }
+        }
+    }
+    h3, h4, h5, h6 {
+        a {
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 15px;
+        }
+        .icon {
+            font-size: 0.75em;
+            height: auto;
+            line-height: 1;
+            margin-left: 6px;
+            width: auto;
+            > i {
+                color: inherit;
+                font-size: inherit;
+            }
+        }
+    }
+    .button-container  {
+        > a {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .icon {
+            font-size: 0.75em;
+            height: auto;
+            line-height: 1;
+            margin-left: 6px;
+            width: auto;
+            > i {
+                color: inherit;
+                font-size: inherit;
+            }
+        }
+    }
+}
