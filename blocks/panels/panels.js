@@ -4,6 +4,15 @@ const setEqualHeights = (elements) => {
     el.style.height = `${maxHeight}px`;
   });
 };
+const scrollToCol = (col) => {
+  setTimeout(() => {
+    const boxTop = col.getBoundingClientRect().top;
+    window.scrollTo({
+      behavior: 'smooth',
+      top: boxTop + window.scrollY - 80
+    });
+  }, 250);
+};
 export default async function decorate(block) {
   const children = Array.from(block.children);
   children.forEach((col) => {
@@ -24,6 +33,25 @@ export default async function decorate(block) {
     }
     if (collapsibleSection?.children.length) {
       collapsibleSection.classList.add('panels-toggle-section-auto');
+      const [toggleOpenEl, toggleCloseEl] = collapsibleSection.children;
+      const toggleOpenBtn = document.createElement('button');
+      const toggleCloseBtn = document.createElement('button');
+      toggleOpenBtn.className = 'panels-toggle-section-open';
+      toggleCloseBtn.className = 'panels-toggle-section-close';
+      toggleOpenBtn.innerHTML = toggleOpenEl.innerHTML;
+      toggleCloseBtn.innerHTML = toggleCloseEl.innerHTML;
+      toggleOpenEl.remove();
+      toggleCloseEl.remove();
+      collapsibleSection.append(toggleOpenBtn);
+      collapsibleSection.append(toggleCloseBtn);
+      toggleOpenBtn.addEventListener('click', () => {
+        col.classList.remove('panels-item-closed');
+        scrollToCol(col);
+      });
+      toggleCloseBtn.addEventListener('click', () => {
+        col.classList.add('panels-item-closed');
+        scrollToCol(col);
+      });
     }
   });
   const topSections = Array.from(block.querySelectorAll('.panels-top-section'));

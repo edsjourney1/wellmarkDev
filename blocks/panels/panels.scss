@@ -65,11 +65,33 @@
             #{$this}-bottom-section {
                 background-color: $--blue-50;
             }
+            #{$this}-toggle-section {
+                background-color: $--blue-50;
+            }
+        }
+        &-closed {
+            @include for-mobile {
+                #{$this}-bottom-section {
+                    display: none;
+                }
+            }
+            #{$this}-toggle-section {
+                &-auto {
+                    border-top: 0;
+                }
+                &-open {
+                    display: block;
+                }
+                &-close {
+                    display: none;
+                }
+            }
         }
     }
     &-top-section {
         background-color: $--blue-50;
         border-bottom: 2px solid $--blue-550;
+        border-radius: 2px 2px 0 0;
         padding: 24px;
         h3 {
             font-family: $--font-museo;
@@ -93,6 +115,7 @@
         }
     }
     &-bottom-section {
+        border-radius: 0 0 2px 2px;
         padding: 24px;
         @include for-mobile {
             height: auto !important;
@@ -118,9 +141,23 @@
     &-toggle-section {
         display: none;
         &-auto {
+            border-top: 2px solid $--blue-550;
             @include for-mobile {
                 display: block;
             }
+        }
+        &-open, &-close {
+            background-color: transparent;
+            border: 0;
+            font-weight: 700;
+            width: 100%;
+            padding: 14px;
+        }
+        &-open {
+            display: none;
+        }
+        &-close {
+            display: block;
         }
     }
     &-4-col {
