@@ -19,6 +19,7 @@
     > div {
         box-sizing: border-box;
         padding: 0 15px;
+        width: 100%;
     }
     &-4-col {
         > div {
@@ -56,11 +57,6 @@
             }
         }
     }
-    &-1-col {
-        > div {
-            width: 100%;
-        }
-    }
     a.button {
         align-items: center;
         display: flex;
@@ -95,7 +91,7 @@
         > a {
             align-items: center;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             margin-top: 15px;
         }
         .icon {
