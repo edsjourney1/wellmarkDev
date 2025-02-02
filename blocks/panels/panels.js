@@ -1,7 +1,7 @@
 const setEqualHeights = (elements) => {
-  const maxHeight = Math.max(...elements.map(el => el.clientHeight));
+  const maxHeight = Math.max(...elements.map((el) => el.clientHeight));
   elements.forEach(el => {
-    el.style.height = `${maxHeight}px`;    
+    el.style.height = `${maxHeight}px`;
   });
 };
 export default async function decorate(block) {
@@ -26,18 +26,18 @@ export default async function decorate(block) {
       collapsibleSection.classList.add('panels-toggle-section-auto');
     }
   });
-  const topSections = Array.from(block.querySelectorAll(".panels-top-section"));
-  const bottomSections = Array.from(block.querySelectorAll(".panels-bottom-section"));
-  [...topSections, ...bottomSections].forEach(el => {
-    el.removeAttribute("style");
+  const topSections = Array.from(block.querySelectorAll('.panels-top-section'));
+  const bottomSections = Array.from(block.querySelectorAll('.panels-bottom-section'));
+  [...topSections, ...bottomSections].forEach((el) => {
+    el.removeAttribute('style');
   });
   setTimeout(() => {
     setEqualHeights(topSections);
     setEqualHeights(bottomSections);
   }, 1);
   window.addEventListener('resize', () => {
-    [...topSections, ...bottomSections].forEach(el => {
-      el.removeAttribute("style");
+    [...topSections, ...bottomSections].forEach((el) => {
+      el.removeAttribute('style');
     });
     setTimeout(() => {
       setEqualHeights(topSections);
