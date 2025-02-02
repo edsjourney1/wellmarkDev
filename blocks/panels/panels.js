@@ -1,12 +1,12 @@
 const setEqualHeights = (elements) => {
   const maxHeight = Math.max(...elements.map((el) => el.clientHeight));
-  elements.forEach(el => {
+  elements.forEach((el) => {
     el.style.height = `${maxHeight}px`;
   });
 };
 export default async function decorate(block) {
   const children = Array.from(block.children);
-  children.forEach(col => {
+  children.forEach((col) => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('panels-col');
     col.classList.add('panels-item');
