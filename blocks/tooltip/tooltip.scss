@@ -1,0 +1,46 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.tooltip {
+    padding: 12px;
+    &-wrapper {
+        * {
+            box-sizing: border-box;
+        }
+        background-color: $--white;
+        border-radius: 4px;
+        box-shadow: rgba($--gray-700, 0.2) 0px 7px 29px 0px;
+        font-size: 0.9em;
+        left: 0;
+        max-width: 300px !important;
+        opacity: 0;
+        padding: 5px;
+        position: absolute;
+        top: 0;
+        transition: all 0.25s ease;
+        visibility: hidden;
+        width: max-content;
+        &-active {
+            opacity: 1;
+            visibility: visible;
+        }
+        p {
+            margin: 0 0 12px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    &-link {
+        text-decoration: none !important;
+        border-bottom-style: dotted;
+        border-bottom-width: 2px;
+    }
+    &-arrow  {
+        position: absolute;
+        background: $--white;
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+    }
+}
