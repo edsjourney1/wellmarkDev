@@ -592,7 +592,6 @@ export default async function decorate(block) {
     blockDiv.innerHTML = '';
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const jsonVar = myJson.slice(startIndex, endIndex);
     countList.innerHTML = '';
     const showingText = document.createElement('p');
     showingText.textContent = innertextH2;
