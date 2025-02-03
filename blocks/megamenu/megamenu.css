@@ -648,11 +648,13 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper {
     padding: 0;
+    margin: 0;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper h4 {
     margin: 0;
     border-bottom: 2px solid #d6e5f1;
     padding-bottom: 24px;
+    width: 100%;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block {
     padding-top: 24px;
@@ -745,11 +747,13 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper {
     padding: 0;
+    margin: 0;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper h4 {
     margin: 0;
     border-bottom: 2px solid #d6e5f1;
     padding-bottom: 24px;
+    width: 100%;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block {
     padding-top: 24px;
@@ -841,11 +845,13 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper {
     padding: 0;
+    margin: 0;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper h4 {
     margin: 0;
     border-bottom: 2px solid #d6e5f1;
     padding-bottom: 24px;
+    width: 100%;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block {
     padding-top: 24px;
