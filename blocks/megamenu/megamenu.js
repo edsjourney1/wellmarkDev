@@ -689,11 +689,11 @@ window.addEventListener('scroll', () => {
   const collapseclose = document.querySelector('.collapse-bar');
   const megamobilemenu = document.querySelector('.main-header-menu');
   if (scrollpos > blogmenubreak) {
-    blogmenuscroll.classList.add('menu-sticky');
+    blogmenuscroll?.classList.add('menu-sticky');
     collapseclose.classList.remove('active');
     megamobilemenu.classList.remove('active');
   } else {
-    blogmenuscroll.classList.remove('menu-sticky');
+    blogmenuscroll?.classList.remove('menu-sticky');
   }
 });
 
