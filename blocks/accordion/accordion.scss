@@ -75,10 +75,16 @@ main {
                     line-height: $--spacing-l;
                     color: $--gray-700;
                     text-decoration: none;
+                    a{
+                        color: $--blue-675;
+                        font-weight: 500;
+                    }
                     span.icon{
+                        width: 16px;
+                        height: 16px;
+                        padding: 0 8px 0 12px;
                         i{
                             font-size: 16px;
-                            padding:0 6px 0 12px;
                             color: $--blue-675;
                         }
                     }
