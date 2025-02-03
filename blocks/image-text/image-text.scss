@@ -101,15 +101,13 @@
               font-weight: 700;
               opacity: 1;
               text-align: left;
-              margin-top: 0;
-              margin-bottom: $--spacing-l;
+              margin: 0;
               @include for-tablet {
                 font-size: 28px;
                 line-height: 28px;
               }
               @include for-mobile {
                 margin-top: $--spacing-xl;
-                margin-bottom: $--spacing-m;
               }
             }
             p {
@@ -123,7 +121,13 @@
               text-align: left;
               line-height: 24px;
               margin-bottom: 20px;
-              margin-top: 0;
+              margin-top: $--spacing-l;
+              @include for-tablet-smallest{
+                margin-top: $--spacing-m;
+              }
+              @include for-mobile {
+                margin-top: $--spacing-m;
+              }
               .icon{
                 height: auto;
                 width: auto;
