@@ -218,12 +218,12 @@
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .blog-article-listing-curated .cards-div > .card-div > .content-div > .date-div > .date::after {
-    right: 310px;
+    right: 275px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .blog-article-listing-curated .cards-div > .card-div > .content-div > .date-div > .date::after {
-    right: 204px;
+    right: 255px;
   }
 }
 @media (max-width: 480px) {
