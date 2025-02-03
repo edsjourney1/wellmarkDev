@@ -34,8 +34,8 @@ export default async function decorate(block) {
   }
   const startSymbol = document.createElement('div');
   const endSymbol = document.createElement('div');
-  startSymbol.classList.add('pullquote-bar');
-  endSymbol.classList.add('pullquote-bar');
+  startSymbol.classList.add('pullquote-v2-bar');
+  endSymbol.classList.add('pullquote-v2-bar');
   startSymbol.innerHTML = `<span class='icon icon-solid--quote-left'>
     <i class='fa-solid fa-quote-left' data-icon-name='solid--quote-left'></i></span>`;
   endSymbol.innerHTML = `<span class='icon icon-solid--quote-right'>

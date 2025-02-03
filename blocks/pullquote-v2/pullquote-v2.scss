@@ -1,13 +1,13 @@
 @import '../../styles/include/mq.scss';
 @import '../../styles/include/tokens.scss';
 
-.pullquote {
+.pullquote-v2 {
     &-wrapper {
         align-items: center;
         display: flex;
         justify-content: center;
         padding: 24px 16px;
-        .pullquote-bar {
+        .pullquote-v2-bar {
             display: flex;
             gap: 36px;
             align-items: center;
@@ -55,7 +55,7 @@
     @include for-tablet-smallest {
         &-wrapper {
             padding: 24px 36px;
-            .pullquote-bar {
+            .pullquote-v2-bar {
                 gap: 52px;
             }
             figure {
@@ -71,7 +71,7 @@
     @include for-tablet {
         &-wrapper {
             padding: 24px 36px;
-            .pullquote-bar {
+            .pullquote-v2-bar {
                 gap: 52px;
             }
             figure {
@@ -88,7 +88,7 @@
         max-width: 838px;
         &-wrapper {
             padding: 24px 36px;
-            .pullquote-bar {
+            .pullquote-v2-bar {
                 gap: 52px;
             }
             figure {
@@ -105,7 +105,7 @@
         max-width: 838px;
         &-wrapper {
             padding: 24px 36px;
-            .pullquote-bar {
+            .pullquote-v2-bar {
                 gap: 52px;
             }
             figure {
@@ -122,7 +122,7 @@
         max-width: 838px;
         &-wrapper {
             padding: 24px 36px;
-            .pullquote-bar {
+            .pullquote-v2-bar {
                 gap: 52px;
             }
             figure {
