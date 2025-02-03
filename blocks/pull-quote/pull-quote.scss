@@ -1,0 +1,71 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.pull-quote-container {
+    .pull-quote-wrapper {
+        @include for-xlarge{
+            width: calc((100% / 12) * 8 - 174px);
+        }
+        @include for-large{
+            width: calc((100% / 12 * 8) - 174px);
+        }
+        .pull-quote.block {
+            @include for-xlarge{
+                padding: 24px 0 36px 0;
+            }
+            @include for-large{
+                padding: 24px 0 36px 0;
+            }
+            .main-content{
+                .quote-content{
+                    p{
+                        color: $--gray-700;
+                        font-family: $--font-museo;
+                        font-size: 32px;
+                        line-height: 36px;
+                        font-weight: 600;
+                        text-align: center;
+                        padding: 52px 108px 52px 107px;
+                        margin: 0;
+                    }
+                }
+                .icon-top, .icon-bottom{
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    span {
+                        position: relative;
+                        z-index: 1;
+                        width: 50px;
+                        height: 36px;
+                        i{
+                            color: $--blue-100;
+                            font-size: 50px;
+                        }
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        width: 342px;
+                        height: 8px;
+                        background-color:  $--blue-100;
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                        width: 342px;
+                        height: 8px;
+                        background-color:  $--blue-100;
+                    }
+                }
+            }
+        }
+    }
+}
