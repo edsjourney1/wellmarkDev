@@ -3,6 +3,11 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .blog-article-listing-curated {
+    padding: 0 52px;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
   .blog-article-listing-curated {
     padding: 0 36px;
@@ -248,16 +253,6 @@
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-}
-@media (min-width: 1379px) {
-  .blog-article-listing-curated .cards-div > .card-div > .content-div > .category-list {
-    width: 209px;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  .blog-article-listing-curated .cards-div > .card-div > .content-div > .category-list {
-    width: 209px;
-  }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .blog-article-listing-curated .cards-div > .card-div > .content-div > .category-list {

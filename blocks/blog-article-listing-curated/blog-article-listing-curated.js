@@ -705,18 +705,17 @@ const myJson = [
 ];
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
-  // const itemsPerPage = Number(block.children[1].children[0].innerText);
   const articleOne = block.children[1].children[0].textContent;
   const articleTwo = block.children[1].children[1].textContent;
   const articleThree = block.children[1].children[2].textContent;
-  const headingSpam = document.createElement('h2');
-  headingSpam.classList.add('title');
-  const iconwithtext = document.createElement('span');
-  iconwithtext.classList.add('text-icon');
-  headingSpam.append(heading);
   const headDiv = document.createElement('div');
-  headDiv.classList.add('heading-div');
-  headDiv.append(headingSpam, iconwithtext);
+  if (heading !== '') {
+    const headingSpam = document.createElement('h2');
+    headingSpam.classList.add('title');
+    headingSpam.append(heading);
+    headDiv.classList.add('heading-div');
+    headDiv.append(headingSpam);
+  }
   block.innerHTML = '';
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
@@ -757,8 +756,16 @@ export default async function decorate(block) {
     const categoryPara = document.createElement('p');
     categoryPara.classList.add('category-list');
     contentDiv.appendChild(categoryPara);
-    categoryPara.append(postArticle1.category);
+    const categoryArr = postArticle1.category.split(',');
+    categoryArr.forEach((item) => {
+      const categorySpan = document.createElement('a');
+      categorySpan.append(item);
+      categoryPara.append(categorySpan);
+    });
     blockDiv.appendChild(mainDiv);
+    blockDiv.addEventListener('click', () => {
+      window.location.href = `${postArticle1.url}`;
+    });
   }
   const postArticle2 = myJson.find((item) => item.url === articleTwo);
   if (postArticle2) {
@@ -796,8 +803,16 @@ export default async function decorate(block) {
     const categoryPara = document.createElement('p');
     categoryPara.classList.add('category-list');
     contentDiv.appendChild(categoryPara);
-    categoryPara.append(postArticle2.category);
+    const categoryArr = postArticle2.category.split(',');
+    categoryArr.forEach((item) => {
+      const categorySpan = document.createElement('a');
+      categorySpan.append(item);
+      categoryPara.append(categorySpan);
+    });
     blockDiv.appendChild(mainDiv);
+    blockDiv.addEventListener('click', () => {
+      window.location.href = `${postArticle2.url}`;
+    });
   }
   const postArticle3 = myJson.find((item) => item.url === articleThree);
   if (postArticle3) {
@@ -835,7 +850,15 @@ export default async function decorate(block) {
     const categoryPara = document.createElement('p');
     categoryPara.classList.add('category-list');
     contentDiv.appendChild(categoryPara);
-    categoryPara.append(postArticle3.category);
+    const categoryArr = postArticle3.category.split(',');
+    categoryArr.forEach((item) => {
+      const categorySpan = document.createElement('a');
+      categorySpan.append(item);
+      categoryPara.append(categorySpan);
+    });
     blockDiv.appendChild(mainDiv);
+    blockDiv.addEventListener('click', () => {
+      window.location.href = `${postArticle3.url}`;
+    });
   }
 }

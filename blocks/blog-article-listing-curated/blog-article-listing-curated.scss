@@ -2,6 +2,9 @@
 @import "../../styles/include/tokens.scss";
 
 .blog-article-listing-curated {
+  @include for-large {
+    padding: 0 52px;
+  }
   @include for-laptop {
     padding: 0 36px;
   }
@@ -198,12 +201,6 @@
           display: flex;
           gap: 12px;
           flex-wrap: wrap;
-          @include for-xlarge {
-            width: 209px;
-          }
-          @include for-large {
-            width: 209px;
-          }
           @include for-laptop {
             width: 209px;
           }
