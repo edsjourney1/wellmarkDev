@@ -1,0 +1,138 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.pullquote-v2 {
+    &-wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: 24px 16px;
+        .pullquote-v2-bar {
+            display: flex;
+            gap: 36px;
+            align-items: center;
+            justify-content: center;
+            &::before, &::after {
+                display: block;
+                height: 8px;
+                content: '';
+                width: 100%;
+                background-color: $--blue-100;
+            }
+            span {
+                height: auto;
+                width: auto;
+                line-height: 1;
+            }
+            .icon > i {
+                color: $--blue-100;
+                font-size: 57.14px;
+            }
+        }
+        figure {
+            margin: 30px 0;
+        }
+        figcaption {
+            margin-top: 24px;
+            text-align: center;
+        }
+        blockquote {
+            margin: 0;
+            text-align: center;
+            p {
+                font-family: $--font-museo;
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 1.25;
+                margin: 0 0 24px 0;
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    max-width: 790px;
+    @include for-tablet-smallest {
+        &-wrapper {
+            padding: 24px 36px;
+            .pullquote-v2-bar {
+                gap: 52px;
+            }
+            figure {
+                margin: 40px 73px;
+            }
+            blockquote {
+                p {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    @include for-tablet {
+        &-wrapper {
+            padding: 24px 36px;
+            .pullquote-v2-bar {
+                gap: 52px;
+            }
+            figure {
+                margin: 40px 73px;
+            }
+            blockquote {
+                p {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    @include for-laptop {
+        max-width: 838px;
+        &-wrapper {
+            padding: 24px 36px;
+            .pullquote-v2-bar {
+                gap: 52px;
+            }
+            figure {
+                margin: 40px 82px;
+            }
+            blockquote {
+                p {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    @include for-large {
+        max-width: 838px;
+        &-wrapper {
+            padding: 24px 36px;
+            .pullquote-v2-bar {
+                gap: 52px;
+            }
+            figure {
+                margin: 40px 107px;
+            }
+            blockquote {
+                p {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    @include for-xlarge {
+        max-width: 838px;
+        &-wrapper {
+            padding: 24px 36px;
+            .pullquote-v2-bar {
+                gap: 52px;
+            }
+            figure {
+                margin: 40px 107px;
+            }
+            blockquote {
+                p {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}

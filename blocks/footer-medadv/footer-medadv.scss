@@ -30,7 +30,7 @@
       }
       > .social-div {
         display: flex;
-        gap: 11px;
+        gap: 12px;
         > p {
           display: flex;
           gap: 12px;
@@ -51,7 +51,7 @@
               display: flex;
               justify-content: center;
               align-items: center;
-              border-radius: 5px;
+              // border-radius: 5px;
             }
           }
         }
@@ -67,19 +67,19 @@
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px 0px 20px;
+        padding: 36px 20px 0 20px;
       }
       @include for-tablet {
-        padding: 36px 36px 0px 36px;
+        padding: 36px 36px 0 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px 0px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-large {
-        padding: 36px 52px 0px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-laptop {
-        padding: 36px 36px 0px 36px;
+        padding: 36px 36px 0 36px;
       }
       > div {
         border-bottom: 2px solid $--gray-225;
@@ -101,19 +101,19 @@
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px 0px 20px;
+        padding: 36px 20px 0 20px;
       }
       @include for-tablet {
-        padding: 36px 36px 0px 36px;
+        padding: 36px 36px 0 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px 0px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-large {
-        padding: 36px 52px 0px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-laptop {
-        padding: 36px 36px 0px 36px;
+        padding: 36px 36px 0 36px;
       }
       > div {
         border-bottom: 2px solid $--gray-225;
@@ -124,25 +124,31 @@
       max-width: 1275px;
       margin: auto;
       @include for-mobile {
-        padding: 36px 20px 24px 20px;
+        // padding: 36px 20px 24px 20px;
+        padding: 36px 20px 30px 20px;
       }
       @include for-tablet {
-        padding: 36px 36px 24px 36px;
+        // padding: 36px 36px 24px 36px;
+        padding: 36px 36px 30px 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px 24px 52px;
+        // padding: 36px 52px 30px 52px;
+        padding: 36px 52px 36px 52px;
       }
       @include for-large {
-        padding: 36px 52px 24px 52px;
+        // padding: 36px 52px 30px 52px;
+        padding: 36px 52px 36px 52px;
       }
       @include for-laptop {
-        padding: 36px 36px 24px 36px;
+        // padding: 36px 36px 24px 36px;
+        padding: 36px 36px 30px 36px;
       }
-      > div ul {
-        padding-bottom: 24px;
-      }
+      // > div ul {
+      //   padding-bottom: 24px;
+      // }
       > div h4 {
-        padding-bottom: 4px;
+        // padding-bottom: 4px;
+        padding-bottom: 10px;
         opacity: 1;
         color: $--gray-700;
         font-family: $--font-roboto;
@@ -162,6 +168,25 @@
         font-weight: 500;
         letter-spacing: 0px;
       }
+      + .language-div {
+        padding-top: 0px;
+        ul {
+          list-style: none;
+          flex-wrap: wrap;
+          row-gap: 14px;
+          column-gap: 16px;
+          flex-direction: row;
+        }
+        li {
+          line-height: 1;
+          em {
+            display: none;
+          }
+        }
+      }
+      .language-desc-div {
+        padding: 12px 0 16px 0;
+      }
     }
     > .attention-div {
       max-width: 1275px;
@@ -170,17 +195,19 @@
         padding: 0 20px 52px 20px;
       }
       @include for-tablet {
+        // padding: 0 36px 64px 36px;
         padding: 0 36px 52px 36px;
       }
-      @include for-xlarge {
-        padding: 0 52px 52px 52px;
-      }
-      @include for-large {
-        padding: 0 52px 52px 52px;
-      }
-      @include for-laptop {
-        padding: 0 36px 52px 36px;
-      }
+      padding: 0;
+      // @include for-xlarge {
+      //   padding: 0 52px 52px 52px;
+      // }
+      // @include for-large {
+      //   padding: 0 52px 52px 52px;
+      // }
+      // @include for-laptop {
+      //   padding: 0 36px 52px 36px;
+      // }
       > div p {
         opacity: 1;
         color: $--gray-700;
@@ -190,11 +217,12 @@
         letter-spacing: 0px;
         text-align: left;
         line-height: 24px;
+        margin: 0;
       }
       > .social-div {
         display: flex;
-        gap: 11px;
-        padding-top: 36px;
+        gap: 12px;
+        padding-top: 0px;
         > p {
           display: flex;
           gap: 12px;
@@ -257,6 +285,15 @@
       > div {
         max-width: 1275px;
         margin: auto;
+        span {
+          height: inherit;
+          width: inherit;
+          margin-right: 5px;
+        }
+        i {
+          font-size: inherit;
+          color: inherit;
+        }
         > p {
           padding-bottom: 24px;
           opacity: 1;

@@ -185,6 +185,15 @@
     > .copyright-div {
       opacity: 1;
       background-color: $--blue-100;
+      i {
+        font-size: inherit;
+        color: inherit;
+      }
+      span {
+        height: inherit;
+        width: inherit;
+        margin-right: 5px;
+      }
       @include for-mobile {
         padding: 36px 20px 52px 20px;
       }
