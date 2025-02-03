@@ -778,14 +778,12 @@ export default async function decorate(block) {
       const categoryPara = document.createElement('p');
       categoryPara.classList.add('category-list');
       contentDiv.appendChild(categoryPara);
-      categoryPara.append(category);
-      // category.forEach((item) => {
-      //   const anchor = document.createElement('a');
-      //   anchor.href = 'www.google.com';
-      //   anchor.textContent = item;
-      //   categoryPara.appendChild(anchor);
-      // });
-
+      const categoryArr = category.split(',');
+      categoryArr.forEach((item) => {
+        const categorySpan = document.createElement('a');
+        categorySpan.append(item);
+        categoryPara.append(categorySpan);
+      });
       blockDiv.appendChild(mainDiv);
     });
     countList.innerHTML = '';
