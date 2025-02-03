@@ -137,6 +137,15 @@
               line-height: 24px;
               margin-bottom: 20px;
               margin-top: 0;
+              .icon{
+                height: auto;
+                width: auto;
+                i{
+                  font-size: 16px;
+                  color: $--blue-675;
+                  margin-left: $--spacing-s;
+                }
+              }
               &.button-container {
                 margin-top: 0;
                 margin-bottom: 0;

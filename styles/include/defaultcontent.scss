@@ -152,12 +152,15 @@
           }
         }
       }
+      a{
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
       &.button-container {
         display: inline-flex;
         padding-bottom: 0;
         padding-right: 26px;
         width: max-content;
-        margin-bottom: $--spacing-m;
         &:has(img){
           width: 100%;
           padding: 0;
@@ -349,6 +352,7 @@
         text-align: left;
         line-height: 24px;
         display: flex;
+        padding-bottom: 8px;
         .icon{
           height: auto;
           width: auto;
@@ -373,6 +377,7 @@
           text-align: left;
           text-decoration: underline;
           line-height: 24px;
+          margin: 0;
           .icon{
             height: auto;
             width: auto;
