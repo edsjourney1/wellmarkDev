@@ -9,14 +9,15 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+html, body {
+  scroll-behavior: smooth;
+}
+
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 /* buttons */
-html, body {
-  scroll-behavior: smooth;
-}
 .button-container {
   display: flex;
 }
@@ -439,6 +440,14 @@ a:any-link {
   border-top: 2px solid #c2c2c3;
   padding-top: 16px;
 }
+.section.hr-line .default-content-wrapper p {
+  width: 100%;
+}
+.section.hr-line .default-content-wrapper p:has(strong) {
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 16px;
+}
 .section .default-content-wrapper {
   margin: 0 16px 0 16px;
   padding: 0;
@@ -464,6 +473,7 @@ a:any-link {
 @media (min-width: 1379px) {
   .section .default-content-wrapper {
     padding: 0;
+    margin: auto;
   }
 }
 .section .default-content-wrapper h1,
@@ -787,7 +797,7 @@ a:any-link {
   font-weight: 400;
   letter-spacing: 0px;
   text-align: left;
-  line-height: 24px;
+  line-height: 20px;
   display: flex;
   padding-bottom: 8px;
 }
