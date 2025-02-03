@@ -585,12 +585,15 @@ a:any-link {
   color: green;
   font-size: 24px;
 }
+.section .default-content-wrapper p a {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
 .section .default-content-wrapper p.button-container {
   display: inline-flex;
   padding-bottom: 0;
   padding-right: 26px;
   width: max-content;
-  margin-bottom: 16px;
 }
 .section .default-content-wrapper p.button-container:has(img) {
   width: 100%;
@@ -782,6 +785,7 @@ a:any-link {
   text-align: left;
   line-height: 24px;
   display: flex;
+  padding-bottom: 8px;
 }
 .section.body-small .default-content-wrapper p .icon {
   height: auto;
@@ -809,6 +813,7 @@ a:any-link {
   text-align: left;
   text-decoration: underline;
   line-height: 24px;
+  margin: 0;
 }
 .section.body-small .default-content-wrapper p a .icon {
   height: auto;
