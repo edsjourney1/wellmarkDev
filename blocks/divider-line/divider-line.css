@@ -1,0 +1,15 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.divider-line p {
+  margin: 0;
+}
+.divider-line hr {
+  border-color: #f2f2f3;
+  border-width: 1px 0 1px 0;
+  margin: 0;
+}
+.divider-line-dark hr {
+  border-color: #f3f9ff;
+}
