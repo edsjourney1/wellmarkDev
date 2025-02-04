@@ -10,7 +10,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_16c00edee537dcf06b1b8df1704ff248f3dc5cd57.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '02/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738307040',
@@ -24,7 +24,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '06/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305692',
@@ -38,7 +38,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '28/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306803',
@@ -52,7 +52,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1d5f117b5848a8350ae9da153e0bb8f74c28f1cbb.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '11/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305799',
@@ -66,7 +66,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '10/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305770',
@@ -80,7 +80,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '09/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305716',
@@ -94,7 +94,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '28/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305853',
@@ -108,7 +108,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '18/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305983',
@@ -122,7 +122,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '16/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305963',
@@ -136,7 +136,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '15/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305941',
@@ -150,7 +150,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '14/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305923',
@@ -164,7 +164,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '13/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305904',
@@ -178,7 +178,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '23/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306121',
@@ -192,7 +192,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1d5f117b5848a8350ae9da153e0bb8f74c28f1cbb.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '21/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306190',
@@ -206,7 +206,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '20/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306199',
@@ -220,7 +220,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '19/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306195',
@@ -234,7 +234,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '30/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306090',
@@ -248,7 +248,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '28/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306577',
@@ -262,7 +262,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '28/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306760',
@@ -276,7 +276,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '29/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305365',
@@ -290,7 +290,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1d5f117b5848a8350ae9da153e0bb8f74c28f1cbb.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '24/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306594',
@@ -304,7 +304,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '28/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305292',
@@ -318,7 +318,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '02/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305554',
@@ -332,7 +332,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '03/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305551',
@@ -346,7 +346,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '05/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305572',
@@ -360,7 +360,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1b9a42083a90e491e4986172ef49fc0fb8a682a6d.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '06/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305586',
@@ -374,7 +374,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '08/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305603',
@@ -388,7 +388,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '05/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306410',
@@ -402,7 +402,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1b9a42083a90e491e4986172ef49fc0fb8a682a6d.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '06/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306489',
@@ -416,7 +416,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1d5f117b5848a8350ae9da153e0bb8f74c28f1cbb.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '24/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306293',
@@ -430,7 +430,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '29/10/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306250',
@@ -444,7 +444,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '03/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306398',
@@ -458,7 +458,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '12/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306582',
@@ -472,7 +472,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '09/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306593',
@@ -486,7 +486,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '06/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306597',
@@ -500,7 +500,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '08/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306476',
@@ -514,7 +514,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '14/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306712',
@@ -528,7 +528,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '02/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306314',
@@ -542,7 +542,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '18/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306738',
@@ -556,7 +556,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '16/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306728',
@@ -570,7 +570,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1d5f117b5848a8350ae9da153e0bb8f74c28f1cbb.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '11/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306585',
@@ -584,7 +584,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '30/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306860',
@@ -598,7 +598,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1d5f117b5848a8350ae9da153e0bb8f74c28f1cbb.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '21/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306833',
@@ -612,7 +612,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_16c00edee537dcf06b1b8df1704ff248f3dc5cd57.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '22/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738307099',
@@ -626,7 +626,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '23/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306847',
@@ -640,7 +640,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '20/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306824',
@@ -654,7 +654,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '15/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306721',
@@ -668,7 +668,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '13/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306697',
@@ -682,7 +682,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '19/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306811',
@@ -696,7 +696,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '10/11/2024',
     readTime: '5',
-    category: 'Category One , Category Two , Category Three',
+    category: ['Nutrition', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306557',
@@ -704,6 +704,7 @@ const myJson = [
   },
 ];
 export default async function decorate(block) {
+  const categoryByauthor = block.children[1].children[1].innerText;
   const heading = block.children[0].children[0].innerText;
   const itemsPerPage = Number(block.children[1].children[0].innerText);
   const inlinewithIcon = block.children[0].children[1].innerHTML;
@@ -731,11 +732,13 @@ export default async function decorate(block) {
   paginationDiv.append(paginationContainer);
   block.append(headDiv, blockDiv, paginationDiv);
   let currentPage = 1;
+  const categoryBasedJson = myJson.filter((article) => article.category.includes(categoryByauthor));
   function renderItems() {
     blockDiv.innerHTML = '';
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const jsonVar = myJson.slice(startIndex, endIndex);
+    // eslint-disable-next-line max-len
+    const jsonVar = categoryBasedJson.slice(startIndex, endIndex);
     const sortedJSON = jsonVar.sort((a, b) => {
       const dateA = new Date(a.publishedDate?.split('/').reverse().join('/'));
       const dateB = new Date(b.publishedDate?.split('/').reverse().join('/'));
@@ -778,11 +781,11 @@ export default async function decorate(block) {
       const categoryPara = document.createElement('p');
       categoryPara.classList.add('category-list');
       contentDiv.appendChild(categoryPara);
-      const categoryArr = category.split(',');
-      categoryArr.forEach((item) => {
-        const categorySpan = document.createElement('a');
-        categorySpan.append(item);
-        categoryPara.append(categorySpan);
+      category.forEach((item) => {
+        const anchor = document.createElement('a');
+        anchor.href = 'www.google.com';
+        anchor.textContent = item;
+        categoryPara.appendChild(anchor);
       });
       blockDiv.appendChild(mainDiv);
     });
@@ -791,18 +794,18 @@ export default async function decorate(block) {
     showingText.textContent = 'Showing';
     countList.appendChild(showingText);
     const showingSpan = document.createElement('span');
-    showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, myJson.length)}`;
+    showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, categoryBasedJson.length)}`;
     countList.appendChild(showingSpan);
     const ofText = document.createElement('p');
     ofText.textContent = 'of';
     countList.appendChild(ofText);
     const ofSpan = document.createElement('span');
-    ofSpan.textContent = myJson.length;
+    ofSpan.textContent = categoryBasedJson.length;
     countList.appendChild(ofSpan);
   }
 
   function renderPagination() {
-    const totalPages = Math.ceil(myJson.length / itemsPerPage);
+    const totalPages = Math.ceil(categoryBasedJson.length / itemsPerPage);
     countResult.innerHTML = '';
 
     // Function to create a pagination button
