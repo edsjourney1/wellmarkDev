@@ -1,6 +1,8 @@
-const { computePosition, flip, shift, offset, arrow } = window.FloatingUIDOM;
+const {
+  computePosition, flip, shift, offset, arrow
+} = window.FloatingUIDOM;
 
-const tooltipComponents = Array.from(document.querySelectorAll(`.tooltip`));
+const tooltipComponents = Array.from(document.querySelectorAll('.tooltip'));
 const tooltipsBlocksArr = [];
 const tooltipsMainArr = [];
 
@@ -8,17 +10,17 @@ let areTooltipsCounted = false;
 
 const updateTooltipPosition = (obj) => {
   computePosition(obj.link, obj.tooltipEl, {
-  placement: 'top',
-  middleware: [
-    offset(6),
-    flip(),
-    shift({padding: 5}),
-    arrow({element: obj.arrowEl}),
-  ],
+    placement: 'top',
+    middleware: [
+      offset(6),
+      flip(),
+      shift({padding: 5}),
+      arrow({element: obj.arrowEl}),
+    ],
   }).then(({x, y, placement, middlewareData}) => {
-  Object.assign(obj.tooltipEl.style, {
-    left: `${x}px`,
-    top: `${y}px`,
+    Object.assign(obj.tooltipEl.style, {
+      left: `${x}px`,
+      top: `${y}px`,
   });
   
   const {x: arrowX, y: arrowY} = middlewareData.arrow;
@@ -31,12 +33,12 @@ const updateTooltipPosition = (obj) => {
   }[placement.split('-')[0]];
    
   Object.assign(obj.arrowEl.style, {
-    left: arrowX != null ? `${arrowX}px` : '',
-    top: arrowY != null ? `${arrowY}px` : '',
-    right: '',
-    bottom: '',
-    [staticSide]: '-4px',
-  });
+      left: arrowX != null ? `${arrowX}px` : '',
+      top: arrowY != null ? `${arrowY}px` : '',
+      right: '',
+      bottom: '',
+      [staticSide]: '-4px',
+    });
   });
 };
 
@@ -75,6 +77,7 @@ const initializeTooltips = () => {
     };
     tooltipArr.push(tooltipObj);
   });
+  
   setTimeout(() => {
     tooltipArr.forEach((obj, index) => {
       if (obj.tooltipEl && obj.link) {
