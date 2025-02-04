@@ -17,24 +17,26 @@ const updateTooltipPosition = (obj) => {
       shift({ padding: 5 }),
       arrow({ element: obj.arrowEl }),
     ],
-  }).then(({ x, y, placement, middlewareData }) => {
+  }).then(({
+    x, y, placement, middlewareData
+  }) => {
     Object.assign(obj.tooltipEl.style, {
-      left: `${x}px`,
+      left: x + 'px',
       top: `${y}px`,
-  });
-  
-  const { x: arrowX, y: arrowY } = middlewareData.arrow;
+    });
 
-  const staticSide = {
-    top: 'bottom',
-    right: 'left',
-    bottom: 'top',
-    left: 'right',
-  }[placement.split('-')[0]];
-   
-  Object.assign(obj.arrowEl.style, {
-      left: arrowX != null ? `${arrowX}px` : '',
-      top: arrowY != null ? `${arrowY}px` : '',
+    const { x: arrowX, y: arrowY } = middlewareData.arrow;
+
+    const staticSide = {
+      top: 'bottom',
+      right: 'left',
+      bottom: 'top',
+      left: 'right',
+    }[placement.split('-')[0]];
+    
+    Object.assign(obj.arrowEl.style, {
+      left: arrowX ? arrowX + 'px' : '',
+      top: arrowY ? arrowY + 'px' : '',
       right: '',
       bottom: '',
       [staticSide]: '-4px',
@@ -44,7 +46,7 @@ const updateTooltipPosition = (obj) => {
 
 const showTooltip = (obj) => {
   tooltipsMainArr.forEach((tEl) => {
-  obj.index !== tEl.index && hideTooltip(tEl);
+    obj.index !== tEl.index && hideTooltip(tEl);
   });
   obj.tooltipEl.classList.add('tooltip-wrapper-active');
   obj.isActive = true;
@@ -57,7 +59,7 @@ const hideTooltip = (obj) => {
 };
 
 const initializeTooltips = () => {
-  const allTooltipLinks = Array.from(document.querySelectorAll(`a[href^='#tooltip-']`));
+  const allTooltipLinks = Array.from(document.querySelectorAll('a[href^="#tooltip-"]'));
   const tooltipArr = [];
   let tooltipNode;
   allTooltipLinks.forEach((href) => {
