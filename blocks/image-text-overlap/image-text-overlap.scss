@@ -118,11 +118,9 @@
             h2 {
               color: $--blue-550;
               width: 100%;
-              margin-top: 0;
-              margin-bottom: $--spacing-l;
+              margin: 0;
               @include for-mobile {
-                margin-top: $--spacing-xxl;
-                margin-bottom: $--spacing-l;
+                margin-top: $--spacing-xl;
               }
             }
             p {
@@ -136,14 +134,20 @@
               text-align: left;
               line-height: 24px;
               margin-bottom: 20px;
-              margin-top: 0;
+              margin-top: $--spacing-l;
+              @include for-tablet-smallest{
+                margin-top: $--spacing-m;
+              }
+              @include for-mobile {
+                margin-top: $--spacing-m;
+              }
               .icon{
                 height: auto;
                 width: auto;
                 i{
                   font-size: 16px;
                   color: $--blue-675;
-                  margin-left: $--spacing-s;
+                  margin: 0 6px 0 $--spacing-s;
                 }
               }
               &.button-container {
