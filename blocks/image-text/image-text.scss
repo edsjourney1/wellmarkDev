@@ -95,7 +95,7 @@
           }
           &.block {
             h2 {
-              color: $--blue-550;
+              color: $--gray-700;
               width: 100%;
               font-family: $--font-museo;
               font-weight: 700;
@@ -124,6 +124,9 @@
               text-align: left;
               line-height: 24px;
               margin: 0 0 20px 0;
+              a{
+                font-weight: 500;
+              }
               .icon{
                 height: auto;
                 width: auto;
