@@ -33,10 +33,9 @@ const updateTooltipPosition = (obj) => {
       bottom: 'top',
       left: 'right',
     }[placement.split('-')[0]];
-    
     Object.assign(obj.arrowEl.style, {
       left: arrowX ? `${arrowX}px` : '',
-      top: arrowY ?  `${arrowY}px` : '',
+      top: arrowY ? `${arrowY}px` : '',
       right: '',
       bottom: '',
       [staticSide]: '-4px',
@@ -51,7 +50,7 @@ const hideTooltip = (obj) => {
 
 const showTooltip = (obj) => {
   tooltipsMainArr.forEach((tEl) => {
-    obj.index !== tEl.index && hideTooltip(tEl);
+    (obj.index !== tEl.index) && hideTooltip(tEl);
   });
   obj.tooltipEl.classList.add('tooltip-wrapper-active');
   obj.isActive = true;
