@@ -1,19 +1,10 @@
-import { computePosition, flip, shift, offset, arrow } from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.13/+esm';
+const { computePosition, flip, shift, offset, arrow } = window.FloatingUIDOM;
 
 const tooltipComponents = Array.from(document.querySelectorAll(`.tooltip`));
 const tooltipsBlocksArr = [];
 const tooltipsMainArr = [];
 
 let areTooltipsCounted = false;
-
-export default async function decorate(block) {
-  const thisblock = block;
-  tooltipsBlocksArr.push(thisblock);
-  if (!areTooltipsCounted && tooltipComponents.length === tooltipsBlocksArr.length) {
-    areTooltipsCounted = true;
-    initializeTooltips();
-  }
-};
 
 const updateTooltipPosition = (obj) => {
   computePosition(obj.link, obj.tooltipEl, {
@@ -120,4 +111,15 @@ const initializeTooltips = () => {
     });
 
   }, 100);
+};
+
+export default async function decorate(block) {
+  if (computePosition && flip && shift && offset && arrow) {
+    const thisblock = block;
+    tooltipsBlocksArr.push(thisblock);
+    if (!areTooltipsCounted && tooltipComponents.length === tooltipsBlocksArr.length) {
+      areTooltipsCounted = true;
+      initializeTooltips();
+    }
+  }
 };
