@@ -101,13 +101,16 @@
               font-weight: 700;
               opacity: 1;
               text-align: left;
-              margin: 0;
+              margin: 0 0 24px 0;
               @include for-tablet {
                 font-size: 28px;
                 line-height: 28px;
               }
+              @include for-tablet-smallest{
+                margin-bottom: $--spacing-m;
+              }
               @include for-mobile {
-                margin-top: $--spacing-xl;
+                margin: $--spacing-xl 0 $--spacing-m 0;
               }
             }
             p {
@@ -120,21 +123,13 @@
               letter-spacing: 0px;
               text-align: left;
               line-height: 24px;
-              margin-bottom: 20px;
-              margin-top: $--spacing-l;
-              @include for-tablet-smallest{
-                margin-top: $--spacing-m;
-              }
-              @include for-mobile {
-                margin-top: $--spacing-m;
-              }
+              margin: 0 0 20px 0;
               .icon{
                 height: auto;
                 width: auto;
                 i{
                   font-size: 16px;
-                  color: $--blue-675;
-                  margin: 0 6px 0 $--spacing-s;
+                  padding: 0 6px 0 $--spacing-s;
                 }
               }
               &.button-container {
@@ -146,6 +141,15 @@
                 a.button {
                   margin-top: $--spacing-m;
                 }
+              }
+              &.button-container ~ p:not(.button-container){
+                margin-top: 24px;
+                &:last-child{
+                  margin-bottom: 0;
+                }
+              }
+              &.button-container ~ h2{
+                margin-top: 24px;
               }
             }
           }
