@@ -18,10 +18,10 @@ const updateTooltipPosition = (obj) => {
       arrow({ element: obj.arrowEl }),
     ],
   }).then(({
-    x, y, placement, middlewareData
+    x, y, placement, middlewareData,
   }) => {
     Object.assign(obj.tooltipEl.style, {
-      left: x + 'px',
+      left: `${x}px`,
       top: `${y}px`,
     });
 
@@ -35,13 +35,18 @@ const updateTooltipPosition = (obj) => {
     }[placement.split('-')[0]];
     
     Object.assign(obj.arrowEl.style, {
-      left: arrowX ? arrowX + 'px' : '',
-      top: arrowY ? arrowY + 'px' : '',
+      left: arrowX ? `${arrowX}px` : '',
+      top: arrowY ?  `${arrowY}px` : '',
       right: '',
       bottom: '',
       [staticSide]: '-4px',
     });
   });
+};
+
+const hideTooltip = (obj) => {
+  obj.tooltipEl.classList.remove('tooltip-wrapper-active');
+  obj.isActive = false;
 };
 
 const showTooltip = (obj) => {
@@ -51,11 +56,6 @@ const showTooltip = (obj) => {
   obj.tooltipEl.classList.add('tooltip-wrapper-active');
   obj.isActive = true;
   updateTooltipPosition(obj);
-};
-
-const hideTooltip = (obj) => {
-  obj.tooltipEl.classList.remove('tooltip-wrapper-active');
-  obj.isActive = false;
 };
 
 const initializeTooltips = () => {
@@ -75,7 +75,7 @@ const initializeTooltips = () => {
 
     const tooltipObj = {
       link: linkCta,
-      tooltipEl: tooltipNode ? tooltipNode.parentNode : null
+      tooltipEl: tooltipNode ? tooltipNode.parentNode : null,
     };
     tooltipArr.push(tooltipObj);
   });
@@ -88,14 +88,14 @@ const initializeTooltips = () => {
         obj.link.setAttribute('aria-describedby', genId);
         obj.tooltipEl.setAttribute('role', 'tooltip');
         obj.tooltipEl.setAttribute('id', genId);
-  
+
         const arrowEl = document.createElement('div');
         arrowEl.classList.add('tooltip-arrow');
         obj.tooltipEl.append(arrowEl);
         obj.arrowEl = arrowEl;
         obj.index = index;
         obj.isActive = false;
-    
+
         updateTooltipPosition(obj);
         obj.link.classList.remove('tooltip-btn-hidden');
         obj.link.addEventListener('click', (event) => {
@@ -106,7 +106,6 @@ const initializeTooltips = () => {
         tooltipsMainArr.push(obj);
       }
     });
-
     document.addEventListener('click', (event) => {
       tooltipsMainArr.forEach((tEl) => {
         if (!event.composedPath().includes(tEl.tooltipEl) && tEl.isActive) {
@@ -114,7 +113,6 @@ const initializeTooltips = () => {
         }
       });
     });
-
   }, 100);
 };
 
@@ -127,4 +125,4 @@ export default async function decorate(block) {
       initializeTooltips();
     }
   }
-};
+}
