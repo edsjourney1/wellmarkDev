@@ -1,7 +1,7 @@
 @import "../../styles/include/mq.scss";
 @import "../../styles/include/tokens.scss";
 
-.blog-article-listing {
+.blog-article-listing-curated {
   @include for-large {
     padding: 0 52px;
   }
@@ -166,10 +166,10 @@
                 right: 310px;
               }
               @include for-large {
-                right: 310px;
+                right: 275px;
               }
               @include for-laptop {
-                right: 204px;
+                right: 255px;
               }
               @include for-mobile {
                 left: 88px;
@@ -201,12 +201,6 @@
           display: flex;
           gap: 12px;
           flex-wrap: wrap;
-          @include for-xlarge {
-            width: 209px;
-          }
-          @include for-large {
-            width: 209px;
-          }
           @include for-laptop {
             width: 209px;
           }

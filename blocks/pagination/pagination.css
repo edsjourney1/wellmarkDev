@@ -25,14 +25,6 @@
 .section.pagination-container .pagination-wrapper .pagination.block {
   border-top: 2px solid #c2c2c3;
 }
-.section.pagination-container .pagination-wrapper .pagination.block .cards-div {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.section.pagination-container .pagination-wrapper .pagination.block .cards-div .card-div {
-  width: 31.5%;
-}
 .section.pagination-container .pagination-wrapper .pagination.block .pagination-container {
   display: flex;
   align-items: center;

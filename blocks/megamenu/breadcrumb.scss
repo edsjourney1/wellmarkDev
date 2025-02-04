@@ -32,6 +32,12 @@
             bottom: 4px;
             left: -15px;
             display: none;
+            @include for-tablet{
+                bottom: 1px;
+            }
+            @include for-mobile{
+                bottom: 1px;
+            }
         }
         &:first-child{
             margin-left: 0;
