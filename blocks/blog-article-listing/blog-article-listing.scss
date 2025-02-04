@@ -2,6 +2,9 @@
 @import "../../styles/include/tokens.scss";
 
 .blog-article-listing {
+  @include for-large {
+    padding: 0 52px;
+  }
   @include for-laptop {
     padding: 0 36px;
   }
