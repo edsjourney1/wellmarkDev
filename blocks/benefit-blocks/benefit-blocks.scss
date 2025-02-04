@@ -63,12 +63,15 @@
               padding: 0 $--spacing-xl;
             }
             h2{
-              color: $--blue-550;
+              color: $--gray-700;
               font-family: $--font-museo;
               font-size: 32px;
               line-height: 38px;
               font-weight: 700;
               margin: 0;
+              &:has(a){
+                color: $--blue-550;
+              }
               @include for-tablet{
                 font-size: 28px;
                 line-height: 33px;

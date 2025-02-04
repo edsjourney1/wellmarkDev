@@ -37,7 +37,10 @@
             flex-direction: row;
           }
           @include for-xlarge {
-            gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            gap: 139px;
+          }
+          @include for-xlarge {
+            gap: 139px;
           }
           @include for-tablet{
             width: calc((100% * 5) / 6);
@@ -180,6 +183,12 @@
       }
       .tbnr-maindiv{
         gap: 30px;
+        @include for-xlarge {
+          gap: 139px;
+        }
+        @include for-xlarge {
+          gap: 139px;
+        }
         @include for-laptop{
           gap: 30px;
         }

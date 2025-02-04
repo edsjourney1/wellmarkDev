@@ -85,12 +85,15 @@
   }
 }
 .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left > div > div h2 {
-  color: #4a7390;
+  color: #4b4c4d;
   font-family: museo, sans-serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 38px;
   margin: 0;
+}
+.benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left > div > div h2:has(a) {
+  color: #4a7390;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left > div > div h2 {
