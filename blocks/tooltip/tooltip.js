@@ -50,7 +50,9 @@ const hideTooltip = (obj) => {
 
 const showTooltip = (obj) => {
   tooltipsMainArr.forEach((tEl) => {
-    (obj.index !== tEl.index) && hideTooltip(tEl);
+    if (obj.index !== tEl.index) {
+      hideTooltip(tEl);
+    }
   });
   obj.tooltipEl.classList.add('tooltip-wrapper-active');
   obj.isActive = true;
