@@ -7,7 +7,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_16c00edee537dcf06b1b8df1704ff248f3dc5cd57.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '02/10/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738307040',
@@ -21,7 +21,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '06/11/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305692',
@@ -35,7 +35,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '28/10/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306803',
@@ -119,7 +119,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '16/11/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305963',
@@ -189,7 +189,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1d5f117b5848a8350ae9da153e0bb8f74c28f1cbb.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '21/11/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306190',
@@ -301,7 +301,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '28/10/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305292',
@@ -357,7 +357,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/medicare/media_1b9a42083a90e491e4986172ef49fc0fb8a682a6d.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '06/11/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738305586',
@@ -427,7 +427,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '29/10/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306250',
@@ -455,7 +455,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1073cd3ad3615e27658167fabe91670378e2aef59.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '12/11/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306582',
@@ -539,7 +539,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_1ce5fd2ac8e8b4aae365cb821cc1660a8cdff4684.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '18/11/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306738',
@@ -623,7 +623,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '23/11/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306847',
@@ -665,7 +665,7 @@ const myJson = [
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_145fbb24470a45b7967b3c63d08475149f75fd0b2.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '13/11/2024',
     readTime: '5',
-    category: ['Nutrition', 'Category Two', 'Category Three'],
+    category: ['Nutrition1', 'Category Two', 'Category Three'],
     theme: 'light',
     template: 'article',
     lastModified: '1738306697',
@@ -724,11 +724,12 @@ export default async function decorate(block) {
   paginationDiv.append(paginationContainer);
   block.append(headDiv, blockDiv, paginationDiv);
   let currentPage = 1;
+  const categoryBasedJson = myJson.filter((article) => article.category.includes(heading));
   function renderItems() {
     blockDiv.innerHTML = '';
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const jsonVar = myJson.slice(startIndex, endIndex);
+    const jsonVar = categoryBasedJson.slice(startIndex, endIndex);
     const sortedJSON = jsonVar.sort((a, b) => {
       const dateA = new Date(a.publishedDate?.split('/').reverse().join('/'));
       const dateB = new Date(b.publishedDate?.split('/').reverse().join('/'));
@@ -791,18 +792,18 @@ export default async function decorate(block) {
     showingText.textContent = 'Showing';
     countList.appendChild(showingText);
     const showingSpan = document.createElement('span');
-    showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, myJson.length)}`;
+    showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, categoryBasedJson.length)}`;
     countList.appendChild(showingSpan);
     const ofText = document.createElement('p');
     ofText.textContent = 'of';
     countList.appendChild(ofText);
     const ofSpan = document.createElement('span');
-    ofSpan.textContent = myJson.length;
+    ofSpan.textContent = categoryBasedJson.length;
     countList.appendChild(ofSpan);
   }
 
   function renderPagination() {
-    const totalPages = Math.ceil(myJson.length / itemsPerPage);
+    const totalPages = Math.ceil(categoryBasedJson.length / itemsPerPage);
     countResult.innerHTML = '';
 
     // Function to create a pagination button
