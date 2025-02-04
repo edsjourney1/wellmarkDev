@@ -1,5 +1,5 @@
 const {
-  computePosition, flip, shift, offset, arrow
+  computePosition, flip, shift, offset, arrow,
 } = window.FloatingUIDOM;
 
 const tooltipComponents = Array.from(document.querySelectorAll('.tooltip'));
@@ -14,16 +14,16 @@ const updateTooltipPosition = (obj) => {
     middleware: [
       offset(6),
       flip(),
-      shift({padding: 5}),
-      arrow({element: obj.arrowEl}),
+      shift({ padding: 5 }),
+      arrow({ element: obj.arrowEl }),
     ],
-  }).then(({x, y, placement, middlewareData}) => {
+  }).then(({ x, y, placement, middlewareData }) => {
     Object.assign(obj.tooltipEl.style, {
       left: `${x}px`,
       top: `${y}px`,
   });
   
-  const {x: arrowX, y: arrowY} = middlewareData.arrow;
+  const { x: arrowX, y: arrowY } = middlewareData.arrow;
 
   const staticSide = {
     top: 'bottom',
@@ -77,7 +77,7 @@ const initializeTooltips = () => {
     };
     tooltipArr.push(tooltipObj);
   });
-  
+
   setTimeout(() => {
     tooltipArr.forEach((obj, index) => {
       if (obj.tooltipEl && obj.link) {
@@ -107,9 +107,9 @@ const initializeTooltips = () => {
 
     document.addEventListener('click', (event) => {
       tooltipsMainArr.forEach((tEl) => {
-      if (!event.composedPath().includes(tEl.tooltipEl) && tEl.isActive) {
-        hideTooltip(tEl);
-      }
+        if (!event.composedPath().includes(tEl.tooltipEl) && tEl.isActive) {
+          hideTooltip(tEl);
+        }
       });
     });
 
