@@ -1,17 +1,15 @@
 import { computePosition, flip, shift, offset, arrow } from 'https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.13/+esm';
 
 const tooltipComponents = Array.from(document.querySelectorAll(`.tooltip`));
-const tooltipMainArr = [];
+const tooltipsBlocksArr = [];
+const tooltipsMainArr = [];
 
 let areTooltipsCounted = false;
 
-let tooltipsMainArr = [];
-let activeIndex = -1;
-
 export default async function decorate(block) {
     const thisblock = block;
-    tooltipMainArr.push(thisblock);
-    if (!areTooltipsCounted && tooltipComponents.length === tooltipMainArr.length) {
+    tooltipsBlocksArr.push(thisblock);
+    if (!areTooltipsCounted && tooltipComponents.length === tooltipsBlocksArr.length) {
         areTooltipsCounted = true;
         initializeTooltips();
     }
@@ -53,16 +51,12 @@ const updateTooltipPosition = (obj) => {
 
 const showTooltip = (obj) => {
   obj.tooltipEl.classList.add("tooltip-wrapper-active");
-  activeIndex = obj.index;
+  obj.isActive = true;
   updateTooltipPosition(obj);
 };
 
 const hideTooltip = (index) => {
   // console.log("==============index", index);
-  if (tooltipsMainArr[index]) {
-    tooltipsMainArr[index].tooltipEl.classList.remove("tooltip-wrapper-active");
-    activeIndex = -1;
-  }
   // currentActiveTooltip = null;
   // currentActiveTooltipArr[index].tooltipEl.classList.remove("tooltip-wrapper-active");
   // console.log("============currentActiveTooltipArr 1", currentActiveTooltipArr);
@@ -75,7 +69,7 @@ const initializeTooltips = () => {
     const tooltipArr = [];
     let tooltipNode;
     allTooltipLinks.forEach((link) => {
-        tooltipNode = tooltipMainArr.find((el) => el.classList.contains(link.getAttribute('href').substring(1)));
+        tooltipNode = tooltipsBlocksArr.find((el) => el.classList.contains(link.getAttribute('href').substring(1)));
         const tooltipObj = {
             link,
             tooltipEl: tooltipNode ? tooltipNode.parentNode : null
@@ -96,6 +90,7 @@ const initializeTooltips = () => {
                 obj.tooltipEl.append(arrowEl);
                 obj.arrowEl = arrowEl;
                 obj.index = index;
+                obj.isActive = false;
         
                 updateTooltipPosition(obj);
 
@@ -103,16 +98,21 @@ const initializeTooltips = () => {
                   event.preventDefault();
                   showTooltip(obj);
                 });
+
+                tooltipsMainArr.push(obj);
             }
         });
 
-        tooltipsMainArr = tooltipArr;
-
         document.addEventListener('click', (event) => {
-          let withinBoundaries = event.composedPath().includes(tooltipsMainArr[activeIndex]);
-          if (!withinBoundaries) {
-            hideTooltip(activeIndex);
-          };
+          let withinBoundaries;
+          tooltipsMainArr.forEach((tEl) => {
+            withinBoundaries = event.composedPath().includes(tEl);
+            console.log("==========withinBoundaries", withinBoundaries, tEl.isActive);
+          });
+          // let withinBoundaries = event.composedPath().includes(tooltipsMainArr[activeIndex]);
+          // if (!withinBoundaries) {
+          //   // hideTooltip(activeIndex);
+          // };
         });
     }, 100);
 };
