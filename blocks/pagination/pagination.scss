@@ -17,14 +17,6 @@
         }
         .pagination.block{
             border-top: 2px solid $--gray-225;
-            .cards-div{
-                display: flex;
-                gap: 30px;
-                flex-wrap: wrap;
-                .card-div{
-                    width: 31.5%;
-                }
-            }
             .pagination-container{
                 display: flex;
                 align-items: center;

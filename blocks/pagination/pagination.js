@@ -592,54 +592,6 @@ export default async function decorate(block) {
     blockDiv.innerHTML = '';
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const jsonVar = myJson.slice(startIndex, endIndex);
-    jsonVar.forEach(({
-      ImageUrl, category, publishedDate, articleReadTime, title,
-    }) => {
-      const mainDiv = document.createElement('div');
-      mainDiv.classList.add('card-div');
-
-      const image = document.createElement('img');
-      image.src = ImageUrl;
-      image.alt = 'thumbnail';
-      mainDiv.appendChild(image);
-
-      const contentDiv = document.createElement('div');
-      contentDiv.classList.add('content-div');
-      mainDiv.appendChild(contentDiv);
-
-      const mainTitle = document.createElement('h3');
-      mainTitle.classList.add('card-title');
-      mainTitle.textContent = title;
-      contentDiv.appendChild(mainTitle);
-
-      const datetimeDiv = document.createElement('div');
-      datetimeDiv.classList.add('date-div');
-      contentDiv.appendChild(datetimeDiv);
-
-      const pubDate = document.createElement('p');
-      pubDate.classList.add('date');
-      pubDate.textContent = publishedDate;
-      datetimeDiv.appendChild(pubDate);
-
-      const arcretime = document.createElement('p');
-      arcretime.classList.add('read-time');
-      arcretime.textContent = articleReadTime;
-      datetimeDiv.appendChild(arcretime);
-
-      const categoryPara = document.createElement('p');
-      categoryPara.classList.add('category-list');
-      contentDiv.appendChild(categoryPara);
-
-      category.forEach((item) => {
-        const anchor = document.createElement('a');
-        anchor.href = 'www.google.com';
-        anchor.textContent = item;
-        categoryPara.appendChild(anchor);
-      });
-
-      blockDiv.appendChild(mainDiv);
-    });
     countList.innerHTML = '';
     const showingText = document.createElement('p');
     showingText.textContent = innertextH2;
