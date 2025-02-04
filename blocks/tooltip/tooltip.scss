@@ -3,6 +3,9 @@
 
 .tooltip {
     padding: 12px;
+    &-btn-hidden {
+        display: none;
+    }
     &-wrapper {
         * {
             box-sizing: border-box;
@@ -32,9 +35,19 @@
         }
     }
     &-link {
-        text-decoration: none !important;
+        background-color: transparent;
+        border: 0;
         border-bottom-style: dotted;
         border-bottom-width: 2px;
+        cursor: pointer;
+        display: inline;
+        line-height: inherit;
+        margin: 0;
+        padding: 0;
+        text-decoration: none !important;
+        .icon > i {
+            color: inherit !important;
+        }
     }
     &-arrow  {
         position: absolute;

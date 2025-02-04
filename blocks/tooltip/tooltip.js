@@ -50,28 +50,36 @@ const updateTooltipPosition = (obj) => {
 };
 
 const showTooltip = (obj) => {
-  obj.tooltipEl.classList.add("tooltip-wrapper-active");
+  tooltipsMainArr.forEach((tEl) => {
+    obj.index !== tEl.index && hideTooltip(tEl);
+  });
+  obj.tooltipEl.classList.add('tooltip-wrapper-active');
   obj.isActive = true;
   updateTooltipPosition(obj);
 };
 
-const hideTooltip = (index) => {
-  // console.log("==============index", index);
-  // currentActiveTooltip = null;
-  // currentActiveTooltipArr[index].tooltipEl.classList.remove("tooltip-wrapper-active");
-  // console.log("============currentActiveTooltipArr 1", currentActiveTooltipArr);
-  // currentActiveTooltipArr.splice(index, 1);
-  // console.log("============currentActiveTooltipArr 2", currentActiveTooltipArr);
+const hideTooltip = (obj) => {
+  obj.tooltipEl.classList.remove('tooltip-wrapper-active');
+  obj.isActive = false;
 };
 
 const initializeTooltips = () => {
     const allTooltipLinks = Array.from(document.querySelectorAll(`a[href^='#tooltip-']`));
     const tooltipArr = [];
     let tooltipNode;
-    allTooltipLinks.forEach((link) => {
-        tooltipNode = tooltipsBlocksArr.find((el) => el.classList.contains(link.getAttribute('href').substring(1)));
+    allTooltipLinks.forEach((href) => {
+        tooltipNode = tooltipsBlocksArr.find((el) => el.classList.contains(href.getAttribute('href').substring(1)));
+        const linkCta = document.createElement('button');
+
+        linkCta.innerHTML = href.innerHTML;
+        linkCta.dataset.href = href.href;
+        linkCta.className = `${href.className} tooltip-btn-hidden`;
+        linkCta.style.cssText = href.style.cssText;
+
+        href.replaceWith(linkCta);
+
         const tooltipObj = {
-            link,
+            link: linkCta,
             tooltipEl: tooltipNode ? tooltipNode.parentNode : null
         };
         tooltipArr.push(tooltipObj);
@@ -80,7 +88,7 @@ const initializeTooltips = () => {
         tooltipArr.forEach((obj, index) => {
             if (obj.tooltipEl && obj.link) {
                 const genId = `tooltip_${Math.random().toString(16).slice(2)}_${index}`;
-                obj.link.classList.add("tooltip-link");
+                obj.link.classList.add('tooltip-link');
                 obj.link.setAttribute('aria-describedby', genId);
                 obj.tooltipEl.setAttribute('role', 'tooltip');
                 obj.tooltipEl.setAttribute('id', genId);
@@ -93,9 +101,9 @@ const initializeTooltips = () => {
                 obj.isActive = false;
         
                 updateTooltipPosition(obj);
-
+                obj.link.classList.remove('tooltip-btn-hidden');
                 obj.link.addEventListener('click', (event) => {
-                  event.preventDefault();
+                  event.stopPropagation();
                   showTooltip(obj);
                 });
 
@@ -104,15 +112,12 @@ const initializeTooltips = () => {
         });
 
         document.addEventListener('click', (event) => {
-          let withinBoundaries;
           tooltipsMainArr.forEach((tEl) => {
-            withinBoundaries = event.composedPath().includes(tEl);
-            console.log("==========withinBoundaries", withinBoundaries, tEl.isActive);
+            if (!event.composedPath().includes(tEl.tooltipEl) && tEl.isActive) {
+              hideTooltip(tEl);
+            }
           });
-          // let withinBoundaries = event.composedPath().includes(tooltipsMainArr[activeIndex]);
-          // if (!withinBoundaries) {
-          //   // hideTooltip(activeIndex);
-          // };
         });
+
     }, 100);
 };

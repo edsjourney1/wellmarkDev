@@ -5,6 +5,9 @@
 .tooltip {
   padding: 12px;
 }
+.tooltip-btn-hidden {
+  display: none;
+}
 .tooltip-wrapper {
   background-color: #ffffff;
   border-radius: 4px;
@@ -18,7 +21,6 @@
   top: 0;
   transition: all 0.25s ease;
   visibility: hidden;
-  width: -moz-max-content;
   width: max-content;
 }
 .tooltip-wrapper * {
@@ -35,9 +37,19 @@
   margin: 0;
 }
 .tooltip-link {
-  text-decoration: none !important;
+  background-color: transparent;
+  border: 0;
   border-bottom-style: dotted;
   border-bottom-width: 2px;
+  cursor: pointer;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+}
+.tooltip-link .icon > i {
+  color: inherit !important;
 }
 .tooltip-arrow {
   position: absolute;
