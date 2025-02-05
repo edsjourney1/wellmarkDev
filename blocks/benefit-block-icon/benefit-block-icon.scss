@@ -190,3 +190,13 @@
     }
   }
 }
+.background-blue-50{
+  .block-left{
+    background-color: $--white;
+  }
+}
+p:has(i){
+  a{
+    margin-left: 8px;
+  }
+}

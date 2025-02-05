@@ -226,3 +226,11 @@
 .benefit-block-icon-container.two-column-layout .benefit-block-icon-wrapper .benefit-block-icon {
   align-items: center;
 }
+
+.background-blue-50 .block-left {
+  background-color: #ffffff;
+}
+
+p:has(i) a {
+  margin-left: 8px;
+}
