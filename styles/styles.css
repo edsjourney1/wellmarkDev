@@ -575,6 +575,7 @@ a:any-link {
 }
 .section .default-content-wrapper p:has(img) {
   width: 100%;
+  text-align: center;
 }
 @media (max-width: 480px) {
   .section .default-content-wrapper p {
@@ -679,6 +680,9 @@ a:any-link {
   font-size: 15px;
   color: #4b4c4d;
   margin: 0 12px 0 0;
+}
+.section .default-content-wrapper p.button-container a.button {
+  margin-top: 12px;
 }
 .section .default-content-wrapper a .icon {
   height: auto;

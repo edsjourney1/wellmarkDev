@@ -133,6 +133,7 @@
     p {
       &:has(img){
         width: 100%;
+        text-align: center;
       }
       margin: 0;
       padding-bottom: $--spacing-l;
@@ -250,6 +251,9 @@
               }
             }
           }
+        }
+        a.button {
+          margin-top: $--spacing-s;
         }
       }
     }
