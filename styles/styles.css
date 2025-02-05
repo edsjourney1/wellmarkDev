@@ -343,6 +343,7 @@ a:any-link {
   text-decoration: underline;
   word-break: break-word;
   padding: 0;
+  font-weight: 500;
 }
 
 .background-blue-50 {
