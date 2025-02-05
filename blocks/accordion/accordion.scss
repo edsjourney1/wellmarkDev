@@ -106,6 +106,9 @@ main {
                             color: $--blue-675;
                         }
                     }
+                    &:has(a){
+                        margin-top: 12px;
+                    }
                 }
             }
             summary {
