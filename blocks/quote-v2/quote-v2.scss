@@ -1,0 +1,60 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+[class^='quote-v2 quote-v2-grid'] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    row-gap: 52px;
+    width: calc(100% + 30px);
+    > div {
+        padding: 0 15px;
+        width: 100%;
+    }
+}
+.quote-v2 {
+    * {
+        box-sizing: border-box;
+    }
+    &-hidden {
+        display: none;
+    }
+    &-grid {
+        &-4-col {
+            > div {
+                width: 25%;
+                @include for-tablet {
+                    width: 50%;
+                }
+                @include for-tablet-smallest {
+                    width: 50%;
+                }
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+        &-3-col {
+            > div {
+                width: 33.3333%;
+                @include for-tablet {
+                    width: 50%;
+                }
+                @include for-tablet-smallest {
+                    width: 50%;
+                }
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+        &-2-col {
+            > div {
+                width: 50%;
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

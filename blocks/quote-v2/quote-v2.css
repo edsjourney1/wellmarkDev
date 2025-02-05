@@ -1,0 +1,66 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+[class^="quote-v2 quote-v2-grid"] {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 52px;
+  width: calc(100% + 30px);
+}
+[class^="quote-v2 quote-v2-grid"] > div {
+  padding: 0 15px;
+  width: 100%;
+}
+
+.quote-v2 * {
+  box-sizing: border-box;
+}
+.quote-v2-hidden {
+  display: none;
+}
+.quote-v2-grid-4-col > div {
+  width: 25%;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .quote-v2-grid-4-col > div {
+    width: 50%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .quote-v2-grid-4-col > div {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .quote-v2-grid-4-col > div {
+    width: 100%;
+  }
+}
+.quote-v2-grid-3-col > div {
+  width: 33.3333%;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .quote-v2-grid-3-col > div {
+    width: 50%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .quote-v2-grid-3-col > div {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .quote-v2-grid-3-col > div {
+    width: 100%;
+  }
+}
+.quote-v2-grid-2-col > div {
+  width: 50%;
+}
+@media (max-width: 480px) {
+  .quote-v2-grid-2-col > div {
+    width: 100%;
+  }
+}
