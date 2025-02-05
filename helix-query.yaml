@@ -1,7 +1,7 @@
 indices:
   mysite:
     include:
-      - /article-page/**
+      - /**
     exclude:
       - /documents/snippets/**
     target: /query-index.json
@@ -9,5 +9,45 @@ indices:
       url:
         select: head > meta[property="og:url"]
         value: |
-          value: attribute(el, "content")
+         attribute(el, "content")
+      description:
+        select: head > meta[property="og:description"]
+        value: |
+         attribute(el, "content")
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+         attribute(el, "content")
+      image:
+        select: head > meta[property="og:image"]
+        value: |
+         attribute(el, "content")
+      publishedDate:
+        select: head > meta[name="published"]
+        value: |
+         attribute(el, "content")
+      readTime:
+        selectFirst: head > meta[name="article-read-time"]
+        value: |
+         attribute(el, "content")
+      category:
+        select: head > meta[name="categories"]
+        value: |
+         attribute(el, "content")
+      theme:
+        select: head > meta[name="theme"]
+        value: |
+         attribute(el, "content")
+      template:
+        select: head > meta[name="template"]
+        value: |
+         attribute(el, "content")
+      lastModified:
+        select: none
+        value: |
+          parseTimestamp(headers['last-modified'],'ddd, DD MM YYYY hh:mm:ss GMT')
+      author:
+        select: head > meta[name="author"]
+        value: |
+         attribute(el, "content")
       
