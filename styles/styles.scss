@@ -9,7 +9,9 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
+html, body {
+  scroll-behavior: smooth;
+}
 @import 'include/button';
 @import 'include/tokens';
 @import 'include/typography';
@@ -85,10 +87,10 @@ header.megamenu-wrapper {
 }
 
 header.blog-menu {
-  height: 60px;
+  height: 218px;
 
   @include for-tablet {
-    height: 60px;
+    height: 218px;
   }
   
   @include for-laptop {

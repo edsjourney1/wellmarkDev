@@ -81,9 +81,6 @@ form.eds-mkto-form.mktoForm .mktoFormRow div div label {
   font-size: 16px;
   line-height: 32px;
 }
-form.eds-mkto-form.mktoForm .mktoFormRow div div label .mktoAsterix {
-  display: none;
-}
 form.eds-mkto-form.mktoForm .mktoFormRow div div input {
   width: 100% !important;
   font-weight: 400;
@@ -112,6 +109,53 @@ form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList input.mktoField {
 }
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList label {
   margin-left: 9px;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap .mktoHtmlText {
+  width: 100% !important;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap .mktoHtmlText p {
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap .mktoHtmlText .required {
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap:has(h1) {
+  display: none;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap:has(.mktoHtmlText:not(p)) {
+  display: none;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap:has(p:not(:empty)) {
+  display: block;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap label:has(.mktoAsterix) {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  white-space: nowrap;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap label:has(.mktoAsterix) .mktoAsterix {
+  margin-left: 4px;
+  display: inline;
+  margin-top: 5px;
+  padding: 0;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFormCol {
+  margin: 0 !important;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFormCol:has(.mktoFieldWrap:empty) {
+  min-height: 0;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow .mktoFormCol:has(.mktoHtmlText:not(p)) {
+  min-height: 0;
 }
 form.eds-mkto-form.mktoForm .mktoButtonRow .mktoButton {
   height: unset;

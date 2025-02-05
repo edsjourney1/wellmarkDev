@@ -128,7 +128,9 @@ function renderBlogMenu(nav) {
   blogheadermenu.className = 'blog-header-menu';
   const blogmobilemenu = document.createElement('div');
   blogmobilemenu.className = 'blog-mobile-menu';
-  blogmobilemenu.innerHTML = ('Topics');
+  const blogmobiletext = document.createElement('p');
+  blogmobiletext.classList.add('blog-topics-label');
+  blogmobiletext.innerHTML = ('Topics');
   const mobileuparrow = document.createElement('img');
   mobileuparrow.className = 'mobile-up-arrow';
   mobileuparrow.src = '../../icons/mobile-up-arrow.svg';
@@ -138,8 +140,8 @@ function renderBlogMenu(nav) {
   mobiledownarrow.src = '../../icons/mobile-down-arrow.svg';
   mobiledownarrow.setAttribute('title', 'image');
 
-  blogmobilemenu.appendChild(mobileuparrow);
-  blogmobilemenu.appendChild(mobiledownarrow);
+  blogmobiletext.appendChild(mobileuparrow);
+  blogmobiletext.appendChild(mobiledownarrow);
 
   const blogheaderlogo = document.createElement('div');
   blogheaderlogo.className = 'blog-menu-logo';
@@ -238,6 +240,8 @@ function renderBlogMenu(nav) {
 
   blogmobilemenu.addEventListener('click', () => {
     blogmobilemenu.classList.toggle('mobile-arrow');
+    const mainsubmenucls = document.querySelector('.blog-header-section');
+    mainsubmenucls.classList.add('blog-submenu-list');
   });
 
   const blogImg = document.createElement('img');
@@ -258,6 +262,7 @@ function renderBlogMenu(nav) {
   blogheadersection.append(blogheadernav);
   blogheadernav.append(blogmenublock);
   blogheadersection.append(blogmobilemenu);
+  blogmobilemenu.append(blogmobiletext);
   blogheadersection.append(blogheadermenu);
   nav.append(blogheadersection);
   blogmenublock.append(blogheaderlogo);
@@ -639,6 +644,19 @@ window.addEventListener('click', (e) => {
   });
 });
 
+// Outside click topic menu close
+window.addEventListener('click', (e) => {
+  const handletopic = document.querySelectorAll('.blog-mobile-menu');
+  handletopic.forEach((topicactivemenu) => {
+    const topicblogmenu = e.target.closest('.blog-header-menu');
+    const topicbloglist = e.target.closest('.blog-mobile-menu');
+    const topicclose = topicblogmenu === null && topicbloglist === null;
+    if (topicclose) {
+      topicactivemenu.classList.remove('mobile-arrow');
+    }
+  });
+});
+
 // Outside click blog menu close
 window.addEventListener('click', (e) => {
   const bloghandleClickOutside = document.querySelectorAll('.blog-menu-link');
@@ -648,7 +666,7 @@ window.addEventListener('click', (e) => {
     const blogoutsideClick = e.target?.closest('.blog-menu-li')?.querySelector('.blog-menu-item');
     const blogcloseactive = blogoutsideClickListener === null && blogoutsideClick === undefined;
     const mobileblogcloseactive = (blogoutsideClickListener === null && blogoutsideClick === undefined) || (e.target.tagName === 'DIV' || bloglist);
-    if (window.innerWidth >= 1023) {
+    if (window.innerWidth > 1024) {
       if (blogcloseactive) {
         checkactiveblogmenu.classList.remove('show-blog-menu');
       }
@@ -662,16 +680,20 @@ window.addEventListener('click', (e) => {
 });
 
 // Scroll Blog menu
+
 window.addEventListener('scroll', () => {
   const scrollpos = window.scrollY;
-  if (scrollpos > 150) {
-    const outside = document.querySelectorAll('.blog-header-section');
-    const check = outside[0];
-    check.classList.add('menu-sticky');
+  const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+  const blogmenubreak = isMobile ? 60 : 150;
+  const blogmenuscroll = document.querySelector('.blog-header-section');
+  const collapseclose = document.querySelector('.collapse-bar');
+  const megamobilemenu = document.querySelector('.main-header-menu');
+  if (scrollpos > blogmenubreak) {
+    blogmenuscroll?.classList.add('menu-sticky');
+    collapseclose.classList.remove('active');
+    megamobilemenu.classList.remove('active');
   } else {
-    const outside = document.querySelectorAll('.blog-header-section');
-    const check = outside[0];
-    check.classList.remove('menu-sticky');
+    blogmenuscroll?.classList.remove('menu-sticky');
   }
 });
 

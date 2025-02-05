@@ -98,7 +98,7 @@
           }
           &.block {
             h2 {
-              color: $--blue-550;
+              color: $--gray-700;
               width: 100%;
               margin: 0;
               .icon-promoimage{
@@ -132,6 +132,17 @@
               text-align: left;
               line-height: 24px;
               margin: $--spacing-l 0 20px 0;
+              a{
+                font-weight: 500;
+              }
+              .icon{
+                height: auto;
+                width: auto;
+                i{
+                  font-size: 16px;
+                  padding: 0 6px 0 $--spacing-s;
+                }
+              }
               &.button-container {
                 margin-top: 0;
                 margin-bottom: 0;

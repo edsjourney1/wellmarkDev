@@ -1,0 +1,148 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.pull-quote-container .pull-quote-wrapper .pull-quote.block {
+  margin: 0 auto;
+}
+@media (min-width: 1379px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block {
+    width: calc(66.6666666667% - 10px);
+    padding: 24px 0 36px 0;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block {
+    width: calc(66.6666666667% - 10px);
+    padding: 24px 0 36px 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block {
+    width: calc(83.3333333333% - 60px);
+    padding: 24px 0 36px 0;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block {
+    width: calc(100% - 72px);
+    padding: 24px 0;
+  }
+}
+@media (max-width: 480px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block {
+    width: calc(100% - 32px);
+    padding: 24px 0;
+  }
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
+  color: #4b4c4d;
+  font-family: museo, sans-serif;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  padding: 52px 108px 52px 107px;
+  margin: 0;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
+    padding: 52px 82px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
+    padding: 52px 163px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
+    padding: 52px 73px;
+  }
+}
+@media (max-width: 480px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
+    font-size: 28px;
+    line-height: 33px;
+    padding: 36px 0;
+  }
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top span, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom span {
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: 36px;
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top span i, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom span i {
+  color: #d6e5f1;
+  font-size: 50px;
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::after, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 342px;
+  height: 8px;
+  background-color: #d6e5f1;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::after, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::after {
+    width: 323px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::after, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::after {
+    width: 404px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::after, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::after {
+    width: 127px;
+  }
+}
+@media (max-width: 480px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::after, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::after {
+    width: 120px;
+  }
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::before, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 342px;
+  height: 8px;
+  background-color: #d6e5f1;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::before, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::before {
+    width: 312px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::before, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::before {
+    width: 393px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::before, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::before {
+    width: 127px;
+  }
+}
+@media (max-width: 480px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top::before, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom::before {
+    width: 119px;
+  }
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom i {
+  transform: scaleX(-1);
+}

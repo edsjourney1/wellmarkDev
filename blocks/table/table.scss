@@ -1,0 +1,103 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.table {
+    overflow-x: auto;
+    width: 100%;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        @include for-mobile {
+            width: 250%;
+        }
+        p {
+            margin: 0 0 10px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+        thead {
+            th, td {
+                padding: 16px 24px;
+                border-bottom: 2px solid $--blue-550;
+            }
+        }
+        tbody {
+            td {
+                padding: 16px 24px;
+            }
+            tr:nth-child(even) {
+                td {
+                    background-color: $--gray-100;
+                }
+            }
+        }
+    }
+}
+// .table {
+//     width: 100%;
+//     overflow-x: auto;
+//   }
+  
+//   .table table {
+//     width: 100%;
+//     max-width: 100%;
+//     border-collapse: collapse;
+//     font-size: var(--body-font-size-xs);
+//   }
+  
+//   @media (width >= 600px) {
+//     .table table {
+//       font-size: var(--body-font-size-s);
+//     }
+//   }
+  
+//   @media (width >= 900px) {
+//     .table table {
+//       font-size: var(--body-font-size-m);
+//     }
+//   }
+  
+//   .table table thead tr {
+//     border-top: 2px solid #dadada;
+//     border-bottom: 2px solid #dadada;
+//   }
+  
+//   .table table tbody tr {
+//     border-bottom: 1px solid #dadada;
+//   }
+  
+//   .table table th {
+//     font-weight: 700;
+//   }
+  
+//   .table table th,
+//   .table table td {
+//     padding: 0.5em;
+//     text-align: left;
+//   }
+  
+//   .table table th p,
+//   .table table td p {
+//     margin: 0;
+//   }
+  
+//   .table table td p + p {
+//     margin-top: 0.25em;
+//   }
+  
+//   /* no header variant */
+//   .table.no-header table tbody tr {
+//     border-top: 1px solid #dadada;
+//   }
+  
+//   /* striped variant */
+//   .table.striped tbody tr:nth-child(odd) {
+//     background-color: var(--light-color);
+//   }
+  
+//   /* bordered variant */
+//   .table.bordered table th,
+//   .table.bordered table td {
+//     border: 1px solid #dadada;
+//   }
