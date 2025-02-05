@@ -9,6 +9,24 @@ main {
     }
 }
 .accordion-wrapper {
+    ol, ul{
+        li{
+            margin-top: 12px;
+            a{
+                color: $--blue-675;
+                font-weight: 500;
+            }
+            span.icon{
+                width: 16px;
+                height: 16px;
+                padding: 0 8px 0 12px;
+                i{
+                    font-size: 16px;
+                    color: $--blue-675;
+                }
+            }
+        }
+    }
     padding: $--spacing-max 0;
     @include for-large{
         padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
@@ -121,7 +139,6 @@ main {
                     transition: transform 0.2s;
                 }
             }
-
             &[open] {
                 summary {
                     background-color: unset;
@@ -130,7 +147,6 @@ main {
                         top: 60%;
                     }
                 }
-
                 .accordion-item-body {
                     padding: $--spacing-l;
                     padding-top: 0;
