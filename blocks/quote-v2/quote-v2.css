@@ -14,6 +14,21 @@
   width: 100%;
 }
 
+[class^="quote-v2 quote-v2-image"] .quote-v2-article {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+[class^="quote-v2 quote-v2-image"] .quote-v2-article > div {
+  padding: 0 15px;
+}
+[class^="quote-v2 quote-v2-image"] figure picture {
+  display: none;
+}
+
+.quote-v2 {
+  margin: 0 0 52px 0;
+}
 .quote-v2 * {
   box-sizing: border-box;
 }
@@ -63,4 +78,52 @@
   .quote-v2-grid-2-col > div {
     width: 100%;
   }
+}
+.quote-v2 figure {
+  border-radius: 4px;
+  background-color: #f3f9ff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 36px;
+}
+.quote-v2 blockquote {
+  margin: 0;
+  padding: 0;
+}
+.quote-v2 blockquote .icon {
+  display: inline-block;
+  font-size: 73.5px;
+  height: auto;
+  margin: 0 0 36px 0;
+  width: auto;
+}
+.quote-v2 blockquote .icon > i {
+  font-size: inherit;
+}
+.quote-v2 blockquote p {
+  font-family: museo, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 24px 0;
+}
+.quote-v2 blockquote p:last-child {
+  margin: 0;
+}
+.quote-v2 figcaption {
+  margin-top: 25px;
+}
+.quote-v2-image-large figure {
+  width: 33.3334%;
+}
+.quote-v2-image-large .quote-v2-img {
+  width: 66.6666%;
+}
+.quote-v2-image-small figure {
+  width: 66.6666%;
+}
+.quote-v2-image-small .quote-v2-img {
+  width: 33.3334%;
 }

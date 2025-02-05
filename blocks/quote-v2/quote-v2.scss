@@ -12,7 +12,26 @@
         width: 100%;
     }
 }
+[class^='quote-v2 quote-v2-image'] {
+    .quote-v2 {
+        &-article {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            > div {
+                padding: 0 15px;
+            }
+        }
+    }
+    figure {
+        picture {
+            display: none;
+        }
+    }
+}
 .quote-v2 {
+    $this: &;
+    margin: 0 0 52px 0;
     * {
         box-sizing: border-box;
     }
@@ -55,6 +74,58 @@
                     width: 100%;
                 }
             }
+        }
+    }
+    figure {
+        border-radius: 4px;
+        background-color: $--blue-50;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+        padding: 36px;
+    }
+    blockquote {
+        margin: 0;
+        padding: 0;
+        .icon {
+            display: inline-block;
+            font-size: 73.5px;
+            height: auto;
+            margin: 0 0 36px 0;
+            width: auto;
+            > i {
+                font-size: inherit;
+            }
+        }
+        p {
+            font-family: $--font-museo;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin: 0 0 24px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    figcaption {
+        margin-top: 25px;
+    }
+    &-image-large {
+        figure {
+            width: 33.3334%;
+        }
+        #{$this}-img {
+            width: 66.6666%;
+        }
+    }
+    &-image-small {
+        figure {
+            width: 66.6666%;
+        }
+        #{$this}-img {
+            width: 33.3334%;
         }
     }
 }
