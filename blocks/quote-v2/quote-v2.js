@@ -92,7 +92,6 @@ export default async function decorate(block) {
         col.append(pictureDiv);
       }
     } else {
-      col.append(pictureDiv);
       col.append(figureEl);
     }
   });

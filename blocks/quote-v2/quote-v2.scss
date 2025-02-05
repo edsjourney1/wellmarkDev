@@ -17,13 +17,13 @@
         &-article {
             display: flex;
             flex-wrap: wrap;
-            margin: 0 -15px;
-            > div {
-                padding: 0 15px;
-            }
+            justify-content: space-between;
         }
     }
     figure {
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
         picture {
             display: none;
         }
@@ -112,20 +112,90 @@
     figcaption {
         margin-top: 25px;
     }
-    &-image-large {
-        figure {
-            width: 33.3334%;
+    &-image-large, &-image-small {
+        @include for-mobile {
+            figure, #{$this}-img {
+                width: 100%;
+                margin: 15px 0;
+            }
+            figure {
+                order: 2;
+            }
         }
-        #{$this}-img {
-            width: 66.6666%;
+        @include for-tablet-smallest {
+            figure, #{$this}-img {
+                width: 100%;
+                margin: 15px 0;
+            }
+            figure {
+                order: 2;
+            }
+        }
+        @include for-tablet {
+            figure {
+                min-height: 600px;
+            }
+            figure, #{$this}-img {
+                width: calc(50% - 15px);
+            }
         }
     }
-    &-image-small {
-        figure {
-            width: 66.6666%;
+    @include for-laptop {
+        &-image-large {
+            figure {
+                width: calc(33.3334% - 15px);
+                min-height: 600px;
+            }
+            #{$this}-img {
+                width: calc(66.6666% - 15px);
+            }
         }
-        #{$this}-img {
-            width: 33.3334%;
+        &-image-small {
+            figure {
+                width: calc(66.6666% - 15px);
+                min-height: 600px;
+            }
+            #{$this}-img {
+                width: calc(33.3334% - 15px);
+            }
+        }
+    }
+    @include for-large {
+        &-image-large {
+            figure {
+                width: calc(33.3334% - 15px);
+                min-height: 600px;
+            }
+            #{$this}-img {
+                width: calc(66.6666% - 15px);
+            }
+        }
+        &-image-small {
+            figure {
+                width: calc(66.6666% - 15px);
+                min-height: 600px;
+            }
+            #{$this}-img {
+                width: calc(33.3334% - 15px);
+            }
+        }
+    }
+    @include for-xlarge {
+        &-image-large {
+            figure {
+                width: calc(33.3334% - 15px);
+            }
+            #{$this}-img {
+                width: calc(66.6666% - 15px);
+            }
+        }
+        &-image-small {
+            figure {
+                width: calc(66.6666% - 15px);
+            }
+            #{$this}-img {
+                width: calc(33.3334% - 15px);
+            }
         }
     }
 }
