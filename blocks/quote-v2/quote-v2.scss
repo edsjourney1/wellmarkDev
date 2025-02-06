@@ -1,0 +1,276 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+[class^='quote-v2 quote-v2-grid'] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    row-gap: 52px;
+    width: calc(100% + 30px);
+    > div {
+        padding: 0 15px;
+        width: 100%;
+    }
+}
+[class^='quote-v2 quote-v2-image'] {
+    .quote-v2 {
+        &-article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    figure {
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        picture {
+            display: none;
+        }
+    }
+}
+.quote-v2 {
+    $this: &;
+    margin: 0 0 52px 0;
+    * {
+        box-sizing: border-box;
+    }
+    &-hidden {
+        display: none;
+    }
+    &-grid {
+        &-4-col {
+            > div {
+                width: 25%;
+                @include for-tablet {
+                    width: 50%;
+                }
+                @include for-tablet-smallest {
+                    width: 50%;
+                }
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+        &-3-col {
+            > div {
+                width: 33.3333%;
+                @include for-tablet {
+                    width: 50%;
+                }
+                @include for-tablet-smallest {
+                    width: 50%;
+                }
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+        &-2-col {
+            > div {
+                width: 50%;
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    figure {
+        border-radius: 4px;
+        background-color: $--blue-50;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+        padding: 36px;
+    }
+    blockquote {
+        margin: 0;
+        padding: 0;
+        .icon {
+            display: inline-block;
+            font-size: 73.5px;
+            height: auto;
+            margin: 0 0 36px 0;
+            width: auto;
+            > i {
+                font-size: inherit;
+            }
+        }
+        p {
+            font-family: $--font-museo;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin: 0 0 24px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    figcaption {
+        margin-top: 25px;
+    }
+    &-image-large, &-image-small {
+        #{$this}-img {
+            > div {
+                border-radius: 4px;
+                height: 0;
+                overflow: hidden;
+                padding-bottom: 100%;
+                position: relative;
+                img {
+                    border-radius: 4px;
+                    height: 100.5%;
+                    left: 50%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100.5%;
+                }
+            }
+        }
+        @include for-mobile {
+            figure, #{$this}-img {
+                width: 100%;
+                margin: 15px 0;
+            }
+            figure {
+                order: 2;
+            }
+        }
+        @include for-tablet-smallest {
+            figure, #{$this}-img {
+                width: 100%;
+                margin: 15px 0;
+            }
+            figure {
+                order: 2;
+            }
+        }
+        @include for-tablet {
+            figure {
+                min-height: 600px;
+            }
+            figure, #{$this}-img {
+                width: calc(50% - 15px);
+            }
+        }
+    }
+    @include for-laptop {
+        &-image-large, &-image-small {
+            #{$this}-img {
+                > div {
+                    height: 100%;
+                    overflow: hidden;
+                    padding-bottom: 0;
+                    position: relative;
+                    img {
+                        height: 100.5%;
+                        left: 50%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100.5%;
+                    }
+                }
+            }
+        }
+        &-image-large {
+            figure {
+                min-height: 600px;
+                width: calc(33.3334% - 15px);
+            }
+            #{$this}-img {
+                width: calc(66.6666% - 15px);
+            }
+        }
+        &-image-small {
+            figure {
+                min-height: 600px;
+                width: calc(66.6666% - 15px);
+            }
+            #{$this}-img {
+                width: calc(33.3334% - 15px);
+            }
+        }
+    }
+    @include for-large {
+        &-image-large, &-image-small {
+            #{$this}-img {
+                > div {
+                    height: 100%;
+                    overflow: hidden;
+                    padding-bottom: 0;
+                    position: relative;
+                    img {
+                        height: 100.5%;
+                        left: 50%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100.5%;
+                    }
+                }
+            }
+        }
+        &-image-large {
+            figure {
+                width: calc(33.3334% - 15px);
+                min-height: 600px;
+            }
+            #{$this}-img {
+                width: calc(66.6666% - 15px);
+            }
+        }
+        &-image-small {
+            figure {
+                width: calc(66.6666% - 15px);
+                min-height: 600px;
+            }
+            #{$this}-img {
+                width: calc(33.3334% - 15px);
+            }
+        }
+    }
+    @include for-xlarge {
+        &-image-large, &-image-small {
+            #{$this}-img {
+                > div {
+                    height: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    img {
+                        height: 100.5%;
+                        left: 50%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100.5%;
+                    }
+                }
+            }
+        }
+        &-image-large {
+            figure {
+                width: calc(33.3334% - 15px);
+            }
+            #{$this}-img {
+                width: calc(66.6666% - 15px);
+            }
+        }
+        &-image-small {
+            figure {
+                width: calc(66.6666% - 15px);
+            }
+            #{$this}-img {
+                width: calc(33.3334% - 15px);
+            }
+        }
+    }
+}
