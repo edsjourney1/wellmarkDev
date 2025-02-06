@@ -1,0 +1,42 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.blog-cta {
+    * {
+        text-align: center;
+    }
+    border-bottom: 8px solid $--gray-100;
+    border-top: 8px solid $--gray-100;
+    padding: 52px 0;
+    text-align: center;
+    h3 {
+        margin: 0 0 12px 0;
+    }
+    p {
+        margin: 0 0 24px 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    &-btn {
+        .button-container {
+            justify-content: center;
+            margin-top: 24px;
+            a {
+                display: inline-block;
+                border-radius: 2px;
+                border: 2px solid $--blue-675;
+                padding: 12px 30px;
+                text-decoration: none;
+            }
+            .icon {
+                height: auto;
+                width: auto;
+                margin-left: 5px;
+                > i {
+                    font-size: inherit;
+                }
+            }
+        }
+    }
+}
