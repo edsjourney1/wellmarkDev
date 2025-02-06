@@ -113,6 +113,25 @@
         margin-top: 25px;
     }
     &-image-large, &-image-small {
+        #{$this}-img {
+            > div {
+                border-radius: 4px;
+                height: 0;
+                overflow: hidden;
+                padding-bottom: 100%;
+                position: relative;
+                img {
+                    border-radius: 4px;
+                    height: 100.5%;
+                    left: 50%;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100.5%;
+                }
+            }
+        }
         @include for-mobile {
             figure, #{$this}-img {
                 width: 100%;
@@ -141,10 +160,29 @@
         }
     }
     @include for-laptop {
+        &-image-large, &-image-small {
+            #{$this}-img {
+                > div {
+                    height: 100%;
+                    overflow: hidden;
+                    padding-bottom: 0;
+                    position: relative;
+                    img {
+                        height: 100.5%;
+                        left: 50%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100.5%;
+                    }
+                }
+            }
+        }
         &-image-large {
             figure {
-                width: calc(33.3334% - 15px);
                 min-height: 600px;
+                width: calc(33.3334% - 15px);
             }
             #{$this}-img {
                 width: calc(66.6666% - 15px);
@@ -152,8 +190,8 @@
         }
         &-image-small {
             figure {
-                width: calc(66.6666% - 15px);
                 min-height: 600px;
+                width: calc(66.6666% - 15px);
             }
             #{$this}-img {
                 width: calc(33.3334% - 15px);
@@ -161,6 +199,25 @@
         }
     }
     @include for-large {
+        &-image-large, &-image-small {
+            #{$this}-img {
+                > div {
+                    height: 100%;
+                    overflow: hidden;
+                    padding-bottom: 0;
+                    position: relative;
+                    img {
+                        height: 100.5%;
+                        left: 50%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100.5%;
+                    }
+                }
+            }
+        }
         &-image-large {
             figure {
                 width: calc(33.3334% - 15px);
@@ -181,6 +238,24 @@
         }
     }
     @include for-xlarge {
+        &-image-large, &-image-small {
+            #{$this}-img {
+                > div {
+                    height: 100%;
+                    overflow: hidden;
+                    position: relative;
+                    img {
+                        height: 100.5%;
+                        left: 50%;
+                        object-fit: cover;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100.5%;
+                    }
+                }
+            }
+        }
         &-image-large {
             figure {
                 width: calc(33.3334% - 15px);

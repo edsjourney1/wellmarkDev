@@ -117,6 +117,24 @@
 .quote-v2 figcaption {
   margin-top: 25px;
 }
+.quote-v2-image-large .quote-v2-img > div, .quote-v2-image-small .quote-v2-img > div {
+  border-radius: 4px;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+}
+.quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
+  border-radius: 4px;
+  height: 100.5%;
+  left: 50%;
+  
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100.5%;
+}
 @media (max-width: 480px) {
   .quote-v2-image-large figure, .quote-v2-image-large .quote-v2-img, .quote-v2-image-small figure, .quote-v2-image-small .quote-v2-img {
     width: 100%;
@@ -144,22 +162,53 @@
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
+  .quote-v2-image-large .quote-v2-img > div, .quote-v2-image-small .quote-v2-img > div {
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 0;
+    position: relative;
+  }
+  .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
+    height: 100.5%;
+    left: 50%;
+    
+       object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100.5%;
+  }
   .quote-v2-image-large figure {
-    width: calc(33.3334% - 15px);
     min-height: 600px;
+    width: calc(33.3334% - 15px);
   }
   .quote-v2-image-large .quote-v2-img {
     width: calc(66.6666% - 15px);
   }
   .quote-v2-image-small figure {
-    width: calc(66.6666% - 15px);
     min-height: 600px;
+    width: calc(66.6666% - 15px);
   }
   .quote-v2-image-small .quote-v2-img {
     width: calc(33.3334% - 15px);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
+  .quote-v2-image-large .quote-v2-img > div, .quote-v2-image-small .quote-v2-img > div {
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 0;
+    position: relative;
+  }
+  .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
+    height: 100.5%;
+    left: 50%;
+       object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100.5%;
+  }
   .quote-v2-image-large figure {
     width: calc(33.3334% - 15px);
     min-height: 600px;
@@ -176,6 +225,21 @@
   }
 }
 @media (min-width: 1379px) {
+  .quote-v2-image-large .quote-v2-img > div, .quote-v2-image-small .quote-v2-img > div {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
+    height: 100.5%;
+    left: 50%;
+    
+       object-fit: cover;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100.5%;
+  }
   .quote-v2-image-large figure {
     width: calc(33.3334% - 15px);
   }

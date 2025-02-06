@@ -1,5 +1,5 @@
 const formTheQuote = (child1, child2, clsName) => {
-  const col = document.createElement("div");
+  const col = document.createElement('div');
   col.className = `quote-v2-${clsName}`;
   child1.parentNode.insertBefore(col, child1);
 
@@ -20,19 +20,9 @@ export default async function decorate(block) {
   if (isGrid) {
     for(let i=0; i<children.length; i+=2) {
       quoteMainArr.push(formTheQuote(children[i], children[i+1], 'col'));
-      // const gridCol = document.createElement('div');
-      // gridCol.className = 'quote-v2-col';
-      // if (children[i] && children[i+1]) {
-      //   quoteMainArr.push(formTheQuote(gridCol, children[i], children[i+1]));
-      // }
     }
   } else {
     quoteMainArr.push(formTheQuote(children[0], children[1], 'article'));
-    // const gridCol = document.createElement('div');
-    // gridCol.className = 'quote-v2-article';
-    // if (children[0] && children[1]) {
-    //   quoteMainArr.push(formTheQuote(gridCol, children[0], children[1]));
-    // }
   }
 
   quoteMainArr.forEach((col) => {
