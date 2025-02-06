@@ -19,7 +19,7 @@ export default async function decorate(block) {
   const quoteMainArr = [];
   if (isGrid) {
     for (let i = 0; i < children.length; i += 2) {
-      quoteMainArr.push(formTheQuote(children[i], children[i+1], 'col'));
+      quoteMainArr.push(formTheQuote(children[i], children[i + 1], 'col'));
     }
   } else {
     quoteMainArr.push(formTheQuote(children[0], children[1], 'article'));
@@ -32,16 +32,16 @@ export default async function decorate(block) {
     const figureEl = document.createElement('figure');
     const blockquoteEl = document.createElement('blockquote');
     const iconEl = document.createElement('span');
-    iconEl.className='icon icon-solid--quote-left';
+    iconEl.className = 'icon icon-solid--quote-left';
     iconEl.innerHTML = '<i class="fa-solid fa-quote-left" data-icon-name="solid--quote-left"></i>';
 
     blockquoteEl.innerHTML = child1.innerHTML;
 
     // let [blockquoteChild, imgChild] = Array.from(blockquoteEl.children);
-    let blockquoteChild = Array.from(blockquoteEl.children)[0];
+    let blockquoteChild = blockquoteEl.children[0];
 
     if (blockquoteEl.children[0].querySelector('picture')) {
-      blockquoteChild = Array.from(blockquoteEl.children)[1];
+      blockquoteChild = blockquoteEl.children[1];
       // imgChild = blockquoteEl.children[0];
     }
     blockquoteChild.insertBefore(iconEl, blockquoteEl.querySelector('p'));
