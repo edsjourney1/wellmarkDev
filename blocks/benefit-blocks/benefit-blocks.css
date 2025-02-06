@@ -339,3 +339,11 @@
     padding-top: 52px;
   }
 }
+
+.background-blue-50 .block-left {
+  background-color: #ffffff;
+}
+
+p:has(i) a {
+  margin-left: 8px;
+}
