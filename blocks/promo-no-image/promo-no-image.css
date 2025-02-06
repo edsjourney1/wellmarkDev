@@ -232,7 +232,7 @@
 .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li .cards-card-body p > span > i {
   font-size: 84px;
 }
-.promo-no-image-container .promo-no-image > .promo-no-image-4-column > li .cards-card-body:nth-child(2) i {
+.promo-no-image-container .promo-no-image > .promo-no-image-4-column > li .cards-card-body h3 ~ p:has(span) i {
   font-size: 16px;
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
