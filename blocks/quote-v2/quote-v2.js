@@ -42,6 +42,7 @@ export default async function decorate(block) {
 
     if (blockquoteEl.children[0].querySelector('picture')) {
       blockquoteChild = imgChild;
+      imgChild = null;
       // imgChild = blockquoteEl.children[0];
     }
     blockquoteChild.insertBefore(iconEl, blockquoteEl.querySelector('p'));
