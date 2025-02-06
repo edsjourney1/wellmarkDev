@@ -27,7 +27,7 @@ indices:
         value: |
          attribute(el, "content")
       readTime:
-        selectFirst: head > meta[name="article-read-time"]
+        selectFirst: head > meta[name="read-time"]
         value: |
          attribute(el, "content")
       category:
