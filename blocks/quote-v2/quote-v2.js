@@ -38,10 +38,10 @@ export default async function decorate(block) {
     blockquoteEl.innerHTML = child1.innerHTML;
 
     // let [blockquoteChild, imgChild] = Array.from(blockquoteEl.children);
-    let blockquoteChild = blockquoteEl.children[0];
+    let [blockquoteChild, imgChild] = Array.from(blockquoteEl.children);
 
     if (blockquoteEl.children[0].querySelector('picture')) {
-      blockquoteChild = blockquoteEl.children[1];
+      blockquoteChild = imgChild;
       // imgChild = blockquoteEl.children[0];
     }
     blockquoteChild.insertBefore(iconEl, blockquoteEl.querySelector('p'));
