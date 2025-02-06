@@ -128,8 +128,7 @@
   border-radius: 4px;
   height: 100.5%;
   left: 50%;
-  
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -171,8 +170,7 @@
   .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
     height: 100.5%;
     left: 50%;
-    
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -203,7 +201,7 @@
   .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
     height: 100.5%;
     left: 50%;
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -233,8 +231,7 @@
   .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
     height: 100.5%;
     left: 50%;
-    
-       object-fit: cover;
+    object-fit: cover;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
