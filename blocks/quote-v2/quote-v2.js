@@ -18,7 +18,7 @@ export default async function decorate(block) {
   const children = Array.from(thisBlock.children);
   const quoteMainArr = [];
   if (isGrid) {
-    for(let i=0; i<children.length; i+=2) {
+    for (let i = 0; i < children.length; i += 2) {
       quoteMainArr.push(formTheQuote(children[i], children[i+1], 'col'));
     }
   } else {
@@ -34,15 +34,15 @@ export default async function decorate(block) {
     const iconEl = document.createElement('span');
     iconEl.className='icon icon-solid--quote-left';
     iconEl.innerHTML = '<i class="fa-solid fa-quote-left" data-icon-name="solid--quote-left"></i>';
-    
+
     blockquoteEl.innerHTML = child1.innerHTML;
 
-    let blockquoteChild = blockquoteEl.children[0];
-    let imgChild = blockquoteEl.children[1];
+    // let [blockquoteChild, imgChild] = Array.from(blockquoteEl.children);
+    let blockquoteChild = Array.from(blockquoteEl.children)[0];
 
     if (blockquoteEl.children[0].querySelector('picture')) {
-      blockquoteChild = blockquoteEl.children[1];
-      imgChild = blockquoteEl.children[0];
+      blockquoteChild = Array.from(blockquoteEl.children)[1];
+      // imgChild = blockquoteEl.children[0];
     }
     blockquoteChild.insertBefore(iconEl, blockquoteEl.querySelector('p'));
     figureEl.appendChild(blockquoteEl);
@@ -51,7 +51,7 @@ export default async function decorate(block) {
     child1.classList.add('quote-v2-hidden');
     child2.setAttribute('aria-hidden', true);
     child2.classList.add('quote-v2-hidden');
-  
+
     const author = child2.children[0].querySelector('p');
     const source = child2.children[1].querySelector('p');
     const figcaptionEl = document.createElement('figcaption');
@@ -64,12 +64,12 @@ export default async function decorate(block) {
     str += str2;
     figcaptionEl.innerHTML = str;
     figureEl.append(figcaptionEl);
-    
+
     const quoteImg = figureEl.querySelector('picture');
 
     if (quoteImg) {
       const pictureDiv = document.createElement('div');
-      pictureDiv.classList.add('quote-v2-img')
+      pictureDiv.classList.add('quote-v2-img');
       const pictureInnerDiv = document.createElement('div');
       pictureInnerDiv.append(quoteImg.cloneNode(true));
       pictureDiv.append(pictureInnerDiv);
