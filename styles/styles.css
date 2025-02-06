@@ -639,7 +639,10 @@ a:any-link {
   line-height: 19px;
   display: flex;
 }
-.section .default-content-wrapper p.button-container a:has(.icon).button {
+.section .default-content-wrapper p.button-container a.button.primary {
+  font-size: 18px;
+}
+.section .default-content-wrapper p.button-container a.button.secondary {
   font-size: 18px;
 }
 .section .default-content-wrapper p.button-container a:has(.icon).button.primary {
