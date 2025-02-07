@@ -42,8 +42,7 @@ export default async function decorate(block) {
   dateandtime.append(span, articletime);
   const categoryPara = document.createElement('p');
   categoryPara.classList.add('category-list');
-  const categoryArr = postArticle.category.split(',');
-  categoryArr.forEach((item) => {
+  postArticle.category.forEach((item) => {
     const categorySpan = document.createElement('a');
     categorySpan.append(item);
     categoryPara.append(categorySpan);
