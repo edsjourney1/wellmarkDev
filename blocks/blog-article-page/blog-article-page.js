@@ -23,7 +23,7 @@ export default function decorate(block) {
   fbtext.classList.add('facebook');
   fbtext.innerHTML = ('facebook');
   const link = encodeURI(window.location.href);
-  const linktext = encodeURI(document.title);
+  const linktext = encodeURI('Hello');
   fbtext.href = `https://www.facebook.com/share.php?title=${linktext}&u=${link}`;
   fbtext.setAttribute('href', fbtext);
   block.append(fbtext);
@@ -33,8 +33,8 @@ export default function decorate(block) {
   twittertext.classList.add('Twitter');
   twittertext.innerHTML = ('Twitter');
   const twitterlink = encodeURI(window.location.href);
-  twittertext.href = (`https://twitter.com/intent/tweet?url=${twitterlink}&text=${document.title}`, '_blank');
-  // twittertext.href = `http://twitter.com/share?&url=${twitterlink}&text=${document.title}&hashtags=javascript,programming`;
+  // twittertext.href = (`https://twitter.com/intent/tweet?url=${twitterlink}&text=${document.title}`, '_blank');
+  twittertext.href = `http://twitter.com/share?&url=${twitterlink}&text=${document.title}&hashtags=javascript,programming`;
   twittertext.setAttribute('href', twittertext);
   block.append(twittertext);
 
