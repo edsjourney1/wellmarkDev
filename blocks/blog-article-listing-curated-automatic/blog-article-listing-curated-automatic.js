@@ -6,7 +6,7 @@ import myJson from '../../scripts/constants.js';
 export default async function decorate(block) {
   const heading = block.children[0].children[0].textContent;
   console.log(heading);
-  const categoryByauthor = block.children[1].children[1].textContent;
+  const categoryByauthor = block.children[1].children[0].textContent;
   console.log(categoryByauthor);
   const inlinewithIcon = block.children[0].children[1].innerHTML;
   const headingSpam = document.createElement('h2');
