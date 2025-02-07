@@ -2,7 +2,7 @@ const myJson = [
   {
     path: '/nutrition/nutrition1',
     url: 'https://main--wellmark--anutyagi007.aem.live/nutrition/nutrition1',
-    description: 'description copy',
+    description: 'This is what 150-character text looks like. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dol.Enter your text.Enter your text. This ...This is what 150-character text looks like. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dol.Enter your text.Enter your text. This ...',
     title: 'Nutrition 1',
     image: 'https://main--wellmark--anutyagi007.aem.live/nutrition/media_16c00edee537dcf06b1b8df1704ff248f3dc5cd57.png?width=1200&format=pjpg&optimize=medium',
     publishedDate: '02/10/2024',
