@@ -2,10 +2,13 @@ import myJson from '../../scripts/constants.js';
 
 export default async function decorate(block) {
   const mainPageURL = block.children[0].textContent;
-  console.log(mainPageURL);
   block.innerHTML = '';
-  const postArticle = myJson.find((item) => item.url === mainPageURL);
-  console.log(postArticle);
+  const postArticle = myJson.find((item) => {
+    if (item.url === mainPageURL) {
+      console.log(item);
+    }
+    return item;
+  });
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
