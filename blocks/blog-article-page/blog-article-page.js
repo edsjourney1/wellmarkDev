@@ -23,7 +23,8 @@ export default function decorate(block) {
   fbtext.classList.add('facebook');
   fbtext.innerHTML = ('facebook');
   const link = encodeURI(window.location.href);
-  fbtext.href = `https://www.facebook.com/share.php?title=${document.title}&u=${link}`;
+  const linktext = encodeURI(document.title);
+  fbtext.href = `https://www.facebook.com/share.php?title=${linktext}&u=${link}`;
   fbtext.setAttribute('href', fbtext);
   block.append(fbtext);
 
@@ -32,7 +33,8 @@ export default function decorate(block) {
   twittertext.classList.add('Twitter');
   twittertext.innerHTML = ('Twitter');
   const twitterlink = encodeURI(window.location.href);
-  twittertext.href = `http://twitter.com/share?&url=${twitterlink}&text=${document.title}&hashtags=javascript,programming`;
+  twittertext.href = (`https://twitter.com/intent/tweet?url=${twitterlink}&text=${document.title}`, '_blank');
+  // twittertext.href = `http://twitter.com/share?&url=${twitterlink}&text=${document.title}&hashtags=javascript,programming`;
   twittertext.setAttribute('href', twittertext);
   block.append(twittertext);
 
@@ -41,7 +43,7 @@ export default function decorate(block) {
   intext.classList.add('Linkedin');
   intext.innerHTML = ('Linkedin');
   const inlink = encodeURI(window.location.href);
-  intext.href = `https://www.linkedin.com/sharing/share-offsite/?title=${document.title}&url=${inlink}`;
+  intext.href = `https://www.linkedin.com/sharing/share-offsite/?url=${inlink}`;
   intext.setAttribute('href', intext);
   block.append(intext);
 
