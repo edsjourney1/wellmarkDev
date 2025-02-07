@@ -63,15 +63,15 @@ function getUrlExtension(url) {
     setreturn = url.split(/[#?]/)[0].split('.').pop().trim();
   } else {
     const aaidURL = url.split(/[:]/);
-    if (aaidURL.includes('aaid')) {
-      setreturn = 'aaid';
+    if (aaidURL.includes('/adobe/assets/urn:aaid')) {
+      setreturn = '/adobe/assets/urn:aaid';
     }
   }
   return setreturn;
 }
 function returnExtension(element) {
   const ext = getUrlExtension(element.getAttribute('href'));
-  const extensionvalidation = ext === 'aaid' ? true : ext
+  const extensionvalidation = ext === '/adobe/assets/urn:aaid' ? true : ext
     && ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(ext.toLowerCase());
   return { isVisible: extensionvalidation, isaaid: extensionvalidation };
 }
