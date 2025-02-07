@@ -1,0 +1,160 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.blog-new-stories {
+  .new-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 52px;
+    .line-icon{
+      p{
+        margin: 0;
+        font-weight: 500;
+        .icon{
+          height: auto;
+          width: auto;
+          i{
+            font-size: 16px;
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+    @include for-mobile {
+      flex-direction: column;
+      gap: 24px;
+    }
+    @include for-tablet {
+      flex-direction: column;
+      gap: 24px;
+    }
+    > .stories-title {
+      color: $--blue-550;
+      margin: 0;
+      @include for-mobile {
+        width: 100%;
+      }
+      @include for-tablet {
+        width: 100%;
+      }
+      @include for-laptop {
+        width: calc((100% - 15px) / 8 * 5)
+      }
+      @include for-large {
+        width: calc((100% - 15px) / 8 * 6)
+      }
+      @include for-xlarge {
+        width: calc((100% - 15px) / 8 * 6)
+      }
+    }
+  }
+  .new-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    > .new-card-div {
+      display: flex;
+      align-items: start;
+      width: 100%;
+      gap: 30px;
+      border-bottom: 2px solid $--gray-225;
+      padding-bottom: 34px;
+      &:last-child {
+        border-bottom: unset;
+        padding-bottom: 0;
+      }
+      @include for-tablet {
+        flex-direction: column;
+        gap: 0px;
+      }
+      @include for-mobile {
+        flex-direction: column;
+        gap: 0px;
+      }
+      > img {
+        width: calc((100% - 45px) / 8 * 3);
+        border-radius: 4px;
+        @include for-laptop{
+          width: calc((100% - 30px) / 8* 4);
+        }
+        @include for-tablet {
+          width: 100%;
+          padding-bottom: 24px;
+        }
+        @include for-mobile {
+          width: 100%;
+          padding-bottom: 24px;
+        }
+      }
+      > .content-div {
+        width: calc((100% - 15px) / 8 * 5);
+        @include for-xlarge{
+          padding-right: 150px;
+        }
+        @include for-laptop{
+          width: calc((100% - 30px) / 8* 4);
+        }
+        @include for-tablet{
+          width: 100%;
+        }
+        @include for-mobile{
+          width: 100%;
+        }
+        > .card-title {
+          color: $--blue-675;
+          text-decoration: underline;
+          margin: 0;
+          padding-bottom: 8px;
+        }
+        > .description {
+          margin: 0;
+          padding-bottom: 8px;
+        }
+
+        > .date-div {
+          display: flex;
+          position: relative;
+          gap: 13px;
+          padding-bottom: 12px;
+          > .date {
+            margin: 0;
+            &::after {
+              content: "•";
+              position: absolute;
+              left: 90px;
+              @include for-mobile {
+                left: 88px;
+              }
+              @include for-tablet {
+                left: 88px;
+              }
+              top: 35%;
+              transform: translateY(-50%);
+              font-size: 16px;
+              color: $--gray-700;
+            }
+          }
+          > .read-time {
+            margin: 0;
+          }
+        }
+        > .category-list {
+          margin: 0;
+          display: flex;
+          gap: 12px;
+          flex-wrap: wrap;
+          @include for-tablet {
+            padding-bottom: 36px;
+          }
+          @include for-mobile {
+            padding-bottom: 36px;
+          }
+          > a {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

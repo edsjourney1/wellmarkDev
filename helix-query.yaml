@@ -1,7 +1,7 @@
 indices:
   mysite:
     include:
-      - /**
+      - /article-page/**
     exclude:
       - /documents/snippets/**
     target: /query-index.json
