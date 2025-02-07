@@ -3,12 +3,14 @@ import myJson from '../../scripts/constants.js';
 export default async function decorate(block) {
   const mainPageURL = block.children[0].textContent;
   block.innerHTML = '';
-  const postArticle = myJson.find((item) => {
-    if (item.url === mainPageURL) {
-      console.log(item);
-    }
-    return item;
-  });
+  // const postArticle = myJson.find((item) => {
+  //   if (item.url === mainPageURL) {
+  //     console.log(item);
+  //   }
+  //   return item;
+  // });
+  const postArticle = myJson.findIndex((item) => item.url === mainPageURL);
+  console.log(postArticle);
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
