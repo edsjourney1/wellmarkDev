@@ -5,9 +5,7 @@ import myJson from '../../scripts/constants.js';
 
 export default async function decorate(block) {
   const heading = block.children[0].children[0].textContent;
-  console.log(heading);
   const categoryByauthor = block.children[1].children[0].textContent;
-  console.log(categoryByauthor);
   const inlinewithIcon = block.children[0].children[1].innerHTML;
   const headingSpam = document.createElement('h2');
   headingSpam.classList.add('title');
@@ -21,6 +19,7 @@ export default async function decorate(block) {
   block.innerHTML = '';
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
+  block.append(headDiv, blockDiv);
   const categoryBasedJson = myJson.filter((article) => article.category.includes(categoryByauthor));
   function renderItems() {
     blockDiv.innerHTML = '';
@@ -32,7 +31,6 @@ export default async function decorate(block) {
       return categoryBasedJson.slice(0, num);
     }
     const randomArticles = getRandomArticlesfromJSON();
-    console.log(randomArticles);
     randomArticles.forEach(({
       image, category, publishedDate, readTime, title,
     }) => {
