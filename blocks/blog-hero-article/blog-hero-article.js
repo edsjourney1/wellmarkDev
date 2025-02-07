@@ -1,7 +1,7 @@
 import myJson from '../../scripts/constants.js';
 
 export default async function decorate(block) {
-  const mainPageURL = block.children[0].textContent;
+  const mainPageURL = String(block.children[0].textContent);
   block.innerHTML = '';
   // const postArticle = myJson.find((item) => {
   //   if (item.url === mainPageURL) {
