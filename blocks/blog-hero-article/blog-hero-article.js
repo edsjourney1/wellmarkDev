@@ -9,7 +9,7 @@ export default async function decorate(block) {
   //   }
   //   return item;
   // });
-  const postArticle = myJson.findIndex((item) => item.url === mainPageURL);
+  const postArticle = myJson.find((item) => item.url === mainPageURL);
   console.log(postArticle);
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
@@ -44,11 +44,11 @@ export default async function decorate(block) {
   dateandtime.append(span, articletime);
   const categoryPara = document.createElement('p');
   categoryPara.classList.add('category-list');
-  postArticle.category.forEach((item) => {
-    const categorySpan = document.createElement('a');
-    categorySpan.append(item);
-    categoryPara.append(categorySpan);
-  });
+  // postArticle.category.forEach((item) => {
+  //   const categorySpan = document.createElement('a');
+  //   categorySpan.append(item);
+  //   categoryPara.append(categorySpan);
+  // });
   categoryDateDiv.append(dateandtime, categoryPara);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
