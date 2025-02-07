@@ -22,17 +22,17 @@ export default function decorate(block) {
   const fbtext = document.createElement('button');
   fbtext.classList.add('facebook');
   fbtext.innerHTML = ('facebook');
-  const link = encodeURI(window.location.href);
+  // const link = encodeURI(window.location.href);
   const linktext = encodeURI(document.title);
-  fbtext.href = `https://www.facebook.com/share.php?title=${linktext}&u=${link}`;
-  fbtext.setAttribute('href', fbtext);
+  // fbtext.href = `https://www.facebook.com/share.php?title=${linktext}&u=${link}`;
+  // fbtext.setAttribute('href', fbtext);
   block.append(fbtext);
 
   window.addEventListener('click', () => {
     // const e = document.querySelectorAll('.facebook');
     console.log('test');
     const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?title=${linktext}&u=${url}`, '_blank');
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${linktext}`, '_blank');
   });
 
   // Twitter
