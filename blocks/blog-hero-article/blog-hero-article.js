@@ -34,19 +34,13 @@ export default async function decorate(block) {
   descriptionPara.append(postArticle.description);
   descriptionDiv.append(descriptionPara);
   descriptionDiv.classList.add('description');
-  // const dateandtime = document.createElement('p');
-  // if (datafromArticleInformation.querySelector('.date') !== undefined &&
-  // datafromArticleInformation.querySelector('.date') !== null) {
-  //   const publishedDate = datafromArticleInformation.querySelector('.date');
-  //   const publishDate = String(publishedDate.children[0].textContent).split(':')[1];
-  //   const span = document.createElement('span');
-  //   span.append(publishDate);
-  //   const articletime = document.createElement('span');
-  //   articletime.append(articlereadtime);
-  //   // lastUpdatedpara.append(span, articlereadtime);
-  //   dateandtime.append(span, articletime);
-  // }
-  // categoryDateDiv.append(dateandtime, articleAnchors);
+  const dateandtime = document.createElement('p');
+  const span = document.createElement('span');
+  span.append(postArticle.publishedDate);
+  const articletime = document.createElement('span');
+  articletime.append(postArticle.readTime);
+  dateandtime.append(span, articletime);
+  categoryDateDiv.append(dateandtime);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
   block.innerHTML = '';
