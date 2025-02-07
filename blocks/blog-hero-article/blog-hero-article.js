@@ -1,11 +1,11 @@
 import myJson from '../../scripts/constants.js';
 
 export default async function decorate(block) {
-  const mainPageURL = block.textContent;
+  const mainPageURL = String(block.textContent);
   console.log(mainPageURL);
   const postArticle = myJson.find((item) => {
     console.log(item.url);
-    return item.url === mainPageURL;
+    return String(item.url) === mainPageURL;
   });
   console.log(postArticle);
   const blogHero = document.createElement('div');
