@@ -40,7 +40,15 @@ export default async function decorate(block) {
   const articletime = document.createElement('span');
   articletime.append(`${postArticle.readTime} min read`);
   dateandtime.append(span, articletime);
-  categoryDateDiv.append(dateandtime);
+  const categoryPara = document.createElement('p');
+  categoryPara.classList.add('category-list');
+  const categoryArr = postArticle.category.split(',');
+  categoryArr.forEach((item) => {
+    const categorySpan = document.createElement('a');
+    categorySpan.append(item);
+    categoryPara.append(categorySpan);
+  });
+  categoryDateDiv.append(dateandtime, categoryPara);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
   block.innerHTML = '';
