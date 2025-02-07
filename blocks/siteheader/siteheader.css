@@ -58,7 +58,6 @@
 .siteheader-search-wrapper {
   display: flex;
   margin: 16px 0;
-  position: relative;
 }
 .siteheader-search-wrapper * {
   box-sizing: border-box;
@@ -150,4 +149,36 @@
 }
 .siteheader-mobile-wrapper {
   display: none;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .siteheader-right-section {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .siteheader-login-wrapper-cta {
+    display: none;
+  }
+  .siteheader-search-content {
+    display: none;
+  }
+  .siteheader-mobile-wrapper {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  .siteheader-search-wrapper button[type=button] {
+    display: block;
+    right: 0;
+    position: absolute;
+    top: 0;
+  }
+  .siteheader-logo-wrapper {
+    padding: 14px 0;
+    width: 157px;
+  }
+  .siteheader-container {
+    width: 100%;
+    justify-content: center;
+  }
 }

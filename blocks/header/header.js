@@ -25,7 +25,7 @@ export default async function decorate(block) {
             </div>`;
         }
 
-        const searchSectionStartStr = `<dov class='siteheader-right-section'>`;
+        const searchSectionStartStr = `<div class='siteheader-right-section'>`;
         const searchSectionEndStr = `</div>`;
 
         let searchWrapperStr = '';
@@ -75,7 +75,13 @@ export default async function decorate(block) {
             </div>`;
         }
 
-        headerFragment.innerHTML = logoWrapperStr + searchSectionStartStr + searchWrapperStr + loginWrapperStr + logoutWrapperStr + mobileBtnStr + searchSectionEndStr;
+        headerFragment.innerHTML = logoWrapperStr
+            + searchSectionStartStr
+            + searchWrapperStr
+            + loginWrapperStr
+            + logoutWrapperStr
+            + searchSectionEndStr
+            + mobileBtnStr;
         
         thisBlock.append(headerFragment);
         thisBlock.closest('.header-wrapper').append(navMaskEl);

@@ -3,8 +3,9 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 .header {
-  max-width: 1275px;
   margin: 0 auto;
+  max-width: 1275px;
+  position: relative;
   width: 100%;
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
@@ -19,7 +20,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .header {
-    width: calc(100% - 72px);
+    width: 100%;
   }
 }
 @media (max-width: 480px) {

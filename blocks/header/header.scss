@@ -3,8 +3,9 @@
 // @import 'breadcrumb.scss';
 
 .header {
-    max-width: 1275px;
     margin: 0 auto;
+    max-width: 1275px;
+    position: relative;
     width: 100%;
     @include for-large{
         width: calc(100% - 104px);
@@ -13,7 +14,7 @@
         width: calc(100% - 72px);
     }
     @include for-tablet{
-        width: calc(100% - 72px);
+        width: 100%;
     }
     @include for-mobile{
         width: 100%;

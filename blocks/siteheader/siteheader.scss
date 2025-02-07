@@ -56,7 +56,6 @@
         &-wrapper {
             display: flex;
             margin: 16px 0;
-            position: relative;
             * {
                 box-sizing: border-box;
             }
@@ -151,5 +150,37 @@
     }
     &-mobile-wrapper {
         display: none;
+    }
+
+    @include for-tablet {
+        &-right-section {
+            column-gap: 0;
+        }
+        &-login-wrapper-cta {
+            display: none;
+        }
+        &-search-content {
+            display: none;
+        }
+        &-mobile-wrapper {
+            display: block;
+            left: 0;
+            position: absolute;
+            top: 0;
+        }
+        &-search-wrapper button[type=button] {
+            display: block;
+            right: 0;
+            position: absolute;
+            top: 0;
+        }
+        &-logo-wrapper {
+            padding: 14px 0;
+            width: 157px;
+        }
+        &-container {
+            width: 100%;
+            justify-content: center;
+        }
     }
 }
