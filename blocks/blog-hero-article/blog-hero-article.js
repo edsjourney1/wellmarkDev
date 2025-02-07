@@ -14,6 +14,8 @@ export default async function decorate(block) {
   imgDiv.classList.add('image-div');
   const imageURL = document.createElement('img');
   imageURL.src = postArticle.image;
+  imageURL.alt = 'image';
+  imgDiv.append(imageURL);
   const contentDiv = document.createElement('div');
   contentDiv.classList.add('content-div');
   const button = document.createElement('p');
