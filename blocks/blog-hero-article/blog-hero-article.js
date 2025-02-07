@@ -1,8 +1,12 @@
 import myJson from '../../scripts/constants.js';
 
 export default async function decorate(block) {
-  const mainPageURL = block.textContent;
+  const mainPageURL = block.children[0].textContent;
+  const mainPageURL1 = block.textContent;
+  console.log(mainPageURL, mainPageURL1);
+  block.innerHTML = '';
   const postArticle = myJson.find((item) => item.url === mainPageURL);
+  console.log(postArticle);
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
@@ -44,6 +48,5 @@ export default async function decorate(block) {
   categoryDateDiv.append(dateandtime, categoryPara);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
-  block.innerHTML = '';
   block.append(blogHero);
 }
