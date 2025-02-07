@@ -1,17 +1,17 @@
 import myJson from '../../scripts/constants.js';
 
 export default async function decorate(block) {
-  const mainPageURL = String(block.children[0].textContent);
+  const articleDetails = String(block.children[0].textContent);
   block.innerHTML = '';
   // eslint-disable-next-line no-confusing-arrow
-  const postArticle = myJson.find((item) => item.url === mainPageURL ? item : '');
+  const postArticle = myJson.find((item) => item.url === articleDetails);
   // const postArticle = myJson.find((item) => item.url === mainPageURL ? item : '');
   console.log(postArticle);
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
   const imageURL = document.createElement('img');
-  imageURL.src = postArticle.image;
+  imageURL.src = articleDetails.image;
   imageURL.alt = 'image';
   imgDiv.append(imageURL);
   const contentDiv = document.createElement('div');
@@ -20,7 +20,7 @@ export default async function decorate(block) {
   button.classList.add('button-container');
   const buttonanchor = document.createElement('a');
   buttonanchor.classList.add('button', 'primary');
-  buttonanchor.setAttribute('href', `${mainPageURL}`);
+  buttonanchor.setAttribute('href', `${articleDetails}`);
   buttonanchor.innerText = 'Read more';
   button.append(buttonanchor);
   const categoryDateDiv = document.createElement('div');
@@ -28,23 +28,23 @@ export default async function decorate(block) {
   const descriptionDiv = document.createElement('div');
   const descriptionPara = document.createElement('p');
   const heading = document.createElement('h2');
-  heading.append(postArticle.title);
-  descriptionPara.append(postArticle.description);
+  heading.append(articleDetails.title);
+  descriptionPara.append(articleDetails.description);
   descriptionDiv.append(descriptionPara);
   descriptionDiv.classList.add('description');
   const dateandtime = document.createElement('p');
   const span = document.createElement('span');
   span.append(postArticle.publishedDate);
   const articletime = document.createElement('span');
-  articletime.append(`${postArticle.readTime} min read`);
+  articletime.append(`${articleDetails.readTime} min read`);
   dateandtime.append(span, articletime);
   const categoryPara = document.createElement('p');
   categoryPara.classList.add('category-list');
-  // postArticle.category.forEach((item) => {
-  //   const categorySpan = document.createElement('a');
-  //   categorySpan.append(item);
-  //   categoryPara.append(categorySpan);
-  // });
+  articleDetails.category.forEach((item) => {
+    const categorySpan = document.createElement('a');
+    categorySpan.append(item);
+    categoryPara.append(categorySpan);
+  });
   categoryDateDiv.append(dateandtime, categoryPara);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
