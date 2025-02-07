@@ -34,7 +34,7 @@ export default async function decorate(block) {
   descriptionDiv.classList.add('description');
   const dateandtime = document.createElement('p');
   const span = document.createElement('span');
-  span.append(postArticle.publishedDate);
+  span.append(articleDetails.publishedDate);
   const articletime = document.createElement('span');
   articletime.append(`${articleDetails.readTime} min read`);
   dateandtime.append(span, articletime);
