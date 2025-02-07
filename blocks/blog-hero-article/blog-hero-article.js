@@ -3,13 +3,9 @@ import myJson from '../../scripts/constants.js';
 export default async function decorate(block) {
   const mainPageURL = String(block.children[0].textContent);
   block.innerHTML = '';
-  // const postArticle = myJson.find((item) => {
-  //   if (item.url === mainPageURL) {
-  //     console.log(item);
-  //   }
-  //   return item;
-  // });
-  const postArticle = myJson.find((item) => item.url === mainPageURL);
+  // eslint-disable-next-line no-confusing-arrow
+  const postArticle = myJson.find((item) => item.url === mainPageURL ? item : '');
+  // const postArticle = myJson.find((item) => item.url === mainPageURL ? item : '');
   console.log(postArticle);
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
