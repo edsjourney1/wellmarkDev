@@ -1,9 +1,59 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
+const navClicks = (liObj, navArr) => {
+  if (liObj.isActive) {
+    liObj.isActive = false;
+    navArr.forEach(item => {
+      item.link.classList.remove('siteheader-nav-active');
+      item.subnav.classList.remove('siteheader-nav-active');
+    });
+  } else {
+    navArr.forEach(item => {
+      if (item.index === liObj.index) {
+        liObj.isActive = true;
+        item.link.classList.add('siteheader-nav-active');
+        item.subnav.classList.add('siteheader-nav-active');
+      } else {
+        item.isActive = false;
+        item.link.classList.remove('siteheader-nav-active');
+        item.subnav.classList.remove('siteheader-nav-active');
+      }
+    });
+  }
+};
 
-  console.log('============thisBlock', thisBlock);
+const addEvents = (thisBlock) => {
+  const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
+  const loginCtaEl = loginWrapEl?.querySelector('button');
+
+  loginCtaEl?.addEventListener('click', () => {
+      if (loginWrapEl.classList.contains('siteheader-login-wrapper-cta-active')) {
+          loginWrapEl.classList.remove('siteheader-login-wrapper-cta-active');
+      } else {
+          loginWrapEl.classList.add('siteheader-login-wrapper-cta-active');
+      }
+  });
+
+  const navArr = [];
+  const l0Links = Array.from(thisBlock.querySelectorAll('.siteheader-has-subnav'));
+  l0Links.forEach((link, index) => {
+    navArr.push({
+      index,
+      isActive: false,
+      link,
+      subnav: link.nextElementSibling,
+    })
+  });
+  navArr.forEach(liObj => {
+    liObj.link.addEventListener('click', (event) => {
+      event.preventDefault();
+      navClicks(liObj, navArr);
+    });
+  });
+};
+
+const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
   mobileBtnWrapperEl.innerHTML = `<button type='button'>
@@ -14,34 +64,28 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
 
   const navEl = document.createElement('nav');
   navEl.append(navUl);
-  thisBlock.append(navEl);
-  // const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
-  // const loginCtaEl = loginWrapEl?.querySelector('button');
 
-  // loginCtaEl?.addEventListener('click', () => {
-  //     if (loginWrapEl.classList.contains('siteheader-login-wrapper-cta-active')) {
-  //         loginWrapEl.classList.remove('siteheader-login-wrapper-cta-active');
-  //     } else {
-  //         loginWrapEl.classList.add('siteheader-login-wrapper-cta-active');
-  //     }
-  // });
+  const l0Ul = navEl.children[0];
+  const l0Li = Array.from(l0Ul.children);
+  l0Li.forEach(l0El => {
+    const l1Ul = l0El.querySelector('ul');
+    if (l1Ul) {
+      const l0ElSpan = document.createElement('span');
+      l0ElSpan.className = 'icon icon-solid--chevron-down';
+      l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
+      
+      const l0Anchor = l0El.querySelector('a');
+      l0Anchor.classList.add('siteheader-has-subnav');
+      l0Anchor.append(l0ElSpan);
+      const ulWrap = document.createElement('div');
+      l1Ul.parentNode.insertBefore(ulWrap, l1Ul);
+      ulWrap.appendChild(l1Ul);
+    }
+  });
 
-  // console.log("==============", thisBlock, navUl);
-  // console.log('===========navUl', navUl);
-  // const navArr = [];
-  // const l0li = Array.from(navUl.children);
-  // l0li.forEach(l0liEl => {
-  //   const l0liObj = {
-  //     l0: l0liEl.querySelector('a')
-  //   };
-  //   if (l0liEl.querySelector('ul')) {
-  //     const l1li = Array.from(l0liEl.querySelector('ul').children);
-  //     console.log('===========l1li', l1li);
-  //   }
-  //   navArr.push(l0liObj);
-  // });
+  mobileBtnWrapperEl.append(navEl);
 
-  // console.log('===============', navArr);
+  addEvents(thisBlock);
 };
 
 const formMainHeader = (thisBlock, headerFragment) => {

@@ -6,8 +6,6 @@
     position: relative;
     z-index: 98;
     &-wrapper {
-        background-color: $--blue-50;
-        border-bottom: 2px solid $--blue-100;
         left: 0;
         position: fixed;
         top: 0;
@@ -15,7 +13,7 @@
         z-index: 99;
     }
     &-padding {
-        height: 156px;
+        height: 160px;
         @include for-tablet {
             height: 60px;
         }

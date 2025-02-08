@@ -104,16 +104,14 @@
         width: 100%;
         z-index: 90;
     }
+    &-container {
+        background-color: $--blue-50;
+        border-bottom: 2px solid $--blue-100;
+    }
     &-outer {
         margin: 0 auto;
         max-width: 1275px;
         width: 100%;
-    }
-    &-inner {
-        display: flex;
-        justify-content: space-between;
-    }
-    &-container {
         @include for-large{
             width: calc(100% - 104px);
         }
@@ -125,6 +123,16 @@
         }
         @include for-mobile{
             width: 100%;
+        }
+    }
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        @include for-tablet{
+            justify-content: center;
+        }
+        @include for-mobile{
+            justify-content: center;
         }
     }
     &-logo-wrapper {
@@ -271,6 +279,108 @@
     &-mobile-wrapper {
         > button[type=button] {
             display: none
+        }
+
+        nav {
+            background-color: $--white;
+            border-bottom: 2px solid $--blue-100;
+            position: relative;
+            > ul {
+                align-items: center;
+                display: flex;
+                justify-content: flex-start;
+                list-style: none;
+                margin: 0 auto;
+                max-width: 1275px;
+                padding: 0;
+                width: 100%;
+                > li {
+                    > a {
+                        align-items: center;
+                        color: $--gray-700;
+                        display: flex;
+                        font-size: 16px;
+                        justify-content: center;
+                        padding: 24px 50px 24px 0;
+                        text-decoration: none;
+                        > .icon {
+                            height: 18px;
+                            line-height: 1;
+                            margin-left: 8px;
+                            transform: rotate(0);
+                            transition: transform 0.25s ease;
+                            width: 18px;
+                            > i {
+                                font-size: inherit;
+                            }
+                        }
+                        &.siteheader-nav-active {
+                            > .icon {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    div {
+                        background-color: $--white;
+                        border-bottom: 2px solid $--blue-100;
+                        border-top: 2px solid $--blue-100;
+                        left: 0;
+                        position: absolute;
+                        top: 100%;
+                        width: 100%;
+                        visibility: hidden;
+                        opacity: 0;
+                        z-index: -1;
+                        transform: translate(0, -100%);
+                        transition: all 0.25s ease;
+                        &.siteheader-nav-active {
+                            opacity: 1;
+                            transform: translate(0, 0);
+                            visibility: visible;
+                        }
+                        > ul {
+                            margin: 0 auto;
+                            max-width: 1275px;
+                            width: 100%;
+                            list-style: none;
+                            padding: 0;
+                            display: flex;
+                            > li {
+                                width: 25%;
+                                > ul {
+                                    list-style: none;
+                                    padding: 0;
+                                    margin: 0;
+                                }
+                            }
+                            @include for-large{
+                                width: calc(100% - 104px);
+                            }
+                            @include for-laptop{
+                                width: calc(100% - 72px);
+                            }
+                            @include for-tablet{
+                                width: 100%;
+                            }
+                            @include for-mobile{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                @include for-large{
+                    width: calc(100% - 104px);
+                }
+                @include for-laptop{
+                    width: calc(100% - 72px);
+                }
+                @include for-tablet{
+                    width: 100%;
+                }
+                @include for-mobile{
+                    width: 100%;
+                }
+            }
         }
     }
 

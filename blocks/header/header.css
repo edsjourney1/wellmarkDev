@@ -7,8 +7,6 @@
   z-index: 98;
 }
 .header-wrapper {
-  background-color: #f3f9ff;
-  border-bottom: 2px solid #d6e5f1;
   left: 0;
   position: fixed;
   top: 0;
@@ -16,7 +14,7 @@
   z-index: 99;
 }
 .header-padding {
-  height: 156px;
+  height: 160px;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .header-padding {
