@@ -3,32 +3,28 @@
 /* wellmark spacing size start */
 /* wellmark spacing size start */
 .header {
-  margin: 0 auto;
-  max-width: 1275px;
   position: relative;
-  width: 100%;
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  .header {
-    width: calc(100% - 104px);
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .header {
-    width: calc(100% - 72px);
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .header {
-    width: 100%;
-  }
-}
-@media (max-width: 480px) {
-  .header {
-    width: 100%;
-  }
+  z-index: 98;
 }
 .header-wrapper {
   background-color: #f3f9ff;
   border-bottom: 2px solid #d6e5f1;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.header-padding {
+  height: 156px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .header-padding {
+    height: 60px;
+  }
+}
+@media (max-width: 480px) {
+  .header-padding {
+    height: 60px;
+  }
 }
