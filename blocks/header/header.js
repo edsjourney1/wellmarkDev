@@ -57,7 +57,10 @@ const addEvents = (thisBlock) => {
   });
 };
 
-const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
+const formMainNavigation = (thisBlock, navUl, navCtaEl, fragment) => {
+
+  console.log("-----------fragment", fragment.innerHTML);
+
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
   mobileBtnWrapperEl.innerHTML = `<button type='button'>
@@ -79,7 +82,7 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
       l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
       
       const l0Anchor = l0El.querySelector('a');
-      
+
       // const subnavInfoMeta = getMetadata(`/header-fragments/nav-fragments/${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`);
       // const subnavInfoPath = subnavInfoMeta
       //   ? new URL(subnavInfoMeta, window.location).pathname
@@ -114,8 +117,9 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
   addEvents(thisBlock);
 };
 
-const formMainHeader = (thisBlock, headerFragment) => {
+const formMainHeader = (thisBlock, fragment) => {
   const headerWrapper = thisBlock.closest('.header-wrapper');
+  const headerFragment = fragment.querySelector('.siteheader-container');
 
   if (headerFragment) {
     const [
@@ -124,10 +128,13 @@ const formMainHeader = (thisBlock, headerFragment) => {
       searchToggle,
       loginInfo,
       logoutInfo,
-    ] = Array.from(headerFragment.querySelector('.siteheader > div:first-child').children);
+    ] = Array.from(headerFragment.querySelector('.siteheader.default > div:first-child').children);
 
-    const [navCtaEl] = Array.from(headerFragment.querySelector('.siteheader > div:nth-child(2)').children);
-    const [navUlEl] = Array.from(headerFragment.querySelector('.siteheader > div:last-child').children);
+    const [megamenuTitle, megamenuBody] = Array.from(headerFragment.querySelector('.siteheader.megamenu-shop:first-child').children);
+    console.log("==============megamenuShop", megamenuTitle, megamenuBody);
+
+    const [navCtaEl] = Array.from(headerFragment.querySelector('.siteheader.default > div:nth-child(2)').children);
+    const [navUlEl] = Array.from(headerFragment.querySelector('.siteheader.default > div:nth-child(3)').children);
     const navUl = navUlEl?.querySelector('ul');
 
     const navMaskEl = document.createElement('div');
@@ -216,7 +223,7 @@ const formMainHeader = (thisBlock, headerFragment) => {
     }
 
     if (navUl && navCtaEl) {
-      formMainNavigation(thisBlock, navUl, navCtaEl);
+      formMainNavigation(thisBlock, navUl, navCtaEl, fragment);
     }
   }
 };
@@ -228,11 +235,6 @@ export default async function decorate(block) {
     ? new URL(siteHeaderMeta, window.location).pathname
     : '/header-fragments/siteheader-fragment';
 
-  const fragment = await loadFragment(siteHeaderPath);
-
-  const headerFragment = fragment.querySelector('.siteheader-container');
-
-  if (headerFragment) {
-    formMainHeader(thisBlock, headerFragment);
-  }
+  const thisFragment = await loadFragment(siteHeaderPath);
+  formMainHeader(thisBlock, thisFragment);
 }
