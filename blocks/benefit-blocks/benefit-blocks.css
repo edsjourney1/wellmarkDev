@@ -88,12 +88,15 @@
   }
 }
 .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div h2 {
-  color: #4a7390;
+  color: #4b4c4d;
   font-family: museo, sans-serif;
   font-size: 32px;
   line-height: 38px;
   font-weight: 700;
   margin: 0;
+}
+.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div h2:has(a) {
+  color: #4a7390;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks .block-left > div > div h2 {
@@ -335,4 +338,12 @@
   .two-column-layout.benefit-blocks-container .benefit-blocks-wrapper .benefit-blocks.block .block-right div div {
     padding-top: 52px;
   }
+}
+
+.background-blue-50 .block-left {
+  background-color: #ffffff;
+}
+
+p:has(i) a {
+  margin-left: 8px;
 }

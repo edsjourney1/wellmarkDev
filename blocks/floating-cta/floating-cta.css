@@ -1,0 +1,47 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.floating-cta {
+  margin: 52px 0;
+}
+.floating-cta .button-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.floating-cta .button-container p {
+  margin: 0;
+}
+.floating-cta .button-container a {
+  background-color: #005589;
+  border-radius: 50px;
+  color: #ffffff;
+  column-gap: 12px;
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 14px 38px;
+  text-decoration: none;
+}
+.floating-cta .button-container a:hover {
+  background-color: #0F3659;
+}
+.floating-cta .button-container a .icon {
+  height: auto;
+  width: auto;
+}
+.floating-cta .button-container a .icon > i {
+  color: #ffffff;
+  font-size: inherit;
+}
+.floating-cta-light .button-container a {
+  background-color: #f3f9ff;
+  color: #005589;
+}
+.floating-cta-light .button-container a:hover {
+  background-color: #d6e5f1;
+}
+.floating-cta-light .button-container a .icon > i {
+  color: #005589;
+}

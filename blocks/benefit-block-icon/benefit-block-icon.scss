@@ -60,11 +60,14 @@
               padding: 0 $--spacing-xl;
             }
             h2 {
-              color: $--blue-550;
+              color: $--gray-700;
               font-family: $--font-museo;
               font-size: 32px;
               font-weight: 700;
               line-height: 38px;
+              &:has(a){
+                color: $--blue-550;
+              }
               margin: 0;
               @include for-tablet{
                 font-size: 28px;
@@ -185,5 +188,15 @@
     .benefit-block-icon{
       align-items: center;
     }
+  }
+}
+.background-blue-50{
+  .block-left{
+    background-color: $--white;
+  }
+}
+p:has(i){
+  a{
+    margin-left: 8px;
   }
 }

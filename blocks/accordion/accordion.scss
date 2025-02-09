@@ -9,6 +9,24 @@ main {
     }
 }
 .accordion-wrapper {
+    ol, ul{
+        li{
+            margin-top: 12px;
+            a{
+                color: $--blue-675;
+                font-weight: 500;
+            }
+            span.icon{
+                width: 16px;
+                height: 16px;
+                padding: 0 8px 0 12px;
+                i{
+                    font-size: 16px;
+                    color: $--blue-675;
+                }
+            }
+        }
+    }
     padding: $--spacing-max 0;
     @include for-large{
         padding: $--spacing-max $--spacing-xl $--spacing-max $--spacing-xl;
@@ -75,18 +93,27 @@ main {
                     line-height: $--spacing-l;
                     color: $--gray-700;
                     text-decoration: none;
+                    a{
+                        color: $--blue-675;
+                        font-weight: 500;
+                    }
                     span.icon{
+                        width: 16px;
+                        height: 16px;
+                        padding: 0 8px 0 12px;
                         i{
                             font-size: 16px;
-                            padding:0 6px 0 12px;
                             color: $--blue-675;
                         }
+                    }
+                    &:has(a){
+                        margin-top: 12px;
                     }
                 }
             }
             summary {
                 position: relative;
-                padding: $--spacing-l 63px $--spacing-l $--spacing-l;
+                padding: $--spacing-l 68px $--spacing-l $--spacing-l;
                 background-color: unset !important;
                 cursor: pointer;
                 list-style: none;
@@ -115,7 +142,6 @@ main {
                     transition: transform 0.2s;
                 }
             }
-
             &[open] {
                 summary {
                     background-color: unset;
@@ -124,7 +150,6 @@ main {
                         top: 60%;
                     }
                 }
-
                 .accordion-item-body {
                     padding: $--spacing-l;
                     padding-top: 0;

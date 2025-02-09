@@ -1,0 +1,76 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.alert {
+    &-wrapper{
+        position: relative;
+        h5 {
+            margin: 0 0 5px 0;
+        }
+        p {
+            margin: 0 0 10px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+        .alert {
+            border-radius: 0 2px 2px 0;
+            padding: 24px 24px 24px 80px;
+            position: relative;
+            &::before {
+                border-radius: 2px 0 0 2px;
+                content: '';
+                display: block;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 10px;
+            }
+            > div:first-child {
+                left: 34px;
+                position: absolute;
+                top: 24px;
+                p {
+                    line-height: 1;
+                }
+            }
+        }
+    }
+    &-warning {
+        background-color: $--yellow-50;
+        &::before {
+            background-color: $--yellow-550;
+        }
+        > div:first-child .icon i {
+            color: $--yellow-550;
+        }
+    }
+    &-info {
+        background-color: $--blue-50;
+        &::before {
+            background-color: $--blue-675;
+        }
+        > div:first-child .icon i {
+            color: $--blue-675;
+        }
+    }
+    &-success {
+        background-color: $--green-50;
+        &::before {
+            background-color: $--green-550;
+        }
+        > div:first-child .icon i {
+            color: $--green-550;
+        }
+    }
+    &-error {
+        background-color: $--red-50;
+        &::before {
+            background-color: $--red-550;
+        }
+        > div:first-child .icon i {
+            color: $--red-550;
+        }
+    }
+}

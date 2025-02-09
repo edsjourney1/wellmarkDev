@@ -9,6 +9,22 @@ main .section .accordion-wrapper {
 .accordion-wrapper {
   padding: 120px 0;
 }
+.accordion-wrapper ol li, .accordion-wrapper ul li {
+  margin-top: 12px;
+}
+.accordion-wrapper ol li a, .accordion-wrapper ul li a {
+  color: #005589;
+  font-weight: 500;
+}
+.accordion-wrapper ol li span.icon, .accordion-wrapper ul li span.icon {
+  width: 16px;
+  height: 16px;
+  padding: 0 8px 0 12px;
+}
+.accordion-wrapper ol li span.icon i, .accordion-wrapper ul li span.icon i {
+  font-size: 16px;
+  color: #005589;
+}
 @media (min-width: 1201px) and (max-width: 1379px) {
   .accordion-wrapper {
     padding: 120px 36px 120px 36px;
@@ -92,14 +108,25 @@ main .section .accordion-wrapper {
   color: #4b4c4d;
   text-decoration: none;
 }
+.accordion-wrapper .accordion details .accordion-item-body p a {
+  color: #005589;
+  font-weight: 500;
+}
+.accordion-wrapper .accordion details .accordion-item-body p span.icon {
+  width: 16px;
+  height: 16px;
+  padding: 0 8px 0 12px;
+}
 .accordion-wrapper .accordion details .accordion-item-body p span.icon i {
   font-size: 16px;
-  padding: 0 6px 0 12px;
   color: #005589;
+}
+.accordion-wrapper .accordion details .accordion-item-body p:has(a) {
+  margin-top: 12px;
 }
 .accordion-wrapper .accordion details summary {
   position: relative;
-  padding: 24px 63px 24px 24px;
+  padding: 24px 68px 24px 24px;
   background-color: unset !important;
   cursor: pointer;
   list-style: none;

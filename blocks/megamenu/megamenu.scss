@@ -469,10 +469,12 @@ header {
                                             .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
+                                                    margin: 0;
                                                     h4{
                                                         margin: 0;
                                                         border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
+                                                        width: 100%;
                                                     }
                                                 }
                                                 .mega-image-text-wrapper{
@@ -574,10 +576,12 @@ header {
                                             .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
+                                                    margin: 0;
                                                     h4{
                                                         margin: 0;
                                                         border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
+                                                        width: 100%;
                                                     }
                                                 }
                                                 .mega-image-text-wrapper{
@@ -678,10 +682,12 @@ header {
                                             .mega-image-text-container{
                                                 .default-content-wrapper{
                                                     padding: 0;
+                                                    margin: 0;
                                                     h4{
                                                         margin: 0;
                                                         border-bottom: 2px solid $--blue-100;
                                                         padding-bottom: $--spacing-l;
+                                                        width: 100%;
                                                     }
                                                 }
                                                 .mega-image-text-wrapper{
@@ -1094,12 +1100,16 @@ header {
             }
             .blog-header-section{
                 @include for-mobile {
-                    overflow-y: auto;
-                    height: 100%;
+                    &.blog-submenu-list:has(.mobile-arrow){
+                        height: 100vh;
+                        overflow-y: auto;
+                    }
                 }
                 @include for-tablet {
-                    overflow-y: auto;
-                    height: 100%;
+                    &.blog-submenu-list:has(.mobile-arrow){
+                        height: 100vh;
+                        overflow-y: auto;
+                    }
                 }
                 &.menu-sticky{
                     position: fixed;
@@ -1108,8 +1118,11 @@ header {
                 .blog-header-nav{
                     background-color: $--blue-675;
                     padding: 24px 36px;
+                    @include for-laptop {
+                        padding: 26px 36px 25px 36px;
+                    }
                     @include for-large {
-                        padding: 24px 52px;
+                        padding: 26px 52px 25px 52px;
                     }
                     @include for-xlarge {
                         padding: 26px 0 25px 0;
@@ -1225,11 +1238,17 @@ header {
                                 @include for-mobile {
                                     padding: 16px 52px;
                                     margin: 0;
+                                    &:nth-last-of-type(2){
+                                        margin: 0;
+                                    }
                                     border-top: 1px solid #4A7390;
                                 }
                                 @include for-tablet {
                                     padding: 16px 52px;
                                     margin: 0;
+                                    &:nth-last-of-type(2){
+                                        margin: 0;
+                                    }
                                     border-top: 1px solid #4A7390;
                                 }
                                 a{
@@ -1489,12 +1508,16 @@ header {
                     }
                     .main-header{
                         @include for-mobile {
-                            height: 100vh;
-                            overflow-y: auto;
+                            &.blog-submenu-list{
+                                height: 100vh;
+                                overflow-y: auto;
+                            }
                         }
                         @include for-tablet {
-                            height: 100vh;
-                            overflow-y: auto;
+                            &.blog-submenu-list{
+                                height: 100vh;
+                                overflow-y: auto;
+                            }
                         }
                         .main-header-menu{
                             .header-menu-block{

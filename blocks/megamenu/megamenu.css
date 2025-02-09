@@ -40,6 +40,16 @@
   left: -15px;
   display: none;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .breadcrumb-ul .breadcrumb-list .backarrow {
+    bottom: 1px;
+  }
+}
+@media (max-width: 480px) {
+  .breadcrumb-ul .breadcrumb-list .backarrow {
+    bottom: 1px;
+  }
+}
 .breadcrumb-ul .breadcrumb-list:first-child {
   margin-left: 0;
 }
@@ -648,11 +658,13 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper {
     padding: 0;
+    margin: 0;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper h4 {
     margin: 0;
     border-bottom: 2px solid #d6e5f1;
     padding-bottom: 24px;
+    width: 100%;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block {
     padding-top: 24px;
@@ -745,11 +757,13 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper {
     padding: 0;
+    margin: 0;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper h4 {
     margin: 0;
     border-bottom: 2px solid #d6e5f1;
     padding-bottom: 24px;
+    width: 100%;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block {
     padding-top: 24px;
@@ -841,11 +855,13 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .h
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper {
     padding: 0;
+    margin: 0;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .default-content-wrapper h4 {
     margin: 0;
     border-bottom: 2px solid #d6e5f1;
     padding-bottom: 24px;
+    width: 100%;
   }
   header .main-header-wrapper .main-header .main-header-menu .header-menu-block .header-menu-ul .header-menu-li .header-menu-link.show-menu ~ .header-menu-item .menu-submenu-content .mega-image-text-container .mega-image-text-wrapper .mega-image-text.block {
     padding-top: 24px;
@@ -1230,15 +1246,15 @@ header .main-header-wrapper .main-header .main-header-menu .header-menu-block .s
   display: inline-block;
 }
 @media (max-width: 480px) {
-  header .main-header-wrapper .main-header .blog-header-section {
+  header .main-header-wrapper .main-header .blog-header-section.blog-submenu-list:has(.mobile-arrow) {
+    height: 100vh;
     overflow-y: auto;
-    height: 100%;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  header .main-header-wrapper .main-header .blog-header-section {
+  header .main-header-wrapper .main-header .blog-header-section.blog-submenu-list:has(.mobile-arrow) {
+    height: 100vh;
     overflow-y: auto;
-    height: 100%;
   }
 }
 header .main-header-wrapper .main-header .blog-header-section.menu-sticky {
@@ -1249,9 +1265,14 @@ header .main-header-wrapper .main-header .blog-header-section .blog-header-nav {
   background-color: #005589;
   padding: 24px 36px;
 }
+@media (min-width: 1024px) and (max-width: 1200px) {
+  header .main-header-wrapper .main-header .blog-header-section .blog-header-nav {
+    padding: 26px 36px 25px 36px;
+  }
+}
 @media (min-width: 1201px) and (max-width: 1379px) {
   header .main-header-wrapper .main-header .blog-header-section .blog-header-nav {
-    padding: 24px 52px;
+    padding: 26px 52px 25px 52px;
   }
 }
 @media (min-width: 1379px) {
@@ -1400,12 +1421,18 @@ header .main-header-wrapper .main-header .blog-header-section .blog-header-menu 
     margin: 0;
     border-top: 1px solid #4A7390;
   }
+  header .main-header-wrapper .main-header .blog-header-section .blog-header-menu .blog-menu-view .blog-menu-ul .blog-menu-li:nth-last-of-type(2) {
+    margin: 0;
+  }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   header .main-header-wrapper .main-header .blog-header-section .blog-header-menu .blog-menu-view .blog-menu-ul .blog-menu-li {
     padding: 16px 52px;
     margin: 0;
     border-top: 1px solid #4A7390;
+  }
+  header .main-header-wrapper .main-header .blog-header-section .blog-header-menu .blog-menu-view .blog-menu-ul .blog-menu-li:nth-last-of-type(2) {
+    margin: 0;
   }
 }
 header .main-header-wrapper .main-header .blog-header-section .blog-header-menu .blog-menu-view .blog-menu-ul .blog-menu-li a {
@@ -1673,13 +1700,13 @@ header .main-header-wrapper .main-header .blog-header-section .blog-mobile-menu.
   }
 }
 @media (max-width: 480px) {
-  header.blog-menu .megamenu.block .main-header-wrapper .main-header {
+  header.blog-menu .megamenu.block .main-header-wrapper .main-header.blog-submenu-list {
     height: 100vh;
     overflow-y: auto;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  header.blog-menu .megamenu.block .main-header-wrapper .main-header {
+  header.blog-menu .megamenu.block .main-header-wrapper .main-header.blog-submenu-list {
     height: 100vh;
     overflow-y: auto;
   }

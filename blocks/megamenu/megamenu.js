@@ -240,6 +240,8 @@ function renderBlogMenu(nav) {
 
   blogmobilemenu.addEventListener('click', () => {
     blogmobilemenu.classList.toggle('mobile-arrow');
+    const mainsubmenucls = document.querySelector('.blog-header-section');
+    mainsubmenucls.classList.add('blog-submenu-list');
   });
 
   const blogImg = document.createElement('img');
@@ -682,13 +684,16 @@ window.addEventListener('click', (e) => {
 window.addEventListener('scroll', () => {
   const scrollpos = window.scrollY;
   const isMobile = window.matchMedia('(max-width: 1024px)').matches;
-  const threshold = isMobile ? 60 : 150;
-  const outside = document.querySelectorAll('.blog-header-section');
-  const check = outside[0];
-  if (scrollpos > threshold) {
-    check.classList.add('menu-sticky');
+  const blogmenubreak = isMobile ? 60 : 150;
+  const blogmenuscroll = document.querySelector('.blog-header-section');
+  const collapseclose = document.querySelector('.collapse-bar');
+  const megamobilemenu = document.querySelector('.main-header-menu');
+  if (scrollpos > blogmenubreak) {
+    blogmenuscroll?.classList.add('menu-sticky');
+    collapseclose.classList.remove('active');
+    megamobilemenu.classList.remove('active');
   } else {
-    check.classList.remove('menu-sticky');
+    blogmenuscroll?.classList.remove('menu-sticky');
   }
 });
 
