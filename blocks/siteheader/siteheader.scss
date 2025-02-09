@@ -320,39 +320,35 @@
                             }
                         }
                     }
-                    div {
+                    .siteheader-subnav {
                         background-color: $--white;
                         border-bottom: 2px solid $--blue-100;
                         border-top: 2px solid $--blue-100;
                         left: 0;
+                        opacity: 0;
                         position: absolute;
                         top: 100%;
-                        width: 100%;
-                        visibility: hidden;
-                        opacity: 0;
-                        z-index: -1;
                         transform: translate(0, -100%);
                         transition: all 0.25s ease;
+                        visibility: hidden;
+                        width: 100%;
+                        z-index: -1;
                         &.siteheader-nav-active {
                             opacity: 1;
                             transform: translate(0, 0);
                             visibility: visible;
                         }
-                        > ul {
+                        h3 {
+                            font-size: 20px;
+                            margin: 0 0 24px 0;
+                            padding: 0 0 24px 0;
+                            border-bottom: 1px solid $--gray-100;
+                        }
+                        > div {
                             margin: 0 auto;
                             max-width: 1275px;
+                            padding: 36px 0 52px 0;
                             width: 100%;
-                            list-style: none;
-                            padding: 0;
-                            display: flex;
-                            > li {
-                                width: 25%;
-                                > ul {
-                                    list-style: none;
-                                    padding: 0;
-                                    margin: 0;
-                                }
-                            }
                             @include for-large{
                                 width: calc(100% - 104px);
                             }
@@ -364,6 +360,30 @@
                             }
                             @include for-mobile{
                                 width: 100%;
+                            }
+                            > ul {
+                                display: flex;
+                                list-style: none;
+                                margin: 0 -15px;
+                                padding: 0;
+                                width: 100%;
+                                > li {
+                                    padding: 0 15px;
+                                    width: 20%;
+                                    > ul {
+                                        list-style: none;
+                                        padding: 0;
+                                        margin: 0;
+                                        > li {
+                                            margin: 0 0 24px 0;
+                                            ul {
+                                                list-style: none;
+                                                padding: 0;
+                                                margin: 0;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

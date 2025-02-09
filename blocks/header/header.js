@@ -78,8 +78,21 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
       l0Anchor.classList.add('siteheader-has-subnav');
       l0Anchor.append(l0ElSpan);
       const ulWrap = document.createElement('div');
+      ulWrap.className = 'siteheader-subnav';
       l1Ul.parentNode.insertBefore(ulWrap, l1Ul);
-      ulWrap.appendChild(l1Ul);
+
+      const ulWrap2 = document.createElement('div');
+      ulWrap.appendChild(ulWrap2);
+      
+      const l2Li = Array.from(l1Ul.children);
+      l2Li.forEach((l2LiEl) => {
+        const h3El = document.createElement('h3');
+        const strongEl = Array.from(l2LiEl.children)[0];
+        strongEl.parentNode.insertBefore(h3El, strongEl);
+        h3El.append(strongEl);
+      });
+
+      ulWrap2.appendChild(l1Ul);
     }
   });
 
