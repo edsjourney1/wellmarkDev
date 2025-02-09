@@ -37,7 +37,7 @@ export default function decorate(block) {
 
   fbtext.addEventListener('click', () => {
     const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?t=${linktext}&u=${url}`, '_blank');
+    window.open(`https://www.facebook.com/sharer/sharer.php?t=${linktext}&u=${url}&text=${linktext}`, '_blank');
   });
   const twittertext = document.createElement('button');
   twittertext.classList.add('Twitter');
@@ -51,7 +51,7 @@ export default function decorate(block) {
   intext.innerHTML = ('Linkedin');
   intext.addEventListener('click', () => {
     const inlink = encodeURIComponent(window.location.href);
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${inlink}`, '_blank');
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${inlink}&text=${linktext}`, '_blank');
   });
   const mailtext = document.createElement('button');
   mailtext.classList.add('Mail');
