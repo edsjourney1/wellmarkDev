@@ -57,10 +57,8 @@ const addEvents = (thisBlock) => {
   });
 };
 
-const formMainNavigation = (thisBlock, navUl, navCtaEl, fragment) => {
-
-  console.log("-----------fragment", fragment.innerHTML);
-
+const formMainNavigation = (thisBlock, navUl, navCtaEl, megamenuInfo) => {
+  console.log("===========megamenuInfo", megamenuInfo);
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
   mobileBtnWrapperEl.innerHTML = `<button type='button'>
@@ -82,14 +80,7 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl, fragment) => {
       l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
       
       const l0Anchor = l0El.querySelector('a');
-
-      // const subnavInfoMeta = getMetadata(`/header-fragments/nav-fragments/${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`);
-      // const subnavInfoPath = subnavInfoMeta
-      //   ? new URL(subnavInfoMeta, window.location).pathname
-      //   : `/header-fragments/nav-fragments/${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`;
-
-      // const infoFragment = await loadFragment(subnavInfoPath);
-      // console.log("==========infoFragment", infoFragment);
+      const currentMegamenuInfo = megamenuInfo.find((infoEl) => infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`));
 
       l0Anchor.classList.add('siteheader-has-subnav');
       l0Anchor.append(l0ElSpan);
@@ -97,15 +88,26 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl, fragment) => {
       ulWrap.className = 'siteheader-subnav';
       l1Ul.parentNode.insertBefore(ulWrap, l1Ul);
 
+      if (currentMegamenuInfo) {
+        const megamenuLi = document.createElement('li');
+        megamenuLi.className = 'siteheader-subnav-info';
+        megamenuLi.append(currentMegamenuInfo.querySelector('h3'));
+        currentMegamenuInfo.children[1].classList.add('siteheader-subnav-grid');
+        megamenuLi.append(currentMegamenuInfo.children[1]);
+        l1Ul.append(megamenuLi);
+      }
+
       const ulWrap2 = document.createElement('div');
       ulWrap.appendChild(ulWrap2);
 
       const l2Li = Array.from(l1Ul.children);
       l2Li.forEach((l2LiEl) => {
-        const h3El = document.createElement('h3');
-        const strongEl = Array.from(l2LiEl.children)[0];
-        strongEl.parentNode.insertBefore(h3El, strongEl);
-        h3El.append(strongEl);
+        if (!l2LiEl.classList.contains('siteheader-subnav-info')) {
+          const h3El = document.createElement('h3');
+          const strongEl = Array.from(l2LiEl.children)[0];
+          strongEl.parentNode.insertBefore(h3El, strongEl);
+          h3El.append(strongEl);
+        }
       });
 
       ulWrap2.appendChild(l1Ul);
@@ -130,9 +132,8 @@ const formMainHeader = (thisBlock, fragment) => {
       logoutInfo,
     ] = Array.from(headerFragment.querySelector('.siteheader.default > div:first-child').children);
 
-    const [megamenuTitle, megamenuBody] = Array.from(headerFragment.querySelector('.siteheader.megamenu-shop:first-child').children);
-    console.log("==============megamenuShop", megamenuTitle, megamenuBody);
-
+    const megamenuInfo = Array.from(headerFragment.querySelectorAll('[class^="siteheader megamenu-"]'));
+    
     const [navCtaEl] = Array.from(headerFragment.querySelector('.siteheader.default > div:nth-child(2)').children);
     const [navUlEl] = Array.from(headerFragment.querySelector('.siteheader.default > div:nth-child(3)').children);
     const navUl = navUlEl?.querySelector('ul');
@@ -223,7 +224,7 @@ const formMainHeader = (thisBlock, fragment) => {
     }
 
     if (navUl && navCtaEl) {
-      formMainNavigation(thisBlock, navUl, navCtaEl, fragment);
+      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo);
     }
   }
 };
