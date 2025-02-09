@@ -6,7 +6,7 @@ import myJson from '../../scripts/constants.js';
 const getDatafromJSON = async () => {
   const data = await fetch('https://main--wellmarkdev--edsjourney1.aem.live/query-index.json');
   const json = await data.json();
-  console.log(json);
+  console.log(json.data);
 };
 getDatafromJSON();
 export default async function decorate(block) {
