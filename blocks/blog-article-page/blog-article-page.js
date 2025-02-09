@@ -21,7 +21,7 @@ export default function decorate(block) {
   // Facebook
   const fbtext = document.createElement('button');
   fbtext.classList.add('facebook');
-  fbtext.innerHTML = ('facebook');
+  fbtext.innerHTML = ('Facebook');
   // const link = encodeURI(window.location.href);
   const linktext = encodeURI(document.title);
   // fbtext.href = `https://www.facebook.com/share.php?title=${linktext}&u=${link}`;
@@ -37,21 +37,21 @@ export default function decorate(block) {
 
   fbtext.addEventListener('click', () => {
     const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.facebook.com/sharer/sharer.php?t=${linktext}&u=${url}&text=${linktext}`, '_blank');
+    window.open(`https://www.facebook.com/sharer/sharer.php?t=${linktext}&u=${url}&text=${document.title}`, '_blank');
   });
   const twittertext = document.createElement('button');
   twittertext.classList.add('Twitter');
   twittertext.innerHTML = ('Twitter');
   twittertext.addEventListener('click', () => {
     const twitterlink = encodeURIComponent(window.location.href);
-    window.open(`https://twitter.com/intent/tweet?url=${twitterlink}&text=${linktext}`, '_blank');
+    window.open(`https://twitter.com/intent/tweet?url=${twitterlink}&text=${document.title}`, '_blank');
   });
   const intext = document.createElement('button');
   intext.classList.add('Linkedin');
   intext.innerHTML = ('Linkedin');
   intext.addEventListener('click', () => {
     const inlink = encodeURIComponent(window.location.href);
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${inlink}&text=${linktext}`, '_blank');
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${inlink}&text=${document.title}`, '_blank');
   });
   const mailtext = document.createElement('button');
   mailtext.classList.add('Mail');
