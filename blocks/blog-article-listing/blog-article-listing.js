@@ -3,12 +3,12 @@
 
 import myJson from '../../scripts/constants.js';
 
-// const getDatafromJSON = async () => {
-//   const data = await fetch('https://main--wellmark--anutyagi007.aem.page/query-index.json');
-//   const json = await data.json();
-//   console.log(json);
-// };
-// getDatafromJSON();
+const getDatafromJSON = async () => {
+  const data = await fetch('https://main--wellmarkdev--edsjourney1.aem.live/query-index.json');
+  const json = await data.json();
+  console.log(json);
+};
+getDatafromJSON();
 export default async function decorate(block) {
   const categoryByauthor = block.children[1].children[1].innerText;
   const heading = block.children[0].children[0].innerText;
