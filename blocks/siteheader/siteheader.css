@@ -244,20 +244,17 @@
   background-color: #ffffff;
   border-bottom: 2px solid #d6e5f1;
   border-top: 2px solid #d6e5f1;
+  display: none;
   left: 0;
-  opacity: 0;
   position: absolute;
   top: 100%;
-  transform: translate(0, -100%);
+  transform: translate(0, 0);
   transition: all 0.25s ease;
-  visibility: hidden;
   width: 100%;
   z-index: -1;
 }
-.siteheader-mobile-wrapper nav > ul > li .siteheader-subnav.siteheader-nav-active {
-  opacity: 1;
-  transform: translate(0, 0);
-  visibility: visible;
+.siteheader-mobile-wrapper nav > ul > li .siteheader-subnav * {
+  box-sizing: border-box;
 }
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav h3 {
   font-size: 20px;
@@ -268,7 +265,7 @@
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div {
   margin: 0 auto;
   max-width: 1275px;
-  padding: 36px 0 52px 0;
+  padding: 0;
   width: 100%;
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
@@ -299,7 +296,7 @@
   width: 100%;
 }
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li {
-  padding: 0 15px;
+  padding: 24px 16px 36px 16px;
   width: 20%;
 }
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li > ul {
@@ -383,6 +380,56 @@
   }
   .siteheader-mobile-wrapper > button[type=button] div:nth-child(2) {
     display: none;
+  }
+  .siteheader-mobile-wrapper nav {
+    position: fixed;
+    top: 62px;
+    height: calc(100% - 62px);
+    overflow-y: auto;
+    width: 100%;
+  }
+  .siteheader-mobile-wrapper nav > ul {
+    display: block;
+  }
+  .siteheader-mobile-wrapper nav > ul > li {
+    border-top: 1px solid #d6e5f1;
+  }
+  .siteheader-mobile-wrapper nav > ul > li:first-child {
+    border-top: 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav {
+    background-color: #f3f9ff;
+    position: static;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav h3 {
+    border-bottom: 1px solid #d6e5f1;
+    margin: 0;
+    padding: 0 0 16px 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div {
+    padding: 16px 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul {
+    display: block;
+    margin: 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li {
+    padding: 0 52px;
+    width: 100%;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li > ul {
+    margin: 0 0 16px 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li > ul > li {
+    margin: 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li > ul > li > a {
+    display: block;
+    padding: 14px 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li > a {
+    display: block;
+    padding: 16px 36px;
   }
   .siteheader-search-wrapper > button[type=button] {
     align-items: center;
@@ -470,6 +517,56 @@
   }
   .siteheader-mobile-wrapper > button[type=button] div:nth-child(2) {
     display: none;
+  }
+  .siteheader-mobile-wrapper nav {
+    position: fixed;
+    top: 62px;
+    height: calc(100% - 62px);
+    overflow-y: auto;
+    width: 100%;
+  }
+  .siteheader-mobile-wrapper nav > ul {
+    display: block;
+  }
+  .siteheader-mobile-wrapper nav > ul > li {
+    border-top: 1px solid #d6e5f1;
+  }
+  .siteheader-mobile-wrapper nav > ul > li:first-child {
+    border-top: 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav {
+    background-color: #f3f9ff;
+    position: static;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav h3 {
+    border-bottom: 1px solid #d6e5f1;
+    margin: 0;
+    padding: 0 0 16px 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div {
+    padding: 16px 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul {
+    display: block;
+    margin: 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li {
+    padding: 0 52px;
+    width: 100%;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li > ul {
+    margin: 0 0 16px 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li > ul > li {
+    margin: 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li > ul > li > a {
+    display: block;
+    padding: 14px 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li > a {
+    display: block;
+    padding: 16px 36px;
   }
   .siteheader-search-wrapper > button[type=button] {
     align-items: center;

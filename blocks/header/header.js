@@ -1,5 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import { slideUp, slideDown } from '../../scripts/tools.js';
 
 const navClicks = (liObj, navArr) => {
   if (liObj.isActive) {
@@ -7,6 +8,7 @@ const navClicks = (liObj, navArr) => {
     navArr.forEach(item => {
       item.link.classList.remove('siteheader-nav-active');
       item.subnav.classList.remove('siteheader-nav-active');
+      slideUp(item.subnav);
     });
   } else {
     navArr.forEach(item => {
@@ -14,10 +16,12 @@ const navClicks = (liObj, navArr) => {
         liObj.isActive = true;
         item.link.classList.add('siteheader-nav-active');
         item.subnav.classList.add('siteheader-nav-active');
+        slideDown(item.subnav);
       } else {
         item.isActive = false;
         item.link.classList.remove('siteheader-nav-active');
         item.subnav.classList.remove('siteheader-nav-active');
+        slideUp(item.subnav);
       }
     });
   }
@@ -67,7 +71,7 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
 
   const l0Ul = navEl.children[0];
   const l0Li = Array.from(l0Ul.children);
-  l0Li.forEach(l0El => {
+  l0Li.forEach((l0El) => {
     const l1Ul = l0El.querySelector('ul');
     if (l1Ul) {
       const l0ElSpan = document.createElement('span');
@@ -75,6 +79,15 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
       l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
       
       const l0Anchor = l0El.querySelector('a');
+      
+      // const subnavInfoMeta = getMetadata(`/header-fragments/nav-fragments/${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`);
+      // const subnavInfoPath = subnavInfoMeta
+      //   ? new URL(subnavInfoMeta, window.location).pathname
+      //   : `/header-fragments/nav-fragments/${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`;
+
+      // const infoFragment = await loadFragment(subnavInfoPath);
+      // console.log("==========infoFragment", infoFragment);
+
       l0Anchor.classList.add('siteheader-has-subnav');
       l0Anchor.append(l0ElSpan);
       const ulWrap = document.createElement('div');
@@ -83,7 +96,7 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl) => {
 
       const ulWrap2 = document.createElement('div');
       ulWrap.appendChild(ulWrap2);
-      
+
       const l2Li = Array.from(l1Ul.children);
       l2Li.forEach((l2LiEl) => {
         const h3El = document.createElement('h3');
@@ -114,7 +127,6 @@ const formMainHeader = (thisBlock, headerFragment) => {
     ] = Array.from(headerFragment.querySelector('.siteheader > div:first-child').children);
 
     const [navCtaEl] = Array.from(headerFragment.querySelector('.siteheader > div:nth-child(2)').children);
-
     const [navUlEl] = Array.from(headerFragment.querySelector('.siteheader > div:last-child').children);
     const navUl = navUlEl?.querySelector('ul');
 
