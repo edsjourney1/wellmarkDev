@@ -30,6 +30,8 @@ const navClicks = (liObj, navArr) => {
 const addEvents = (thisBlock) => {
   const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
   const loginCtaEl = loginWrapEl?.querySelector('button');
+  const navCtaEl = thisBlock.querySelector('.siteheader-mobile-wrapper > button');
+  const navEl = thisBlock.querySelector('.siteheader-mobile-wrapper > nav');
 
   loginCtaEl?.addEventListener('click', () => {
       if (loginWrapEl.classList.contains('siteheader-login-wrapper-cta-active')) {
@@ -54,6 +56,16 @@ const addEvents = (thisBlock) => {
       event.preventDefault();
       navClicks(liObj, navArr);
     });
+  });
+
+  navCtaEl?.addEventListener('click', () => {
+    if (navCtaEl.classList.contains('siteheader-nav-active')) {
+      navCtaEl.classList.remove('siteheader-nav-active');
+      navEl.classList.remove('siteheader-nav-active');
+    } else {
+      navCtaEl.classList.add('siteheader-nav-active');
+      navEl.classList.add('siteheader-nav-active');
+    }
   });
 };
 

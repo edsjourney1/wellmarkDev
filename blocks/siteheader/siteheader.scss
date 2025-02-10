@@ -50,18 +50,29 @@
             div:nth-child(2) {
                 display: none;
             }
+            &.siteheader-nav-active {
+                background-color: $--white;
+                div:nth-child(1) {
+                    display: none;
+                }
+                div:nth-child(2) {
+                    display: flex;
+                }
+            }
         }
         nav {
             height: calc(100% - 62px);
             overflow-y: auto;
             position: fixed;
             top: 62px;
-            transition: transform 0.25s ease;
-            transform: translate(0, -100%);
+            transform: translate(-100%, 0);
+            transition: all 0.25s ease;
+            visibility: hidden;
             width: 100%;
             z-index: -1;
             &.siteheader-nav-active {
                 transform: translate(0);
+                visibility: visible;
             }
             > ul {
                 display: block;
