@@ -3,12 +3,6 @@
 
 import myJson from '../../scripts/constants.js';
 
-const getDatafromJSON = async () => {
-  const data = await fetch('/query-index.json');
-  const json = await data.json();
-  console.log(json.data);
-};
-getDatafromJSON();
 export default async function decorate(block) {
   const categoryByauthor = block.children[1].children[1].innerText;
   const heading = block.children[0].children[0].innerText;
@@ -38,7 +32,11 @@ export default async function decorate(block) {
   paginationDiv.append(paginationContainer);
   block.append(headDiv, blockDiv, paginationDiv);
   let currentPage = 1;
-  const categoryBasedJson = myJson.filter((article) => article.category.includes(categoryByauthor));
+  const data = await fetch('/query-index.json');
+  const json = await data.json();
+  console.log(json.data);
+  // eslint-disable-next-line max-len
+  const categoryBasedJson = json.data.filter((article) => article.category.includes(categoryByauthor));
   function renderItems() {
     blockDiv.innerHTML = '';
     const startIndex = (currentPage - 1) * itemsPerPage;
