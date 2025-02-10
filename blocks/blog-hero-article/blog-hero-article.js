@@ -1,9 +1,9 @@
-import myJson from '../../scripts/constants.js';
-
 export default async function decorate(block) {
   const mainPageURL = String(block.children[0].textContent);
   block.innerHTML = '';
-  const postArticle = myJson.find((item) => item.url.trim() === mainPageURL.trim());
+  const data = await fetch('/query-index.json');
+  const json = await data.json();
+  const postArticle = json.data.find((item) => item.url.trim() === mainPageURL.trim());
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
@@ -37,7 +37,7 @@ export default async function decorate(block) {
   dateandtime.append(span, articletime);
   const categoryPara = document.createElement('p');
   categoryPara.classList.add('category-list');
-  postArticle.category.forEach((item) => {
+  postArticle.category.split(',').forEach((item) => {
     const categorySpan = document.createElement('a');
     categorySpan.append(item);
     categoryPara.append(categorySpan);
