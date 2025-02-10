@@ -6,7 +6,7 @@ function create_blogarticletitle_0(main, document) {
     ? document.querySelector('.txt-block-inner > p').innerText
     : '';
   const element_3_0 = document.querySelector(
-    '.col-xs-12.col-md-6.img-block > img'
+    '.col-xs-12.col-md-6.img-block > img',
   );
 
   const newContainer = document.createElement('div');
@@ -18,9 +18,10 @@ function create_blogarticletitle_0(main, document) {
   const contentElement = document.createElement('p');
   contentElement.innerText = element_2_0;
   newContainer.appendChild(contentElement);
-  document.querySelector('.txt-block-inner > p')
-    ? document.querySelector('.txt-block-inner > p').remove()
-    : '';
+  if (document.querySelector('.txt-block-inner > p')) {
+    document.querySelector('.txt-block-inner > p').remove()
+  }
+
   const imgElement = document.createElement('img');
   imgElement.innerText = element_3_0;
   newContainer.appendChild(imgElement);
@@ -35,17 +36,17 @@ function update_A_Btn_Elements(document) {
 
     if (element.tagName.toLowerCase() === 'a') {
       if (
-        element.classList.contains('btn') &&
-        element.classList.contains('btn-primary')
+        element.classList.contains('btn')
+        && element.classList.contains('btn-primary')
       ) {
         element.classList.remove('btn', 'btn-primary');
         element.classList.add('button', 'primary');
         shouldWrap = true;
       }
       if (
-        element.classList.contains('btn') &&
-        element.classList.contains('btn-primary') &&
-        element.classList.contains('btn-lg')
+        element.classList.contains('btn')
+        && element.classList.contains('btn-primary')
+        && element.classList.contains('btn-lg')
       ) {
         element.classList.remove('btn', 'btn-primary', 'btn-lg');
         element.classList.add('button', 'primary');
@@ -57,18 +58,18 @@ function update_A_Btn_Elements(document) {
       element.title = element.innerText;
     } else if (element.tagName.toLowerCase() === 'button') {
       if (
-        element.classList.contains('btn') &&
-        element.classList.contains('btn-continue') &&
-        element.classList.contains('btn-default') &&
-        element.classList.contains('btn-lg') &&
-        element.classList.contains('esub-link')
+        element.classList.contains('btn')
+        && element.classList.contains('btn-continue')
+        && element.classList.contains('btn-default')
+        && element.classList.contains('btn-lg')
+        && element.classList.contains('esub-link')
       ) {
         element.classList.remove(
           'btn',
           'btn-continue',
           'btn-default',
           'btn-lg',
-          'esub-link'
+          'esub-link',
         );
         element.classList.add('button', 'secondary');
         shouldWrap = true;
@@ -85,8 +86,7 @@ function update_A_Btn_Elements(document) {
 }
 
 function create_relatedarticle_0(main, document) {
-  const mainContainer =
-    document.querySelector(
+  const mainContainer = document.querySelector(
       '.container-fluid.mag-closing.hidden-print.mag-closing-blue'
     ) || document.querySelector('.container-fluid.mag-closing.hidden-print');
   if (!mainContainer) {
