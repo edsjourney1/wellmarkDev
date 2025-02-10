@@ -1,5 +1,3 @@
-import myJson from '../../scripts/constants.js';
-
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
   const itemsPerPage = Number(block.children[0].children[1].innerText);
@@ -254,7 +252,7 @@ export default async function decorate(block) {
       doubleforwardPageButton.classList.remove('dp-none');
     }
   }
-  if (myJson.length > 10) {
+  if (json.data.length > 10) {
     renderPagination();
   } else {
     renderItems();

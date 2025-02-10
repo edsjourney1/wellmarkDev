@@ -1,8 +1,6 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
 
-import myJson from '../../scripts/constants.js';
-
 export default async function decorate(block) {
   const categoryByauthor = block.children[1].children[1].innerText;
   const heading = block.children[0].children[0].innerText;
@@ -258,7 +256,7 @@ export default async function decorate(block) {
       doubleforwardPageButton.classList.remove('dp-none');
     }
   }
-  if (myJson.length > 10) {
+  if (json.data.length > 10) {
     renderPagination();
   } else {
     renderItems();
