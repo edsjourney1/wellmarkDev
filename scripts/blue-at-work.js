@@ -86,9 +86,8 @@ function update_A_Btn_Elements(document) {
 }
 
 function create_relatedarticle_0(main, document) {
-  const mainContainer = document.querySelector(
-    '.container-fluid.mag-closing.hidden-print.mag-closing-blue'
-  ) || document.querySelector('.container-fluid.mag-closing.hidden-print');
+  const mainContainer = document.querySelector('.container-fluid.mag-closing.hidden-print.mag-closing-blue')
+    || document.querySelector('.container-fluid.mag-closing.hidden-print');
   if (!mainContainer) {
     return;
   }
@@ -172,7 +171,7 @@ function createPullQuoteV2(main, document) {
 
       const table = WebImporter.DOMUtils.createTable(cells, document);
       primarySection.replaceWith(table);
-      console.log(table);
+      // console.log(table);
     }
   });
 }
@@ -257,9 +256,7 @@ function createMetadataBlock(main, document) {
 
   const tags = Array.from(tagElements)
     .map((tag) => tag.innerText.trim())
-    .filter(
-      (text, index, self) => text.length > 0 && self.indexOf(text) === index
-    )
+    .filter((text, index, self) => text.length > 0 && self.indexOf(text) === index)
     .join(', ');
 
   if (tags) {
@@ -268,9 +265,8 @@ function createMetadataBlock(main, document) {
 
   tagElements.forEach((tag) => tag.remove());
 
-  const contentBlockDate =
-    document.querySelector('.content-block em') ||
-    document.querySelector('.content-block p i');
+  const contentBlockDate = document.querySelector('.content-block em')
+    || document.querySelector('.content-block p i');
   meta['publish-date'] = '';
   if (contentBlockDate) {
     const dateText = contentBlockDate.innerText.match(
@@ -378,9 +374,8 @@ function removeImageDesc(document) {
     const buttons = infographic.querySelectorAll('button');
 
     buttons.forEach((button) => {
-      const ariaControls =
-        button.getAttribute('aria-controls') ||
-        button.getAttribute('ariacontrols');
+      const ariaControls = button.getAttribute('aria-controls')
+        || button.getAttribute('ariacontrols');
       if (ariaControls) {
         const elementToRemove = infographic.querySelector(`#${ariaControls}`);
         if (elementToRemove) {
@@ -412,14 +407,11 @@ function extractContentAndMakeTable(main, document) {
   const divStyles = ['margin-bottom:0px', 'margin-bottom: 0px;'];
 
   const h3Elements = h3Styles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`h3[style='${style}']`))
-  );
+    Array.from(document.querySelectorAll(`h3[style='${style}']`)));
   const pElements = pStyles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`p[style='${style}']`))
-  );
+    Array.from(document.querySelectorAll(`p[style='${style}']`)));
   const divElements = divStyles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`div[style='${style}']`))
-  );
+    Array.from(document.querySelectorAll(`div[style='${style}']`)));
 
   let combinedHTML = '';
   [...h3Elements, ...pElements].forEach((element) => {
@@ -442,7 +434,7 @@ function extractContentAndMakeTable(main, document) {
     );
   }
 
-  console.log(table);
+  // console.log(table);
 }
 
 function paraForSmall(document) {
