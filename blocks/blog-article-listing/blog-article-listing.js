@@ -4,7 +4,7 @@
 import myJson from '../../scripts/constants.js';
 
 const getDatafromJSON = async () => {
-  const data = await fetch('https://main--wellmarkdev--edsjourney1.aem.live/query-index.json');
+  const data = await fetch('/query-index.json');
   const json = await data.json();
   console.log(json.data);
 };
