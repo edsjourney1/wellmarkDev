@@ -4,25 +4,14 @@
 
 @mixin commonNavCode {
     $this: &;
+    &-search-mask {
+        display: block;
+    }
     &-right-section {
         column-gap: 0;
     }
     &-login-wrapper-cta {
         display: none;
-    }
-    &-search {
-        &-inner {
-            background-color: $--white;
-            left: 0;
-            padding: 20px;
-            position: fixed;
-            top: 60px;
-            width: 100%;
-            z-index: 96;
-        }
-        &-input-wrapper {
-            width: auto;
-        }
     }
     &-mobile-wrapper {
         > button[type=button] {
@@ -141,39 +130,70 @@
             }
         }
     }
-    &-search-wrapper {
-        label {
-            position: static;
-            color: $--gray-700;
-            height: auto;
+    &-search {
+        &-inner {
+            background-color: $--white;
+            border-bottom: 2px solid $--blue-100;
+            left: 0;
+            opacity: 0;
+            padding: 20px;
+            position: fixed;
+            top: 62px;
+            transform: translate(0, -100%);
+            transition: all 0.25s ease;
+            visibility: hidden;
+            width: 100%;
+            z-index: -1;
+            &.siteheader-search-inner-active {
+                opacity: 1;
+                transform: translate(0);
+                visibility: visible;
+            }
+        }
+        &-input-wrapper {
             width: auto;
         }
-        > button[type=button] {
-            align-items: center;
-            background-color: transparent;
-            border: 0;
-            border-left: 2px solid $--blue-100;
-            color: $--gray-700;
-            display: flex;
-            flex-direction: column;
-            font-size: 12px;
-            font-weight: 500;
-            height: 60px;
-            justify-content: center;
-            line-height: 20px;
-            padding: 5px;
-            position: absolute;
-            right: 0;
-            text-decoration: none;
-            top: 0;
-            width: 70px;
-            .icon {
+        &-wrapper {
+            label {
+                color: $--gray-700;
+                display: inline-block;
+                font-weight: 700;
                 height: auto;
-                line-height: 1;
-                margin-top: 3px;
+                line-height: 22px;
+                margin-bottom: 3px;
+                position: static;
                 width: auto;
-                > i {
-                    font-size: 18px;
+            }
+            > button[type=button] {
+                align-items: center;
+                background-color: transparent;
+                border: 0;
+                border-left: 2px solid $--blue-100;
+                color: $--gray-700;
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                font-weight: 500;
+                height: 60px;
+                justify-content: center;
+                line-height: 20px;
+                padding: 5px;
+                position: absolute;
+                right: 0;
+                text-decoration: none;
+                top: 0;
+                width: 70px;
+                &.siteheader-search-inner-active {
+                    background-color: $--white;
+                }
+                .icon {
+                    height: auto;
+                    line-height: 1;
+                    margin-top: 3px;
+                    width: auto;
+                    > i {
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -189,7 +209,10 @@
 };
 
 .siteheader {
-    &-mask {
+    &-search-mask {
+        display: none;
+    }
+    &-nav-mask, &-search-mask {
         backdrop-filter: blur(4px);
         background-color: rgba($--white, 0.75);
         height: 100%;

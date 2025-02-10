@@ -2,7 +2,10 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-.siteheader-mask {
+.siteheader-search-mask {
+  display: none;
+}
+.siteheader-nav-mask, .siteheader-search-mask {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   background-color: rgba(255, 255, 255, 0.75);
@@ -17,7 +20,7 @@
   width: 100%;
   z-index: 90;
 }
-.siteheader-mask-active {
+.siteheader-nav-mask-active, .siteheader-search-mask-active {
   opacity: 1;
   transform: translate(0, 0);
   visibility: visible;
@@ -380,24 +383,15 @@
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .siteheader-search-mask {
+    display: block;
+  }
   .siteheader-right-section {
     -moz-column-gap: 0;
          column-gap: 0;
   }
   .siteheader-login-wrapper-cta {
     display: none;
-  }
-  .siteheader-search-inner {
-    background-color: #ffffff;
-    left: 0;
-    padding: 20px;
-    position: fixed;
-    top: 60px;
-    width: 100%;
-    z-index: 96;
-  }
-  .siteheader-search-input-wrapper {
-    width: auto;
   }
   .siteheader-mobile-wrapper > button[type=button] {
     align-items: center;
@@ -514,10 +508,36 @@
     display: block;
     padding: 16px 36px;
   }
+  .siteheader-search-inner {
+    background-color: #ffffff;
+    border-bottom: 2px solid #d6e5f1;
+    left: 0;
+    opacity: 0;
+    padding: 20px;
+    position: fixed;
+    top: 62px;
+    transform: translate(0, -100%);
+    transition: all 0.25s ease;
+    visibility: hidden;
+    width: 100%;
+    z-index: -1;
+  }
+  .siteheader-search-inner.siteheader-search-inner-active {
+    opacity: 1;
+    transform: translate(0);
+    visibility: visible;
+  }
+  .siteheader-search-input-wrapper {
+    width: auto;
+  }
   .siteheader-search-wrapper label {
-    position: static;
     color: #4b4c4d;
+    display: inline-block;
+    font-weight: 700;
     height: auto;
+    line-height: 22px;
+    margin-bottom: 3px;
+    position: static;
     width: auto;
   }
   .siteheader-search-wrapper > button[type=button] {
@@ -539,6 +559,9 @@
     text-decoration: none;
     top: 0;
     width: 70px;
+  }
+  .siteheader-search-wrapper > button[type=button].siteheader-search-inner-active {
+    background-color: #ffffff;
   }
   .siteheader-search-wrapper > button[type=button] .icon {
     height: auto;
@@ -559,24 +582,15 @@
   }
 }
 @media (max-width: 480px) {
+  .siteheader-search-mask {
+    display: block;
+  }
   .siteheader-right-section {
     -moz-column-gap: 0;
          column-gap: 0;
   }
   .siteheader-login-wrapper-cta {
     display: none;
-  }
-  .siteheader-search-inner {
-    background-color: #ffffff;
-    left: 0;
-    padding: 20px;
-    position: fixed;
-    top: 60px;
-    width: 100%;
-    z-index: 96;
-  }
-  .siteheader-search-input-wrapper {
-    width: auto;
   }
   .siteheader-mobile-wrapper > button[type=button] {
     align-items: center;
@@ -693,10 +707,36 @@
     display: block;
     padding: 16px 36px;
   }
+  .siteheader-search-inner {
+    background-color: #ffffff;
+    border-bottom: 2px solid #d6e5f1;
+    left: 0;
+    opacity: 0;
+    padding: 20px;
+    position: fixed;
+    top: 62px;
+    transform: translate(0, -100%);
+    transition: all 0.25s ease;
+    visibility: hidden;
+    width: 100%;
+    z-index: -1;
+  }
+  .siteheader-search-inner.siteheader-search-inner-active {
+    opacity: 1;
+    transform: translate(0);
+    visibility: visible;
+  }
+  .siteheader-search-input-wrapper {
+    width: auto;
+  }
   .siteheader-search-wrapper label {
-    position: static;
     color: #4b4c4d;
+    display: inline-block;
+    font-weight: 700;
     height: auto;
+    line-height: 22px;
+    margin-bottom: 3px;
+    position: static;
     width: auto;
   }
   .siteheader-search-wrapper > button[type=button] {
@@ -718,6 +758,9 @@
     text-decoration: none;
     top: 0;
     width: 70px;
+  }
+  .siteheader-search-wrapper > button[type=button].siteheader-search-inner-active {
+    background-color: #ffffff;
   }
   .siteheader-search-wrapper > button[type=button] .icon {
     height: auto;

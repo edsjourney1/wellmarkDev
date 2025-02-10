@@ -2,12 +2,30 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 import { navClicks, closeAllNavItems } from './navClicks.js';
 
-const addEvents = (thisBlock, navMaskEl) => {
+const addEvents = (thisBlock, navMaskEl, searchMaskEl) => {
   const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
   const loginCtaEl = loginWrapEl?.querySelector('button');
   const navCtaEl = thisBlock.querySelector(
     '.siteheader-mobile-wrapper > button'
   );
+  const searchParent = document.querySelector('.siteheader-search-wrapper > .siteheader-search-inner');
+  const searchCtaEl = document.querySelector('.siteheader-search-wrapper > button');
+
+  searchCtaEl.addEventListener('click', () => {
+    if (navCtaEl.classList.contains('siteheader-nav-active')) {
+      navCtaEl.dispatchEvent(new MouseEvent('click'));
+    }
+    if (searchParent.classList.contains('siteheader-search-inner-active')) {
+      searchCtaEl.classList.remove('siteheader-search-inner-active');
+      searchParent.classList.remove('siteheader-search-inner-active');
+      searchMaskEl.classList.remove('siteheader-search-mask-active');
+    } else {
+      searchCtaEl.classList.add('siteheader-search-inner-active');
+      searchParent.classList.add('siteheader-search-inner-active');
+      searchMaskEl.classList.add('siteheader-search-mask-active');
+    }
+  });
+
   const navEl = thisBlock.querySelector('.siteheader-mobile-wrapper > nav');
   const navArr = [];
 
@@ -39,6 +57,9 @@ const addEvents = (thisBlock, navMaskEl) => {
   });
 
   navCtaEl?.addEventListener('click', () => {
+    if (searchCtaEl.classList.contains('siteheader-search-inner-active')) {
+      searchCtaEl.dispatchEvent(new MouseEvent('click'));
+    }
     if (navCtaEl.classList.contains('siteheader-nav-active')) {
       navCtaEl.classList.remove('siteheader-nav-active');
       navEl.classList.remove('siteheader-nav-active');
@@ -55,7 +76,8 @@ const formMainNavigation = (
   navUl,
   navCtaEl,
   megamenuInfo,
-  navMaskEl
+  navMaskEl,
+  searchMaskEl
 ) => {
   console.log('===========megamenuInfo', megamenuInfo);
   const mobileBtnWrapperEl = document.createElement('div');
@@ -120,7 +142,7 @@ const formMainNavigation = (
 
   mobileBtnWrapperEl.append(navEl);
 
-  addEvents(thisBlock, navMaskEl);
+  addEvents(thisBlock, navMaskEl, searchMaskEl);
 };
 
 const formMainHeader = (thisBlock, fragment) => {
@@ -156,7 +178,10 @@ const formMainHeader = (thisBlock, fragment) => {
     const navUl = navUlEl?.querySelector('ul');
 
     const navMaskEl = document.createElement('div');
-    navMaskEl.className = 'siteheader-mask';
+    navMaskEl.className = 'siteheader-nav-mask';
+
+    const searchMaskEl = document.createElement('div');
+    searchMaskEl.className = 'siteheader-search-mask';
 
     const paddingEl = document.createElement('div');
     paddingEl.className = 'header-padding';
@@ -240,11 +265,12 @@ const formMainHeader = (thisBlock, fragment) => {
 
     if (headerWrapper) {
       headerWrapper.parentNode.insertBefore(navMaskEl, headerWrapper);
+      headerWrapper.parentNode.insertBefore(searchMaskEl, headerWrapper);
       headerWrapper.parentNode.insertBefore(paddingEl, headerWrapper);
     }
 
     if (navUl && navCtaEl) {
-      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl);
+      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl, searchMaskEl);
     }
   }
 };
