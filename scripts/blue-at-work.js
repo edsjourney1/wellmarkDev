@@ -424,9 +424,7 @@ function extractContentAndMakeTable(main, document) {
   if (h3Elements.length > 0 || pElements.length > 0 || divElements.length > 0) {
     const referenceElement = h3Elements[0] || pElements[0] || divElements[0];
     referenceElement.replaceWith(table);
-    [...h3Elements.slice(1), ...pElements, ...divElements].forEach((el) =>
-      el.remove()
-    );
+    [...h3Elements.slice(1), ...pElements, ...divElements].forEach((el) => el.remove());
   }
 
   // console.log(table);
