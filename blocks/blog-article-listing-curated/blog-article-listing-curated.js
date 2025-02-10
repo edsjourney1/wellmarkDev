@@ -66,7 +66,7 @@ export default async function decorate(block) {
       window.location.href = `${postArticle1.url}`;
     });
   }
-  const postArticle2 = data.json.find((item) => item.url === articleTwo);
+  const postArticle2 = json.data.find((item) => item.url === articleTwo);
   if (postArticle2) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
@@ -112,7 +112,7 @@ export default async function decorate(block) {
       window.location.href = `${postArticle2.url}`;
     });
   }
-  const postArticle3 = data.json.find((item) => item.url === articleThree);
+  const postArticle3 = json.data.find((item) => item.url === articleThree);
   if (postArticle3) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
