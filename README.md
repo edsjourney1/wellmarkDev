@@ -1,9 +1,11 @@
 # Your Project's Title...
-Your project's description...
+Wellmark EDS
 
 ## Environments
-- Preview: https://main--edge-delivery-wellmark-aem-demo--netcentric.aem.page/
-- Live: https://main--edge-delivery-wellmark-aem-demo--netcentric.aem.live/
+- Preview: https://main--wellmark-nonprod-conf--aemsites.aem.page/
+- Live: https://main--wellmark-nonprod-conf--aemsites.aem.live/
+- uat: https://uat--wellmark-nonprod-conf--aemsites.aem.page/
+- qa: https://uat--wellmark-nonprod-conf--aemsites.aem.page/
 
 ## Documentation
 
@@ -16,6 +18,7 @@ Before using the aem-boilerplate, we recommand you to go through the documentati
 Furthremore, we encourage you to watch the recordings of any of our previous presentations or sessions:
 - [Getting started with AEM Authoring and Edge Delivery Services](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
 
+Block are present in /blocks/ folder
 ## Prerequisites
 
 - nodejs 18.3.x or newer
