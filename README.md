@@ -1,11 +1,14 @@
-# Your Project's Title...
-Wellmark EDS
+# Wellmark EDS
+
 
 ## Environments
-- Preview: https://main--wellmark-nonprod-conf--aemsites.aem.page/
-- Live: https://main--wellmark-nonprod-conf--aemsites.aem.live/
-- uat: https://uat--wellmark-nonprod-conf--aemsites.aem.page/
-- qa: https://uat--wellmark-nonprod-conf--aemsites.aem.page/
+| Environment | GitHub Branch | AWS CloudFront Domain Mapping (*)    | EDS Origin URLs                                           |
+| ------------| ------------- | ------------------------------------ | --------------------------------------------------------- |
+| Production  | main          | https://www-a.wellmark.com           | https://main--wellmark-prod-conf--aemsites.aem.live       |
+| Stage       | stage         | https://www-a-prep.wellmark.com      | https://stage--wellmark-prod-conf--aemsites.aem.live      |
+| Uat         | uat           | https://www-a-uat.wellmark.com       | https://uat--wellmark-nonprod-conf--aemsites.aem.live     |
+| QA          | QA            | https://www-a-sit.wellmark.com       | https://qa--wellmark-nonprod-conf--aemsites.aem.live      |
+| Develop     | Develop       | direct access through origin in VDI. | https://develop--wellmark-nonprod-conf--aemsites.aem.live |
 
 ## Documentation
 
@@ -28,6 +31,16 @@ Block are present in /blocks/ folder
 
 ```sh
 npm i
+```
+
+## Running a local instance on port 3000
+```sh
+npm run up
+```
+
+## Compile the SASS files
+```sh
+npm run compile
 ```
 
 ## Linting
