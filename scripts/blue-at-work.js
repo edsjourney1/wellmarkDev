@@ -269,9 +269,7 @@ function createMetadataBlock(main, document) {
     || document.querySelector('.content-block p i');
   meta['publish-date'] = '';
   if (contentBlockDate) {
-    const dateText = contentBlockDate.innerText.match(
-      /([A-Za-z]+\.\s\d{1,2},\s\d{4})|([A-Za-z]+\s\d{1,2},\s\d{4})/
-    );
+    const dateText = contentBlockDate.innerText.match(/([A-Za-z]+\.\s\d{1,2},\s\d{4})|([A-Za-z]+\s\d{1,2},\s\d{4})/);
 
     if (dateText) {
       const parsedDate = new Date(dateText[0]);
@@ -356,7 +354,7 @@ function replaceVideoOpenerWithTable(document) {
       const cells = [['video-embed(video-embed-youtube)'], []];
       if (img) {
         const imgElement = `<img src='${img.src}' alt='${img.alt}'>`;
-        cells[1].push(imgElement + ' ' + videoUrl);
+        cells[1].push(`${imgElement} ${videoUrl}`);
       } else {
         cells[1].push(videoUrl);
       }
@@ -406,21 +404,18 @@ function extractContentAndMakeTable(main, document) {
 
   const divStyles = ['margin-bottom:0px', 'margin-bottom: 0px;'];
 
-  const h3Elements = h3Styles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`h3[style='${style}']`)));
-  const pElements = pStyles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`p[style='${style}']`)));
-  const divElements = divStyles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`div[style='${style}']`)));
+  const h3Elements = h3Styles.flatMap((style) => Array.from(document.querySelectorAll(`h3[style='${style}']`)));
+  const pElements = pStyles.flatMap((style) => Array.from(document.querySelectorAll(`p[style='${style}']`)));
+  const divElements = divStyles.flatMap((style) => Array.from(document.querySelectorAll(`div[style='${style}']`)));
 
   let combinedHTML = '';
   [...h3Elements, ...pElements].forEach((element) => {
-    combinedHTML += element.outerHTML + ' ';
+    combinedHTML += `${element.outerHTML} `;
   });
 
   let divHTML = '';
   divElements.forEach((element) => {
-    divHTML += element.outerHTML + ' ';
+    divHTML += `${element.outerHTML} `;
   });
 
   const cells = [['blog-cta'], [combinedHTML.trim()], [divHTML.trim()]];
