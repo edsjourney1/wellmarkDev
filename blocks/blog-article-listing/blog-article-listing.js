@@ -34,7 +34,6 @@ export default async function decorate(block) {
   let currentPage = 1;
   const data = await fetch('/query-index.json');
   const json = await data.json();
-  console.log(json.data);
   // eslint-disable-next-line max-len
   const categoryBasedJson = json.data.filter((article) => article.category.includes(categoryByauthor));
   function renderItems() {
@@ -85,7 +84,7 @@ export default async function decorate(block) {
       const categoryPara = document.createElement('p');
       categoryPara.classList.add('category-list');
       contentDiv.appendChild(categoryPara);
-      // category.split(',')
+
       category.split(',').forEach((item) => {
         const anchor = document.createElement('a');
         anchor.href = 'www.google.com';
