@@ -1,31 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import { slideUp, slideDown } from '../../scripts/tools.js';
-
-const navClicks = (liObj, navArr) => {
-  if (liObj.isActive) {
-    liObj.isActive = false;
-    navArr.forEach(item => {
-      item.link.classList.remove('siteheader-nav-active');
-      item.subnav.classList.remove('siteheader-nav-active');
-      slideUp(item.subnav);
-    });
-  } else {
-    navArr.forEach(item => {
-      if (item.index === liObj.index) {
-        liObj.isActive = true;
-        item.link.classList.add('siteheader-nav-active');
-        item.subnav.classList.add('siteheader-nav-active');
-        slideDown(item.subnav);
-      } else {
-        item.isActive = false;
-        item.link.classList.remove('siteheader-nav-active');
-        item.subnav.classList.remove('siteheader-nav-active');
-        slideUp(item.subnav);
-      }
-    });
-  }
-};
+import { navClicks } from './navClicks.js';
 
 const addEvents = (thisBlock) => {
   const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');

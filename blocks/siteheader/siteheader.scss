@@ -449,11 +449,12 @@
                                 padding: 0;
                                 width: calc(100% + 30px);
                                 > li {
-                                    padding: 24px 16px 36px 16px;
+                                    padding: 24px 15px 36px 15px;
                                     width: 20%;
                                     &.siteheader-subnav-info {
                                         background-color: $--blue-50;
-                                        width: 40%;
+                                        padding: 24px 30px 36px 30px;
+                                        width: calc(40% - 15px);
                                         h3 {
                                             border-bottom: 1px solid $--blue-100;
                                         }
