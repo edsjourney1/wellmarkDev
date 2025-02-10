@@ -42,7 +42,7 @@ button {
       i{
         font-size: 15px;
         color: $--white;
-        padding: 0 12px 0 0;
+        padding: 0 $--spacing-xs 0 0;
       }
     }
     &:hover {
@@ -86,7 +86,7 @@ button {
       i{
         font-size: 15px;
         color: $--blue-675;
-        padding: 0 12px 0 0;
+        padding: 0 $--spacing-xs 0 0;
       }
     }
     &:has(.icon){
@@ -113,7 +113,7 @@ button {
       i{
         font-size: 15px;
         color: $--gray-700;
-        padding: 0 12px 0 0;
+        padding: 0 $--spacing-xs 0 0;
       }
     }
   }
@@ -130,7 +130,7 @@ button {
         i{
           font-size: 15px;
           color: $--primary-675;
-          padding: 0 12px 0 0;
+          padding: 0 $--spacing-xs 0 0;
         }
       }
       &:has(.icon){
@@ -164,7 +164,7 @@ button {
         i{
           font-size: 15px;
           color: $--white;
-          padding: 0 12px 0 0;
+          padding: 0 $--spacing-xs 0 0;
         }
       }
       &:has(.icon){
@@ -203,7 +203,7 @@ button {
         i{
           font-size: 15px;
           color: $--primary-675;
-          padding: 0 12px 0 0;
+          padding: 0 $--spacing-xs 0 0;
         }
       }
       &:focus{
@@ -223,7 +223,7 @@ button {
         i{
           font-size: 15px;
           color: $--white;
-          padding: 0 12px 0 0;
+          padding: 0 $--spacing-xs 0 0;
         }
       }
       &:hover{
