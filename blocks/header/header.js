@@ -5,29 +5,33 @@ import { navClicks, closeAllNavItems } from './navClicks.js';
 const addEvents = (thisBlock, navMaskEl) => {
   const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
   const loginCtaEl = loginWrapEl?.querySelector('button');
-  const navCtaEl = thisBlock.querySelector('.siteheader-mobile-wrapper > button');
+  const navCtaEl = thisBlock.querySelector(
+    '.siteheader-mobile-wrapper > button'
+  );
   const navEl = thisBlock.querySelector('.siteheader-mobile-wrapper > nav');
   const navArr = [];
 
   loginCtaEl?.addEventListener('click', () => {
-      if (loginWrapEl.classList.contains('siteheader-login-wrapper-cta-active')) {
-          loginWrapEl.classList.remove('siteheader-login-wrapper-cta-active');
-      } else {
-          loginWrapEl.classList.add('siteheader-login-wrapper-cta-active');
-          closeAllNavItems(navArr, navMaskEl);
-      }
+    if (loginWrapEl.classList.contains('siteheader-login-wrapper-cta-active')) {
+      loginWrapEl.classList.remove('siteheader-login-wrapper-cta-active');
+    } else {
+      loginWrapEl.classList.add('siteheader-login-wrapper-cta-active');
+      closeAllNavItems(navArr, navMaskEl);
+    }
   });
 
-  const l0Links = Array.from(thisBlock.querySelectorAll('.siteheader-has-subnav'));
+  const l0Links = Array.from(
+    thisBlock.querySelectorAll('.siteheader-has-subnav')
+  );
   l0Links.forEach((link, index) => {
     navArr.push({
       index,
       isActive: false,
       link,
       subnav: link.nextElementSibling,
-    })
+    });
   });
-  navArr.forEach(liObj => {
+  navArr.forEach((liObj) => {
     liObj.link.addEventListener('click', (event) => {
       event.preventDefault();
       navClicks(liObj, navArr, navMaskEl);
@@ -46,8 +50,14 @@ const addEvents = (thisBlock, navMaskEl) => {
   });
 };
 
-const formMainNavigation = (thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl) => {
-  console.log("===========megamenuInfo", megamenuInfo);
+const formMainNavigation = (
+  thisBlock,
+  navUl,
+  navCtaEl,
+  megamenuInfo,
+  navMaskEl
+) => {
+  console.log('===========megamenuInfo', megamenuInfo);
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
   mobileBtnWrapperEl.innerHTML = `<button type='button'>
@@ -66,10 +76,15 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl)
     if (l1Ul) {
       const l0ElSpan = document.createElement('span');
       l0ElSpan.className = 'icon icon-solid--chevron-down';
-      l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
-      
+      l0ElSpan.innerHTML =
+        '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
+
       const l0Anchor = l0El.querySelector('a');
-      const currentMegamenuInfo = megamenuInfo.find((infoEl) => infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`));
+      const currentMegamenuInfo = megamenuInfo.find((infoEl) =>
+        infoEl.classList.contains(
+          `megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`
+        )
+      );
 
       l0Anchor.classList.add('siteheader-has-subnav');
       l0Anchor.append(l0ElSpan);
@@ -113,18 +128,31 @@ const formMainHeader = (thisBlock, fragment) => {
   const headerFragment = fragment.querySelector('.siteheader-container');
 
   if (headerFragment) {
-    const [
-      logoInfo,
-      searchInfo,
-      searchToggle,
-      loginInfo,
-      logoutInfo,
-    ] = Array.from(headerFragment.querySelector('.siteheader.default > div:first-child').children);
+    const [logoInfo, searchInfo, searchToggle, loginInfo, logoutInfo] =
+      Array.from(
+        headerFragment.querySelector('.siteheader.default > div:first-child')
+          ?.children
+      );
 
-    const megamenuInfo = Array.from(headerFragment.querySelectorAll('[class^="siteheader megamenu-"]'));
-    
-    const [navCtaEl] = Array.from(headerFragment.querySelector('.siteheader.default > div:nth-child(2)').children);
-    const [navUlEl] = Array.from(headerFragment.querySelector('.siteheader.default > div:nth-child(3)').children);
+    const [loginHeader, loginBody, loginCta] = Array.from(
+      headerFragment.querySelector('.siteheader.megamenu-loginnav')?.children
+    );
+    const [registerHeader, registerBody] = Array.from(
+      headerFragment.querySelector('.siteheader.megamenu-registernav')?.children
+    );
+
+    const megamenuInfo = Array.from(
+      headerFragment.querySelectorAll('[class^="siteheader megamenu-"]')
+    );
+
+    const [navCtaEl] = Array.from(
+      headerFragment.querySelector('.siteheader.default > div:nth-child(2)')
+        .children
+    );
+    const [navUlEl] = Array.from(
+      headerFragment.querySelector('.siteheader.default > div:nth-child(3)')
+        .children
+    );
     const navUl = navUlEl?.querySelector('ul');
 
     const navMaskEl = document.createElement('div');
@@ -154,13 +182,14 @@ const formMainHeader = (thisBlock, fragment) => {
               searchToggle.querySelector('p:first-child').innerHTML
             }
                 ${searchToggle.querySelector('p:last-child').innerHTML}</button>
-            <div class='siteheader-search-content'>
+            <div class='siteheader-search-inner'>
+                <div class='siteheader-search-content'>
                     <form action='/' id='siteheader-search-form'>
+                        <label for='siteheader-search-input'>${
+                            searchInfo.querySelector('p:first-child em')
+                              .innerHTML
+                          }</label>
                         <div class='siteheader-search-input-wrapper'>
-                            <label for='siteheader-search-input'>${
-                              searchInfo.querySelector('p:first-child em')
-                                .innerHTML
-                            }</label>
                             <input type='search' id='siteheader-search-input' placeholder='${
                               searchInfo.querySelector('p:nth-child(2) em')
                                 .innerHTML
@@ -172,7 +201,8 @@ const formMainHeader = (thisBlock, fragment) => {
                         </div>
                     </form>
                 </div>
-            </div>`;
+            </div>
+          </div>`;
     }
 
     let loginWrapperStr = '';
@@ -183,6 +213,7 @@ const formMainHeader = (thisBlock, fragment) => {
                         <span>${loginInfo.querySelector('p').innerHTML}</span>
                     </button>
                 </div>
+
             </div>`;
     }
 
@@ -196,7 +227,7 @@ const formMainHeader = (thisBlock, fragment) => {
     }
 
     headerFragment.innerHTML =
-      '<div class="siteheader-outer"><div class="siteheader-inner">' + 
+      '<div class="siteheader-outer"><div class="siteheader-inner">' +
       logoWrapperStr +
       searchSectionStartStr +
       searchWrapperStr +

@@ -3,14 +3,26 @@
 // @import 'breadcrumb.scss';
 
 @mixin commonNavCode {
+    $this: &;
     &-right-section {
         column-gap: 0;
     }
     &-login-wrapper-cta {
         display: none;
     }
-    &-search-content {
-        display: none;
+    &-search {
+        &-inner {
+            background-color: $--white;
+            left: 0;
+            padding: 20px;
+            position: fixed;
+            top: 60px;
+            width: 100%;
+            z-index: 96;
+        }
+        &-input-wrapper {
+            width: auto;
+        }
     }
     &-mobile-wrapper {
         > button[type=button] {
@@ -101,6 +113,7 @@
                                     padding: 0 52px;
                                     width: 100%;
                                     &.siteheader-subnav-info {
+                                        padding-top: 15px;
                                         width: 100%;
                                         .siteheader-subnav-grid {
                                             margin-top: 16px;
@@ -128,32 +141,40 @@
             }
         }
     }
-    &-search-wrapper > button[type=button] {
-        align-items: center;
-        background-color: transparent;
-        border: 0;
-        border-left: 2px solid $--blue-100;
-        color: $--gray-700;
-        display: flex;
-        flex-direction: column;
-        font-size: 12px;
-        font-weight: 500;
-        height: 60px;
-        justify-content: center;
-        line-height: 20px;
-        padding: 5px;
-        position: absolute;
-        right: 0;
-        text-decoration: none;
-        top: 0;
-        width: 70px;
-        .icon {
+    &-search-wrapper {
+        label {
+            position: static;
+            color: $--gray-700;
             height: auto;
-            line-height: 1;
-            margin-top: 3px;
             width: auto;
-            > i {
-                font-size: 18px;
+        }
+        > button[type=button] {
+            align-items: center;
+            background-color: transparent;
+            border: 0;
+            border-left: 2px solid $--blue-100;
+            color: $--gray-700;
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            font-weight: 500;
+            height: 60px;
+            justify-content: center;
+            line-height: 20px;
+            padding: 5px;
+            position: absolute;
+            right: 0;
+            text-decoration: none;
+            top: 0;
+            width: 70px;
+            .icon {
+                height: auto;
+                line-height: 1;
+                margin-top: 3px;
+                width: auto;
+                > i {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -176,9 +197,16 @@
         opacity: 0;
         position: fixed;
         top: 0;
+        transform: translate(0, -100%);
+        transition: all 0.5s ease;
         visibility: hidden;
         width: 100%;
         z-index: 90;
+        &-active {
+            opacity: 1;
+            transform: translate(0, 0);
+            visibility: visible;
+        }
     }
     &-container {
         background-color: $--blue-50;
@@ -227,10 +255,11 @@
         column-gap: 24px;
     }
     &-search {
-        &-content {
+        &-input-wrapper {
             background-color: $--white;
             border-radius: 2px;
             border: 1px solid $--blue-100;
+            display: flex;
             height: 52px;
             width: 345px;
             input[type=search] {
@@ -253,9 +282,6 @@
                 padding: 0;
                 width: 60px;
             }
-        }
-        &-input-wrapper {
-            display: flex;
         }
         &-wrapper {
             display: flex;
