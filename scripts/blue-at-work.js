@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // function create_blogarticletitle_0(main, document) {
 //   const element_1_0 = document.querySelector('.txt-block-inner > header > h1')
 //     ? document.querySelector('.txt-block-inner > header > h1').innerText
