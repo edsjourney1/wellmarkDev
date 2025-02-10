@@ -19,7 +19,7 @@ function create_blogarticletitle_0(main, document) {
   contentElement.innerText = element_2_0;
   newContainer.appendChild(contentElement);
   if (document.querySelector('.txt-block-inner > p')) {
-    document.querySelector('.txt-block-inner > p').remove()
+    document.querySelector('.txt-block-inner > p').remove();
   }
 
   const imgElement = document.createElement('img');
@@ -87,8 +87,8 @@ function update_A_Btn_Elements(document) {
 
 function create_relatedarticle_0(main, document) {
   const mainContainer = document.querySelector(
-      '.container-fluid.mag-closing.hidden-print.mag-closing-blue'
-    ) || document.querySelector('.container-fluid.mag-closing.hidden-print');
+    '.container-fluid.mag-closing.hidden-print.mag-closing-blue'
+  ) || document.querySelector('.container-fluid.mag-closing.hidden-print');
   if (!mainContainer) {
     return;
   }
@@ -117,7 +117,7 @@ function create_relatedarticle_0(main, document) {
 
 function appendBaseURLToInternalLinks(document) {
   const baseURL = 'https://qa--wellmark-nonprod-conf--aemsites.aem.page';
-  const links = document.querySelectorAll('a[href^='/']');
+  const links = document.querySelectorAll('a[href^="/"]');
   links.forEach((link) => {
     link.href = baseURL + link.getAttribute('href');
   });
@@ -125,15 +125,15 @@ function appendBaseURLToInternalLinks(document) {
 
 function createPullQuoteV2(main, document) {
   const primarySections = document.querySelectorAll(
-    '.callout.ctr.bg-blue, .callout.f_rt.bg-blue, blockquote .callout, blockquote'
+    '.callout.ctr.bg-blue, .callout.f_rt.bg-blue, blockquote .callout, blockquote',
   );
   primarySections.forEach((primarySection) => {
     if (primarySection) {
       // Remove subscribe button sections
       const subscribeButton = primarySection.querySelector('button');
       if (
-        subscribeButton &&
-        subscribeButton.textContent.includes('Subscribe')
+        subscribeButton
+        && subscribeButton.textContent.includes('Subscribe')
       ) {
         primarySection.remove();
         return;
@@ -147,7 +147,7 @@ function createPullQuoteV2(main, document) {
         .querySelectorAll('h1, h2, h3, h4, h5, h6, p')
         .forEach((element) => {
           if (!element.closest('.quotee')) {
-            contentHTML += element.outerHTML + ' ';
+            contentHTML += `${element.outerHTML} `;
           }
         });
 
@@ -182,7 +182,7 @@ function appendIconTextToExternalLinks(document) {
 
   links.forEach((link) => {
     let span = link.querySelector(
-      'span.icon-wmkExternalLinkSmall, span.icon-file-pdf, span.icon-lock, span.icon-mail'
+      'span.icon-wmkExternalLinkSmall, span.icon-file-pdf, span.icon-lock, span.icon-mail',
     );
 
     if (!span) {
@@ -237,15 +237,14 @@ function createMetadataBlock(main, document) {
   ];
 
   const metaElements = document.querySelectorAll(
-    '[name], [property], [http-equiv], [charset]'
+    '[name], [property], [http-equiv], [charset]',
   );
 
   metaElements.forEach((el) => {
-    const key =
-      el.getAttribute('name') ||
-      el.getAttribute('property') ||
-      el.getAttribute('http-equiv') ||
-      el.getAttribute('charset');
+    const key = el.getAttribute('name')
+    || el.getAttribute('property')
+    || el.getAttribute('http-equiv')
+    || el.getAttribute('charset');
     const value = el.content || el.getAttribute('content');
 
     if (key && !ignoreList.includes(key)) {
@@ -471,7 +470,7 @@ function replaceRegisteredTrademark(document) {
     document.body,
     NodeFilter.SHOW_TEXT,
     null,
-    false
+    false,
   );
   let node;
   while ((node = walker.nextNode())) {
