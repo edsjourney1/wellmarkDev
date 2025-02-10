@@ -49,7 +49,7 @@ export default async function decorate(block) {
       return dateA - dateB;
     });
     sortedJSON.forEach(({
-      image, publishedDate, readTime, title,
+      image, category, publishedDate, readTime, title,
     }) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('card-div');
@@ -85,12 +85,13 @@ export default async function decorate(block) {
       const categoryPara = document.createElement('p');
       categoryPara.classList.add('category-list');
       contentDiv.appendChild(categoryPara);
-      // category.forEach((item) => {
-      //   const anchor = document.createElement('a');
-      //   anchor.href = 'www.google.com';
-      //   anchor.textContent = item;
-      //   categoryPara.appendChild(anchor);
-      // });
+      // category.split(',')
+      category.split(',').forEach((item) => {
+        const anchor = document.createElement('a');
+        anchor.href = 'www.google.com';
+        anchor.textContent = item;
+        categoryPara.appendChild(anchor);
+      });
       blockDiv.appendChild(mainDiv);
     });
     countList.innerHTML = '';
