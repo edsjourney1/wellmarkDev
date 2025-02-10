@@ -1,17 +1,17 @@
 import { slideUp, slideDown } from '../../scripts/tools.js';
 
-export const closeAllNavItems = (liObj, navArr) => {
-    liObj.isActive = false;
-    navArr.forEach((item) => {
-      item.link.classList.remove('siteheader-nav-active');
-      item.subnav.classList.remove('siteheader-nav-active');
-      slideUp(item.subnav);
-    });
+export const closeAllNavItems = (navArr, navMaskEl) => {
+  navArr.forEach((item) => {
+    item.isActive = false;
+    item.link.classList.remove('siteheader-nav-active');
+    item.subnav.classList.remove('siteheader-nav-active');
+    slideUp(item.subnav);
+  });
 };
 
-export const navClicks = (liObj, navArr) => {
+export const navClicks = (liObj, navArr, navMaskEl) => {
   if (liObj.isActive) {
-    closeAllNavItems(liObj, navArr);
+    closeAllNavItems(navArr);
   } else {
     navArr.forEach((item) => {
       if (item.index === liObj.index) {

@@ -1,22 +1,23 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import { navClicks } from './navClicks.js';
+import { navClicks, closeAllNavItems } from './navClicks.js';
 
-const addEvents = (thisBlock) => {
+const addEvents = (thisBlock, navMaskEl) => {
   const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
   const loginCtaEl = loginWrapEl?.querySelector('button');
   const navCtaEl = thisBlock.querySelector('.siteheader-mobile-wrapper > button');
   const navEl = thisBlock.querySelector('.siteheader-mobile-wrapper > nav');
+  const navArr = [];
 
   loginCtaEl?.addEventListener('click', () => {
       if (loginWrapEl.classList.contains('siteheader-login-wrapper-cta-active')) {
           loginWrapEl.classList.remove('siteheader-login-wrapper-cta-active');
       } else {
           loginWrapEl.classList.add('siteheader-login-wrapper-cta-active');
+          closeAllNavItems(navArr, navMaskEl);
       }
   });
 
-  const navArr = [];
   const l0Links = Array.from(thisBlock.querySelectorAll('.siteheader-has-subnav'));
   l0Links.forEach((link, index) => {
     navArr.push({
@@ -29,7 +30,7 @@ const addEvents = (thisBlock) => {
   navArr.forEach(liObj => {
     liObj.link.addEventListener('click', (event) => {
       event.preventDefault();
-      navClicks(liObj, navArr);
+      navClicks(liObj, navArr, navMaskEl);
     });
   });
 
@@ -37,6 +38,7 @@ const addEvents = (thisBlock) => {
     if (navCtaEl.classList.contains('siteheader-nav-active')) {
       navCtaEl.classList.remove('siteheader-nav-active');
       navEl.classList.remove('siteheader-nav-active');
+      closeAllNavItems(navArr, navMaskEl);
     } else {
       navCtaEl.classList.add('siteheader-nav-active');
       navEl.classList.add('siteheader-nav-active');
@@ -44,7 +46,7 @@ const addEvents = (thisBlock) => {
   });
 };
 
-const formMainNavigation = (thisBlock, navUl, navCtaEl, megamenuInfo) => {
+const formMainNavigation = (thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl) => {
   console.log("===========megamenuInfo", megamenuInfo);
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
@@ -103,7 +105,7 @@ const formMainNavigation = (thisBlock, navUl, navCtaEl, megamenuInfo) => {
 
   mobileBtnWrapperEl.append(navEl);
 
-  addEvents(thisBlock);
+  addEvents(thisBlock, navMaskEl);
 };
 
 const formMainHeader = (thisBlock, fragment) => {
@@ -211,7 +213,7 @@ const formMainHeader = (thisBlock, fragment) => {
     }
 
     if (navUl && navCtaEl) {
-      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo);
+      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl);
     }
   }
 };
