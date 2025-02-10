@@ -1,0 +1,45 @@
+export default function decorate(block) {
+  const socialShare = block.children[0];
+  socialShare.classList.add('social-share');
+  const like = socialShare.children[0];
+  like.classList.add('like');
+  const share = socialShare.children[1];
+  share.classList.add('share');
+  if (like) {
+    const likeIcon = document.createElement('p');
+    likeIcon.classList.add('like-icons');
+    likeIcon.innerHTML = `
+        <i class="fa-regular fa-thumbs-up"></i>
+        <i class="fa-regular fa-thumbs-down"></i>
+    `;
+    like.append(likeIcon);
+  }
+  if (share) {
+    const shareIcon = document.createElement('div');
+    shareIcon.classList.add('share-icons');
+    const fb = document.createElement('span');
+    fb.innerHTML = '<i class="fa-brands fa-facebook-f"></i>';
+    const twitter = document.createElement('span');
+    twitter.innerHTML = '<i class="fa-brands fa-twitter"></i>';
+    const linked = document.createElement('span');
+    linked.innerHTML = '<i class="fa-brands fa-linkedin-in"></i>';
+    const mail = document.createElement('span');
+    mail.innerHTML = '<i class="fa-solid fa-envelope"></i>';
+    const print = document.createElement('span');
+    print.innerHTML = '<i class="fa-solid fa-print"></i>';
+    shareIcon.append(fb, twitter, linked, mail, print);
+    share.append(shareIcon);
+  }
+  const pTag = like.children[0];
+  const pTagsec = share.children[0];
+  if (pTag) {
+    const h4 = document.createElement('h4');
+    h4.innerHTML = pTag.innerHTML;
+    pTag.replaceWith(h4);
+  }
+  if (pTagsec) {
+    const h4 = document.createElement('h4');
+    h4.innerHTML = pTagsec.innerHTML;
+    pTagsec.replaceWith(h4);
+  }
+}
