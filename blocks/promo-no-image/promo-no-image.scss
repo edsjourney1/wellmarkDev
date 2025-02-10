@@ -184,6 +184,11 @@
               }
             }
           }
+          h3 ~ p:has(span) {
+            i {
+              font-size: 16px;
+            }
+          }
         }
       }
     }
@@ -278,6 +283,18 @@
             padding-top: 16px;
             @include for-mobile {
               padding-top: 12px;
+            }
+            > span {
+              height: 100%;
+              width: 100%;
+              > i {
+                font-size: 84px;
+              }
+            }
+          }
+          h3 ~ p:has(span) {
+            i {
+              font-size: 16px;
             }
           }
         }
@@ -379,6 +396,18 @@
             @include for-mobile {
               padding-top: 12px;
             }
+            > span {
+              height: 100%;
+              width: 100%;
+              > i {
+                font-size: 84px;
+              }
+            }
+          h3 ~ p:has(span) {
+            i {
+              font-size: 16px;
+            }
+          }
           }
         }
       }

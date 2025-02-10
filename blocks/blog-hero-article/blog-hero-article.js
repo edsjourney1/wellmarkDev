@@ -1,20 +1,16 @@
-// import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
-
 export default async function decorate(block) {
-  const mainPageURL = block.textContent;
-  const blogHeroPath = new URL(block.children[0].innerText).pathname;
-  const fragment = await loadFragment(blogHeroPath);
-  const mainHeading = fragment.children[0].textContent;
-  const datafromArticleInformation = fragment.children[1].children[0];
-  const datafromImageContent = fragment.children[1].children[1];
-  const articleAnchors = datafromArticleInformation.querySelector('.article-link').children[1];
-  const articlereadtime = datafromArticleInformation.querySelector('.article-link').children[0].textContent;
-  const imageSrc = datafromImageContent.querySelector('.columns-img-col picture').innerHTML;
-  const description = datafromImageContent.querySelector('.image-text').children[0].children[0].textContent;
+  const mainPageURL = String(block.children[0].textContent);
+  block.innerHTML = '';
+  const data = await fetch('/query-index.json');
+  const json = await data.json();
+  const postArticle = json.data.find((item) => item.url.trim() === mainPageURL.trim());
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
+  const imageURL = document.createElement('img');
+  imageURL.src = postArticle.image;
+  imageURL.alt = 'image';
+  imgDiv.append(imageURL);
   const contentDiv = document.createElement('div');
   contentDiv.classList.add('content-div');
   const button = document.createElement('p');
@@ -24,30 +20,30 @@ export default async function decorate(block) {
   buttonanchor.setAttribute('href', `${mainPageURL}`);
   buttonanchor.innerText = 'Read more';
   button.append(buttonanchor);
-  imgDiv.innerHTML = imageSrc;
   const categoryDateDiv = document.createElement('div');
   categoryDateDiv.classList.add('date-div');
   const descriptionDiv = document.createElement('div');
   const descriptionPara = document.createElement('p');
   const heading = document.createElement('h2');
-  heading.append(mainHeading);
-  descriptionPara.append(description);
+  heading.append(postArticle.title);
+  descriptionPara.append(postArticle.description);
   descriptionDiv.append(descriptionPara);
   descriptionDiv.classList.add('description');
   const dateandtime = document.createElement('p');
-  if (datafromArticleInformation.querySelector('.date') !== undefined && datafromArticleInformation.querySelector('.date') !== null) {
-    const publishedDate = datafromArticleInformation.querySelector('.date');
-    const publishDate = String(publishedDate.children[0].textContent).split(':')[1];
-    const span = document.createElement('span');
-    span.append(publishDate);
-    const articletime = document.createElement('span');
-    articletime.append(articlereadtime);
-    // lastUpdatedpara.append(span, articlereadtime);
-    dateandtime.append(span, articletime);
-  }
-  categoryDateDiv.append(dateandtime, articleAnchors);
+  const span = document.createElement('span');
+  span.append(postArticle.publishedDate);
+  const articletime = document.createElement('span');
+  articletime.append(`${postArticle.readTime} min read`);
+  dateandtime.append(span, articletime);
+  const categoryPara = document.createElement('p');
+  categoryPara.classList.add('category-list');
+  postArticle.category.split(',').forEach((item) => {
+    const categorySpan = document.createElement('a');
+    categorySpan.append(item);
+    categoryPara.append(categorySpan);
+  });
+  categoryDateDiv.append(dateandtime, categoryPara);
   contentDiv.append(heading, categoryDateDiv, descriptionDiv, button);
   blogHero.append(imgDiv, contentDiv);
-  block.innerHTML = '';
   block.append(blogHero);
 }
