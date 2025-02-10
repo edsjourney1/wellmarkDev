@@ -6,7 +6,7 @@ function create_blogarticletitle_0(main, document) {
     ? document.querySelector('.txt-block-inner > p').innerText
     : '';
   const element_3_0 = document.querySelector(
-    '.col-xs-12.col-md-6.img-block > img'
+    '.col-xs-12.col-md-6.img-block > img',
   );
 
   const newContainer = document.createElement('div');
@@ -18,9 +18,10 @@ function create_blogarticletitle_0(main, document) {
   const contentElement = document.createElement('p');
   contentElement.innerText = element_2_0;
   newContainer.appendChild(contentElement);
-  document.querySelector('.txt-block-inner > p')
-    ? document.querySelector('.txt-block-inner > p').remove()
-    : '';
+  if (document.querySelector('.txt-block-inner > p')) {
+    document.querySelector('.txt-block-inner > p').remove();
+  }
+
   const imgElement = document.createElement('img');
   imgElement.innerText = element_3_0;
   newContainer.appendChild(imgElement);
@@ -35,17 +36,17 @@ function update_A_Btn_Elements(document) {
 
     if (element.tagName.toLowerCase() === 'a') {
       if (
-        element.classList.contains('btn') &&
-        element.classList.contains('btn-primary')
+        element.classList.contains('btn')
+        && element.classList.contains('btn-primary')
       ) {
         element.classList.remove('btn', 'btn-primary');
         element.classList.add('button', 'primary');
         shouldWrap = true;
       }
       if (
-        element.classList.contains('btn') &&
-        element.classList.contains('btn-primary') &&
-        element.classList.contains('btn-lg')
+        element.classList.contains('btn')
+        && element.classList.contains('btn-primary')
+        && element.classList.contains('btn-lg')
       ) {
         element.classList.remove('btn', 'btn-primary', 'btn-lg');
         element.classList.add('button', 'primary');
@@ -57,18 +58,18 @@ function update_A_Btn_Elements(document) {
       element.title = element.innerText;
     } else if (element.tagName.toLowerCase() === 'button') {
       if (
-        element.classList.contains('btn') &&
-        element.classList.contains('btn-continue') &&
-        element.classList.contains('btn-default') &&
-        element.classList.contains('btn-lg') &&
-        element.classList.contains('esub-link')
+        element.classList.contains('btn')
+        && element.classList.contains('btn-continue')
+        && element.classList.contains('btn-default')
+        && element.classList.contains('btn-lg')
+        && element.classList.contains('esub-link')
       ) {
         element.classList.remove(
           'btn',
           'btn-continue',
           'btn-default',
           'btn-lg',
-          'esub-link'
+          'esub-link',
         );
         element.classList.add('button', 'secondary');
         shouldWrap = true;
@@ -85,10 +86,8 @@ function update_A_Btn_Elements(document) {
 }
 
 function create_relatedarticle_0(main, document) {
-  const mainContainer =
-    document.querySelector(
-      '.container-fluid.mag-closing.hidden-print.mag-closing-blue'
-    ) || document.querySelector('.container-fluid.mag-closing.hidden-print');
+  const mainContainer = document.querySelector('.container-fluid.mag-closing.hidden-print.mag-closing-blue')
+    || document.querySelector('.container-fluid.mag-closing.hidden-print');
   if (!mainContainer) {
     return;
   }
@@ -117,7 +116,7 @@ function create_relatedarticle_0(main, document) {
 
 function appendBaseURLToInternalLinks(document) {
   const baseURL = 'https://qa--wellmark-nonprod-conf--aemsites.aem.page';
-  const links = document.querySelectorAll('a[href^='/']');
+  const links = document.querySelectorAll('a[href^="/"]');
   links.forEach((link) => {
     link.href = baseURL + link.getAttribute('href');
   });
@@ -125,15 +124,15 @@ function appendBaseURLToInternalLinks(document) {
 
 function createPullQuoteV2(main, document) {
   const primarySections = document.querySelectorAll(
-    '.callout.ctr.bg-blue, .callout.f_rt.bg-blue, blockquote .callout, blockquote'
+    '.callout.ctr.bg-blue, .callout.f_rt.bg-blue, blockquote .callout, blockquote',
   );
   primarySections.forEach((primarySection) => {
     if (primarySection) {
       // Remove subscribe button sections
       const subscribeButton = primarySection.querySelector('button');
       if (
-        subscribeButton &&
-        subscribeButton.textContent.includes('Subscribe')
+        subscribeButton
+        && subscribeButton.textContent.includes('Subscribe')
       ) {
         primarySection.remove();
         return;
@@ -147,7 +146,7 @@ function createPullQuoteV2(main, document) {
         .querySelectorAll('h1, h2, h3, h4, h5, h6, p')
         .forEach((element) => {
           if (!element.closest('.quotee')) {
-            contentHTML += element.outerHTML + ' ';
+            contentHTML += `${element.outerHTML} `;
           }
         });
 
@@ -172,7 +171,7 @@ function createPullQuoteV2(main, document) {
 
       const table = WebImporter.DOMUtils.createTable(cells, document);
       primarySection.replaceWith(table);
-      console.log(table);
+      // console.log(table);
     }
   });
 }
@@ -182,7 +181,7 @@ function appendIconTextToExternalLinks(document) {
 
   links.forEach((link) => {
     let span = link.querySelector(
-      'span.icon-wmkExternalLinkSmall, span.icon-file-pdf, span.icon-lock, span.icon-mail'
+      'span.icon-wmkExternalLinkSmall, span.icon-file-pdf, span.icon-lock, span.icon-mail',
     );
 
     if (!span) {
@@ -237,15 +236,14 @@ function createMetadataBlock(main, document) {
   ];
 
   const metaElements = document.querySelectorAll(
-    '[name], [property], [http-equiv], [charset]'
+    '[name], [property], [http-equiv], [charset]',
   );
 
   metaElements.forEach((el) => {
-    const key =
-      el.getAttribute('name') ||
-      el.getAttribute('property') ||
-      el.getAttribute('http-equiv') ||
-      el.getAttribute('charset');
+    const key = el.getAttribute('name')
+    || el.getAttribute('property')
+    || el.getAttribute('http-equiv')
+    || el.getAttribute('charset');
     const value = el.content || el.getAttribute('content');
 
     if (key && !ignoreList.includes(key)) {
@@ -258,9 +256,7 @@ function createMetadataBlock(main, document) {
 
   const tags = Array.from(tagElements)
     .map((tag) => tag.innerText.trim())
-    .filter(
-      (text, index, self) => text.length > 0 && self.indexOf(text) === index
-    )
+    .filter((text, index, self) => text.length > 0 && self.indexOf(text) === index)
     .join(', ');
 
   if (tags) {
@@ -269,14 +265,11 @@ function createMetadataBlock(main, document) {
 
   tagElements.forEach((tag) => tag.remove());
 
-  const contentBlockDate =
-    document.querySelector('.content-block em') ||
-    document.querySelector('.content-block p i');
+  const contentBlockDate = document.querySelector('.content-block em')
+    || document.querySelector('.content-block p i');
   meta['publish-date'] = '';
   if (contentBlockDate) {
-    const dateText = contentBlockDate.innerText.match(
-      /([A-Za-z]+\.\s\d{1,2},\s\d{4})|([A-Za-z]+\s\d{1,2},\s\d{4})/
-    );
+    const dateText = contentBlockDate.innerText.match(/([A-Za-z]+\.\s\d{1,2},\s\d{4})|([A-Za-z]+\s\d{1,2},\s\d{4})/);
 
     if (dateText) {
       const parsedDate = new Date(dateText[0]);
@@ -361,7 +354,7 @@ function replaceVideoOpenerWithTable(document) {
       const cells = [['video-embed(video-embed-youtube)'], []];
       if (img) {
         const imgElement = `<img src='${img.src}' alt='${img.alt}'>`;
-        cells[1].push(imgElement + ' ' + videoUrl);
+        cells[1].push(`${imgElement} ${videoUrl}`);
       } else {
         cells[1].push(videoUrl);
       }
@@ -379,9 +372,8 @@ function removeImageDesc(document) {
     const buttons = infographic.querySelectorAll('button');
 
     buttons.forEach((button) => {
-      const ariaControls =
-        button.getAttribute('aria-controls') ||
-        button.getAttribute('ariacontrols');
+      const ariaControls = button.getAttribute('aria-controls')
+        || button.getAttribute('ariacontrols');
       if (ariaControls) {
         const elementToRemove = infographic.querySelector(`#${ariaControls}`);
         if (elementToRemove) {
@@ -412,24 +404,18 @@ function extractContentAndMakeTable(main, document) {
 
   const divStyles = ['margin-bottom:0px', 'margin-bottom: 0px;'];
 
-  const h3Elements = h3Styles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`h3[style='${style}']`))
-  );
-  const pElements = pStyles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`p[style='${style}']`))
-  );
-  const divElements = divStyles.flatMap((style) =>
-    Array.from(document.querySelectorAll(`div[style='${style}']`))
-  );
+  const h3Elements = h3Styles.flatMap((style) => Array.from(document.querySelectorAll(`h3[style='${style}']`)));
+  const pElements = pStyles.flatMap((style) => Array.from(document.querySelectorAll(`p[style='${style}']`)));
+  const divElements = divStyles.flatMap((style) => Array.from(document.querySelectorAll(`div[style='${style}']`)));
 
   let combinedHTML = '';
   [...h3Elements, ...pElements].forEach((element) => {
-    combinedHTML += element.outerHTML + ' ';
+    combinedHTML += `${element.outerHTML} `;
   });
 
   let divHTML = '';
   divElements.forEach((element) => {
-    divHTML += element.outerHTML + ' ';
+    divHTML += `${element.outerHTML} `;
   });
 
   const cells = [['blog-cta'], [combinedHTML.trim()], [divHTML.trim()]];
@@ -438,12 +424,10 @@ function extractContentAndMakeTable(main, document) {
   if (h3Elements.length > 0 || pElements.length > 0 || divElements.length > 0) {
     const referenceElement = h3Elements[0] || pElements[0] || divElements[0];
     referenceElement.replaceWith(table);
-    [...h3Elements.slice(1), ...pElements, ...divElements].forEach((el) =>
-      el.remove()
-    );
+    [...h3Elements.slice(1), ...pElements, ...divElements].forEach((el) => el.remove());
   }
 
-  console.log(table);
+  // console.log(table);
 }
 
 function paraForSmall(document) {
@@ -471,7 +455,7 @@ function replaceRegisteredTrademark(document) {
     document.body,
     NodeFilter.SHOW_TEXT,
     null,
-    false
+    false,
   );
   let node;
   while ((node = walker.nextNode())) {
