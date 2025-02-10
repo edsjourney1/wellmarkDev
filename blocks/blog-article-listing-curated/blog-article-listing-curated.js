@@ -1,8 +1,6 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
 
-import myJson from '../../scripts/constants.js';
-
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
   const articleOne = block.children[1].children[0].textContent;
@@ -20,7 +18,9 @@ export default async function decorate(block) {
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
   block.append(headDiv, blockDiv);
-  const postArticle1 = myJson.find((item) => item.url === articleOne);
+  const data = await fetch('/query-index.json');
+  const json = await data.json();
+  const postArticle1 = json.data.find((item) => item.url === articleOne);
   if (postArticle1) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
@@ -56,7 +56,7 @@ export default async function decorate(block) {
     const categoryPara = document.createElement('p');
     categoryPara.classList.add('category-list');
     contentDiv.appendChild(categoryPara);
-    postArticle1.category.forEach((item) => {
+    postArticle1.category.split(',').forEach((item) => {
       const categorySpan = document.createElement('a');
       categorySpan.append(item);
       categoryPara.append(categorySpan);
@@ -66,7 +66,7 @@ export default async function decorate(block) {
       window.location.href = `${postArticle1.url}`;
     });
   }
-  const postArticle2 = myJson.find((item) => item.url === articleTwo);
+  const postArticle2 = data.json.find((item) => item.url === articleTwo);
   if (postArticle2) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
@@ -112,7 +112,7 @@ export default async function decorate(block) {
       window.location.href = `${postArticle2.url}`;
     });
   }
-  const postArticle3 = myJson.find((item) => item.url === articleThree);
+  const postArticle3 = data.json.find((item) => item.url === articleThree);
   if (postArticle3) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
