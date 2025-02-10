@@ -102,7 +102,7 @@ export default async function decorate(block) {
     const categoryPara = document.createElement('p');
     categoryPara.classList.add('category-list');
     contentDiv.appendChild(categoryPara);
-    postArticle2.category.forEach((item) => {
+    postArticle2.category.split(',').forEach((item) => {
       const categorySpan = document.createElement('a');
       categorySpan.append(item);
       categoryPara.append(categorySpan);
@@ -148,7 +148,7 @@ export default async function decorate(block) {
     const categoryPara = document.createElement('p');
     categoryPara.classList.add('category-list');
     contentDiv.appendChild(categoryPara);
-    postArticle3.category.forEach((item) => {
+    postArticle3.category.split(',').forEach((item) => {
       const categorySpan = document.createElement('a');
       categorySpan.append(item);
       categoryPara.append(categorySpan);
