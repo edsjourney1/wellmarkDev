@@ -1,8 +1,6 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
 
-import myJson from '../../scripts/constants.js';
-
 export default async function decorate(block) {
   const heading = block.children[0].children[0].textContent;
   const categoryByauthor = block.children[1].children[0].textContent;
@@ -20,7 +18,10 @@ export default async function decorate(block) {
   const blockDiv = document.createElement('div');
   blockDiv.classList.add('cards-div');
   block.append(headDiv, blockDiv);
-  const categoryBasedJson = myJson.filter((article) => article.category.includes(categoryByauthor));
+  const data = await fetch('/query-index.json');
+  const json = await data.json();
+  // eslint-disable-next-line max-len
+  const categoryBasedJson = json.data.filter((article) => article.category.includes(categoryByauthor));
   function renderItems() {
     blockDiv.innerHTML = '';
     function getRandomArticlesfromJSON(num = 3) {
@@ -68,7 +69,7 @@ export default async function decorate(block) {
       const categoryPara = document.createElement('p');
       categoryPara.classList.add('category-list');
       contentDiv.appendChild(categoryPara);
-      category.forEach((item) => {
+      category.split(',').forEach((item) => {
         const anchor = document.createElement('a');
         anchor.href = 'www.google.com';
         anchor.textContent = item;
