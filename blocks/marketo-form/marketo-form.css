@@ -30,13 +30,11 @@ form.eds-mkto-form.mktoForm {
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   form.eds-mkto-form.mktoForm {
-    width: 100% !important;
     padding: 67px 20px 105px 20px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   form.eds-mkto-form.mktoForm {
-    width: 100% !important;
     padding: 67px 20px 105px 20px;
   }
 }
@@ -87,8 +85,27 @@ form.eds-mkto-form.mktoForm .mktoFormRow div div input {
   color: #4b4c4d;
   font-family: roboto, sans-serif;
   font-size: 16px;
-  line-height: 32px;
-  padding: 10px 21px 8px 20px;
+  padding: 16px 20px;
+  border-radius: 2px;
+  border: 2px solid rgb(117, 117, 117);
+  opacity: 1;
+  background-color: rgb(255, 255, 255);
+}
+form.eds-mkto-form.mktoForm .mktoFormRow div div input:not(:has(+ .mktoError:not([style*="display: none"]))) {
+  border: 2px solid rgb(117, 117, 117);
+  box-shadow: none;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow div div input:focus {
+  outline: none;
+  border: 2px solid rgb(117, 117, 117);
+  box-shadow: none;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow div div input:has(+ .mktoError) {
+  border: 2px solid rgb(180, 66, 66);
+}
+form.eds-mkto-form.mktoForm .mktoFormRow div div input.mktoField:focus {
+  outline: 2px dashed red;
+  outline-offset: 2px;
 }
 form.eds-mkto-form.mktoForm .mktoFormRow div div select {
   width: 100% !important;
@@ -97,6 +114,23 @@ form.eds-mkto-form.mktoForm .mktoFormRow div div select {
 form.eds-mkto-form.mktoForm .mktoFormRow div div .mktoError {
   right: 0 !important;
   bottom: 0 !important;
+  top: 75% !important;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow div div .mktoError .mktoErrorArrowWrap {
+  display: none;
+}
+form.eds-mkto-form.mktoForm .mktoFormRow div div .mktoError .mktoErrorMsg {
+  border-top: none;
+  border: none;
+  background-image: none !important;
+  border-radius: 2px !important;
+  opacity: 1 !important;
+  background-color: rgb(255, 245, 245) !important;
+  color: black;
+  text-shadow: none !important;
+  border-left: 4px solid rgb(180, 66, 66);
+  box-shadow: none;
+  margin-top: 8px;
 }
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList {
   width: 100% !important;
@@ -106,6 +140,7 @@ form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList {
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList input.mktoField {
   width: 22px !important;
   height: 22px;
+  accent-color: rgb(0, 85, 137);
 }
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList label {
   margin-left: 9px;
@@ -144,7 +179,7 @@ form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap label:has(.mktoAsterix) 
 }
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoFieldWrap label:has(.mktoAsterix) .mktoAsterix {
   margin-left: 4px;
-  display: inline;
+  display: inline !important;
   margin-top: 5px;
   padding: 0;
 }
@@ -167,3 +202,5 @@ form.eds-mkto-form.mktoForm .mktoButtonRow .mktoButton {
   background-color: #005589;
   text-decoration: none;
 }
+
+/*# sourceMappingURL=marketo-form.css.map */
