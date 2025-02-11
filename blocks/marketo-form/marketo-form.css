@@ -91,9 +91,6 @@ form.eds-mkto-form.mktoForm .mktoFormRow div div input {
   opacity: 1;
   background-color: rgb(255, 255, 255);
 }
-form.eds-mkto-form.mktoForm .mktoFormRow div div input:has(+ .mktoError) {
-  border: 2px solid rgb(180, 66, 66);
-}
 form.eds-mkto-form.mktoForm .mktoFormRow div div input:not(:has(+ .mktoError:not([style*="display: none"]))) {
   border: 2px solid rgb(117, 117, 117);
   box-shadow: none;

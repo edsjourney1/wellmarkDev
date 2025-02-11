@@ -89,10 +89,7 @@ form.eds-mkto-form {
             border: 2px solid rgba(117, 117, 117, 1);
             opacity: 1;
             background-color: rgba(255, 255, 255, 1);
-            // when input validation errors
-            &:has(+ .mktoError) {
-              border: 2px solid rgba(180, 66, 66, 1);
-            }
+
             &:not(:has(+ .mktoError:not([style*="display: none"]))) {
               border: 2px solid rgba(117, 117, 117, 1);
               box-shadow: none;
