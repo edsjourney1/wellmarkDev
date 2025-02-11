@@ -54,6 +54,14 @@
                     }
                 }
             }
+            .feedback{
+                display: none;
+                color: $--gray-700;
+                font-family: roboto, sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                padding-top: 24px;
+            }
             .share{
                 .share-icons{
                     display: flex;
