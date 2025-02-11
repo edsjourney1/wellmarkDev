@@ -154,6 +154,24 @@
 .siteheader-login-wrapper-cta-active button .icon {
   transform: rotate(180deg) !important;
 }
+.siteheader-login-wrapper .button-container {
+  margin-top: 42px;
+}
+.siteheader-login-wrapper .button-container p {
+  margin: 0;
+}
+.siteheader-login-wrapper .button-container a {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  display: flex;
+  height: 52px;
+  justify-content: center;
+  padding: 5px 36px;
+  text-decoration: none;
+}
 .siteheader-login-wrapper button {
   background-color: #005589;
   border-radius: 2px;

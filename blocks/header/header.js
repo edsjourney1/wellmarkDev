@@ -164,8 +164,9 @@ const formMainHeader = (thisBlock, fragment) => {
     let loginFieldsStr = '<form><div>';
 
     Array.from(loginBody?.children).forEach((el, index) => {
-      loginFieldsStr += `<div><label>${el.querySelector('p').innerHTML}</label>`;
-      loginFieldsStr += `<input type='${index === 0 ? 'text' : 'password'}'/></div>`;
+      loginFieldsStr += `<div><label>${el.querySelector('p:first-child').innerHTML}</label>`;
+      loginFieldsStr += `<input type='${index === 0 ? 'text' : 'password'}'/>`;
+      loginFieldsStr += `<span>${el.querySelector('p:last-child').innerHTML}</span></div>`
     });
 
     loginFieldsStr += `</div><div><button type="submit">${loginCta.children[0].querySelector('p').innerHTML}</button>
@@ -189,6 +190,7 @@ const formMainHeader = (thisBlock, fragment) => {
                       </div>
                       <div>
                         ${registerHeader.innerHTML}
+                        ${registerBody.innerHTML}
                       </div>
                     </div>
                   </div>

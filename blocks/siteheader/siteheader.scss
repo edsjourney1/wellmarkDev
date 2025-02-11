@@ -377,6 +377,24 @@
                 }
             }
         }
+        .button-container {
+            margin-top: 42px;
+            p {
+                margin: 0;
+            }
+            a {
+                align-items: center;
+                background-color: transparent;
+                border-radius: 2px;
+                border: 2px solid $--white;
+                color: $--white;
+                display: flex;
+                height: 52px;
+                justify-content: center;
+                padding: 5px 36px;
+                text-decoration: none;
+            }
+        }
         button {
             background-color: $--blue-675;
             border-radius: 2px;
