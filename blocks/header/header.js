@@ -1,75 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import { navClicks, closeAllNavItems } from './navClicks.js';
-
-const addEvents = (thisBlock, navMaskEl, searchMaskEl) => {
-  const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
-  const loginCtaEl = loginWrapEl?.querySelector('button');
-  const navCtaEl = thisBlock.querySelector(
-    '.siteheader-mobile-wrapper > button'
-  );
-  const searchParent = document.querySelector('.siteheader-search-wrapper > .siteheader-search-inner');
-  const searchCtaEl = document.querySelector('.siteheader-search-wrapper > button');
-
-  searchCtaEl.addEventListener('click', () => {
-    if (navCtaEl.classList.contains('siteheader-nav-active')) {
-      navCtaEl.dispatchEvent(new MouseEvent('click'));
-    }
-    if (searchParent.classList.contains('siteheader-search-inner-active')) {
-      searchCtaEl.classList.remove('siteheader-search-inner-active');
-      searchParent.classList.remove('siteheader-search-inner-active');
-      searchMaskEl.classList.remove('siteheader-search-mask-active');
-    } else {
-      searchCtaEl.classList.add('siteheader-search-inner-active');
-      searchParent.classList.add('siteheader-search-inner-active');
-      searchMaskEl.classList.add('siteheader-search-mask-active');
-    }
-  });
-
-  const navEl = thisBlock.querySelector('.siteheader-mobile-wrapper > nav');
-  const navArr = [];
-
-  loginCtaEl?.addEventListener('click', () => {
-    if (loginWrapEl.classList.contains('siteheader-login-wrapper-cta-active')) {
-      loginWrapEl.classList.remove('siteheader-login-wrapper-cta-active');
-    } else {
-      loginWrapEl.classList.add('siteheader-login-wrapper-cta-active');
-      closeAllNavItems(navArr, navMaskEl);
-    }
-  });
-
-  const l0Links = Array.from(
-    thisBlock.querySelectorAll('.siteheader-has-subnav')
-  );
-  l0Links.forEach((link, index) => {
-    navArr.push({
-      index,
-      isActive: false,
-      link,
-      subnav: link.nextElementSibling,
-    });
-  });
-  navArr.forEach((liObj) => {
-    liObj.link.addEventListener('click', (event) => {
-      event.preventDefault();
-      navClicks(liObj, navArr, navMaskEl);
-    });
-  });
-
-  navCtaEl?.addEventListener('click', () => {
-    if (searchCtaEl.classList.contains('siteheader-search-inner-active')) {
-      searchCtaEl.dispatchEvent(new MouseEvent('click'));
-    }
-    if (navCtaEl.classList.contains('siteheader-nav-active')) {
-      navCtaEl.classList.remove('siteheader-nav-active');
-      navEl.classList.remove('siteheader-nav-active');
-      closeAllNavItems(navArr, navMaskEl);
-    } else {
-      navCtaEl.classList.add('siteheader-nav-active');
-      navEl.classList.add('siteheader-nav-active');
-    }
-  });
-};
+import { addEvents } from './addEvents.js';
 
 const formMainNavigation = (
   thisBlock,
@@ -79,7 +10,6 @@ const formMainNavigation = (
   navMaskEl,
   searchMaskEl
 ) => {
-  console.log('===========megamenuInfo', megamenuInfo);
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
   mobileBtnWrapperEl.innerHTML = `<button type='button'>
@@ -231,6 +161,16 @@ const formMainHeader = (thisBlock, fragment) => {
     }
 
     let loginWrapperStr = '';
+    let loginFieldsStr = '<form><div>';
+
+    Array.from(loginBody?.children).forEach((el, index) => {
+      loginFieldsStr += `<div><label>${el.querySelector('p').innerHTML}</label>`;
+      loginFieldsStr += `<input type='${index === 0 ? 'text' : 'password'}'/></div>`;
+    });
+
+    loginFieldsStr += `</div><div><button type="submit">${loginCta.children[0].querySelector('p').innerHTML}</button>
+      ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
+
     if (loginInfo) {
       loginWrapperStr = `<div class='siteheader-login-wrapper'>
                 <div class='siteheader-login-wrapper-cta'>
@@ -238,7 +178,21 @@ const formMainHeader = (thisBlock, fragment) => {
                         <span>${loginInfo.querySelector('p').innerHTML}</span>
                     </button>
                 </div>
-
+                <div class='siteheader-login-wrapper-outer'>
+                  <div class='siteheader-login-wrapper-inner'>
+                    <div class='siteheader-login-wrapper-grid'>
+                      <div>
+                        ${loginHeader.innerHTML}
+                        <div class='siteheader-login-fields'>
+                          ${loginFieldsStr}
+                        </div>
+                      </div>
+                      <div>
+                        ${registerHeader.innerHTML}
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>`;
     }
 
