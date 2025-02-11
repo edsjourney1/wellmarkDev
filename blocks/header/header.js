@@ -2,6 +2,19 @@ import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 import { addEvents } from './addEvents.js';
 
+const generateLoginForm = (loginElArr, formCount) => {
+  let str = '';
+  loginElArr.forEach((el, index) => {
+    str += `<div><label for='${index === 0 ? 'username' : 'userpassword'}_${formCount}'>${el.querySelector('p:first-child').innerHTML}</label>`;
+    str += `<input type='${index === 0 ? 'text' : 'password'}'
+      id='${index === 0 ? 'username' : 'userpassword'}_${formCount}'
+      name='${index === 0 ? 'username' : 'userpassword'}'/>`;
+      str += `<div class='siteheader-login-error' data-error='${index === 0 ? 'username' : 'userpassword'}_${formCount}'>
+        ${el.querySelector('p:last-child').innerHTML}</div></div>`
+  });
+  return str;
+};
+
 const formMainNavigation = (
   thisBlock,
   navUl,
@@ -9,7 +22,8 @@ const formMainNavigation = (
   megamenuInfo,
   navMaskEl,
   searchMaskEl,
-  loginMaskEl
+  loginMaskEl,
+  loginWrapperMobileStr
 ) => {
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
@@ -21,6 +35,10 @@ const formMainNavigation = (
 
   const navEl = document.createElement('nav');
   navEl.append(navUl);
+
+  const ulWrap2Login = document.createElement('div');
+  ulWrap2Login.innerHTML = loginWrapperMobileStr;
+  navEl.appendChild(ulWrap2Login);
 
   const l0Ul = navEl.children[0];
   const l0Li = Array.from(l0Ul.children);
@@ -72,6 +90,7 @@ const formMainNavigation = (
   });
 
   mobileBtnWrapperEl.append(navEl);
+
   addEvents(thisBlock, navMaskEl, searchMaskEl, loginMaskEl);
 };
 
@@ -163,20 +182,35 @@ const formMainHeader = (thisBlock, fragment) => {
           </div>`;
     }
 
-    let loginWrapperStr = '';
-    let loginFieldsStr = '<form><div>';
+    let loginWrapperDesktopStr = '';
+    let loginWrapperMobileStr = '';
+    let loginFieldsDesktopStr = '<form><div>';
+    let loginFieldsMobileStr = '<form><div>';
 
-    Array.from(loginBody?.children).forEach((el, index) => {
-      loginFieldsStr += `<div><label>${el.querySelector('p:first-child').innerHTML}</label>`;
-      loginFieldsStr += `<input type='${index === 0 ? 'text' : 'password'}'/>`;
-      loginFieldsStr += `<span>${el.querySelector('p:last-child').innerHTML}</span></div>`
-    });
+    const loginformDesktop = generateLoginForm(Array.from(loginBody?.children), 0);
+    const loginformMobile = generateLoginForm(Array.from(loginBody?.children), 1);
 
-    loginFieldsStr += `</div><div><button type="submit">${loginCta.children[0].querySelector('p').innerHTML}</button>
+    loginFieldsDesktopStr += `${loginformDesktop}</div><div><button type="submit">${loginCta.children[0].querySelector('p').innerHTML}</button>
       ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
+    loginFieldsMobileStr += `${loginformMobile}</div><div><button type="submit">${loginCta.children[0].querySelector('p').innerHTML}</button>
+    ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
 
     if (loginInfo) {
-      loginWrapperStr = `<div class='siteheader-login-wrapper'>
+      loginWrapperMobileStr = `<div class='siteheader-login-wrapper'>
+                <div class='siteheader-login-wrapper-grid'>
+                      <div>
+                        ${loginHeader.innerHTML}
+                        <div class='siteheader-login-fields'>
+                          ${loginFieldsMobileStr}
+                        </div>
+                      </div>
+                      <div>
+                        ${registerHeader.innerHTML}
+                        ${registerBody.innerHTML}
+                      </div>
+                    </div>
+            </div>`;
+      loginWrapperDesktopStr = `<div class='siteheader-login-wrapper'>
                 <div class='siteheader-login-wrapper-cta'>
                     <button type='button'>
                         <span>${loginInfo.querySelector('p').innerHTML}</span>
@@ -188,7 +222,7 @@ const formMainHeader = (thisBlock, fragment) => {
                       <div>
                         ${loginHeader.innerHTML}
                         <div class='siteheader-login-fields'>
-                          ${loginFieldsStr}
+                          ${loginFieldsDesktopStr}
                         </div>
                       </div>
                       <div>
@@ -215,7 +249,7 @@ const formMainHeader = (thisBlock, fragment) => {
       logoWrapperStr +
       searchSectionStartStr +
       searchWrapperStr +
-      loginWrapperStr +
+      loginWrapperDesktopStr +
       logoutWrapperStr +
       searchSectionEndStr +
       '</div></div>';
@@ -230,7 +264,7 @@ const formMainHeader = (thisBlock, fragment) => {
     }
 
     if (navUl && navCtaEl) {
-      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl, searchMaskEl, loginMaskEl);
+      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl, searchMaskEl, loginMaskEl, loginWrapperMobileStr);
     }
   }
 };

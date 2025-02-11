@@ -62,10 +62,14 @@ html, body {
   }
 }
 
-body.appear {
-  display: block;
+body {
+  &.appear {
+    display: block;
+  }
+  &.siteheader-nav-active {
+    overflow: hidden;
+  }
 }
-
 header.megamenu-wrapper {
   height: 60px;
 

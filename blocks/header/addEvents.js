@@ -1,11 +1,17 @@
 import { loginEventFn } from './loginEvents.js';
 import { navClicks, closeAllNavItems } from './navClicks.js';
+
+const bodyElem = document.querySelector('body');
 const activeCls = 'siteheader-active';
 
 export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
-  const loginCtaWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
+  const loginCtaWrapEl = thisBlock.querySelector(
+    '.siteheader-login-wrapper-cta'
+  );
   const loginCtaEl = loginCtaWrapEl?.querySelector('button');
-  const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-outer');
+  const loginWrapEl = thisBlock.querySelector(
+    '.siteheader-login-wrapper-outer'
+  );
 
   const navCtaEl = thisBlock.querySelector(
     '.siteheader-mobile-wrapper > button'
@@ -25,10 +31,12 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
       searchCtaEl.classList.remove('siteheader-active');
       searchParent.classList.remove('siteheader-active');
       searchMaskEl.classList.remove('siteheader-active');
+      bodyElem.classList.remove('siteheader-nav-active');
     } else {
       searchCtaEl.classList.add('siteheader-active');
       searchParent.classList.add('siteheader-active');
       searchMaskEl.classList.add('siteheader-active');
+      bodyElem.classList.add('siteheader-nav-active');
     }
   });
 
@@ -60,12 +68,21 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     if (navCtaEl.classList.contains(activeCls)) {
       navCtaEl.classList.remove(activeCls);
       navEl.classList.remove(activeCls);
+      bodyElem.classList.remove('siteheader-nav-active');
       closeAllNavItems(navArr, navMaskEl);
     } else {
+      bodyElem.classList.add('siteheader-nav-active');
       navCtaEl.classList.add(activeCls);
       navEl.classList.add(activeCls);
     }
   });
 
-  loginEventFn(loginCtaEl, loginCtaWrapEl, loginWrapEl, navArr, navMaskEl, loginMaskEl);
+  loginEventFn(
+    loginCtaEl,
+    loginCtaWrapEl,
+    loginWrapEl,
+    navArr,
+    navMaskEl,
+    loginMaskEl
+  );
 };

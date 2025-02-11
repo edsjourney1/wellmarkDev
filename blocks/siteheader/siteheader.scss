@@ -9,16 +9,27 @@
         column-gap: 0;
     }
     &-login-wrapper {
+        background-color: $--blue-550;
+        .button-container {
+            margin-top: 15px;
+        }
         &-cta {
             display: none;
         }
         &-grid {
             display: block;
-            > div:first-child {                
+            > div:first-child {
                 border: 0;
                 border-bottom: 2px solid $--blue-600;
                 width: 100%;
                 padding: 36px 36px 48px 36px;
+            }
+            > div:last-child {
+                h3 {
+                    margin: 0;
+                }
+                width: 100%;
+                padding: 36px 36px 52px 36px;
             }
         }
         form {
@@ -358,6 +369,7 @@
         }
     }
     &-login-wrapper {
+        color: $--white;
         &-hidden {
             display: none;
         }
@@ -430,7 +442,6 @@
         }
         &-outer {
             background-color: $--blue-550;
-            color: $--white;
             display: none;
             left: 0;
             position: absolute;
@@ -561,6 +572,9 @@
             border-bottom: 2px solid $--blue-100;
             position: relative;
             z-index: 6;
+            .siteheader-login-wrapper {
+                display: none;
+            }
             > ul {
                 align-items: center;
                 display: flex;
