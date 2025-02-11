@@ -94,7 +94,7 @@ const formMainNavigation = (
   addEvents(thisBlock, navMaskEl, searchMaskEl, loginMaskEl);
 };
 
-const formMainHeader = (thisBlock, fragment) => {
+const formMainHeader = (thisBlock, fragment, alertFragment) => {
   const headerWrapper = thisBlock.closest('.header-wrapper');
   const headerFragment = fragment.querySelector('.siteheader-container');
 
@@ -195,8 +195,21 @@ const formMainHeader = (thisBlock, fragment) => {
     loginFieldsMobileStr += `${loginformMobile}</div><div><button type="submit">${loginCta.children[0].querySelector('p').innerHTML}</button>
     ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
 
+    let loginMsgEl;
+    const loginMsgSelector = loginMessage?.children[0]?.querySelector('p');
     let loginMsgStr = '';
-
+    if (loginMsgSelector) {
+      loginMsgEl = alertFragment?.querySelector(`.${loginMsgSelector.innerHTML}`)?.closest('.alert-wrapper');
+      const loginMsgParent = loginMsgEl?.querySelector('.icon').closest('div');
+      Array.from(loginMsgParent.children).forEach((el, index) => {
+        if (index !== 0) {
+          el.remove();
+        }
+      });
+      loginMsgParent.append(loginMessage?.children[1]);
+      loginMsgStr = loginMsgParent.closest('.alert-container').innerHTML;
+    }
+    console.log("==========loginMsgStr", loginMsgStr);
     if (loginInfo) {
       loginWrapperMobileStr = `<div class='siteheader-login-wrapper'>
                 <div class='siteheader-login-wrapper-grid'>
