@@ -8,7 +8,8 @@ const formMainNavigation = (
   navCtaEl,
   megamenuInfo,
   navMaskEl,
-  searchMaskEl
+  searchMaskEl,
+  loginMaskEl
 ) => {
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
@@ -71,8 +72,7 @@ const formMainNavigation = (
   });
 
   mobileBtnWrapperEl.append(navEl);
-
-  addEvents(thisBlock, navMaskEl, searchMaskEl);
+  addEvents(thisBlock, navMaskEl, searchMaskEl, loginMaskEl);
 };
 
 const formMainHeader = (thisBlock, fragment) => {
@@ -112,6 +112,9 @@ const formMainHeader = (thisBlock, fragment) => {
 
     const searchMaskEl = document.createElement('div');
     searchMaskEl.className = 'siteheader-search-mask';
+
+    const loginMaskEl = document.createElement('div');
+    loginMaskEl.className = 'siteheader-login-mask';
 
     const paddingEl = document.createElement('div');
     paddingEl.className = 'header-padding';
@@ -222,11 +225,12 @@ const formMainHeader = (thisBlock, fragment) => {
     if (headerWrapper) {
       headerWrapper.parentNode.insertBefore(navMaskEl, headerWrapper);
       headerWrapper.parentNode.insertBefore(searchMaskEl, headerWrapper);
+      headerWrapper.parentNode.insertBefore(loginMaskEl, headerWrapper);
       headerWrapper.parentNode.insertBefore(paddingEl, headerWrapper);
     }
 
     if (navUl && navCtaEl) {
-      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl, searchMaskEl);
+      formMainNavigation(thisBlock, navUl, navCtaEl, megamenuInfo, navMaskEl, searchMaskEl, loginMaskEl);
     }
   }
 };

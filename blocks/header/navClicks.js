@@ -8,7 +8,7 @@ export const closeAllNavItems = (navArr, navMaskEl) => {
     item.link.classList.remove(activeCls);
     item.subnav.classList.remove(activeCls);
     slideUp(item.subnav);
-    navMaskEl.classList.remove('siteheader-nav-mask-active');
+    navMaskEl.classList.remove('siteheader-active');
   });
 };
 
@@ -22,7 +22,7 @@ export const navClicks = (liObj, navArr, navMaskEl) => {
         item.link.classList.add(activeCls);
         item.subnav.classList.add(activeCls);
         slideDown(item.subnav);
-        navMaskEl.classList.add('siteheader-nav-mask-active');
+        navMaskEl.classList.add('siteheader-active');
       } else {
         item.isActive = false;
         item.link.classList.remove(activeCls);

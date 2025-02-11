@@ -5,7 +5,7 @@
 .siteheader-search-mask {
   display: none;
 }
-.siteheader-nav-mask, .siteheader-search-mask {
+.siteheader-nav-mask, .siteheader-search-mask, .siteheader-login-mask {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   background-color: rgba(255, 255, 255, 0.75);
@@ -20,7 +20,7 @@
   width: 100%;
   z-index: 90;
 }
-.siteheader-nav-mask-active, .siteheader-search-mask-active {
+.siteheader-nav-mask.siteheader-active, .siteheader-search-mask.siteheader-active, .siteheader-login-mask.siteheader-active {
   opacity: 1;
   transform: translate(0, 0);
   visibility: visible;
@@ -145,13 +145,13 @@
   padding: 16px 0;
   transition: padding 0.25s ease;
 }
-.siteheader-login-wrapper-cta-active {
+.siteheader-login-wrapper-cta.siteheader-active {
   padding: 0;
 }
-.siteheader-login-wrapper-cta-active button {
+.siteheader-login-wrapper-cta.siteheader-active button {
   height: 84px !important;
 }
-.siteheader-login-wrapper-cta-active button .icon {
+.siteheader-login-wrapper-cta.siteheader-active button .icon {
   transform: rotate(180deg) !important;
 }
 .siteheader-login-wrapper .button-container {
@@ -207,6 +207,7 @@
 .siteheader-login-wrapper-outer {
   background-color: #4a7390;
   color: #ffffff;
+  display: none;
   left: 0;
   position: absolute;
   top: 100%;
@@ -676,7 +677,7 @@
     width: 100%;
     z-index: -1;
   }
-  .siteheader-search-inner.siteheader-search-inner-active {
+  .siteheader-search-inner.siteheader-active {
     opacity: 1;
     transform: translate(0);
     visibility: visible;
@@ -714,7 +715,7 @@
     top: 0;
     width: 70px;
   }
-  .siteheader-search-wrapper > button[type=button].siteheader-search-inner-active {
+  .siteheader-search-wrapper > button[type=button].siteheader-active {
     background-color: #ffffff;
   }
   .siteheader-search-wrapper > button[type=button] .icon {
@@ -903,7 +904,7 @@
     width: 100%;
     z-index: -1;
   }
-  .siteheader-search-inner.siteheader-search-inner-active {
+  .siteheader-search-inner.siteheader-active {
     opacity: 1;
     transform: translate(0);
     visibility: visible;
@@ -941,7 +942,7 @@
     top: 0;
     width: 70px;
   }
-  .siteheader-search-wrapper > button[type=button].siteheader-search-inner-active {
+  .siteheader-search-wrapper > button[type=button].siteheader-active {
     background-color: #ffffff;
   }
   .siteheader-search-wrapper > button[type=button] .icon {

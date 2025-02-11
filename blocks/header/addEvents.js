@@ -1,9 +1,12 @@
+import { loginEventFn } from './loginEvents.js';
 import { navClicks, closeAllNavItems } from './navClicks.js';
 const activeCls = 'siteheader-active';
 
-export const addEvents = (thisBlock, navMaskEl, searchMaskEl) => {
-  const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
-  const loginCtaEl = loginWrapEl?.querySelector('button');
+export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
+  const loginCtaWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
+  const loginCtaEl = loginCtaWrapEl?.querySelector('button');
+  const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-outer');
+
   const navCtaEl = thisBlock.querySelector(
     '.siteheader-mobile-wrapper > button'
   );
@@ -18,28 +21,19 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl) => {
     if (navCtaEl.classList.contains(activeCls)) {
       navCtaEl.dispatchEvent(new MouseEvent('click'));
     }
-    if (searchParent.classList.contains('siteheader-search-inner-active')) {
-      searchCtaEl.classList.remove('siteheader-search-inner-active');
-      searchParent.classList.remove('siteheader-search-inner-active');
+    if (searchParent.classList.contains('siteheader-active')) {
+      searchCtaEl.classList.remove('siteheader-active');
+      searchParent.classList.remove('siteheader-active');
       searchMaskEl.classList.remove('siteheader-search-mask-active');
     } else {
-      searchCtaEl.classList.add('siteheader-search-inner-active');
-      searchParent.classList.add('siteheader-search-inner-active');
+      searchCtaEl.classList.add('siteheader-active');
+      searchParent.classList.add('siteheader-active');
       searchMaskEl.classList.add('siteheader-search-mask-active');
     }
   });
 
   const navEl = thisBlock.querySelector('.siteheader-mobile-wrapper > nav');
   const navArr = [];
-
-  loginCtaEl?.addEventListener('click', () => {
-    if (loginWrapEl.classList.contains('siteheader-login-wrapper-cta-active')) {
-      loginWrapEl.classList.remove('siteheader-login-wrapper-cta-active');
-    } else {
-      loginWrapEl.classList.add('siteheader-login-wrapper-cta-active');
-      closeAllNavItems(navArr, navMaskEl);
-    }
-  });
 
   const l0Links = Array.from(
     thisBlock.querySelectorAll('.siteheader-has-subnav')
@@ -60,7 +54,7 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl) => {
   });
 
   navCtaEl?.addEventListener('click', () => {
-    if (searchCtaEl.classList.contains('siteheader-search-inner-active')) {
+    if (searchCtaEl.classList.contains('siteheader-active')) {
       searchCtaEl.dispatchEvent(new MouseEvent('click'));
     }
     if (navCtaEl.classList.contains(activeCls)) {
@@ -72,4 +66,6 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl) => {
       navEl.classList.add(activeCls);
     }
   });
+
+  loginEventFn(loginCtaEl, loginCtaWrapEl, loginWrapEl, navArr, navMaskEl, loginMaskEl);
 };

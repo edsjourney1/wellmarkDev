@@ -174,7 +174,7 @@
             visibility: hidden;
             width: 100%;
             z-index: -1;
-            &.siteheader-search-inner-active {
+            &.siteheader-active {
                 opacity: 1;
                 transform: translate(0);
                 visibility: visible;
@@ -213,7 +213,7 @@
                 text-decoration: none;
                 top: 0;
                 width: 70px;
-                &.siteheader-search-inner-active {
+                &.siteheader-active {
                     background-color: $--white;
                 }
                 .icon {
@@ -242,7 +242,7 @@
     &-search-mask {
         display: none;
     }
-    &-nav-mask, &-search-mask {
+    &-nav-mask, &-search-mask, &-login-mask {
         backdrop-filter: blur(4px);
         background-color: rgba($--white, 0.75);
         height: 100%;
@@ -255,7 +255,7 @@
         visibility: hidden;
         width: 100%;
         z-index: 90;
-        &-active {
+        &.siteheader-active {
             opacity: 1;
             transform: translate(0, 0);
             visibility: visible;
@@ -367,7 +367,7 @@
             height: 84px;
             padding: 16px 0;
             transition: padding 0.25s ease;
-            &-active {
+            &.siteheader-active {
                 padding: 0;
                 button {
                     height: 84px !important;
@@ -430,6 +430,7 @@
         &-outer {
             background-color: $--blue-550;
             color: $--white;
+            display: none;
             left: 0;
             position: absolute;
             top: 100%;
