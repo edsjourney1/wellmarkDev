@@ -66,6 +66,14 @@
   font-size: 32px;
   height: 28px;
 }
+.blog-social-wrapper .blog-social .social-share .feedback {
+  display: none;
+  color: #4b4c4d;
+  font-family: roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 24px;
+}
 .blog-social-wrapper .blog-social .social-share .share .share-icons {
   display: flex;
   gap: 12px;
