@@ -111,6 +111,7 @@
                     border-top: 1px solid $--blue-100;
                     &:first-child {
                         border-top: 0;
+                        margin-left: 0;
                     }
                     .siteheader-subnav {
                         background-color: $--blue-50;
@@ -495,7 +496,7 @@
                     height: 52px;
                     border-radius: 2px;
                     border: 1px solid $--gray-500;
-                    padding: 5px 12px;
+                    padding: 5px 20px;
                 }
             }
             > div:last-child {
@@ -570,13 +571,16 @@
                 padding: 0;
                 width: 100%;
                 > li {
+                    &:first-child {
+                        margin-left: -25px;
+                    }
                     > a {
                         align-items: center;
                         color: $--gray-700;
                         display: flex;
                         font-size: 16px;
                         justify-content: center;
-                        padding: 24px 50px 24px 0;
+                        padding: 24px 25px;
                         text-decoration: none;
                         > .icon {
                             height: 18px;

@@ -24,11 +24,11 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     if (searchParent.classList.contains('siteheader-active')) {
       searchCtaEl.classList.remove('siteheader-active');
       searchParent.classList.remove('siteheader-active');
-      searchMaskEl.classList.remove('siteheader-search-mask-active');
+      searchMaskEl.classList.remove('siteheader-active');
     } else {
       searchCtaEl.classList.add('siteheader-active');
       searchParent.classList.add('siteheader-active');
-      searchMaskEl.classList.add('siteheader-search-mask-active');
+      searchMaskEl.classList.add('siteheader-active');
     }
   });
 

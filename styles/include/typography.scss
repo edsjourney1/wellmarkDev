@@ -135,3 +135,9 @@ a:any-link {
     padding-bottom: $--spacing-max;
   }
 }
+
+input, textarea, select { 
+  font-family: $--font-roboto;
+  font-size: 16px;
+  line-height: 1;
+}

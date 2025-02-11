@@ -48,7 +48,7 @@
   display: flex;
   justify-content: end;
 }
-@media (min-width: 1380px) {
+@media (min-width: 1379px) {
   .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus {
     max-width: 1275px;
     margin: 0 auto;
