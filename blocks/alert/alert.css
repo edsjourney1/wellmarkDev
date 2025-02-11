@@ -29,12 +29,12 @@
   top: 0;
   width: 10px;
 }
-.alert-wrapper .alert > div:first-child {
+.alert-wrapper .alert span.icon {
   left: 34px;
   position: absolute;
-  top: 24px;
+  top: 31px;
 }
-.alert-wrapper .alert > div:first-child p {
+.alert-wrapper .alert span.icon p {
   line-height: 1;
 }
 .alert-warning {

@@ -105,7 +105,7 @@ const formMainHeader = (thisBlock, fragment) => {
           ?.children
       );
 
-    const [loginHeader, loginBody, loginCta] = Array.from(
+    const [loginHeader, loginBody, loginCta, loginMessage] = Array.from(
       headerFragment.querySelector('.siteheader.megamenu-loginnav')?.children
     );
     const [registerHeader, registerBody] = Array.from(
@@ -195,10 +195,13 @@ const formMainHeader = (thisBlock, fragment) => {
     loginFieldsMobileStr += `${loginformMobile}</div><div><button type="submit">${loginCta.children[0].querySelector('p').innerHTML}</button>
     ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
 
+    let loginMsgStr = '';
+
     if (loginInfo) {
       loginWrapperMobileStr = `<div class='siteheader-login-wrapper'>
                 <div class='siteheader-login-wrapper-grid'>
                       <div>
+                        ${loginMsgStr}
                         ${loginHeader.innerHTML}
                         <div class='siteheader-login-fields'>
                           ${loginFieldsMobileStr}
@@ -220,6 +223,7 @@ const formMainHeader = (thisBlock, fragment) => {
                   <div class='siteheader-login-wrapper-inner'>
                     <div class='siteheader-login-wrapper-grid'>
                       <div>
+                        ${loginMsgStr}
                         ${loginHeader.innerHTML}
                         <div class='siteheader-login-fields'>
                           ${loginFieldsDesktopStr}
@@ -277,5 +281,19 @@ export default async function decorate(block) {
     : '/header-fragments/siteheader-fragment';
 
   const thisFragment = await loadFragment(siteHeaderPath);
-  formMainHeader(thisBlock, thisFragment);
+
+  const alertBlockrMeta = getMetadata('/content-fragment/alert-states');
+  const alertBlockPath = alertBlockrMeta
+    ? new URL(alertBlockrMeta, window.location).pathname
+    : '/content-fragment/alert-states';
+
+  const alertFragment = await loadFragment(alertBlockPath);
+
+  // const headerFragment = thisFragment.querySelector('.siteheader-container');
+  // const alertIndicesGlobal = [...headerFragment.innerHTML.matchAll(/alert-warning|alert-info|alert-error|alert-success/ig)];
+
+  // let alertIndices = [...new Set(alertIndicesGlobal.map(index => index[0]))];
+  // console.log("=============alertIndices 2", alertIndices);
+
+  formMainHeader(thisBlock, thisFragment, alertFragment);
 }

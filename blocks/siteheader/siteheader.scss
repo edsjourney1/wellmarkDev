@@ -251,6 +251,33 @@
 };
 
 .siteheader {
+    &-login-error {
+        background-color: $--red-50;
+        border-left: 5px solid $--red-550;
+        border-radius: 4px;
+        color: $--gray-700;
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 8px;
+        padding: 8px 10px 8px 42px;
+        position: relative;
+        .icon {
+            height: auto;
+            left: 20px;
+            position: absolute;
+            width: auto;
+            > i {
+                color: $--red-550;
+                font-size: inherit;
+            }
+        }
+        &::before {
+            background-color: $--red-550;
+        }
+        > div:first-child .icon i {
+            color: $--red-550;
+        }
+    }
     &-search-mask {
         display: none;
     }

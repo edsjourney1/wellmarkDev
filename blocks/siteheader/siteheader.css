@@ -2,11 +2,39 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.siteheader-login-error {
+  background-color: #fbeae9;
+  border-left: 5px solid #b44242;
+  border-radius: 4px;
+  color: #4b4c4d;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 8px;
+  padding: 8px 10px 8px 42px;
+  position: relative;
+}
+.siteheader-login-error .icon {
+  height: auto;
+  left: 20px;
+  position: absolute;
+  width: auto;
+}
+.siteheader-login-error .icon > i {
+  color: #b44242;
+  font-size: inherit;
+}
+.siteheader-login-error::before {
+  background-color: #b44242;
+}
+.siteheader-login-error > div:first-child .icon i {
+  color: #b44242;
+}
 .siteheader-search-mask {
   display: none;
 }
 .siteheader-nav-mask, .siteheader-search-mask, .siteheader-login-mask {
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   background-color: rgba(255, 255, 255, 0.75);
   height: 100%;
   left: 0;
@@ -82,7 +110,8 @@
 }
 .siteheader-right-section {
   display: flex;
-  column-gap: 24px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
 }
 .siteheader-search-input-wrapper {
   background-color: #ffffff;
@@ -98,6 +127,9 @@
   height: 52px;
   padding: 5px 20px;
   width: calc(100% - 60px);
+}
+.siteheader-search-input-wrapper ::-moz-placeholder {
+  font-style: italic;
 }
 .siteheader-search-input-wrapper ::placeholder {
   font-style: italic;
@@ -445,7 +477,8 @@
   border-bottom: 1px solid #d6e5f1;
 }
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li.siteheader-subnav-info .siteheader-subnav-grid {
-  column-gap: 16px;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
   display: flex;
 }
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li.siteheader-subnav-info .siteheader-subnav-grid > div:first-child {
@@ -470,7 +503,8 @@
 }
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li.siteheader-subnav-info .siteheader-subnav-grid > div img {
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
   top: 50%;
@@ -515,7 +549,8 @@
     display: block;
   }
   .siteheader-right-section {
-    column-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
   }
   .siteheader-login-wrapper {
     background-color: #4a7390;
@@ -755,7 +790,8 @@
     display: block;
   }
   .siteheader-right-section {
-    column-gap: 0;
+    -moz-column-gap: 0;
+         column-gap: 0;
   }
   .siteheader-login-wrapper {
     background-color: #4a7390;
