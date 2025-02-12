@@ -782,6 +782,12 @@
     border-top: 0;
     margin-left: 0;
   }
+  .siteheader-mobile-wrapper nav > ul > li > a:hover::after {
+    display: none;
+  }
+  .siteheader-mobile-wrapper nav > ul > li > a.siteheader-active::after {
+    display: none;
+  }
   .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav {
     background-color: #f3f9ff;
     border-bottom: 0;
@@ -1025,6 +1031,12 @@
   .siteheader-mobile-wrapper nav > ul > li:first-child {
     border-top: 0;
     margin-left: 0;
+  }
+  .siteheader-mobile-wrapper nav > ul > li > a:hover::after {
+    display: none;
+  }
+  .siteheader-mobile-wrapper nav > ul > li > a.siteheader-active::after {
+    display: none;
   }
   .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav {
     background-color: #f3f9ff;

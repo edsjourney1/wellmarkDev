@@ -135,6 +135,16 @@
                         border-top: 0;
                         margin-left: 0;
                     }
+                    > a {
+                        &:hover::after {
+                            display: none;
+                        }
+                        &.siteheader-active {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
                     .siteheader-subnav {
                         background-color: $--blue-50;
                         border-bottom: 0;
