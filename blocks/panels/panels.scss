@@ -11,6 +11,21 @@
     * {
         box-sizing: border-box;
     }
+    &-wrapper {
+        width: 100%;
+        @include for-large{
+            width: calc(100% - 104px);
+        }
+        @include for-laptop{
+            width: calc(100% - 72px);
+        }
+        @include for-tablet{
+            width: calc(100% - 72px);
+        }
+        @include for-mobile{
+            width: calc(100% - 48px);
+        }
+    }
     > div {
         box-sizing: border-box;
         padding: 0 15px;
@@ -97,7 +112,7 @@
             font-family: $--font-museo;
             font-size: 32px;
             font-weight: 700;
-            line-height: 1.25;
+            line-height: 1;
             margin: 0 0 18px 0;
             padding: 0 0 12px 0;
             position: relative;
