@@ -729,7 +729,8 @@ export default async function decorate(block) {
       const breadcrumbList = document.createElement('li');
       breadcrumbList.classList.add('breadcrumb-list');
       const breadcrumbaTag = document.createElement('a');
-      breadcrumbaTag.textContent = index;
+      const modifiedIndex = index.replace(/-/g, ' '); // replace '-' with ' ' and add 'x' at the beginning
+      breadcrumbaTag.textContent = modifiedIndex;
       breadcrumbaTag.setAttribute('data-breadcrumb-value', index);
       breadcrumbList.append(breadcrumbaTag);
       breadCrumbdiv.append(breadcrumbList);
