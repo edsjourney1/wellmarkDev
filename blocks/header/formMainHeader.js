@@ -1,4 +1,5 @@
 import { addEvents } from './addEvents.js';
+import { enableAutocomplete, searchBuilder } from './searchBuilder.js';
 
 const generateLoginForm = (loginElArr, formCount) => {
   let str = '';
@@ -154,37 +155,8 @@ export const formMainHeader = (thisBlock, fragment, alertFragment) => {
     const searchSectionStartStr = `<div class='siteheader-right-section'>`;
     const searchSectionEndStr = `</div>`;
 
-    let searchWrapperStr = '';
-    if (searchInfo && searchToggle) {
-      searchWrapperStr = `<div class='siteheader-search-wrapper'>
-              <button type='button' aria-label='Toggle Search'>${
-                searchToggle.querySelector('p:first-child').innerHTML
-              }
-                  ${
-                    searchToggle.querySelector('p:last-child').innerHTML
-                  }</button>
-              <div class='siteheader-search-inner'>
-                  <div class='siteheader-search-content'>
-                      <form action='/' id='siteheader-search-form'>
-                          <label for='siteheader-search-input'>${
-                            searchInfo.querySelector('p:first-child em')
-                              .innerHTML
-                          }</label>
-                          <div class='siteheader-search-input-wrapper'>
-                              <input type='search' id='siteheader-search-input' placeholder='${
-                                searchInfo.querySelector('p:nth-child(2) em')
-                                  .innerHTML
-                              }'/>
-                              <button type='submit' aria-label='Search'>${
-                                searchInfo.querySelector('p:last-child em')
-                                  .innerHTML
-                              }</button>
-                          </div>
-                      </form>
-                  </div>
-              </div>
-            </div>`;
-    }
+
+    let searchWrapperStr = searchBuilder(searchInfo, searchToggle);
 
     let loginWrapperDesktopStr = '';
     let loginWrapperMobileStr = '';
@@ -301,6 +273,11 @@ export const formMainHeader = (thisBlock, fragment, alertFragment) => {
       headerWrapper.parentNode.insertBefore(searchMaskEl, headerWrapper);
       headerWrapper.parentNode.insertBefore(loginMaskEl, headerWrapper);
       headerWrapper.parentNode.insertBefore(paddingEl, headerWrapper);
+    }
+
+    const searchInput = thisBlock.querySelector('#header_search');
+    if (searchInput) {
+      enableAutocomplete('header_search');
     }
 
     if (navUl && navCtaEl) {

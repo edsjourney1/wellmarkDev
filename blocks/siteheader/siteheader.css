@@ -127,6 +127,12 @@
   height: 52px;
   width: 345px;
 }
+.siteheader-search-input-wrapper > div {
+  width: calc(100% - 60px);
+}
+.siteheader-search-input-wrapper > div input[type=search] {
+  width: 100%;
+}
 .siteheader-search-input-wrapper input[type=search] {
   background-color: transparent;
   border: 0;
