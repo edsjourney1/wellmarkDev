@@ -44,10 +44,16 @@
                 gap: 36px;
             }
             .like{
+                @include for-laptop{
+                    padding-bottom: 26px;
+                }
                 .like-icons{
                     display: flex;
                     gap: 24px;
                     padding-top: 16px;
+                    @include for-laptop{
+                        padding-top: 12px;
+                    }
                     i{
                         font-size: 32px;
                         height: 28px;
@@ -67,6 +73,9 @@
                     display: flex;
                     gap: 12px;
                     padding-top: 16px;
+                    @include for-laptop{
+                        padding-top: 32px;
+                    }
                     span{
                         width: 44px;
                         height: 44px;

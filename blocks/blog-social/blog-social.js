@@ -31,7 +31,7 @@ export default function decorate(block) {
       window.open(`https://www.facebook.com/sharer/sharer.php?t=${document.title}&u=${url}`, '_blank');
     });
     const twitter = document.createElement('span');
-    twitter.innerHTML = '<i class="fa-brands fa-twitter"></i>';
+    twitter.innerHTML = '<i class="fa-brands fa-x-twitter"></i>';
     twitter.addEventListener('click', () => {
       const twitterlink = encodeURIComponent(window.location.href);
       window.open(`https://twitter.com/intent/tweet?url=${twitterlink}&text=${document.title}`, '_blank');
