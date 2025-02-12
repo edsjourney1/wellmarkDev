@@ -34,10 +34,6 @@ export default function decorate(block) {
         const spanmodified = document.createElement('span');
         spanmodified.innerHTML = modifiedDate;
         updated.append(spanmodified);
-      } else {
-        const spanNull = document.createElement('span');
-        spanNull.innerHTML = 'MM/DD/YYYY';
-        updated.append(spanNull);
       }
     }
   }, 500);
