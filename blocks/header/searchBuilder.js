@@ -106,12 +106,15 @@ export const enableAutocomplete = (searchInput) => {
         },
         highlight: true
       },
-      threshold: 0,
+      threshold: 3,
       debounce: 250,
     });
 
     document.querySelector(`#${searchInput}`).addEventListener(`selection`, function (event) {
-      console.log(event.detail);
+      const link = ((event.detail?.selection?.value || '').split('---') || [])[2];
+      if (link) {
+        alert(`TO BE IMPLEMENTED: Must go to ${link}`);
+      }
     });
   }
 };

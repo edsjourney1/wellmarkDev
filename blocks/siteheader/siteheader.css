@@ -190,6 +190,7 @@
   align-items: center;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
   display: flex;
   height: 52px;
   justify-content: center;
@@ -487,7 +488,21 @@
   font-size: 16px;
   justify-content: center;
   padding: 24px 25px;
+  position: relative;
   text-decoration: none;
+}
+.siteheader-mobile-wrapper nav > ul > li > a::after {
+  background-color: #005589;
+  bottom: 16px;
+  content: "";
+  display: none;
+  height: 1px;
+  left: 25px;
+  position: absolute;
+  width: calc(100% - 50px);
+}
+.siteheader-mobile-wrapper nav > ul > li > a:hover::after {
+  display: block;
 }
 .siteheader-mobile-wrapper nav > ul > li > a > .icon {
   height: 18px;
@@ -499,6 +514,9 @@
 }
 .siteheader-mobile-wrapper nav > ul > li > a > .icon > i {
   font-size: inherit;
+}
+.siteheader-mobile-wrapper nav > ul > li > a.siteheader-active::after {
+  display: block;
 }
 .siteheader-mobile-wrapper nav > ul > li > a.siteheader-active > .icon {
   transform: rotate(180deg);

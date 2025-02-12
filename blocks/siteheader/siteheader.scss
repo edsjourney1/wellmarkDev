@@ -429,6 +429,7 @@
                 align-items: center;
                 background-color: transparent;
                 border: 0;
+                cursor: pointer;
                 display: flex;
                 height: 52px;
                 justify-content: center;
@@ -692,7 +693,21 @@
                         font-size: 16px;
                         justify-content: center;
                         padding: 24px 25px;
+                        position: relative;
                         text-decoration: none;
+                        &::after {
+                            background-color: $--blue-675;
+                            bottom: 16px;
+                            content: '';
+                            display: none;
+                            height: 1px;
+                            left: 25px;
+                            position: absolute;
+                            width: calc(100% - 50px);
+                        }
+                        &:hover::after {
+                            display: block;
+                        }
                         > .icon {
                             height: 18px;
                             line-height: 1;
@@ -705,6 +720,9 @@
                             }
                         }
                         &.siteheader-active {
+                            &::after {
+                                display: block;
+                            }
                             > .icon {
                                 transform: rotate(180deg);
                             }
