@@ -4,17 +4,17 @@ import { formMainHeader } from './formMainHeader.js';
 
 export default async function decorate(block) {
   const thisBlock = block;
-  const siteHeaderMeta = getMetadata('/header-fragments/siteheader-fragment');
+  const siteHeaderMeta = getMetadata('/content-fragments/siteheader-fragment');
   const siteHeaderPath = siteHeaderMeta
     ? new URL(siteHeaderMeta, window.location).pathname
-    : '/header-fragments/siteheader-fragment';
+    : '/content-fragments/siteheader-fragment';
 
   const thisFragment = await loadFragment(siteHeaderPath);
 
-  const alertBlockrMeta = getMetadata('/content-fragment/alert-states');
+  const alertBlockrMeta = getMetadata('/content-fragments/alert-states');
   const alertBlockPath = alertBlockrMeta
     ? new URL(alertBlockrMeta, window.location).pathname
-    : '/content-fragment/alert-states';
+    : '/content-fragments/alert-states';
 
   const alertFragment = await loadFragment(alertBlockPath);
 

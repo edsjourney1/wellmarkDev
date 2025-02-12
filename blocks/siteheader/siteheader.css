@@ -119,6 +119,41 @@
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
+.siteheader-autocomplete {
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #c2c2c3;
+  padding: 8px 0;
+}
+.siteheader-autocomplete h4 {
+  color: #757575;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  padding: 8px 23px 12px 23px;
+}
+.siteheader-autocomplete-item[aria-selected=true] {
+  background-color: #f3f9ff;
+}
+.siteheader-autocomplete-item {
+  color: #4b4c4d;
+  display: block;
+  padding: 4px 23px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.siteheader-autocomplete-item:hover {
+  background-color: #f3f9ff;
+}
+.siteheader-autocomplete-item mark {
+  background-color: transparent;
+  font-weight: 700;
+}
+.siteheader-autocomplete-item + h4 {
+  border-top: 1px solid #f2f2f3;
+  margin-top: 14px;
+  padding: 12px 23px;
+}
 .siteheader-search-input-wrapper {
   background-color: #ffffff;
   border-radius: 2px;
@@ -140,6 +175,11 @@
   padding: 5px 20px;
   width: calc(100% - 60px);
 }
+.siteheader-search-input-wrapper input[type=search]:focus {
+  outline: 3px solid #e45f0c;
+  outline-style: dashed;
+  outline-offset: 2px;
+}
 .siteheader-search-input-wrapper ::-moz-placeholder {
   font-style: italic;
 }
@@ -155,6 +195,11 @@
   justify-content: center;
   padding: 0;
   width: 60px;
+}
+.siteheader-search-input-wrapper button[type=submit]:focus {
+  outline: 3px solid #e45f0c;
+  outline-style: dashed;
+  outline-offset: 2px;
 }
 .siteheader-search-wrapper {
   display: flex;
@@ -217,6 +262,11 @@
   padding: 5px 36px;
   text-decoration: none;
 }
+.siteheader-login-wrapper .button-container a:focus {
+  outline: 3px solid #e45f0c;
+  outline-style: dashed;
+  outline-offset: 2px;
+}
 .siteheader-login-wrapper button {
   background-color: #005589;
   border-radius: 2px;
@@ -230,6 +280,11 @@
 }
 .siteheader-login-wrapper button:hover {
   background-color: #0F3659;
+}
+.siteheader-login-wrapper button:focus {
+  outline: 3px solid #e45f0c;
+  outline-style: dashed;
+  outline-offset: 2px;
 }
 .siteheader-login-wrapper button span {
   display: flex;
@@ -329,6 +384,11 @@
   border: 1px solid #757575;
   padding: 5px 20px;
 }
+.siteheader-login-wrapper form > div:first-child input[type=text]:focus, .siteheader-login-wrapper form > div:first-child input[type=password]:focus {
+  outline: 3px solid #e45f0c;
+  outline-style: dashed;
+  outline-offset: 2px;
+}
 .siteheader-login-wrapper form > div:last-child {
   align-items: center;
   display: flex;
@@ -341,6 +401,11 @@
   display: flex;
   font-weight: 700;
   justify-content: center;
+}
+.siteheader-login-wrapper form button[type=submit]:focus {
+  outline: 3px solid #e45f0c;
+  outline-style: dashed;
+  outline-offset: 2px;
 }
 .siteheader-login-wrapper form button[type=submit] .icon {
   height: auto;
@@ -356,6 +421,11 @@
   display: inline-block;
   margin-left: 60px;
   color: #ffffff;
+}
+.siteheader-login-wrapper form button[type=submit] + a:focus {
+  outline: 3px solid #e45f0c;
+  outline-style: dashed;
+  outline-offset: 2px;
 }
 .siteheader-logout-wrapper {
   padding: 16px 0;
@@ -379,6 +449,11 @@
 }
 .siteheader-logout-wrapper button:hover {
   background-color: #0F3659;
+}
+.siteheader-logout-wrapper button:focus {
+  outline: 3px solid #e45f0c;
+  outline-style: dashed;
+  outline-offset: 2px;
 }
 .siteheader-mobile-wrapper > button[type=button] {
   display: none;

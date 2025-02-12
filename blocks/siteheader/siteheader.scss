@@ -1,6 +1,14 @@
 @import '../../styles/include/tokens.scss';
 @import '../../styles/include/mq.scss';
+
 // @import 'breadcrumb.scss';
+@mixin focusOutline {
+    &:focus {
+        outline: 3px solid $--orange-450;
+        outline-style: dashed;
+        outline-offset: 2px;
+    }
+}
 @mixin commonNavCode {
     &-search-mask {
         display: block;
@@ -357,6 +365,41 @@
         display: flex;
         column-gap: 24px;
     }
+    &-autocomplete {
+        background-color: $--white;
+        border-radius: 0 0 4px 4px;
+        border: 1px solid $--gray-225;
+        padding: 8px 0;
+        h4 {
+            color: $--gray-500;
+            font-size: 16px;
+            line-height: 1;
+            margin: 0;
+            padding: 8px 23px 12px 23px;
+        }
+        &-item[aria-selected=true] {
+            background-color: $--blue-50;
+        }
+        &-item {
+            color: $--gray-700;
+            display: block;
+            padding: 4px 23px;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover {
+                background-color: $--blue-50;
+            }
+            mark {
+                background-color: transparent;
+                font-weight: 700;
+            }
+            & + h4 {
+                border-top: 1px solid $--gray-100;
+                margin-top: 14px;
+                padding: 12px 23px;
+            }
+        }
+    }
     &-search {
         &-input-wrapper {
             background-color: $--white;
@@ -377,6 +420,7 @@
                 height: 52px;
                 padding: 5px 20px;
                 width: calc(100% - 60px);
+                @include focusOutline;
             }
             ::placeholder {
                 font-style: italic;
@@ -390,6 +434,7 @@
                 justify-content: center;
                 padding: 0;
                 width: 60px;
+                @include focusOutline;
             }
         }
         &-wrapper {
@@ -451,6 +496,7 @@
                 justify-content: center;
                 padding: 5px 36px;
                 text-decoration: none;
+                @include focusOutline;
             }
         }
         button {
@@ -466,6 +512,7 @@
             &:hover {
                 background-color: $--blue-775;
             }
+            @include focusOutline;
             span {
                 display: flex;
                 align-items: center;
@@ -554,6 +601,7 @@
                     border-radius: 2px;
                     border: 1px solid $--gray-500;
                     padding: 5px 20px;
+                    @include focusOutline;
                 }
             }
             > div:last-child {
@@ -568,6 +616,7 @@
                 display: flex;
                 font-weight: 700;
                 justify-content: center;
+                @include focusOutline;
                 .icon {
                     height: auto;
                     width: auto;
@@ -582,6 +631,7 @@
                     display: inline-block;
                     margin-left: 60px;
                     color: $--white;
+                    @include focusOutline;
                 }
             }
         }
@@ -607,6 +657,7 @@
             &:hover {
                 background-color: $--blue-775;
             }
+            @include focusOutline;
         }
     }
     &-mobile-wrapper {

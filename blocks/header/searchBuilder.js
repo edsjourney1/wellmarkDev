@@ -35,6 +35,10 @@ export const searchBuilder = (searchInfo, searchToggle) => {
 
 export const enableAutocomplete = (searchInput) => {
   if (window.autoComplete) {
+    let itemArr = [];
+    let itemArr2 = [];
+    let receivedCategories;
+    let thisEl;
     new window.autoComplete({
       name: searchInput,
       selector: `#${searchInput}`,
@@ -42,35 +46,72 @@ export const enableAutocomplete = (searchInput) => {
         src:  async (query) => {
           try {
             // Fetch Data from external Source
-            const response = await fetch(`/header-fragments/sample-typeahead.json`);
+            const response = await fetch(`/content-fragments/sample-typeahead.json`);
             if (!response.ok) {
               // throw new Error(`Header Search Response status: ${response.status}`);
             }
-            // Data should be an array of `Objects` or `Strings`
             const json = await response.json();
-            // console.log("============json", JSON.stringify(json.data));
             
-            console.log("============keys", Object.keys(json.data[0]));
+            let keysArr = [...new Set((json.data || []).map(item => item.category))];
+            const valueArr = [];
 
-            (json.data || []).forEach(item => {
-              
-            });
-            console.log();
+            receivedCategories = keysArr;
             
-            // const data = await source.json();
-            const data = ["item 1", "item 2"];
-    
-            return data;
+            keysArr.forEach(key => {
+              (json.data || []).forEach(el => {
+                if (el['category'] === key) {
+                  valueArr.push(`a---${el['name']}---${el['url']}---${key}`);
+                }
+              });
+            });
+            
+            return valueArr;
+
+            // return json.data || [];
           } catch (error) {
             return error;
           }
         },
       },
+      resultsList: {
+        tag: 'div',
+        maxResults: 100,
+        class: 'siteheader-autocomplete',
+        element: (list, data) => {
+          (receivedCategories || []).forEach((cat) => {
+            thisEl = list.querySelector(`[data-category='${cat}']`);
+            const titleH4 = document.createElement('h4');
+            if (thisEl) {
+              titleH4.innerHTML = cat;
+              list.insertBefore(titleH4, thisEl);
+            }
+            thisEl = null;
+          });
+        },
+      },
+      cache: false,
+      tabSelect: true,
       resultItem: {
+        tag: 'div',
         highlight: true,
+        element: (item, data) => {
+          itemArr = data.value.split('---');
+          itemArr2 = data.match.split('---');
+          if (itemArr[0] === 'a') {
+            item.innerHTML = itemArr2[1];
+            item.setAttribute('data-href', itemArr[2]);
+            item.setAttribute('data-category', itemArr[3]);
+            item.classList.add('siteheader-autocomplete-item');
+          }
+        },
+        highlight: true
       },
       threshold: 0,
-      debounce: 300,
+      debounce: 250,
+    });
+
+    document.querySelector(`#${searchInput}`).addEventListener(`selection`, function (event) {
+      console.log(event.detail);
     });
   }
 };
