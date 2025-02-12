@@ -57,6 +57,9 @@
                                     margin-left: 4px;
                                 }
                             }
+                            span:first-child{
+                                margin-right: 4px;
+                            }
                         }
                         @include for-tablet{
                             width: 100%;
@@ -178,6 +181,9 @@
                         font-weight: 500;
                         text-decoration: underline;
                         margin-right: 12px;
+                    }
+                    span:first-child{
+                        margin-right: 4px;
                     }
                 }
             }
