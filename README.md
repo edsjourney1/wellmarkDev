@@ -1,9 +1,14 @@
-# Your Project's Title...
-Your project's description...
+# Wellmark EDS
+
 
 ## Environments
-- Preview: https://main--edge-delivery-wellmark-aem-demo--netcentric.aem.page/
-- Live: https://main--edge-delivery-wellmark-aem-demo--netcentric.aem.live/
+| Environment | GitHub Branch | AWS CloudFront Domain Mapping (*)    | EDS Origin URLs                                           |
+| ------------| ------------- | ------------------------------------ | --------------------------------------------------------- |
+| Production  | main          | https://www-a.wellmark.com           | https://main--wellmark-prod-conf--aemsites.aem.live       |
+| Stage       | stage         | https://www-a-prep.wellmark.com      | https://stage--wellmark-prod-conf--aemsites.aem.live      |
+| Uat         | uat           | https://www-a-uat.wellmark.com       | https://uat--wellmark-nonprod-conf--aemsites.aem.live     |
+| QA          | QA            | https://www-a-sit.wellmark.com       | https://qa--wellmark-nonprod-conf--aemsites.aem.live      |
+| Develop     | Develop       | direct access through origin in VDI. | https://develop--wellmark-nonprod-conf--aemsites.aem.live |
 
 ## Documentation
 
@@ -16,6 +21,7 @@ Before using the aem-boilerplate, we recommand you to go through the documentati
 Furthremore, we encourage you to watch the recordings of any of our previous presentations or sessions:
 - [Getting started with AEM Authoring and Edge Delivery Services](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
 
+Block are present in /blocks/ folder
 ## Prerequisites
 
 - nodejs 18.3.x or newer
@@ -25,6 +31,16 @@ Furthremore, we encourage you to watch the recordings of any of our previous pre
 
 ```sh
 npm i
+```
+
+## Running a local instance on port 3000
+```sh
+npm run up
+```
+
+## Compile the SASS files
+```sh
+npm run compile
 ```
 
 ## Linting

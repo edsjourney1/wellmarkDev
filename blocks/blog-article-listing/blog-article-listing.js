@@ -1,14 +1,6 @@
 // import { getMetadata } from '../../scripts/aem.js';
 // import { loadFragment } from '../fragment/fragment.js';
 
-import myJson from '../../scripts/constants.js';
-
-// const getDatafromJSON = async () => {
-//   const data = await fetch('https://main--wellmark--anutyagi007.aem.page/query-index.json');
-//   const json = await data.json();
-//   console.log(json);
-// };
-// getDatafromJSON();
 export default async function decorate(block) {
   const categoryByauthor = block.children[1].children[1].innerText;
   const heading = block.children[0].children[0].innerText;
@@ -38,7 +30,10 @@ export default async function decorate(block) {
   paginationDiv.append(paginationContainer);
   block.append(headDiv, blockDiv, paginationDiv);
   let currentPage = 1;
-  const categoryBasedJson = myJson.filter((article) => article.category.includes(categoryByauthor));
+  const data = await fetch('/query-index.json');
+  const json = await data.json();
+  // eslint-disable-next-line max-len
+  const categoryBasedJson = json.data.filter((article) => article.category.includes(categoryByauthor));
   function renderItems() {
     blockDiv.innerHTML = '';
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -87,7 +82,8 @@ export default async function decorate(block) {
       const categoryPara = document.createElement('p');
       categoryPara.classList.add('category-list');
       contentDiv.appendChild(categoryPara);
-      category.forEach((item) => {
+
+      category.split(',').forEach((item) => {
         const anchor = document.createElement('a');
         anchor.href = 'www.google.com';
         anchor.textContent = item;
@@ -260,7 +256,7 @@ export default async function decorate(block) {
       doubleforwardPageButton.classList.remove('dp-none');
     }
   }
-  if (myJson.length > 10) {
+  if (json.data.length > 10) {
     renderPagination();
   } else {
     renderItems();

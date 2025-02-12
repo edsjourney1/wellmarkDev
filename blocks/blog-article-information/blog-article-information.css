@@ -68,6 +68,9 @@
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child span {
   margin-left: 4px;
 }
+.blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p span:first-child {
+  margin-right: 4px;
+}
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date {
     width: 100%;
@@ -201,6 +204,9 @@
   font-weight: 500;
   text-decoration: underline;
   margin-right: 12px;
+}
+.blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p span:first-child {
+  margin-right: 4px;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-audio {
