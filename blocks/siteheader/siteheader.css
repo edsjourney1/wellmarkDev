@@ -13,6 +13,12 @@
   padding: 8px 10px 8px 42px;
   position: relative;
 }
+.siteheader-login-error p {
+  margin: 0 0 16px 0;
+}
+.siteheader-login-error p:last-child {
+  margin: 0;
+}
 .siteheader-login-error .icon {
   height: auto;
   left: 20px;
@@ -164,6 +170,9 @@
 .siteheader-login-wrapper {
   color: #ffffff;
 }
+.siteheader-login-wrapper .alert-wrapper {
+  margin-bottom: 24px;
+}
 .siteheader-login-wrapper-hidden {
   display: none;
 }
@@ -289,6 +298,9 @@
   color: #ffffff;
   font-size: 24px;
   margin: 0 0 16px 0;
+}
+.siteheader-login-wrapper form {
+  margin-top: 16px;
 }
 .siteheader-login-wrapper form > div:first-child {
   display: flex;
@@ -658,6 +670,9 @@
     transform: translate(0);
     visibility: visible;
   }
+  .siteheader-mobile-wrapper nav .siteheader-login-wrapper {
+    display: block;
+  }
   .siteheader-mobile-wrapper nav > ul {
     display: block;
   }
@@ -898,6 +913,9 @@
   .siteheader-mobile-wrapper nav.siteheader-active {
     transform: translate(0);
     visibility: visible;
+  }
+  .siteheader-mobile-wrapper nav .siteheader-login-wrapper {
+    display: block;
   }
   .siteheader-mobile-wrapper nav > ul {
     display: block;

@@ -16,6 +16,7 @@
 }
 .alert-wrapper .alert {
   border-radius: 0 2px 2px 0;
+  color: #4b4c4d;
   padding: 24px 24px 24px 80px;
   position: relative;
 }
@@ -28,6 +29,9 @@
   position: absolute;
   top: 0;
   width: 10px;
+}
+.alert-wrapper .alert p:first-child {
+  margin: 0;
 }
 .alert-wrapper .alert span.icon {
   left: 34px;

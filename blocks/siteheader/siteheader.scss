@@ -116,6 +116,9 @@
                 transform: translate(0);
                 visibility: visible;
             }
+            .siteheader-login-wrapper {
+                display: block;
+            }
             > ul {
                 display: block;
                 > li {
@@ -261,6 +264,12 @@
         margin-top: 8px;
         padding: 8px 10px 8px 42px;
         position: relative;
+        p {
+            margin: 0 0 16px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
         .icon {
             height: auto;
             left: 20px;
@@ -397,6 +406,9 @@
     }
     &-login-wrapper {
         color: $--white;
+        .alert-wrapper {
+            margin-bottom: 24px;
+        }
         &-hidden {
             display: none;
         }
@@ -516,6 +528,7 @@
             }
         }
         form {
+            margin-top: 16px;
             > div:first-child {
                 display: flex;
                 margin: 0 -12px 36px -12px;

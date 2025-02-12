@@ -15,6 +15,7 @@
         }
         .alert {
             border-radius: 0 2px 2px 0;
+            color: $--gray-700;
             padding: 24px 24px 24px 80px;
             position: relative;
             &::before {
@@ -26,6 +27,9 @@
                 position: absolute;
                 top: 0;
                 width: 10px;
+            }
+            p:first-child {
+                margin: 0;
             }
             span.icon {
                 left: 34px;
