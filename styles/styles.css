@@ -410,12 +410,6 @@ a:any-link {
   }
 }
 
-input, textarea, select {
-  font-family: roboto, sans-serif;
-  font-size: 16px;
-  line-height: 1;
-}
-
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
@@ -960,7 +954,7 @@ input, textarea, select {
 body.appear {
   display: block;
 }
-body.siteheader-nav-active {
+body.external-popup-open {
   overflow: hidden;
 }
 
@@ -1012,37 +1006,13 @@ header.blog-menu {
   }
 }
 
+header .header,
 footer .footer {
   visibility: hidden;
 }
 
+header .header[data-block-status=loaded],
 footer .footer[data-block-status=loaded] {
-  visibility: visible;
-}
-
-main {
-  padding-top: 160px;
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  main {
-    padding-top: 60px;
-  }
-}
-@media (max-width: 480px) {
-  main {
-    padding-top: 60px;
-  }
-}
-
-header .header {
-  opacity: 0;
-  transform: translate(0, -25%);
-  transition: all 0.25s ease;
-  visibility: hidden;
-}
-header .header[data-block-status=loaded] {
-  opacity: 1;
-  transform: unset;
   visibility: visible;
 }
 
