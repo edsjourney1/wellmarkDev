@@ -50,7 +50,8 @@ function buildHeroBlock(main) {
  * @returns the element
  */
 
-// export function createElement(tagName, props, html) {
+export function createElement(tagName, props, html) {
+  return null;
 //   const elem = document.createElement(tagName);
 //   if (props) {
 //     Object.keys(props).forEach((propName) => {
@@ -119,7 +120,7 @@ function buildHeroBlock(main) {
 //       once: true,
 //     },
 //   );
-// }
+}
 
 /**
  * load fonts.css and set a session storage flag

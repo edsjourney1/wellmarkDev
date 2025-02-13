@@ -10,9 +10,7 @@ export default async function decorate() { // block
   const fragment = await loadFragment(popupPath);
   const bodyElem = document.querySelector('body');
 
-  const [dialogHeader, dialogFooter,] = Array.from(
-    fragment?.querySelector('.external-popup').children
-  );
+  const [dialogHeader, dialogFooter] = Array.from(fragment?.querySelector('.external-popup')?.children);
 
   const externalDialogEl = document.createElement('dialog');
   const externalDialogClose = document.createElement('button');
