@@ -1,6 +1,6 @@
 const hideOnMobile = (bottomSections) => {
-  bottomSections.forEach(sec => {
-    if (window.matchMedia("(max-width: 767px)").matches) {
+  bottomSections.forEach((sec) => {
+    if (window.matchMedia('(max-width: 767px)').matches) {
       sec.removeAttribute('style');
       if (sec.clientHeight > 450) {
         sec.parentNode.classList.add('panels-item-closed');
