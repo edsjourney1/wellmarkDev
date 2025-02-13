@@ -19,13 +19,15 @@ import {
 import { decorateExternalImages } from './externalImage.js';
 
 // eslint-disable-next-line import/no-cycle
-// import initAccessibilityMode from '../tools/sidekick/plugins/accessibility-mode/accessibility-mode.js';
+// import initAccessibilityMode from
+// '../tools/sidekick/plugins/accessibility-mode/accessibility-mode.js';
+// let isA11yModeActive = false;
 
-let isA11yModeActive = false;
 /**
  * Builds hero block and prepends to main in a new section.
- * @param {Element} main The container element 
+ * @param {Element} main The container element
  */
+
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
   const picture = main.querySelector('picture');
