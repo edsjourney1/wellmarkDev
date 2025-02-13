@@ -1,6 +1,6 @@
 indices:
   search:
-  include:
+    include:
       - /article-page/**
     exclude:
       - /documents/snippets/**
