@@ -12,13 +12,18 @@ export default async function decorate(block) {
 
     const externalDialogEl = document.createElement('dialog');
     const externalDialogClose = document.createElement('button');
-    const externalDialogContinue = document.createElement('button');
+    const externalDialogContinue = document.createElement('a');
+    externalDialogEl.classList.add('external-popup');
+    externalDialogClose.setAttribute('type', 'button');
+    externalDialogContinue.classList.add('external-popup-link');
+
     externalDialogEl.innerHTML = dialogHeader?.children[0]?.innerHTML;
     externalDialogClose.innerHTML = dialogHeader?.children[1]?.querySelector('p')?.innerHTML;
     externalDialogContinue.innerHTML = dialogFooter?.children[0]?.querySelector('p')?.innerHTML;
 
-    externalDialogEl.append(externalDialogClose);
     externalDialogEl.append(externalDialogContinue);
+    externalDialogEl.append(externalDialogClose);
+
     bodyElem.append(externalDialogEl);
     externalDialogEl.showModal();
 }
