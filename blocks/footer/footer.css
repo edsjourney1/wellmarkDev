@@ -16,6 +16,10 @@ footer .footer-page-id-wrap {
   margin-top: 52px;
 }
 
+footer .footer-li-hidden {
+  display: none;
+}
+
 @media (width >= 900px) {
   footer .footer > div {
     /* padding: 40px 32px 24px; */
