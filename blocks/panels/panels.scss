@@ -65,15 +65,7 @@
                 h3 {
                     color: $--white;
                     &::after {
-                        border-bottom: 2px solid $--blue-50;
-                    }
-                }
-                .button-container {
-                    a {
-                        color: $--blue-50;
-                        &:hover {
-                            color: $--blue-100;
-                        }
+                        border-bottom: 5px solid $--blue-50;
                     }
                 }
             }
@@ -114,15 +106,28 @@
             font-weight: 700;
             line-height: 1;
             margin: 0 0 18px 0;
-            padding: 0 0 12px 0;
+            padding: 0 0 16px 0;
             position: relative;
             &::after {
-                border-bottom: 2px solid $--blue-550;
+                border-bottom: 5px solid $--blue-550;
                 bottom: 0;
                 content: '';
                 left: 0;
                 position: absolute;
                 width: calc(100% - 40px);
+            }
+        }
+        .button-container a {
+            background-color: $--white;
+            border-radius: 2px;
+            border: 2px solid $--blue-550;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 36px;
+            text-align: center;
+            text-decoration: none;
+            &:hover {
+                background-color: $--gray-100;
             }
         }
         @include for-mobile-panel {
