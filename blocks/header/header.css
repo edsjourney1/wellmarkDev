@@ -13,16 +13,3 @@
   width: 100%;
   z-index: 99;
 }
-.header-padding {
-  height: 160px;
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .header-padding {
-    height: 60px;
-  }
-}
-@media (max-width: 480px) {
-  .header-padding {
-    height: 60px;
-  }
-}

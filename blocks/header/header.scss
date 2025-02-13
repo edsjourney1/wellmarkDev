@@ -12,13 +12,4 @@
         width: 100%;
         z-index: 99;
     }
-    &-padding {
-        height: 160px;
-        @include for-tablet {
-            height: 60px;
-        }
-        @include for-mobile {
-            height: 60px;
-        }
-    }
 }

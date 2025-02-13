@@ -18,11 +18,5 @@ export default async function decorate(block) {
 
   const alertFragment = await loadFragment(alertBlockPath);
 
-  // const headerFragment = thisFragment.querySelector('.siteheader-container');
-  // const alertIndicesGlobal = [...headerFragment.innerHTML.matchAll(/alert-warning|alert-info|alert-error|alert-success/ig)];
-
-  // let alertIndices = [...new Set(alertIndicesGlobal.map(index => index[0]))];
-  // console.log("=============alertIndices 2", alertIndices);
-
   formMainHeader(thisBlock, thisFragment, alertFragment);
 }

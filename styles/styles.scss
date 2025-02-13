@@ -110,14 +110,32 @@ header.blog-menu {
   }
 }
 
-header .header,
 footer .footer {
   visibility: hidden;
 }
 
-header .header[data-block-status='loaded'],
 footer .footer[data-block-status='loaded'] {
   visibility: visible;
+}
+
+main {
+  padding-top: 160px;
+  @include for-tablet {
+    height: 60px;
+  }
+  @include for-mobile {
+      height: 60px;
+  }
+}
+
+header .header {
+  transform: translate(0, -100%);
+  transition: all 0.25s ease;
+  visibility: hidden;
+  &[data-block-status='loaded'] {
+    transform: translate(0);
+    visibility: visible;
+  }
 }
 
 @media (width >= 900px) {
