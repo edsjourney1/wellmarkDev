@@ -664,6 +664,18 @@ async function loadHeader(header) {
 }
 
 /**
+ * Loads a block named 'header' into header
+ * @param {Element} header header element
+ * @returns {Promise}
+ */
+async function loadExternalPopup(bodyElem) {
+  const externalPopupBlock = buildBlock('external-link-popup', '');
+  bodyElem.append(externalPopupBlock);
+  decorateBlock(externalPopupBlock);
+  return loadBlock(externalPopupBlock);
+}
+
+/**
  * Loads a block named 'footer' into footer
  * @param footer footer element
  * @returns {Promise}
@@ -793,4 +805,5 @@ export {
   waitForFirstImage,
   wrapTextNodes,
   loadPublishedDate,
+  loadExternalPopup,
 };

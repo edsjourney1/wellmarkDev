@@ -1,9 +1,23 @@
+const hideOnMobile = (bottomSections) => {
+  bottomSections.forEach((sec) => {
+    if (window.matchMedia('(max-width: 767px)').matches) {
+      sec.removeAttribute('style');
+      if (sec.clientHeight > 450) {
+        sec.parentNode.classList.add('panels-item-closed');
+      }
+    } else {
+      sec.parentNode.classList.remove('panels-item-closed');
+    }
+  });
+};
+
 const setEqualHeights = (elements) => {
   const maxHeight = Math.max(...elements.map((el) => el.clientHeight));
   elements.forEach((el) => {
     el.style.height = `${maxHeight}px`;
   });
 };
+
 const scrollToCol = (col) => {
   setTimeout(() => {
     const boxTop = col.getBoundingClientRect().top;
@@ -13,6 +27,7 @@ const scrollToCol = (col) => {
     });
   }, 250);
 };
+
 export default async function decorate(block) {
   const children = Array.from(block.children);
   children.forEach((col) => {
@@ -62,6 +77,7 @@ export default async function decorate(block) {
   setTimeout(() => {
     setEqualHeights(topSections);
     setEqualHeights(bottomSections);
+    hideOnMobile(bottomSections);
   }, 1);
   window.addEventListener('resize', () => {
     [...topSections, ...bottomSections].forEach((el) => {
@@ -70,6 +86,7 @@ export default async function decorate(block) {
     setTimeout(() => {
       setEqualHeights(topSections);
       setEqualHeights(bottomSections);
+      hideOnMobile(bottomSections);
     }, 1);
   });
 }

@@ -1,8 +1,17 @@
 $breakpoint1: 480px;
 $breakpoint2: 752px;
+$breakpoint2-panel: 767px;
 $breakpoint3: 1023px;
 $breakpoint4: 1200px;
 $breakpoint5: 1379px;
+
+// for mobile with upto 767px
+@mixin for-mobile-panel {
+  @media (max-width: $breakpoint2-panel) {
+    @content;
+  }
+}
+
 // for mobile with upto 480px
 @mixin for-mobile {
   @media (max-width: $breakpoint1) {
