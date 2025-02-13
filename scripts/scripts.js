@@ -19,12 +19,12 @@ import {
 import { decorateExternalImages } from './externalImage.js';
 
 // eslint-disable-next-line import/no-cycle
-import initAccessibilityMode from '../tools/sidekick/plugins/accessibility-mode/accessibility-mode.js';
+// import initAccessibilityMode from '../tools/sidekick/plugins/accessibility-mode/accessibility-mode.js';
 
 let isA11yModeActive = false;
 /**
  * Builds hero block and prepends to main in a new section.
- * @param {Element} main The container element
+ * @param {Element} main The container element 
  */
 function buildHeroBlock(main) {
   const h1 = main.querySelector('h1');
@@ -42,87 +42,82 @@ function buildHeroBlock(main) {
 
 /**
  * create an element.
-
  * @param {string} tagName the tag for the element
-
  * @param {object} props properties to apply
-
  * @param {string|Element} html content to add
-
  * @returns the element
-
  */
 
-export function createElement(tagName, props, html) {
-  const elem = document.createElement(tagName);
-  if (props) {
-    Object.keys(props).forEach((propName) => {
-      const val = props[propName];
-      if (propName === 'class') {
-        const classesArr = typeof val === 'string' ? [val] : val;
-        elem.classList.add(...classesArr);
-      } else {
-        elem.setAttribute(propName, val);
-      }
-    });
-  }
-  if (html) {
-    const appendEl = (el) => {
-      if (el instanceof HTMLElement || el instanceof SVGElement) {
-        elem.append(el);
-      } else {
-        elem.insertAdjacentHTML('beforeend', el);
-      }
-    };
+// export function createElement(tagName, props, html) {
+//   const elem = document.createElement(tagName);
+//   if (props) {
+//     Object.keys(props).forEach((propName) => {
+//       const val = props[propName];
+//       if (propName === 'class') {
+//         const classesArr = typeof val === 'string' ? [val] : val;
+//         elem.classList.add(...classesArr);
+//       } else {
+//         elem.setAttribute(propName, val);
+//       }
+//     });
+//   }
+//   if (html) {
+//     const appendEl = (el) => {
+//       if (el instanceof HTMLElement || el instanceof SVGElement) {
+//         elem.append(el);
+//       } else {
+//         elem.insertAdjacentHTML('beforeend', el);
+//       }
+//     };
 
-    if (Array.isArray(html)) {
-      html.forEach(appendEl);
-    } else {
-      appendEl(html);
-    }
-  }
+//     if (Array.isArray(html)) {
+//       html.forEach(appendEl);
+//     } else {
+//       appendEl(html);
+//     }
+//   }
 
-  return elem;
-}
+//   return elem;
+// }
 
-const accessibilityMode = async (e) => {
-  const pluginButton = e.target.shadowRoot.querySelector('plugin-action-bar')
-    ? e.target.shadowRoot
-      .querySelector('plugin-action-bar')
-      .shadowRoot.querySelector('.accessibility-mode')
-    : e.target.shadowRoot.querySelector('.accessibility-mode > button');
+// const accessibilityMode = async (e) => {
+//   const pluginButton = e.target.shadowRoot.querySelector('plugin-action-bar')
+//     ? e.target.shadowRoot
+//       .querySelector('plugin-action-bar')
+//       .shadowRoot.querySelector('.accessibility-mode')
+//     : e.target.shadowRoot.querySelector('.accessibility-mode > button');
 
-  isA11yModeActive = !isA11yModeActive;
+//   isA11yModeActive = !isA11yModeActive;
 
-  if (isA11yModeActive) {
-    pluginButton.style.backgroundColor = '#4e9a17';
+//   if (isA11yModeActive) {
+//     pluginButton.style.backgroundColor = '#4e9a17';
 
-    pluginButton.style.color = '#fff';
-  } else {
-    pluginButton.removeAttribute('style');
-  }
+//     pluginButton.style.color = '#fff';
+//   } else {
+//     pluginButton.removeAttribute('style');
+//   }
 
-  document.querySelector('body').classList.toggle('accessibility-mode-active');
+//   document.querySelector('body').classList.toggle('accessibility-mode-active');
 
-  await initAccessibilityMode(isA11yModeActive);
-};
+//   await initAccessibilityMode(isA11yModeActive);
+// };
 
-let sk = document.querySelector('aem-sidekick') || document.querySelector('helix-sidekick');
+// let sk = document.querySelector('aem-sidekick') || document.querySelector('helix-sidekick');
 
-if (sk) {
-  sk.addEventListener('custom:accessibility-mode', accessibilityMode);
-} else {
-  document.addEventListener(
-    'sidekick-ready',
-    () => {
-      sk = document.querySelector('aem-sidekick') || document.querySelector('helix-sidekick');
-      sk.addEventListener('custom:accessibility-mode', accessibilityMode);
-    },
-    {
-      once: true,
-    },
-  );
-}
+// if (sk) {
+//   sk.addEventListener('custom:accessibility-mode', accessibilityMode);
+// } else {
+//   document.addEventListener(
+//     'sidekick-ready',
+//     () => {
+//       sk = document.querySelector('aem-sidekick') || document.querySelector('helix-sidekick');
+//       sk.addEventListener('custom:accessibility-mode', accessibilityMode);
+//     },
+//     {
+//       once: true,
+//     },
+//   );
+// }
 
 /**
  * load fonts.css and set a session storage flag
