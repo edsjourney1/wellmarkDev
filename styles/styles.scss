@@ -121,19 +121,21 @@ footer .footer[data-block-status='loaded'] {
 main {
   padding-top: 160px;
   @include for-tablet {
-    height: 60px;
+    padding-top: 60px;
   }
   @include for-mobile {
-      height: 60px;
+    padding-top: 60px;
   }
 }
 
 header .header {
-  transform: translate(0, -100%);
+  opacity: 0;
+  transform: translate(0, -25%);
   transition: all 0.25s ease;
   visibility: hidden;
   &[data-block-status='loaded'] {
-    transform: translate(0);
+    opacity: 1;
+    transform: unset;
     visibility: visible;
   }
 }
