@@ -10,7 +10,7 @@ export default async function decorate() { // block
   const fragment = await loadFragment(popupPath);
   const bodyElem = document.querySelector('body');
 
-  const [dialogHeader, dialogFooter] = Array.from(
+  const [dialogHeader, dialogFooter,] = Array.from(
     fragment?.querySelector('.external-popup').children
   );
 
@@ -22,10 +22,8 @@ export default async function decorate() { // block
   externalDialogContinue.classList.add('external-popup-link');
 
   externalDialogEl.innerHTML = dialogHeader?.children[0]?.innerHTML;
-  externalDialogClose.innerHTML =
-    dialogHeader?.children[1]?.querySelector('p')?.innerHTML;
-  externalDialogContinue.innerHTML =
-    dialogFooter?.children[0]?.querySelector('p')?.innerHTML;
+  externalDialogClose.innerHTML = dialogHeader?.children[1]?.querySelector('p')?.innerHTML;
+  externalDialogContinue.innerHTML = dialogFooter?.children[0]?.querySelector('p')?.innerHTML;
 
   externalDialogEl.append(externalDialogContinue);
   externalDialogEl.append(externalDialogClose);
