@@ -28,5 +28,16 @@ export default async function decorate(block) {
       footer.append(footerMain);
     }
   }
+  
+  const pageIdEl = document.createElement('div');
+  pageIdEl.classList.add('footer-page-id-wrap');
+
   block.append(footer);
+  
+  const pageId = document.querySelector('meta[name="page-id"]')?.content || '';
+  const lastplace = document.querySelector('footer .copyright-div > div');
+  if (pageId.length > 0 && lastplace) {
+    pageIdEl.innerHTML = pageId;
+    lastplace.append(pageIdEl);
+  }
 }
