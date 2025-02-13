@@ -27,5 +27,5 @@ export default async function decorate() { // block
   externalDialogEl.append(externalDialogClose);
 
   bodyElem.append(externalDialogEl);
-  externalDialogEl.showModal();
+  // externalDialogEl.showModal();
 }
