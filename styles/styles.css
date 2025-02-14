@@ -576,7 +576,6 @@ a:any-link {
 }
 .section .default-content-wrapper p:has(img) {
   width: 100%;
-  text-align: center;
 }
 @media (max-width: 480px) {
   .section .default-content-wrapper p {
@@ -896,6 +895,72 @@ a:any-link {
 }
 .section .display-wrapper .display.block p {
   margin: 0;
+}
+
+.article-page .section .default-content-wrapper h1 {
+  width: 100%;
+}
+.article-page .section .default-content-wrapper p:has(img) {
+  width: calc((100% - 15px) / 12 * 8);
+}
+@media (max-width: 480px) {
+  .article-page .section .default-content-wrapper p:has(img) {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .article-page .section .default-content-wrapper p:has(img) {
+    width: 100%;
+  }
+}
+.article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+  float: right;
+  max-width: calc((100% - 60px) / 12 * 4);
+}
+@media (max-width: 480px) {
+  .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+    float: unset;
+    min-width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+    float: unset;
+    min-width: 100%;
+  }
+}
+
+.newsroom-page .section .default-content-wrapper h1 {
+  width: 100%;
+}
+.newsroom-page .section .default-content-wrapper p:has(img) {
+  width: calc((100% - 15px) / 12 * 8);
+}
+@media (max-width: 480px) {
+  .newsroom-page .section .default-content-wrapper p:has(img) {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .newsroom-page .section .default-content-wrapper p:has(img) {
+    width: 100%;
+  }
+}
+.newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+  float: right;
+  max-width: calc((100% - 60px) / 12 * 4);
+}
+@media (max-width: 480px) {
+  .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+    float: unset;
+    min-width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+    float: unset;
+    min-width: 100%;
+  }
 }
 
 /* wellmark color start */
