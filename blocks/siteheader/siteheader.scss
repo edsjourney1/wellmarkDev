@@ -9,6 +9,14 @@
         outline-offset: 2px;
     }
 }
+@mixin commonNavCodeBlog {
+    &-nav-toggle {
+        + div {
+            display: none;
+        }
+    }
+}
+
 @mixin commonNavCode {
     &-search-mask {
         display: block;
@@ -888,12 +896,14 @@
     * {
         box-sizing: border-box;
     }
-    &-header-top {
+    &-top-wrapper, &-bottom-wrapper {
+        max-width: none !important;
+    }
+    &-header-top, &-header-bottom {
         margin: 0 auto;
         max-width: 1275px;
         padding: 0;
         width: 100%;
-        padding: 25px 0;
         @include for-large{
             width: calc(100% - 104px);
         }
@@ -906,6 +916,9 @@
         @include for-mobile{
             width: 100%;
         }
+    }
+    &-header-top {
+        padding: 25px 0;
     }
     &-logo-img {
         height: 25px;
@@ -961,5 +974,69 @@
         @include for-tablet{
             padding: 0 15px;
         }
+        @include for-mobile{
+            padding: 0 15px;
+        }
+    }
+    &-nav-toggle > button {
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+        color: $--white;
+        cursor: pointer;
+        display: none;
+        font-weight: 700;
+        height: 60px;
+        justify-content: flex-start;
+        padding: 5px 0;
+        text-decoration: none;
+        width: 100%;
+        @include for-tablet{
+            display: flex;
+            padding: 0 15px;
+        }
+        @include for-mobile{
+            display: flex;
+            padding: 0 15px;
+        }
+        .icon {
+            height: auto;
+            width: auto;
+            margin-left: 8px;
+            > i {
+                font-size: inherit;
+                color: $--white;
+            }
+        }
+    }
+    .siteheader-blog-menu {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            li {
+                margin: 0;
+                padding: 0;
+                &:first-child {
+                    margin-left: -26px;
+                }
+            }
+            a {
+                color: $--white;
+                display: block;
+                padding: 16px 26px;
+                text-decoration: none;
+            }
+            ul {
+                display: none;
+            }
+        }
+    }
+    @include for-tablet {
+        @include commonNavCodeBlog;
+    }
+    @include for-mobile {
+        @include commonNavCodeBlog;
     }
 }
