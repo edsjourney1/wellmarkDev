@@ -6,12 +6,12 @@ export const loginEventFn = (loginCtaEl, loginCtaWrapEl, loginWrapEl, navArr, na
     if (loginCtaWrapEl.classList.contains('siteheader-active')) {
       loginCtaWrapEl.classList.remove('siteheader-active');
       loginMaskEl.classList.remove('siteheader-active');
-      slideUp(loginWrapEl);
+      slideUp(loginWrapEl, 100);
     } else {
       loginCtaWrapEl.classList.add('siteheader-active');
       loginMaskEl.classList.add('siteheader-active');
       // await new Promise(resolve => setTimeout(resolve, 250));
-      slideDown(loginWrapEl);
+      slideDown(loginWrapEl, 100);
       closeAllNavItems(navArr, navMaskEl);
     }
   });

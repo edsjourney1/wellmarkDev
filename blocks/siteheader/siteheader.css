@@ -47,7 +47,7 @@
   position: fixed;
   top: 0;
   transform: translate(0, -100%);
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
   visibility: hidden;
   width: 100%;
   z-index: 90;
@@ -229,7 +229,7 @@
 .siteheader-login-wrapper-cta {
   height: 84px;
   padding: 16px 0;
-  transition: padding 0.25s ease;
+  transition: padding 0.1s ease;
 }
 .siteheader-login-wrapper-cta.siteheader-active {
   padding: 0;
@@ -272,7 +272,7 @@
   height: 52px;
   padding: 5px 36px;
   text-decoration: none;
-  transition: height 0.25s ease;
+  transition: height 0.1s ease;
 }
 .siteheader-login-wrapper button:hover {
   background-color: #0F3659;

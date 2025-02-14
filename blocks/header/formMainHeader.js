@@ -99,12 +99,24 @@ const formMainNavigation = (
 
 export const formMainHeader = (thisBlock, fragment, alertFragment) => {
   const headerWrapper = thisBlock.closest('.header-wrapper');
-  const headerFragment = fragment.querySelector('.siteheader-container');
+  const headerFragment = fragment.querySelector('.siteheader.siteheader-default')?.closest('.siteheader-container');
+
+  let blogFragment;
+
+  const urlArr = (new URL(window.location.href).pathname || '').split('/');
+  if (urlArr.indexOf('blue') !== -1 ) {
+    blogFragment = fragment.querySelector('.siteheader.siteheader-blog-blue')?.closest('.siteheader-container');
+  } else if (urlArr.indexOf('blue-at-work') !== -1) {
+    blogFragment = fragment.querySelector('.siteheader.siteheader-blog-blue-at-work')?.closest('.siteheader-container');
+  }
+  // else if (urlArr.indexOf('blueink') !== -1) {}
+
+  console.log("================blogFragment", blogFragment);
 
   if (headerFragment) {
     const [logoInfo, searchInfo, searchToggle, loginInfo, logoutInfo] =
       Array.from(
-        headerFragment.querySelector('.siteheader.default > div:first-child')
+        headerFragment.querySelector('.siteheader.siteheader-default > div:first-child')
           ?.children
       );
 
@@ -120,13 +132,14 @@ export const formMainHeader = (thisBlock, fragment, alertFragment) => {
     );
 
     const [navCtaEl] = Array.from(
-      headerFragment.querySelector('.siteheader.default > div:nth-child(2)')
+      headerFragment.querySelector('.siteheader.siteheader-default > div:nth-child(2)')
         .children
     );
     const [navUlEl] = Array.from(
-      headerFragment.querySelector('.siteheader.default > div:nth-child(3)')
+      headerFragment.querySelector('.siteheader.siteheader-default > div:nth-child(3)')
         .children
     );
+
     const navUl = navUlEl?.querySelector('ul');
 
     const navMaskEl = document.createElement('div');

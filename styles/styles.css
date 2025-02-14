@@ -1029,61 +1029,23 @@ body.external-popup-open, body.siteheader-nav-active {
   overflow: hidden;
 }
 
-header.megamenu-wrapper {
-  height: 60px;
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  header.megamenu-wrapper {
-    height: 60px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  header.megamenu-wrapper {
-    height: 161px;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  header.megamenu-wrapper {
-    height: 161px;
-  }
-}
-@media (min-width: 1379px) {
-  header.megamenu-wrapper {
-    height: 161px;
-  }
-}
-
-header.blog-menu {
-  height: 218px;
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  header.blog-menu {
-    height: 218px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  header.blog-menu {
-    height: 313px;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  header.blog-menu {
-    height: 313px;
-  }
-}
-@media (min-width: 1379px) {
-  header.blog-menu {
-    height: 313px;
-  }
-}
-
-header .header,
 footer .footer {
   visibility: hidden;
 }
 
-header .header[data-block-status=loaded],
 footer .footer[data-block-status=loaded] {
+  visibility: visible;
+}
+
+header .header {
+  opacity: 0;
+  transform: translate(0, -12.5%);
+  transition: all 0.125s ease;
+  visibility: hidden;
+}
+header .header[data-block-status=loaded] {
+  opacity: 1;
+  transform: unset;
   visibility: visible;
 }
 
@@ -1115,6 +1077,29 @@ pre {
   white-space: pre;
 }
 
+main {
+  padding-top: 160px;
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  main {
+    padding-top: 160px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  main {
+    padding-top: 160px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  main {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    padding-top: 60px;
+  }
+}
 main > div {
   margin: 40px 16px;
 }
