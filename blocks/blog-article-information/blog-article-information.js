@@ -44,11 +44,10 @@ export default function decorate(block) {
   // create a div for author
   const author = document.createElement('div');
   author.classList.add('author');
-  const authorName = document.querySelector('meta[name="author"]');
+  const authorName = document.querySelector('meta[name="author"]').content;
   if (authorName) {
-    const Aname = authorName.content;
     const authorPtag = document.createElement('p');
-    authorPtag.innerText = Aname;
+    authorPtag.innerText = authorName;
     // create a span tag for the icon
     const span = document.createElement('span');
     span.classList.add('icon', 'icon-regular--user');
