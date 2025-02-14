@@ -1,5 +1,5 @@
-@import "../../styles/include/mq.scss";
-@import "../../styles/include/tokens.scss";
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
 
 main {
   .table-high-padding {
@@ -32,7 +32,7 @@ main {
   overflow-x: auto;
   width: 100%;
   color: rgba(75, 76, 77, 1);
-  font-family: "Roboto-Regular";
+  font-family: $--font-roboto;
   font-size: 16px;
   font-weight: 400;
   font-style: Regular;

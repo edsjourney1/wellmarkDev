@@ -35,7 +35,7 @@ main .table-no-padding .table-wrapper {
   overflow-x: auto;
   width: 100%;
   color: rgb(75, 76, 77);
-  font-family: "Roboto-Regular";
+  font-family: roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: Regular;
