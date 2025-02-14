@@ -157,6 +157,50 @@ function buildAutoBlocks(main) {
     console.error('Auto Blocking failed', error);
   }
 }
+/** Order and Unorder list */
+function orderlist() {
+  const orderedWrapper = document.querySelector('.heading-ordered');
+  const unorderedWrapper = document.querySelector('.heading-unordered');
+  if (orderedWrapper) {
+    const orderedDiv = orderedWrapper.children[0];
+    const ol = document.createElement('ol');
+    const orderChildren = [...orderedDiv.children];
+    orderChildren.forEach((child, index) => {
+      if (/^H[2-6]$/.test(child.tagName)) {
+        const li = document.createElement('li');
+        li.appendChild(child); // Append the heading
+        // Append the following elements (p or img) until the next heading or end of children
+        while (orderChildren[index + 1] && !/^H[2-6]$/.test(orderChildren[index + 1].tagName)) {
+          li.appendChild(orderChildren[index + 1]);
+          // eslint-disable-next-line no-plusplus, no-param-reassign
+          index++;
+        }
+        ol.appendChild(li);
+        orderedDiv.appendChild(ol);
+      }
+    });
+  }
+  if (unorderedWrapper) {
+    const unorderedDiv = unorderedWrapper.children[0];
+    const ul = document.createElement('ul');
+    // const unorderChildren = [...unorderedDiv.children];
+    const unorderChildren = Array.from(unorderedDiv.children);
+    unorderChildren.forEach((child, index) => {
+      if (/^H[2-6]$/.test(child.tagName)) {
+        const li = document.createElement('li');
+        li.appendChild(child); // Append the heading
+        // Append the following elements (p or img) until the next heading or end of children
+        while (unorderChildren[index + 1] && !/^H[2-6]$/.test(unorderChildren[index + 1].tagName)) {
+          li.appendChild(unorderChildren[index + 1]);
+          // eslint-disable-next-line no-plusplus, no-param-reassign
+          index++;
+        }
+        ul.appendChild(li);
+        unorderedDiv.appendChild(ul);
+      }
+    });
+  }
+}
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -171,6 +215,7 @@ export function decorateMain(main) {
   decorateBlocks(main);
   decorateExternalImages(main);
   decorateExternalImages(main, '//External Image//');
+  orderlist();
 }
 /**
  * Loads everything needed to get to LCP.
