@@ -57,15 +57,5 @@ export default async function decorate(block) {
     blogObj['blueatwork']?.classList.add('footer-li-hidden');
   }
 
-  const pageIdEl = document.createElement('div');
-  pageIdEl.classList.add('footer-page-id-wrap');
-
-  const pageId = document.querySelector('meta[name="page-id"]')?.content || '';
-  const lastplace = footer.querySelector('.copyright-div > div');
-  if (pageId.length > 0 && lastplace) {
-    pageIdEl.innerHTML = pageId;
-    lastplace.append(pageIdEl);
-  }
-
   block.append(footer);
 }

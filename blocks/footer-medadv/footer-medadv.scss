@@ -264,23 +264,83 @@
         }
       }
     }
+    > .page-id-div {
+      background-color: $--blue-100;
+      font-size: 12px;
+      @include for-mobile {
+        padding: 30px 20px 52px 20px;
+        span {
+          display: block;
+        }
+      }
+      @include for-tablet {
+        padding: 30px 36px 52px 36px;
+        span {
+          border-left: 1px solid $--gray-700;
+          display: inline-block;
+          height: 16px;
+          margin: 0 11px;
+          vertical-align: middle;
+        }
+      }
+      @include for-xlarge {
+        padding: 30px 52px 52px 52px;
+        span {
+          border-left: 1px solid $--gray-700;
+          display: inline-block;
+          height: 16px;
+          margin: 0 11px;
+          vertical-align: middle;
+        }
+      }
+      @include for-large {
+        padding: 30px 52px 52px 52px;
+        span {
+          border-left: 1px solid $--gray-700;
+          display: inline-block;
+          height: 16px;
+          margin: 0 11px;
+          vertical-align: middle;
+        }
+      }
+      @include for-laptop {
+        padding: 24px 36px 52px 36px;
+        span {
+          border-left: 1px solid $--gray-700;
+          display: inline-block;
+          height: 16px;
+          margin: 0 11px;
+          vertical-align: middle;
+        }
+      }
+      > div {
+        margin: 0 auto;
+        max-width: 1275px;
+        width: 100%;
+      }
+    }
     > .copyright-div {
       opacity: 1;
       background-color: $--blue-100;
       @include for-mobile {
-        padding: 36px 20px 52px 20px;
+        // padding: 36px 20px 52px 20px;
+        padding: 36px 20px 0px 20px;
       }
       @include for-tablet {
-        padding: 36px 36px 52px 36px;
+        // padding: 36px 36px 52px 36px;
+        padding: 36px 36px 0 36px;
       }
       @include for-xlarge {
-        padding: 36px 52px 52px 52px;
+        // padding: 36px 52px 52px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-large {
-        padding: 36px 52px 52px 52px;
+        // padding: 36px 52px 52px 52px;
+        padding: 36px 52px 0 52px;
       }
       @include for-laptop {
-        padding: 36px 36px 52px 36px;
+        // padding: 36px 36px 52px 36px;
+        padding: 36px 36px 0 36px;
       }
       > div {
         max-width: 1275px;
