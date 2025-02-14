@@ -721,7 +721,6 @@ a:any-link {
   margin: 0 6px 0 6px;
 }
 .section .default-content-wrapper ul {
-  padding-left: 24px;
   padding-bottom: 24px;
   margin: 0;
 }
@@ -765,7 +764,6 @@ a:any-link {
   padding-bottom: 0;
 }
 .section .default-content-wrapper ol {
-  padding-left: 24px;
   padding-bottom: 24px;
   margin: 0;
 }
@@ -896,6 +894,35 @@ a:any-link {
 .section .display-wrapper .display.block p {
   margin: 0;
 }
+.section.resources-section .default-content-wrapper {
+  border-top: 2px solid #c2c2c3;
+  padding-top: 16px;
+  padding-bottom: 120px;
+}
+.section.resources-section .default-content-wrapper p {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 20px;
+  padding: 16px 0 0 0;
+}
+.section.resources-section .default-content-wrapper p:has(strong) {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+}
+.section.resources-section .default-content-wrapper p .button-container {
+  display: block;
+  padding: 0;
+}
+.section.resources-section .default-content-wrapper p a {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 20px;
+}
 
 .article-page .section .default-content-wrapper h1 {
   width: 100%;
@@ -912,6 +939,9 @@ a:any-link {
   .article-page .section .default-content-wrapper p:has(img) {
     width: 100%;
   }
+}
+.article-page .section .blog-article-information-wrapper ~ .default-content-wrapper {
+  padding-top: 16px;
 }
 .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
   float: right;
@@ -945,6 +975,9 @@ a:any-link {
   .newsroom-page .section .default-content-wrapper p:has(img) {
     width: 100%;
   }
+}
+.newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper {
+  padding-top: 16px;
 }
 .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
   float: right;
