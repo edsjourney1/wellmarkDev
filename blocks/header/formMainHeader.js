@@ -1,4 +1,5 @@
 import { addEvents } from './addEvents.js';
+import { formBlogMenu } from './formBlogMenu.js';
 import { enableAutocomplete, searchBuilder } from './searchBuilder.js';
 
 const generateLoginForm = (loginElArr, formCount) => {
@@ -110,8 +111,6 @@ export const formMainHeader = (thisBlock, fragment, alertFragment) => {
     blogFragment = fragment.querySelector('.siteheader.siteheader-blog-blue-at-work')?.closest('.siteheader-container');
   }
   // else if (urlArr.indexOf('blueink') !== -1) {}
-
-  console.log("================blogFragment", blogFragment);
 
   if (headerFragment) {
     const [logoInfo, searchInfo, searchToggle, loginInfo, logoutInfo] =
@@ -304,6 +303,10 @@ export const formMainHeader = (thisBlock, fragment, alertFragment) => {
         loginMaskEl,
         loginWrapperMobileStr
       );
+    }
+
+    if (blogFragment) {
+      formBlogMenu(blogFragment);
     }
   }
 };

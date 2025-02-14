@@ -13,3 +13,6 @@
   width: 100%;
   z-index: 99;
 }
+.header-wrapper.header-has-blogmenu {
+  position: absolute;
+}

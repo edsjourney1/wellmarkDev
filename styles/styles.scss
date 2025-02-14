@@ -111,6 +111,25 @@ body {
 //   }
 // }
 
+main {
+  padding-top: 160px;
+  @include for-large{
+    padding-top: 160px;
+  }
+  @include for-laptop{
+    padding-top: 160px;
+  }
+  @include for-tablet{
+    padding-top: 60px;
+  }
+  @include for-mobile{
+    padding-top: 60px;
+  }
+  > div {
+    margin: 40px 16px;
+  }
+}
+
 footer .footer {
   visibility: hidden;
 }
@@ -158,25 +177,6 @@ pre {
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
-}
-
-main {
-  padding-top: 160px;
-  @include for-large{
-    padding-top: 160px;
-  }
-  @include for-laptop{
-    padding-top: 160px;
-  }
-  @include for-tablet{
-    padding-top: 60px;
-  }
-  @include for-mobile{
-    padding-top: 60px;
-  }
-  > div {
-    margin: 40px 16px;
-  }
 }
 
 input,
