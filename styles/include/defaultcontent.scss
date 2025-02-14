@@ -133,7 +133,6 @@
     p {
       &:has(img){
         width: 100%;
-        text-align: center;
       }
       margin: 0;
       padding-bottom: $--spacing-l;
@@ -458,6 +457,110 @@
         }
         p{
           margin: 0;
+        }
+      }
+    }
+  }
+}
+.article-page {
+  .section {
+    .default-content-wrapper{
+      h1{
+        width: 100%;
+      }
+      p {
+        &:has(img){
+          width: calc((100% - 15px) / 12* 8);
+        }
+      }
+      @include for-mobile{
+        p {
+          &:has(img){
+            width: 100%;
+          }
+        }
+      }
+      @include for-tablet{
+        p {
+          &:has(img){
+            width: 100%;
+          }
+        }
+      }
+    }
+    .blog-article-information-wrapper ~ .default-content-wrapper {
+      p:has(picture){
+        &:first-of-type{
+          float: right;
+          max-width: calc((100% - 60px) / 12* 4);
+        }
+      }
+      @include for-mobile{
+        p:has(picture){
+          &:first-of-type{
+            float: unset;
+            min-width: 100%;
+          }
+        }
+      }
+      @include for-tablet{
+        p:has(picture){
+          &:first-of-type{
+            float: unset;
+            min-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.newsroom-page{
+  .section {
+    .default-content-wrapper{
+      h1{
+        width: 100%;
+      }
+      p {
+        &:has(img){
+          width: calc((100% - 15px) / 12* 8);
+        }
+      }
+      @include for-mobile{
+        p {
+          &:has(img){
+            width: 100%;
+          }
+        }
+      }
+      @include for-tablet{
+        p {
+          &:has(img){
+            width: 100%;
+          }
+        }
+      }
+    }
+    .blog-article-information-wrapper ~ .default-content-wrapper {
+      p:has(picture){
+        &:first-of-type{
+          float: right;
+          max-width: calc((100% - 60px) / 12* 4);
+        }
+      }
+      @include for-mobile{
+        p:has(picture){
+          &:first-of-type{
+            float: unset;
+            min-width: 100%;
+          }
+        }
+      }
+      @include for-tablet{
+        p:has(picture){
+          &:first-of-type{
+            float: unset;
+            min-width: 100%;
+          }
         }
       }
     }
