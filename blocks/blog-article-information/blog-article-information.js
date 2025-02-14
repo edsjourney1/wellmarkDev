@@ -13,7 +13,7 @@ export default function decorate(block) {
   publishSpan.innerText = 'Published:';
   // create span tag for last published date
   const publishedDate = document.querySelector('meta[name="publish-date"]');
-  if (publishedDate){
+  if (publishedDate) {
     const publishdata = publishedDate.content;
     const dateformat = document.createElement('span');
     dateformat.innerText = publishdata;
