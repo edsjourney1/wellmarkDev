@@ -1,4 +1,5 @@
 import { slideUp, slideDown } from '../../scripts/tools.js';
+import { closeAllBlogMenuItems } from './formBlogMenu.js';
 
 const activeCls = 'siteheader-active';
 
@@ -18,6 +19,7 @@ export const navClicks = (liObj, navArr, navMaskEl) => {
   } else {
     navArr.forEach((item) => {
       if (item.index === liObj.index) {
+        closeAllBlogMenuItems();
         liObj.isActive = true;
         item.link.classList.add(activeCls);
         item.subnav.classList.add(activeCls);

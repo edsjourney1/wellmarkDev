@@ -1169,6 +1169,9 @@
 .siteheader-blog * {
   box-sizing: border-box;
 }
+.siteheader-blog-header-bottom {
+  position: relative;
+}
 .siteheader-blog-top-wrapper, .siteheader-blog-bottom-wrapper {
   max-width: none !important;
 }
@@ -1298,35 +1301,105 @@
   font-size: inherit;
   color: #ffffff;
 }
-.siteheader-blog .siteheader-blog-menu ul {
+.siteheader-blog .siteheader-blog-menu > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-.siteheader-blog .siteheader-blog-menu ul li {
+.siteheader-blog .siteheader-blog-menu > ul > li {
   margin: 0;
   padding: 0;
+  position: relative;
 }
-.siteheader-blog .siteheader-blog-menu ul li:first-child {
+.siteheader-blog .siteheader-blog-menu > ul > li:first-child {
   margin-left: -26px;
 }
-.siteheader-blog .siteheader-blog-menu ul a {
+.siteheader-blog .siteheader-blog-menu > ul a {
   color: #ffffff;
   display: block;
   padding: 16px 26px;
   text-decoration: none;
 }
-.siteheader-blog .siteheader-blog-menu ul ul {
+.siteheader-blog .siteheader-blog-menu > ul a .icon {
+  height: auto;
+  margin-left: 8px;
+  width: auto;
+}
+.siteheader-blog .siteheader-blog-menu > ul a .icon > i {
+  color: inherit;
+  font-size: inherit;
+}
+.siteheader-blog .siteheader-blog-menu > ul ul {
   display: none;
+  margin: 0;
+  padding: 24px 0 44px 0;
+  position: absolute;
+  top: 100%;
+  width: 240px;
+}
+.siteheader-blog .siteheader-blog-menu > ul ul a {
+  padding: 8px 40px 8px 50px;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .siteheader-blog-nav-toggle + div {
     display: none;
   }
+  .siteheader-blog .siteheader-blog-menu {
+    position: absolute;
+    width: 100%;
+  }
+  .siteheader-blog .siteheader-blog-menu-active {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: calc(100% - 222px);
+    top: 222px;
+  }
+  .siteheader-blog .siteheader-blog-menu > ul {
+    display: block;
+  }
+  .siteheader-blog .siteheader-blog-menu > ul > li:first-child {
+    margin: 0;
+  }
+  .siteheader-blog .siteheader-blog-menu > ul ul {
+    padding: 0 0 44px 0;
+    position: relative;
+    width: 100%;
+  }
+  .siteheader-blog .siteheader-blog-menu > ul ul a {
+    padding: 16px 40px 16px 50px;
+  }
 }
 @media (max-width: 480px) {
   .siteheader-blog-nav-toggle + div {
     display: none;
+  }
+  .siteheader-blog .siteheader-blog-menu {
+    position: absolute;
+    width: 100%;
+  }
+  .siteheader-blog .siteheader-blog-menu-active {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: calc(100% - 222px);
+    top: 222px;
+  }
+  .siteheader-blog .siteheader-blog-menu > ul {
+    display: block;
+  }
+  .siteheader-blog .siteheader-blog-menu > ul > li:first-child {
+    margin: 0;
+  }
+  .siteheader-blog .siteheader-blog-menu > ul ul {
+    padding: 0 0 44px 0;
+    position: relative;
+    width: 100%;
+  }
+  .siteheader-blog .siteheader-blog-menu > ul ul a {
+    padding: 16px 40px 16px 50px;
   }
 }

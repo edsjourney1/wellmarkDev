@@ -15,6 +15,32 @@
             display: none;
         }
     }
+    & .siteheader-blog-menu {
+        position: absolute;
+        width: 100%;
+        &-active {
+            overflow-y: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: calc(100% - 222px);
+            top: 222px;
+        }
+        > ul {
+            display: block;
+            > li:first-child {
+                margin: 0;
+            }
+            ul {
+                padding: 0 0 44px 0;
+                position: relative;
+                width: 100%;
+                a {
+                    padding: 16px 40px 16px 50px;
+                }
+            }
+        }
+    }
 }
 
 @mixin commonNavCode {
@@ -896,6 +922,9 @@
     * {
         box-sizing: border-box;
     }
+    &-header-bottom {
+        position: relative;
+    }
     &-top-wrapper, &-bottom-wrapper {
         max-width: none !important;
     }
@@ -1010,14 +1039,15 @@
         }
     }
     .siteheader-blog-menu {
-        ul {
+        > ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
-            li {
+            > li {
                 margin: 0;
                 padding: 0;
+                position: relative;
                 &:first-child {
                     margin-left: -26px;
                 }
@@ -1027,9 +1057,26 @@
                 display: block;
                 padding: 16px 26px;
                 text-decoration: none;
+                .icon {
+                    height: auto;
+                    margin-left: 8px;
+                    width: auto;
+                    > i {
+                        color: inherit;
+                        font-size: inherit;
+                    }
+                }
             }
             ul {
                 display: none;
+                margin: 0;
+                padding: 24px 0 44px 0;
+                position: absolute;
+                top: 100%;
+                width: 240px;
+                a {
+                    padding: 8px 40px 8px 50px;
+                }
             }
         }
     }
