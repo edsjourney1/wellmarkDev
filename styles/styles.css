@@ -1061,6 +1061,43 @@ body.appear {
 body.external-popup-open, body.siteheader-nav-active {
   overflow: hidden;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  body.siteheader-blog-nav-active {
+    overflow: hidden;
+  }
+}
+@media (max-width: 480px) {
+  body.siteheader-blog-nav-active {
+    overflow: hidden;
+  }
+}
+
+main {
+  padding-top: 160px;
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  main {
+    padding-top: 160px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  main {
+    padding-top: 160px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  main {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 480px) {
+  main {
+    padding-top: 60px;
+  }
+}
+main > div {
+  margin: 40px 16px;
+}
 
 footer .footer {
   visibility: hidden;
@@ -1108,33 +1145,6 @@ pre {
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
-}
-
-main {
-  padding-top: 160px;
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  main {
-    padding-top: 160px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  main {
-    padding-top: 160px;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  main {
-    padding-top: 60px;
-  }
-}
-@media (max-width: 480px) {
-  main {
-    padding-top: 60px;
-  }
-}
-main > div {
-  margin: 40px 16px;
 }
 
 input,

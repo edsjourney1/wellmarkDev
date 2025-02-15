@@ -69,6 +69,14 @@ body {
   &.external-popup-open, &.siteheader-nav-active {
     overflow: hidden;
   }
+  &.siteheader-blog-nav-active {
+    @include for-tablet {
+      overflow: hidden;
+    }
+    @include for-mobile {
+      overflow: hidden;
+    }
+  }
 }
 
 // header.megamenu-wrapper {

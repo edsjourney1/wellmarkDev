@@ -3,7 +3,7 @@
 // @import 'breadcrumb.scss';
 
 .header {
-    box-shadow: rgba($--gray-700, 0.2) 0px 7px 29px 0px;
+    box-shadow: 1px 7px 9px -4px rgba($--gray-700, 0.2);
     position: relative;
     z-index: 98;
     &-wrapper {

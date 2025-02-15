@@ -2,6 +2,7 @@ import { slideUp, slideDown } from '../../scripts/tools.js';
 
 let liBlogMenuArr = [];
 const activeCls = 'siteheader-blog-has-subnav-active';
+const bodyEl = document.querySelector('body');
 
 export const closeAllBlogMenuItems = () => {
   liBlogMenuArr.forEach((item) => {
@@ -21,11 +22,11 @@ const initiateBlogSubnav = () => {
         liBlogMenuArr.forEach((item2) => {
           if(item2.index === item.index) {
             item2.isActive = true;
-            item.link.classList.add(activeCls);
+            item2.link.classList.add(activeCls);
             slideDown(item2.subnav, 150);
           } else {
             item2.isActive = false;
-            item.link.classList.remove(activeCls);
+            item2.link.classList.remove(activeCls);
             slideUp(item2.subnav, 150);
           }
         });
@@ -71,15 +72,17 @@ const attachBlogMenuEvents = (headerSection, bottomColorEl) => {
       if (headerSection.classList.contains('siteheader-blog-menu-active')) {
         headerSection.classList.remove('siteheader-blog-menu-active');
         slideUp(navParent, 100);
+        bodyEl.classList.remove('siteheader-blog-nav-active');
         setTimeout(() => {
           allHeaderSectionEl.forEach((el) => {
             if (el.getAttribute('style')?.length > 0) {
               el.style.display = '';
             }
           });
-        }, 1000);
+        }, 300);
       } else {
         headerSection.classList.add('siteheader-blog-menu-active');
+        bodyEl.classList.add('siteheader-blog-nav-active');
         slideDown(navParent, 100);
       }
     });

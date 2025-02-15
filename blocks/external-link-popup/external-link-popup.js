@@ -10,7 +10,6 @@ export default async function decorate() {
     ? new URL(popupMeta, window.location).pathname
     : '/content-fragments/external-popup';
   const fragment = await loadFragment(popupPath);
-  const bodyElem = document.querySelector('body');
 
   const [dialogHeader, dialogFooter] = Array.from(fragment?.querySelector('.external-popup')?.children);
 
@@ -30,7 +29,7 @@ export default async function decorate() {
   externalDialogEl.append(externalDialogContinue);
   externalDialogEl.append(externalDialogClose);
 
-  bodyElem.append(externalDialogEl);
+  bodyEl.append(externalDialogEl);
 
   setTimeout(() => {
     const links = document.querySelectorAll('a');
