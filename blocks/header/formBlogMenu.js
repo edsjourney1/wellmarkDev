@@ -7,7 +7,7 @@ export const closeAllBlogMenuItems = () => {
   liBlogMenuArr.forEach((item) => {
     item.isActive = false;
     item.link.classList.remove(activeCls);
-    slideUp(item.subnav, 100);
+    slideUp(item.subnav, 150);
   });
 };
 
@@ -22,11 +22,11 @@ const initiateBlogSubnav = () => {
           if(item2.index === item.index) {
             item2.isActive = true;
             item.link.classList.add(activeCls);
-            slideDown(item2.subnav, 100);
+            slideDown(item2.subnav, 150);
           } else {
             item2.isActive = false;
             item.link.classList.remove(activeCls);
-            slideUp(item2.subnav, 100);
+            slideUp(item2.subnav, 150);
           }
         });
       }
@@ -64,13 +64,22 @@ const attachBlogMenuEvents = (headerSection, bottomColorEl) => {
 
   initiateBlogSubnav();
 
+  const allHeaderSectionEl = Array.from(headerSection.querySelectorAll('*'));
+
   if (navBtn && navParent && liItems.length) {
     navBtn.addEventListener('click', () => {
-      if (navParent.classList.contains('siteheader-blog-menu-active')) {
-        navParent.classList.remove('siteheader-blog-menu-active');
+      if (headerSection.classList.contains('siteheader-blog-menu-active')) {
+        headerSection.classList.remove('siteheader-blog-menu-active');
         slideUp(navParent, 100);
+        setTimeout(() => {
+          allHeaderSectionEl.forEach((el) => {
+            if (el.getAttribute('style')?.length > 0) {
+              el.style.display = '';
+            }
+          });
+        }, 1000);
       } else {
-        navParent.classList.add('siteheader-blog-menu-active');
+        headerSection.classList.add('siteheader-blog-menu-active');
         slideDown(navParent, 100);
       }
     });

@@ -48,7 +48,7 @@
   position: fixed;
   top: 0;
   transform: translate(0, -100%);
-  transition: all 0.1s ease;
+  transition: all 0.15s ease;
   visibility: hidden;
   width: 100%;
   z-index: 90;
@@ -234,7 +234,7 @@
 .siteheader-login-wrapper-cta {
   height: 84px;
   padding: 16px 0;
-  transition: padding 0.1s ease;
+  transition: padding 0.15s ease;
 }
 .siteheader-login-wrapper-cta.siteheader-active {
   padding: 0;
@@ -277,7 +277,7 @@
   height: 52px;
   padding: 5px 36px;
   text-decoration: none;
-  transition: height 0.1s ease;
+  transition: height 0.15s ease;
 }
 .siteheader-login-wrapper button:hover {
   background-color: #0F3659;
@@ -522,6 +522,7 @@
   transform: rotate(180deg);
 }
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav {
+  box-shadow: rgba(75, 76, 77, 0.2) 0px 7px 29px 0px;
   background-color: #ffffff;
   border-bottom: 2px solid #d6e5f1;
   border-top: 2px solid #d6e5f1;
@@ -1345,17 +1346,22 @@
   .siteheader-blog-nav-toggle + div {
     display: none;
   }
-  .siteheader-blog .siteheader-blog-menu {
-    position: absolute;
-    width: 100%;
-  }
-  .siteheader-blog .siteheader-blog-menu-active {
-    overflow-y: auto;
+  .siteheader-blog-menu-active {
+    height: 100%;
+    left: 0;
     position: fixed;
     top: 0;
+    width: 100%;
+    z-index: 101;
+  }
+  .siteheader-blog-menu-active .siteheader-blog-bottom-wrapper {
+    height: 100%;
     left: 0;
-    height: calc(100% - 222px);
-    top: 222px;
+    overflow-y: auto;
+    position: absolute;
+    top: 102px;
+    width: 100%;
+    height: calc(100% - 102px);
   }
   .siteheader-blog .siteheader-blog-menu > ul {
     display: block;
@@ -1364,7 +1370,7 @@
     margin: 0;
   }
   .siteheader-blog .siteheader-blog-menu > ul ul {
-    padding: 0 0 44px 0;
+    padding: 0 0 24px 0;
     position: relative;
     width: 100%;
   }
@@ -1376,17 +1382,22 @@
   .siteheader-blog-nav-toggle + div {
     display: none;
   }
-  .siteheader-blog .siteheader-blog-menu {
-    position: absolute;
-    width: 100%;
-  }
-  .siteheader-blog .siteheader-blog-menu-active {
-    overflow-y: auto;
+  .siteheader-blog-menu-active {
+    height: 100%;
+    left: 0;
     position: fixed;
     top: 0;
+    width: 100%;
+    z-index: 101;
+  }
+  .siteheader-blog-menu-active .siteheader-blog-bottom-wrapper {
+    height: 100%;
     left: 0;
-    height: calc(100% - 222px);
-    top: 222px;
+    overflow-y: auto;
+    position: absolute;
+    top: 102px;
+    width: 100%;
+    height: calc(100% - 102px);
   }
   .siteheader-blog .siteheader-blog-menu > ul {
     display: block;
@@ -1395,7 +1406,7 @@
     margin: 0;
   }
   .siteheader-blog .siteheader-blog-menu > ul ul {
-    padding: 0 0 44px 0;
+    padding: 0 0 24px 0;
     position: relative;
     width: 100%;
   }
