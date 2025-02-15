@@ -32,29 +32,29 @@ export default async function decorate(block) {
 
   const contactLiArr = footer.querySelectorAll('.contact-div ul > li > a');
   let hrefArr = [];
-  let blogObj = {};
+  const blogObj = {};
 
-  contactLiArr.forEach(link => {
+  contactLiArr.forEach((link) => {
     hrefArr = link.getAttribute('href').split('/');
     if (hrefArr.indexOf('blue') !== -1) {
-      blogObj['blue'] = link.parentNode;
+      blogObj.blue = link.parentNode;
     } else if (hrefArr.indexOf('blue-at-work') !== -1) {
-      blogObj['blueatwork'] = link.parentNode;
+      blogObj.blueatwork = link.parentNode;
     } else if (hrefArr.indexOf('blueink') !== -1) {
-      blogObj['blueink'] = link.parentNode;
+      blogObj.blueink = link.parentNode;
     }
   });
 
   const urlArr = (new URL(window.location.href).pathname || '').split('/');
   if (urlArr.indexOf('blue') !== -1 ) {
-    blogObj['blueatwork']?.classList.add('footer-li-hidden');
-    blogObj['blueink']?.classList.add('footer-li-hidden');
+    blogObj.blueatwork?.classList.add('footer-li-hidden');
+    blogObj.blueink?.classList.add('footer-li-hidden');
   } else if (urlArr.indexOf('blue-at-work') !== -1) {
-    blogObj['blue']?.classList.add('footer-li-hidden');
-    blogObj['blueink']?.classList.add('footer-li-hidden');
+    blogObj.blue?.classList.add('footer-li-hidden');
+    blogObj.blueink?.classList.add('footer-li-hidden');
   } else if (urlArr.indexOf('blueink') !== -1) {
-    blogObj['blue']?.classList.add('footer-li-hidden');
-    blogObj['blueatwork']?.classList.add('footer-li-hidden');
+    blogObj.blue?.classList.add('footer-li-hidden');
+    blogObj.blueatwork?.classList.add('footer-li-hidden');
   }
 
   block.append(footer);
