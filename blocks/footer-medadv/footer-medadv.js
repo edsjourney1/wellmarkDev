@@ -47,10 +47,10 @@ export default function decorate(block) {
   if (publishedDate.length === 0) {
     const tempDate = new Date();
     publishedDate = `${(tempDate.getMonth() > 8)
-    ? (tempDate.getMonth() + 1)
-    : (`0${(tempDate.getMonth() + 1)}`)}/${(tempDate.getDate() > 9)
+      ? (tempDate.getMonth() + 1)
+      : (`0${(tempDate.getMonth() + 1)}`)}/${(tempDate.getDate() > 9)
       ? tempDate.getDate()
-      : (`0${tempDate.getDate()}` )}/${tempDate.getFullYear()}`;
+      : (`0${tempDate.getDate()}`)}/${tempDate.getFullYear()}`;
   }
   const pageId = document.querySelector('meta[name="page-id"]')?.content || '';
   const pEl = block.children[7].querySelector('p');

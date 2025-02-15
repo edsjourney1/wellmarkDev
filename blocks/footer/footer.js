@@ -46,7 +46,7 @@ export default async function decorate(block) {
   });
 
   const urlArr = (new URL(window.location.href).pathname || '').split('/');
-  if (urlArr.indexOf('blue') !== -1 ) {
+  if (urlArr.indexOf('blue') !== -1) {
     blogObj.blueatwork?.classList.add('footer-li-hidden');
     blogObj.blueink?.classList.add('footer-li-hidden');
   } else if (urlArr.indexOf('blue-at-work') !== -1) {

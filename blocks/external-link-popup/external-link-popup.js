@@ -42,7 +42,7 @@ export default async function decorate() {
         && href.length > 0
         && !href.startsWith('/')
         && !href.startsWith('#')) {
-          isExternalURL = new URL(link.getAttribute('href')).origin !== window.location.origin;
+        isExternalURL = new URL(link.getAttribute('href')).origin !== window.location.origin;
       }
       if (isExternalURL) {
         link.addEventListener('click', (event) => {
