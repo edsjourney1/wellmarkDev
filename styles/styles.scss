@@ -62,8 +62,13 @@ html, body {
   }
 }
 
-body.appear {
-  display: block;
+body {
+  &.appear {
+    display: block;
+  }
+  &.external-popup-open {
+    overflow: hidden;
+  }
 }
 
 header.megamenu-wrapper {
