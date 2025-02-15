@@ -78,9 +78,11 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     }
   });
 
+  const loginWrapper = document.querySelector('.siteheader-login-wrapper');
+
   window.addEventListener('scroll', () => {
-    if (document.querySelector('.siteheader-login-wrapper-cta.siteheader-active')) {
-      document.querySelector('.siteheader-login-wrapper-cta.siteheader-active > button').dispatchEvent(new MouseEvent('click'));
+    if (loginWrapper.querySelector('.siteheader-login-wrapper-cta').classList.contains('siteheader-active')) {
+      loginWrapper.querySelector('.siteheader-login-wrapper-cta > button').dispatchEvent(new MouseEvent('click'));
     }
     if (document.querySelector('.siteheader-nav-mask.siteheader-active')) {
       closeAllNavItems(navArr, navMaskEl);
@@ -88,6 +90,10 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     if (document.querySelector('.siteheader-blog-has-subnav-active')) {
       closeAllBlogMenuItems();
     }
+  });
+
+  document.addEventListener('click', (event) => {
+    console.log('============event', event.target);
   });
 
   loginEventFn(
