@@ -69,7 +69,7 @@ body {
   &.external-popup-open, &.siteheader-nav-active {
     overflow: hidden;
   }
-  &.siteheader-blog-nav-active {
+  &.siteheader-search-active, &.siteheader-blog-nav-active {
     @include for-tablet {
       overflow: hidden;
     }

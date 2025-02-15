@@ -1,3 +1,4 @@
+import { closeAllBlogMenuItems } from './formBlogMenu.js';
 import { loginEventFn } from './loginEvents.js';
 import { navClicks, closeAllNavItems } from './navClicks.js';
 
@@ -31,12 +32,12 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
       searchCtaEl.classList.remove('siteheader-active');
       searchParent.classList.remove('siteheader-active');
       searchMaskEl.classList.remove('siteheader-active');
-      bodyElem.classList.remove('siteheader-nav-active');
+      bodyElem.classList.remove('siteheader-search-active');
     } else {
       searchCtaEl.classList.add('siteheader-active');
       searchParent.classList.add('siteheader-active');
       searchMaskEl.classList.add('siteheader-active');
-      bodyElem.classList.add('siteheader-nav-active');
+      bodyElem.classList.add('siteheader-search-active');
     }
   });
 
@@ -85,4 +86,9 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     navMaskEl,
     loginMaskEl
   );
+
+  window.addEventListener('scroll', () => {
+    closeAllNavItems(navArr, navMaskEl);
+    closeAllBlogMenuItems();
+  });
 };

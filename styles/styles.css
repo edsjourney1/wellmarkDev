@@ -1062,12 +1062,12 @@ body.external-popup-open, body.siteheader-nav-active {
   overflow: hidden;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  body.siteheader-blog-nav-active {
+  body.siteheader-search-active, body.siteheader-blog-nav-active {
     overflow: hidden;
   }
 }
 @media (max-width: 480px) {
-  body.siteheader-blog-nav-active {
+  body.siteheader-search-active, body.siteheader-blog-nav-active {
     overflow: hidden;
   }
 }
