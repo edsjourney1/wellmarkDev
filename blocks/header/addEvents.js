@@ -78,6 +78,18 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     }
   });
 
+  window.addEventListener('scroll', () => {
+    if (document.querySelector('.siteheader-login-wrapper-cta.siteheader-active')) {
+      document.querySelector('.siteheader-login-wrapper-cta.siteheader-active > button').dispatchEvent(new MouseEvent('click'));
+    }
+    if (document.querySelector('.siteheader-nav-mask.siteheader-active')) {
+      closeAllNavItems(navArr, navMaskEl);
+    }
+    if (document.querySelector('.siteheader-blog-has-subnav-active')) {
+      closeAllBlogMenuItems();
+    }
+  });
+
   loginEventFn(
     loginCtaEl,
     loginCtaWrapEl,
@@ -86,9 +98,4 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     navMaskEl,
     loginMaskEl
   );
-
-  window.addEventListener('scroll', () => {
-    closeAllNavItems(navArr, navMaskEl);
-    closeAllBlogMenuItems();
-  });
 };

@@ -1336,6 +1336,7 @@
 .siteheader-blog .siteheader-blog-menu > ul ul {
   box-shadow: 1px 7px 9px -4px rgba(75, 76, 77, 0.2);
   display: none;
+  list-style: none;
   margin: 0;
   padding: 24px 0 44px 0;
   position: absolute;
