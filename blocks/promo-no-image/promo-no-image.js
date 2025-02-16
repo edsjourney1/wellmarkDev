@@ -6,10 +6,8 @@ export default function decorate(block) {
   mainHeading.classList.add('promo-no-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-  const headingCheck = document.querySelector('.promo-no-image-heading');
-  console.log(headingCheck);
-  if (headingCheck.textContent === '') {
-    headingCheck.classList.remove('promo-no-image-heading');
+  if (title === '') {
+    mainHeading.classList.remove('promo-no-image-heading');
   }
   const ul = document.createElement('ul');
   const promoClass = `promo-no-image-${block.children.length - 1}-column`;
@@ -25,9 +23,6 @@ export default function decorate(block) {
       ul.append(li);
     }
   });
-  // ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(
-  //   createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]),
-  // ));
   block.innerHTML = '';
   block.append(ul);
 }
