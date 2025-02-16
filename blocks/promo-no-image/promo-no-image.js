@@ -3,10 +3,12 @@ export default function decorate(block) {
   const title = block.children[0].innerText;
   const ul = document.createElement('ul');
   const imageWrapperDiv = block.parentElement;
-  const mainHeading = document.createElement('h3');
-  mainHeading.classList.add('promo-no-image-heading');
-  mainHeading.textContent = `${title}`;
-  imageWrapperDiv.prepend(mainHeading);
+  if (title !== '') {
+    const mainHeading = document.createElement('h3');
+    mainHeading.classList.add('promo-no-image-heading');
+    mainHeading.textContent = `${title}`;
+    imageWrapperDiv.prepend(mainHeading);
+  }
   const promoClass = `promo-no-image-${block.children.length - 1}-column`;
   ul.classList.add(promoClass);
   [...block.children].forEach((row, index) => {
