@@ -7,7 +7,7 @@ export default function decorate(block) {
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
   console.log(mainHeading);
-  if (mainHeading === '') {
+  if (mainHeading.textContent === '') {
     mainHeading.classList.remove('promo-no-image-heading');
   }
   const ul = document.createElement('ul');
