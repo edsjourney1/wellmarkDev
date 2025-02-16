@@ -3,7 +3,6 @@ export default function decorate(block) {
   if (block.children[0]?.children[0]?.children[0]) {
     svgIcon = block.children[0]?.children[0]?.children[0];
   }
-  console.log(svgIcon);
   const title = block.children[0]?.textContent;
   const description = block.children[1]?.textContent;
   const div = document.createElement('div');
@@ -12,7 +11,7 @@ export default function decorate(block) {
   const heading = document.createElement('h2');
   heading.append(title);
   heading.classList.add('title');
-  if (svgIcon) {
+  if (svg.innerHTML !== '') {
     div2.append(svg, heading);
   }
   div2.append(heading);
