@@ -12,7 +12,10 @@ export default function decorate(block) {
   const heading = document.createElement('h2');
   heading.append(title);
   heading.classList.add('title');
-  div2.append(svg, heading);
+  if (svgIcon) {
+    div2.append(svg, heading);
+  }
+  div2.append(heading);
   const paragraph = document.createElement('p');
   paragraph.classList.add('description');
   paragraph.append(description);
