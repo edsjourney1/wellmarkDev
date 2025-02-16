@@ -7,7 +7,7 @@ export default function decorate(block) {
   mainHeading.classList.add('promo-no-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
-  if (!title) {
+  if (title.textContent === '') {
     mainHeading.classList.remove('promo-no-image-heading');
   }
   const promoClass = `promo-no-image-${block.children.length - 1}-column`;
