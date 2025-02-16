@@ -2,7 +2,6 @@ export default function decorate(block) {
   /* change to ul, li */
   const imageWrapperDiv = block.parentElement;
   const title = block.children[0].textContent;
-  block.innerHTML = '';
   const mainHeading = document.createElement('h3');
   mainHeading.classList.add('promo-no-image-heading');
   mainHeading.textContent = `${title}`;
@@ -29,5 +28,6 @@ export default function decorate(block) {
   // ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(
   //   createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]),
   // ));
+  block.innerHTML = '';
   block.append(ul);
 }
