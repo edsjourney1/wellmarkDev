@@ -96,8 +96,8 @@ export const formBlogMenu = (blogFragment) => {
 
   const [blogHeaderTop, blogHeaderNavCta, blogHeaderNav] = blogFragment.querySelector('.siteheader')?.children;
 
-  const topColorEl = blogHeaderTop.children[1]?.querySelector('p');
-  const bottomColorEl = blogHeaderTop.children[2]?.querySelector('p');
+  const topColorEl = blogHeaderTop?.children[1]?.querySelector('p');
+  const bottomColorEl = blogHeaderTop?.children[2]?.querySelector('p');
 
   headerSection.classList.add('siteheader-blog');
   headerSection.innerHTML = `<div class='siteheader-blog-top-wrapper'>

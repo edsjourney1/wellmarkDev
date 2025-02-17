@@ -1,9 +1,9 @@
 /* SLIDE UP */
 export const slideUp = (target, duration = 500) => {
   target.style.transitionProperty = 'height, margin, padding';
-  target.style.transitionDuration = duration + 'ms';
+  target.style.transitionDuration = `${duration}ms`;
   target.style.boxSizing = 'border-box';
-  target.style.height = target.offsetHeight + 'px';
+  target.style.height = `${target.offsetHeight}px`;
   target.offsetHeight;
   target.style.overflow = 'hidden';
   target.style.height = 0;
@@ -21,7 +21,6 @@ export const slideUp = (target, duration = 500) => {
     target.style.removeProperty('overflow');
     target.style.removeProperty('transition-duration');
     target.style.removeProperty('transition-property');
-    //alert('!');
   }, duration);
 };
 
@@ -29,9 +28,11 @@ export const slideUp = (target, duration = 500) => {
 export const slideDown = (target, duration = 500) => {
   target.style.removeProperty('display');
   let display = window.getComputedStyle(target).display;
-  if (display === 'none') display = 'block';
+  if (display === 'none') {
+    display = 'block';
+  }
   target.style.display = display;
-  let height = target.offsetHeight;
+  const height = target.offsetHeight;
   target.style.overflow = 'hidden';
   target.style.height = 0;
   target.style.paddingTop = 0;
@@ -41,8 +42,8 @@ export const slideDown = (target, duration = 500) => {
   target.offsetHeight;
   target.style.boxSizing = 'border-box';
   target.style.transitionProperty = 'height, margin, padding';
-  target.style.transitionDuration = duration + 'ms';
-  target.style.height = height + 'px';
+  target.style.transitionDuration = `${duration}ms`;
+  target.style.height = `${height}px`;
   target.style.removeProperty('padding-top');
   target.style.removeProperty('padding-bottom');
   target.style.removeProperty('margin-top');
