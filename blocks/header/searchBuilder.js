@@ -34,6 +34,7 @@ export const enableAutocomplete = (searchInput) => {
     let itemArr2 = [];
     let receivedCategories;
     let thisEl;
+    // eslint-disable-next-line no-new new-cap
     new window.autoComplete({
       name: searchInput,
       selector: `#${searchInput}`,
@@ -90,6 +91,7 @@ export const enableAutocomplete = (searchInput) => {
         element: (item, data) => {
           itemArr = data.value.split('---');
           itemArr2 = data.match.split('---');
+          // eslint-disable-next-line prefer-destructuring
           if (itemArr[0] === 'a') {
             item.innerHTML = itemArr2[1];
             item.setAttribute('data-href', itemArr[2]);
