@@ -12,10 +12,9 @@ export default function decorate(block) {
   heading.append(title);
   heading.classList.add('title');
   div2.append(svg, heading);
-  // if (block.children[3] === '' || block.children[3] === undefined) {
-  //   const iconCheck = document.querySelector('.svg-icon');
-  //   console.log(iconCheck);
-  // }
+  if (block.children[3] === '' || block.children[3] === undefined) {
+    console.log('hello');
+  }
   const paragraph = document.createElement('p');
   paragraph.classList.add('description');
   paragraph.append(description);
