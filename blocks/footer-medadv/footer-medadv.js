@@ -6,7 +6,7 @@ export default function decorate(block) {
   block.children[5].classList.add('attention-div');
   block.children[6].classList.add('copyright-div');
   block.children[7].classList.add('page-id-div');
-  
+
   const logoImg = document.createElement('img');
   logoImg.src = '../../images/global/WellmarkLogo.png';
   logoImg.alt = 'wellmark-logo';
@@ -43,44 +43,16 @@ export default function decorate(block) {
 
   // block.children[7]
   let publishedDate = document.querySelector('meta[name="publish-date"]')?.content || '';
-  
+
   if (publishedDate.length === 0) {
-    let tempDate = new Date();
+    const tempDate = new Date();
     publishedDate = `${(tempDate.getMonth() > 8)
-    ? (tempDate.getMonth() + 1)
-    : (`0${(tempDate.getMonth() + 1)}`)}/${(tempDate.getDate() > 9)
+      ? (tempDate.getMonth() + 1)
+      : (`0${(tempDate.getMonth() + 1)}`)}/${(tempDate.getDate() > 9)
       ? tempDate.getDate()
-      : (`0${tempDate.getDate()}` )}/${tempDate.getFullYear()}`;
+      : (`0${tempDate.getDate()}`)}/${tempDate.getFullYear()}`;
   }
   const pageId = document.querySelector('meta[name="page-id"]')?.content || '';
   const pEl = block.children[7].querySelector('p');
   pEl.innerHTML = `${pEl.innerHTML}: ${publishedDate} <span></span> ${pageId}`;
-  // const lastplace = footer.querySelector('.copyright-div > div');
-  // if (pageId.length > 0 && lastplace) {
-  //   pageIdEl.innerHTML = pageId;
-  //   lastplace.append(pageIdEl);
-  // }
 }
-
-// export default function decorate(block) {
-//   block.children[1].classList.add('contact-div');
-//   block.children[2].classList.add('adobe-div');
-//   block.children[3].classList.add('language-div');
-//   block.children[4].classList.add('attention-div');
-//   block.children[5].classList.add('copyright-div');
-//   const logoImg = document.createElement('img');
-//   logoImg.src = '../../images/global/Logo.png';
-//   logoImg.className = 'logo-img';
-//   logoImg.alt = 'wellmark-logo';
-//   logoImg.title = 'logo';
-//   const logoDiv = block.children[0];
-//   const imgDiv = document.createElement('div');
-//   imgDiv.append(logoImg);
-//   logoDiv.prepend(imgDiv);
-//   logoDiv.classList.add('logo-social-div');
-//   const socialDiv = block.children[0].children[1];
-//   socialDiv.classList.add('social-div');
-//   const socialDiv2 = socialDiv.cloneNode(true);
-//   const attentionDiv = block.children[4];
-//   attentionDiv.append(socialDiv2);
-// }

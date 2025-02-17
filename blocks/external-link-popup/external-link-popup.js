@@ -21,10 +21,8 @@ export default async function decorate() {
   externalDialogContinue.classList.add('external-popup-link');
 
   externalDialogEl.innerHTML = dialogHeader?.children[0]?.innerHTML;
-  externalDialogClose.innerHTML =
-    dialogHeader?.children[1]?.querySelector('p')?.innerHTML;
-  externalDialogContinue.innerHTML =
-    dialogFooter?.children[0]?.querySelector('p')?.innerHTML;
+  externalDialogClose.innerHTML = dialogHeader?.children[1]?.querySelector('p')?.innerHTML;
+  externalDialogContinue.innerHTML = dialogFooter?.children[0]?.querySelector('p')?.innerHTML;
 
   externalDialogEl.append(externalDialogContinue);
   externalDialogEl.append(externalDialogClose);
@@ -43,8 +41,7 @@ export default async function decorate() {
         && href.length > 0
         && !href.startsWith('/')
         && !href.startsWith('#')) {
-          // console.log("=====================new URL(link.getAttribute('href')).origin", new URL(link.getAttribute('href')).origin);
-          isExternalURL = new URL(link.getAttribute('href')).origin !== window.location.origin;
+        isExternalURL = new URL(link.getAttribute('href')).origin !== window.location.origin;
       }
       if (isExternalURL) {
         link.addEventListener('click', (event) => {
@@ -56,7 +53,7 @@ export default async function decorate() {
       }
       href = null;
     });
-    
+
     externalDialogEl.addEventListener('click', () => {
       externalDialogEl.close();
       bodyEl.classList.remove('external-popup-open');
