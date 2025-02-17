@@ -53,7 +53,7 @@ export const enableAutocomplete = (searchInput) => {
             receivedCategories = keysArr;
 
             keysArr.forEach((key) => {
-              (json.data || []).forEach(el => {
+              (json.data || []).forEach((el) => {
                 if (el.category === key) {
                   valueArr.push(`a---${el.name}---${el.url}---${key}`);
                 }
@@ -102,7 +102,7 @@ export const enableAutocomplete = (searchInput) => {
       debounce: 250,
     });
 
-    document.querySelector(`#${searchInput}`).addEventListener('selection', function (event) {
+    document.querySelector(`#${searchInput}`).addEventListener('selection', (event) => {
       const link = ((event.detail?.selection?.value || '').split('---') || [])[2];
       if (link) {
         alert(`TO BE IMPLEMENTED: Must go to ${link}`);
