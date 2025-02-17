@@ -102,7 +102,7 @@ export const formBlogMenu = (blogFragment) => {
     [
       blogHeaderTop,
       blogHeaderNavCta,
-      blogHeaderNav
+      blogHeaderNav,
     ] = blogFragment.querySelector('.siteheader').children;
   }
 

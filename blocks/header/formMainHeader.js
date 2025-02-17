@@ -55,8 +55,8 @@ const formMainNavigation = (
 
       const l0Anchor = l0El.querySelector('a');
       const currentMegamenuInfo = megamenuInfo.find(
-        (infoEl) => infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`,
-      ));
+        (infoEl) => infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`),
+      );
 
       l0Anchor.classList.add('siteheader-has-subnav');
       l0Anchor.append(l0ElSpan);
@@ -122,11 +122,11 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
       loginError,
       loginBody,
       loginCta,
-      loginMessage
+      loginMessage,
     ] = Array.from(headerFragment.querySelector('.siteheader.megamenu-loginnav')?.children);
     const [
       registerHeader,
-      registerBody
+      registerBody,
     ] = Array.from(headerFragment.querySelector('.siteheader.megamenu-registernav')?.children);
 
     const megamenuInfo = Array.from(headerFragment.querySelectorAll('[class^="siteheader megamenu-"]'));
@@ -152,9 +152,7 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
     if (logoInfo) {
       logoWrapperStr = `<div class='siteheader-logo-wrapper'>
         <a href='${logoInfo.querySelector('a').getAttribute('href')}'>
-          <img src='${
-            logoInfo.querySelector('a').innerHTML
-          }' alt='Wellmark Logo'>
+          <img src='${logoInfo.querySelector('a').innerHTML}' alt='Wellmark Logo'>
         </a>
       </div>`;
     }
@@ -257,9 +255,7 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
       </div>`;
     }
 
-    headerFragment.innerHTML =
-
-    `<div class="siteheader-outer"><div class="siteheader-inner">
+    headerFragment.innerHTML = `<div class="siteheader-outer"><div class="siteheader-inner">
       ${logoWrapperStr}
       ${searchSectionStartStr}
       ${searchWrapperStr}
@@ -267,15 +263,6 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
       ${logoutWrapperStr}
       ${searchSectionEndStr}
     </div></div>`;
-
-    // '<div class="siteheader-outer"><div class="siteheader-inner">'
-    // + logoWrapperStr
-    // + searchSectionStartStr
-    // + searchWrapperStr
-    // + loginWrapperDesktopStr
-    // + logoutWrapperStr
-    // + searchSectionEndStr
-    // + '</div></div>';
 
     thisBlock.append(headerFragment);
 
