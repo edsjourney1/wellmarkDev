@@ -55,7 +55,7 @@ const formMainNavigation = (
 
       const l0Anchor = l0El.querySelector('a');
       const currentMegamenuInfo = megamenuInfo.find(
-        (infoEl) => infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`
+        (infoEl) => infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`,
       ));
 
       l0Anchor.classList.add('siteheader-has-subnav');
@@ -117,10 +117,17 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
       logoutInfo,
     ] = Array.from(headerFragment.querySelector('.siteheader.siteheader-default > div:first-child')?.children);
 
-    const [loginHeader, loginError, loginBody, loginCta, loginMessage]
-      = Array.from(headerFragment.querySelector('.siteheader.megamenu-loginnav')?.children);
-    const [registerHeader, registerBody]
-      = Array.from(headerFragment.querySelector('.siteheader.megamenu-registernav')?.children);
+    const [
+      loginHeader,
+      loginError,
+      loginBody,
+      loginCta,
+      loginMessage
+    ] = Array.from(headerFragment.querySelector('.siteheader.megamenu-loginnav')?.children);
+    const [
+      registerHeader,
+      registerBody
+    ] = Array.from(headerFragment.querySelector('.siteheader.megamenu-registernav')?.children);
 
     const megamenuInfo = Array.from(headerFragment.querySelectorAll('[class^="siteheader megamenu-"]'));
 
@@ -145,9 +152,9 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
     if (logoInfo) {
       logoWrapperStr = `<div class='siteheader-logo-wrapper'>
         <a href='${logoInfo.querySelector('a').getAttribute('href')}'>
-            <img src='${
-              logoInfo.querySelector('a').innerHTML
-            }' alt='Wellmark Logo'>
+          <img src='${
+            logoInfo.querySelector('a').innerHTML
+          }' alt='Wellmark Logo'>
         </a>
       </div>`;
     }
@@ -161,15 +168,18 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
     let loginFieldsDesktopStr = '<form><div>';
     let loginFieldsMobileStr = '<form><div>';
 
-    const loginformDesktop = generateLoginForm(Array.from(loginBody?.children), 0,);
-    const loginformMobile = generateLoginForm(Array.from(loginBody?.children), 1,);
+    const loginformDesktop = generateLoginForm(Array.from(loginBody?.children), 0);
+    const loginformMobile = generateLoginForm(Array.from(loginBody?.children), 1);
 
     loginFieldsDesktopStr += `${loginformDesktop}</div><div><button type='submit'>
       ${loginCta.children[0].querySelector('p').innerHTML}</button>
-      ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
+      ${loginCta.children[1].querySelector('p').innerHTML}</div>
+    </form>`;
+    
     loginFieldsMobileStr += `${loginformMobile}</div><div><button type='submit'>
       ${loginCta.children[0].querySelector('p').innerHTML}</button>
-      ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
+      ${loginCta.children[1].querySelector('p').innerHTML}</div>
+    </form>`;
 
     let loginMsgEl;
     const loginMsgSelector = loginMessage?.children[0]?.querySelector('p');
@@ -248,14 +258,24 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
     }
 
     headerFragment.innerHTML =
-      '<div class="siteheader-outer"><div class="siteheader-inner">'
-      + logoWrapperStr
-      + searchSectionStartStr
-      + searchWrapperStr
-      + loginWrapperDesktopStr
-      + logoutWrapperStr
-      + searchSectionEndStr
-      + '</div></div>';
+
+    `<div class="siteheader-outer"><div class="siteheader-inner">
+      ${logoWrapperStr}
+      ${searchSectionStartStr}
+      ${searchWrapperStr}
+      ${loginWrapperDesktopStr}
+      ${logoutWrapperStr}
+      ${searchSectionEndStr}
+    </div></div>`;
+
+    // '<div class="siteheader-outer"><div class="siteheader-inner">'
+    // + logoWrapperStr
+    // + searchSectionStartStr
+    // + searchWrapperStr
+    // + loginWrapperDesktopStr
+    // + logoutWrapperStr
+    // + searchSectionEndStr
+    // + '</div></div>';
 
     thisBlock.append(headerFragment);
 

@@ -94,11 +94,17 @@ export const formBlogMenu = (blogFragment) => {
   const headerSection = document.createElement('section');
   headerSection.className = blogFragment.className;
 
-  const [
-    blogHeaderTop,
-    blogHeaderNavCta,
-    blogHeaderNav,
-  ] = blogFragment?.querySelector('.siteheader')?.children;
+  let blogHeaderTop;
+  let blogHeaderNavCta;
+  let blogHeaderNav;
+
+  if (blogFragment?.querySelector('.siteheader')) {
+    [
+      blogHeaderTop,
+      blogHeaderNavCta,
+      blogHeaderNav
+    ] = blogFragment.querySelector('.siteheader').children;
+  }
 
   const topColorEl = blogHeaderTop?.children[1]?.querySelector('p');
   const bottomColorEl = blogHeaderTop?.children[2]?.querySelector('p');
