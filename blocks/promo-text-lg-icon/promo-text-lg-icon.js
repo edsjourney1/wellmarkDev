@@ -11,8 +11,8 @@ export default function decorate(block) {
   const heading = document.createElement('h2');
   heading.append(title);
   heading.classList.add('title');
-  if (svg.innerHTML !== '') {
-    div2.append(svg, heading);
+  if (svg.innerHTML === '') {
+    svg.classList.add('none');
   }
   div2.append(heading);
   const paragraph = document.createElement('p');
