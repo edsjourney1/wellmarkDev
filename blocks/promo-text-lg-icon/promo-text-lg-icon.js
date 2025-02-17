@@ -1,5 +1,8 @@
 export default function decorate(block) {
-  const svgIcon = block.children[3]?.children[0]?.children[0];
+  let svgIcon;
+  if (block.children[3] !== '' || block.children[3] !== undefined) {
+    svgIcon = block.children[3]?.children[0]?.children[0];
+  }
   const title = block.children[0]?.textContent;
   const description = block.children[1]?.textContent;
   const div = document.createElement('div');
