@@ -2,7 +2,7 @@ export default function decorate(block) {
   /* change to ul, li */
   const imageWrapperDiv = block.parentElement;
   const title = block.children[0].textContent;
-  if (title.textContent.trim() === '') {
+  if (title.textContent.trim() !== '') {
     const mainHeading = document.createElement('h3');
     mainHeading.classList.add('promo-no-image-heading');
     mainHeading.textContent = `${title}`;
