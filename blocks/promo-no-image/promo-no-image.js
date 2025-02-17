@@ -5,11 +5,8 @@ export default function decorate(block) {
   const mainHeading = document.createElement('h3');
   mainHeading.classList.add('promo-no-image-heading');
   mainHeading.textContent = `${title}`;
-  imageWrapperDiv.prepend(mainHeading);
-  console.log(mainHeading, mainHeading.textContent);
   if (mainHeading.textContent.trim() === '') {
-    console.log('entered');
-    mainHeading.classList.remove('promo-no-image-heading');
+    imageWrapperDiv.prepend(mainHeading);
   }
   const ul = document.createElement('ul');
   const promoClass = `promo-no-image-${block.children.length - 1}-column`;
