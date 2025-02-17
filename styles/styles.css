@@ -67,7 +67,7 @@ a.button.primary .icon i, .mktoButtonRow.primary .icon i, form.eds-mkto-form.mkt
 button.primary .icon i {
   font-size: 15px;
   color: #ffffff;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
 }
 a.button.primary:hover, .mktoButtonRow.primary:hover, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.primary:hover,
 button.primary:hover {
@@ -114,7 +114,7 @@ a.button.secondary .icon i, .mktoButtonRow.secondary .icon i, form.eds-mkto-form
 button.secondary .icon i {
   font-size: 15px;
   color: #005589;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
 }
 a.button.secondary:has(.icon):hover .icon, .mktoButtonRow.secondary:has(.icon):hover .icon, form.eds-mkto-form.mktoForm .mktoButtonWrap .mktoButton.secondary:has(.icon):hover .icon,
 button.secondary:has(.icon):hover .icon {
@@ -141,7 +141,7 @@ a.button.disabled .icon i, .mktoButtonRow.disabled .icon i, form.eds-mkto-form.m
 button.disabled .icon i {
   font-size: 15px;
   color: #4b4c4d;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
 }
 
 .blue-550 .button-container .button.primary {
@@ -155,7 +155,7 @@ button.disabled .icon i {
 .blue-550 .button-container .button.primary .icon i {
   font-size: 15px;
   color: #005589;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
 }
 .blue-550 .button-container .button.primary:has(.icon):hover .icon {
   height: auto;
@@ -185,7 +185,7 @@ button.disabled .icon i {
 .blue-550 .button-container .button.secondary .icon i {
   font-size: 15px;
   color: #ffffff;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
 }
 .blue-550 .button-container .button.secondary:has(.icon):hover .icon {
   height: auto;
@@ -216,7 +216,7 @@ button.disabled .icon i {
 .background-blue-550 .button-container .button.primary .icon i {
   font-size: 15px;
   color: #005589;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
 }
 .background-blue-550 .button-container .button.primary:focus {
   color: #0f3659;
@@ -236,7 +236,7 @@ button.disabled .icon i {
 .background-blue-550 .button-container .button.secondary .icon i {
   font-size: 15px;
   color: #ffffff;
-  padding: 0 12px 0 0;
+  padding: 0 6px 0 0;
 }
 .background-blue-550 .button-container .button.secondary:hover {
   background-color: rgba(255, 255, 255, 0.1882352941);
@@ -524,7 +524,7 @@ a:any-link {
 .section .default-content-wrapper h2 .icon i {
   font-size: 32px;
   color: #4b4c4d;
-  margin-left: 12px;
+  margin-left: 6px;
 }
 .section .default-content-wrapper h3 .icon {
   height: auto;
@@ -533,7 +533,7 @@ a:any-link {
 .section .default-content-wrapper h3 .icon i {
   font-size: 24px;
   color: #4b4c4d;
-  margin-left: 12px;
+  margin-left: 6px;
 }
 .section .default-content-wrapper h4 .icon {
   height: auto;
@@ -542,7 +542,7 @@ a:any-link {
 .section .default-content-wrapper h4 .icon i {
   font-size: 20px;
   color: #4b4c4d;
-  margin-left: 12px;
+  margin-left: 6px;
 }
 .section .default-content-wrapper h5 .icon {
   height: auto;
@@ -551,7 +551,7 @@ a:any-link {
 .section .default-content-wrapper h5 .icon i {
   font-size: 18px;
   color: #4b4c4d;
-  margin-left: 12px;
+  margin-left: 6px;
 }
 .section .default-content-wrapper h6 .icon {
   height: auto;
@@ -560,7 +560,7 @@ a:any-link {
 .section .default-content-wrapper h6 .icon i {
   font-size: 16px;
   color: #4b4c4d;
-  margin-left: 12px;
+  margin-left: 6px;
 }
 .section .default-content-wrapper p {
   margin: 0;
@@ -576,7 +576,6 @@ a:any-link {
 }
 .section .default-content-wrapper p:has(img) {
   width: 100%;
-  text-align: center;
 }
 @media (max-width: 480px) {
   .section .default-content-wrapper p {
@@ -595,11 +594,11 @@ a:any-link {
 .section .default-content-wrapper p .icon i {
   font-size: 16px;
   color: #005589;
-  margin: 0 6px 0 12px;
+  margin: 0 6px;
 }
 .section .default-content-wrapper p .icon.icon-solid--circle-check i {
   font-size: 15px;
-  margin-right: 12px;
+  margin-right: 6px;
 }
 .section .default-content-wrapper p .icon.icon-solid--circle-check i.fa-solid.fa-circle-check {
   color: green;
@@ -642,8 +641,20 @@ a:any-link {
 .section .default-content-wrapper p.button-container a.button.primary {
   font-size: 18px;
 }
+.section .default-content-wrapper p.button-container a.button.primary sup {
+  top: -0.5em;
+  position: relative;
+  vertical-align: baseline;
+  font-size: 13.5px;
+}
 .section .default-content-wrapper p.button-container a.button.secondary {
   font-size: 18px;
+}
+.section .default-content-wrapper p.button-container a.button.secondary sup {
+  top: -0.5em;
+  position: relative;
+  vertical-align: baseline;
+  font-size: 13.5px;
 }
 .section .default-content-wrapper p.button-container a:has(.icon).button.primary {
   padding-bottom: 12px;
@@ -683,7 +694,7 @@ a:any-link {
 .section .default-content-wrapper p.button-container a:has(.icon).button.disabled .icon i {
   font-size: 15px;
   color: #4b4c4d;
-  margin: 0 12px 0 0;
+  margin: 0 6px 0 0;
 }
 .section .default-content-wrapper p.button-container a.button {
   margin-top: 12px;
@@ -707,10 +718,9 @@ a:any-link {
 .section .default-content-wrapper p:has(a) .icon i {
   font-size: 16px;
   color: #005589;
-  margin: 0 6px 0 12px;
+  margin: 0 6px 0 6px;
 }
 .section .default-content-wrapper ul {
-  padding-left: 24px;
   padding-bottom: 24px;
   margin: 0;
 }
@@ -748,13 +758,12 @@ a:any-link {
 .section .default-content-wrapper ul li .icon i {
   font-size: 16px;
   color: #005589;
-  margin: 0 6px 0 12px;
+  margin: 0 6px;
 }
 .section .default-content-wrapper ul li:last-child {
   padding-bottom: 0;
 }
 .section .default-content-wrapper ol {
-  padding-left: 24px;
   padding-bottom: 24px;
   margin: 0;
 }
@@ -792,7 +801,7 @@ a:any-link {
 .section .default-content-wrapper ol li .icon i {
   font-size: 16px;
   color: #005589;
-  margin: 0 6px 0 12px;
+  margin: 0 6px;
 }
 .section .default-content-wrapper ol li:last-child {
   padding-bottom: 0;
@@ -816,7 +825,7 @@ a:any-link {
 .section.body-small .default-content-wrapper p .icon i {
   font-size: 12px;
   color: #4b4c4d;
-  margin: 0 6px 0 12px;
+  margin: 0 6px;
 }
 @media (max-width: 480px) {
   .section.body-small .default-content-wrapper p {
@@ -844,7 +853,7 @@ a:any-link {
 .section.body-small .default-content-wrapper p a .icon i {
   font-size: 14px;
   color: #005589;
-  margin-left: 12px;
+  margin-left: 6px;
 }
 @media (max-width: 480px) {
   .section.body-small .default-content-wrapper p a {
@@ -884,6 +893,107 @@ a:any-link {
 }
 .section .display-wrapper .display.block p {
   margin: 0;
+}
+.section.resources-section .default-content-wrapper {
+  border-top: 2px solid #c2c2c3;
+  padding-top: 16px;
+  padding-bottom: 120px;
+}
+.section.resources-section .default-content-wrapper p {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 20px;
+  padding: 16px 0 0 0;
+}
+.section.resources-section .default-content-wrapper p:has(strong) {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+}
+.section.resources-section .default-content-wrapper p .button-container {
+  display: block;
+  padding: 0;
+}
+.section.resources-section .default-content-wrapper p a {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 20px;
+}
+
+.article-page .section .default-content-wrapper h1 {
+  width: 100%;
+}
+.article-page .section .default-content-wrapper p:has(img) {
+  width: calc((100% - 15px) / 12 * 8);
+}
+@media (max-width: 480px) {
+  .article-page .section .default-content-wrapper p:has(img) {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .article-page .section .default-content-wrapper p:has(img) {
+    width: 100%;
+  }
+}
+.article-page .section .blog-article-information-wrapper ~ .default-content-wrapper {
+  padding-top: 16px;
+}
+.article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+  float: right;
+  max-width: calc((100% - 60px) / 12 * 4);
+}
+@media (max-width: 480px) {
+  .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+    float: unset;
+    min-width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+    float: unset;
+    min-width: 100%;
+  }
+}
+
+.newsroom-page .section .default-content-wrapper h1 {
+  width: 100%;
+}
+.newsroom-page .section .default-content-wrapper p:has(img) {
+  width: calc((100% - 15px) / 12 * 8);
+}
+@media (max-width: 480px) {
+  .newsroom-page .section .default-content-wrapper p:has(img) {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .newsroom-page .section .default-content-wrapper p:has(img) {
+    width: 100%;
+  }
+}
+.newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper {
+  padding-top: 16px;
+}
+.newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+  float: right;
+  max-width: calc((100% - 60px) / 12 * 4);
+}
+@media (max-width: 480px) {
+  .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+    float: unset;
+    min-width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
+    float: unset;
+    min-width: 100%;
+  }
 }
 
 /* wellmark color start */
@@ -941,6 +1051,9 @@ a:any-link {
 }
 body.appear {
   display: block;
+}
+body.external-popup-open {
+  overflow: hidden;
 }
 
 header.megamenu-wrapper {

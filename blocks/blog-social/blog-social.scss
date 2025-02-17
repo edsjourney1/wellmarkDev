@@ -24,6 +24,10 @@
         }
         i{
             color: $--gray-700;
+            cursor: pointer;
+        }
+        p{
+            margin: 0;
         }
         .social-share{
             display: flex;
@@ -40,21 +44,38 @@
                 gap: 36px;
             }
             .like{
+                @include for-laptop{
+                    padding-bottom: 26px;
+                }
                 .like-icons{
                     display: flex;
                     gap: 24px;
                     padding-top: 16px;
+                    @include for-laptop{
+                        padding-top: 12px;
+                    }
                     i{
                         font-size: 32px;
                         height: 28px;
                     }
                 }
             }
+            .feedback{
+                display: none;
+                color: $--gray-700;
+                font-family: roboto, sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+                padding-top: 24px;
+            }
             .share{
                 .share-icons{
                     display: flex;
                     gap: 12px;
                     padding-top: 16px;
+                    @include for-laptop{
+                        padding-top: 32px;
+                    }
                     span{
                         width: 44px;
                         height: 44px;
@@ -63,6 +84,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        cursor: pointer;
                         i{
                             font-size: 20px;
                         }

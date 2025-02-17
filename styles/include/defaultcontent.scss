@@ -78,7 +78,7 @@
         i{
           font-size: 32px;
           color: $--gray-700;
-          margin-left: $--spacing-s;
+          margin-left: 6px;
         }
       }
     }
@@ -90,7 +90,7 @@
         i{
           font-size: 24px;
           color: $--gray-700;
-          margin-left: $--spacing-s;
+          margin-left: 6px;
         }
       }
     }
@@ -102,7 +102,7 @@
         i{
           font-size: 20px;
           color: $--gray-700;
-          margin-left: $--spacing-s;
+          margin-left: 6px;
         }
       }
     }
@@ -114,7 +114,7 @@
         i{
           font-size: 18px;
           color: $--gray-700;
-          margin-left: $--spacing-s;
+          margin-left: 6px;
         }
       }
     }
@@ -126,14 +126,13 @@
         i{
           font-size: 16px;
           color: $--gray-700;
-          margin-left: $--spacing-s;
+          margin-left: 6px;
         }
       }
     }
     p {
       &:has(img){
         width: 100%;
-        text-align: center;
       }
       margin: 0;
       padding-bottom: $--spacing-l;
@@ -157,7 +156,7 @@
         i{
           font-size: 16px;
           color: $--blue-675;
-          margin: 0 6px 0 $--spacing-s;
+          margin: 0 6px;
         }
         &.icon-solid--circle-check{
           i{
@@ -168,7 +167,7 @@
               }
             }
             font-size: 15px;
-            margin-right: $--spacing-s;
+            margin-right: 6px;
           }
         }
       }
@@ -205,9 +204,21 @@
           &.button{
             &.primary{
               font-size: 18px;
+              sup{
+                top: -.5em;
+                position: relative;
+                vertical-align: baseline;
+                font-size: 13.5px;
+              }
             }
             &.secondary{
               font-size: 18px;
+              sup{
+                top: -.5em;
+                position: relative;
+                vertical-align: baseline;
+                font-size: 13.5px;
+              }
             }
           }
           &:has(.icon){
@@ -252,7 +263,7 @@
                   i{
                     font-size: 15px;
                     color: $--gray-700;
-                    margin: 0 $--spacing-s 0 0;
+                    margin: 0 6px 0 0;
                   }
                 }
               }
@@ -287,12 +298,11 @@
         i{
           font-size: 16px;
           color: $--blue-675;
-          margin: 0 6px 0 $--spacing-s;
+          margin: 0 6px 0 6px;
         }
       }
     }
     ul {
-      padding-left: $--spacing-l;
       padding-bottom: $--spacing-l;
       margin: 0;
       @include for-laptop {
@@ -321,7 +331,7 @@
           i{
             font-size: 16px;
             color: $--blue-675;
-            margin: 0 6px 0 $--spacing-s;
+            margin: 0 6px;
           }
         }
         &:last-child{
@@ -330,7 +340,6 @@
       }
     }
     ol {
-      padding-left: $--spacing-l;
       padding-bottom: $--spacing-l;
       margin: 0;
       @include for-laptop {
@@ -359,7 +368,7 @@
           i{
             font-size: 16px;
             color: $--blue-675;
-            margin: 0 6px 0 $--spacing-s;
+            margin: 0 6px;
           }
         }
         &:last-child{
@@ -387,7 +396,7 @@
           i{
             font-size: 12px;
             color: $--gray-700;
-            margin: 0 6px 0 $--spacing-s;
+            margin: 0 6px;
           }
         }
         @include for-mobile {
@@ -412,7 +421,7 @@
             i{
               font-size: 14px;
               color: $--blue-675;
-              margin-left: $--spacing-s;
+              margin-left: 6px;
             }
           }
           @include for-mobile {
@@ -446,6 +455,143 @@
         }
         p{
           margin: 0;
+        }
+      }
+    }
+  }
+  &.resources-section{
+    .default-content-wrapper {
+      border-top: 2px solid $--gray-225;
+      padding-top: 16px;
+      padding-bottom: 120px;
+      p{
+        width: 100%;
+        &:has(strong){
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0;
+        }
+        font-size: 12px;
+        font-weight: 400;
+        text-align: left;
+        line-height: 20px;
+        padding: 16px 0 0 0;
+        .button-container{
+          display: block;
+          padding: 0;
+        }
+        a{
+          margin: 0;
+          font-size: 12px;
+          font-weight: 400;
+          text-align: left;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+.article-page {
+  .section {
+    .default-content-wrapper{
+      h1{
+        width: 100%;
+      }
+      p {
+        &:has(img){
+          width: calc((100% - 15px) / 12* 8);
+        }
+      }
+      @include for-mobile{
+        p {
+          &:has(img){
+            width: 100%;
+          }
+        }
+      }
+      @include for-tablet{
+        p {
+          &:has(img){
+            width: 100%;
+          }
+        }
+      }
+    }
+    .blog-article-information-wrapper ~ .default-content-wrapper {
+      padding-top: 16px;
+      p:has(picture){
+        &:first-of-type{
+          float: right;
+          max-width: calc((100% - 60px) / 12* 4);
+        }
+      }
+      @include for-mobile{
+        p:has(picture){
+          &:first-of-type{
+            float: unset;
+            min-width: 100%;
+          }
+        }
+      }
+      @include for-tablet{
+        p:has(picture){
+          &:first-of-type{
+            float: unset;
+            min-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.newsroom-page{
+  .section {
+    .default-content-wrapper{
+      h1{
+        width: 100%;
+      }
+      p {
+        &:has(img){
+          width: calc((100% - 15px) / 12* 8);
+        }
+      }
+      @include for-mobile{
+        p {
+          &:has(img){
+            width: 100%;
+          }
+        }
+      }
+      @include for-tablet{
+        p {
+          &:has(img){
+            width: 100%;
+          }
+        }
+      }
+    }
+    .blog-article-information-wrapper ~ .default-content-wrapper {
+      padding-top: 16px;
+      p:has(picture){
+        &:first-of-type{
+          float: right;
+          max-width: calc((100% - 60px) / 12* 4);
+        }
+      }
+      @include for-mobile{
+        p:has(picture){
+          &:first-of-type{
+            float: unset;
+            min-width: 100%;
+          }
+        }
+      }
+      @include for-tablet{
+        p:has(picture){
+          &:first-of-type{
+            float: unset;
+            min-width: 100%;
+          }
         }
       }
     }
