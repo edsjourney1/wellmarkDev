@@ -34,7 +34,7 @@ export const enableAutocomplete = (searchInput) => {
     let itemArr2 = [];
     let receivedCategories;
     let thisEl;
-    // eslint-disable-next-line no-new new-cap
+    // eslint-disable-next-line no-new, new-cap
     new window.autoComplete({
       name: searchInput,
       selector: `#${searchInput}`,
@@ -93,8 +93,11 @@ export const enableAutocomplete = (searchInput) => {
           itemArr2 = data.match.split('---');
           // eslint-disable-next-line prefer-destructuring
           if (itemArr[0] === 'a') {
+            // eslint-disable-next-line prefer-destructuring
             item.innerHTML = itemArr2[1];
+            // eslint-disable-next-line prefer-destructuring
             item.setAttribute('data-href', itemArr[2]);
+            // eslint-disable-next-line prefer-destructuring
             item.setAttribute('data-category', itemArr[3]);
             item.classList.add('siteheader-autocomplete-item');
           }
