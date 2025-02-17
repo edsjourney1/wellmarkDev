@@ -2,11 +2,13 @@ export default function decorate(block) {
   /* change to ul, li */
   const imageWrapperDiv = block.parentElement;
   const title = block.children[0].textContent;
-  if (title.textContent.trim() !== '') {
-    const mainHeading = document.createElement('h3');
-    mainHeading.classList.add('promo-no-image-heading');
-    mainHeading.textContent = `${title}`;
-    imageWrapperDiv.prepend(mainHeading);
+  const mainHeading = document.createElement('h3');
+  mainHeading.classList.add('promo-no-image-heading');
+  mainHeading.textContent = `${title}`;
+  imageWrapperDiv.prepend(mainHeading);
+  if (mainHeading.textContent.trim() === '') {
+    const headingCheck = document.querySelector('.promo-no-image-heading');
+    headingCheck.remove();
   }
   const ul = document.createElement('ul');
   const promoClass = `promo-no-image-${block.children.length - 1}-column`;
