@@ -10,9 +10,9 @@ export default function decorate(block) {
   heading.classList.add('title');
   if (svg.innerHTML === '') {
     svg.classList.add('none');
-    div2.append(svg, heading);
-  } else {
     div2.append(heading);
+  } else {
+    div2.append(svg, heading);
   }
   const paragraph = document.createElement('p');
   paragraph.classList.add('description');
