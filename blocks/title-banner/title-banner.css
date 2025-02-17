@@ -169,6 +169,9 @@
     margin: 16px 0 0 0;
   }
 }
+.title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-textcont .tbnr-btn p:has(span.icon) {
+  padding: 0 6px;
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
   .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-pic {
     max-width: calc((100% - 30px) / 12 * 6);
