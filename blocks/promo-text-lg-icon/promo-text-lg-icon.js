@@ -12,6 +12,7 @@ export default function decorate(block) {
   heading.append(title);
   heading.classList.add('title');
   div2.append(svg, heading);
+  console.log(block.children[3]);
   if (block.children[3] === '' || block.children[3] === undefined) {
     console.log('hello');
   }
