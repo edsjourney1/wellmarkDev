@@ -14,7 +14,7 @@ export default function decorate(block) {
   div2.append(svg, heading);
   if (block.children[3] === '' || block.children[3] === undefined) {
     const iconCheck = document.querySelector('.svg-icon');
-    iconCheck.remove();
+    console.log(iconCheck);
   }
   const paragraph = document.createElement('p');
   paragraph.classList.add('description');
