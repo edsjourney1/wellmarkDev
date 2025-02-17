@@ -173,7 +173,7 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
       ${loginCta.children[0].querySelector('p').innerHTML}</button>
       ${loginCta.children[1].querySelector('p').innerHTML}</div>
     </form>`;
-    
+
     loginFieldsMobileStr += `${loginformMobile}</div><div><button type='submit'>
       ${loginCta.children[0].querySelector('p').innerHTML}</button>
       ${loginCta.children[1].querySelector('p').innerHTML}</div>
@@ -287,7 +287,7 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
         navMaskEl,
         searchMaskEl,
         loginMaskEl,
-        loginWrapperMobileStr
+        loginWrapperMobileStr,
       );
     }
 

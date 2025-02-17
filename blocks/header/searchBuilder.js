@@ -11,16 +11,16 @@ export const searchBuilder = (searchInfo, searchToggle) => {
     <div class='siteheader-search-inner'>
       <div class='siteheader-search-content'>
         <form action='/' id='siteheader-search-form'>
-          <label for='siteheader-search-input'>${
-            searchInfo.querySelector('p:first-child em').innerHTML
-          }</label>
+          <label for='siteheader-search-input'>
+            ${searchInfo.querySelector('p:first-child em').innerHTML}
+          </label>
           <div class='siteheader-search-input-wrapper'>
-            <input type='search' name='header_search' id='header_search' autocorrect='off' autocomplete='off' autocapitalize='off' maxlength='2048' placeholder='${
-              searchInfo.querySelector('p:nth-child(2) em').innerHTML
-            }'/>
-            <button type='submit' aria-label='Search'>${
-              searchInfo.querySelector('p:last-child em').innerHTML
-            }</button>
+            <input type='search' name='header_search' id='header_search'
+              autocorrect='off' autocomplete='off' autocapitalize='off' maxlength='2048' placeholder='
+              ${searchInfo.querySelector('p:nth-child(2) em').innerHTML}'/>
+            <button type='submit' aria-label='Search'>
+              ${searchInfo.querySelector('p:last-child em').innerHTML}
+            </button>
           </div>
         </form>
       </div>
@@ -38,7 +38,7 @@ export const enableAutocomplete = (searchInput) => {
       name: searchInput,
       selector: `#${searchInput}`,
       data: {
-        src:  async () => { // query
+        src: async () => { // query
           try {
             // Fetch Data from external Source
             const response = await fetch('/content-fragments/sample-typeahead.json');
@@ -46,23 +46,21 @@ export const enableAutocomplete = (searchInput) => {
               // throw new Error(`Header Search Response status: ${response.status}`);
             }
             const json = await response.json();
-            
-            let keysArr = [...new Set((json.data || []).map(item => item.category))];
+
+            const keysArr = [...new Set((json.data || []).map((item) => item.category))];
             const valueArr = [];
 
             receivedCategories = keysArr;
-            
-            keysArr.forEach(key => {
+
+            keysArr.forEach((key) => {
               (json.data || []).forEach(el => {
-                if (el['category'] === key) {
-                  valueArr.push(`a---${el['name']}---${el['url']}---${key}`);
+                if (el.category === key) {
+                  valueArr.push(`a---${el.name}---${el.url}---${key}`);
                 }
               });
             });
-            
-            return valueArr;
 
-            // return json.data || [];
+            return valueArr;
           } catch (error) {
             return error;
           }
@@ -72,7 +70,7 @@ export const enableAutocomplete = (searchInput) => {
         tag: 'div',
         maxResults: 100,
         class: 'siteheader-autocomplete',
-        element: (list, data) => {
+        element: (list) => { // data
           (receivedCategories || []).forEach((cat) => {
             thisEl = list.querySelector(`[data-category='${cat}']`);
             const titleH4 = document.createElement('h4');
@@ -99,13 +97,12 @@ export const enableAutocomplete = (searchInput) => {
             item.classList.add('siteheader-autocomplete-item');
           }
         },
-        highlight: true
       },
       threshold: 3,
       debounce: 250,
     });
 
-    document.querySelector(`#${searchInput}`).addEventListener(`selection`, function (event) {
+    document.querySelector(`#${searchInput}`).addEventListener('selection', function (event) {
       const link = ((event.detail?.selection?.value || '').split('---') || [])[2];
       if (link) {
         alert(`TO BE IMPLEMENTED: Must go to ${link}`);
