@@ -35,37 +35,58 @@
     padding: 24px 0;
   }
 }
-.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
-  color: #4b4c4d;
-  font-family: museo, sans-serif;
-  font-size: 32px;
-  line-height: 36px;
-  font-weight: 700;
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content {
   text-align: center;
   padding: 52px 108px 52px 107px;
-  margin: 0;
+  font-family: museo, sans-serif;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content {
     padding: 52px 82px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content {
     padding: 52px 163px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 752.5px) {
-  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content {
     padding: 52px 73px;
   }
 }
 @media (max-width: 480px) {
-  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p {
-    font-size: 28px;
-    line-height: 33px;
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content {
     padding: 36px 0;
   }
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content p:first-child:not(:only-child) {
+  padding-bottom: 24px;
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content {
+  color: #4b4c4d;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .authorname {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .authorposition {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0;
 }
 .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-top, .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .icon-bottom {
   position: relative;
