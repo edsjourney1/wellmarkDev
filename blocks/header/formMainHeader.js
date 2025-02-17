@@ -54,9 +54,9 @@ const formMainNavigation = (
       l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
 
       const l0Anchor = l0El.querySelector('a');
-      const currentMegamenuInfo = megamenuInfo.find((infoEl) => {
-        return infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`);
-      });
+      const currentMegamenuInfo = megamenuInfo.find(
+        (infoEl) => infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`
+      ));
 
       l0Anchor.classList.add('siteheader-has-subnav');
       l0Anchor.append(l0ElSpan);
@@ -115,19 +115,17 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
       searchToggle,
       loginInfo,
       logoutInfo,
-    ] = Array.from( headerFragment.querySelector('.siteheader.siteheader-default > div:first-child')?.children);
+    ] = Array.from(headerFragment.querySelector('.siteheader.siteheader-default > div:first-child')?.children);
 
-    const [loginHeader, loginError, loginBody, loginCta, loginMessage,] = Array.from(
-      headerFragment.querySelector('.siteheader.megamenu-loginnav')?.children
-    );
-    const [registerHeader, registerBody,] = Array.from(
-      headerFragment.querySelector('.siteheader.megamenu-registernav')?.children
-    );
+    const [loginHeader, loginError, loginBody, loginCta, loginMessage]
+      = Array.from(headerFragment.querySelector('.siteheader.megamenu-loginnav')?.children);
+    const [registerHeader, registerBody]
+      = Array.from(headerFragment.querySelector('.siteheader.megamenu-registernav')?.children);
 
     const megamenuInfo = Array.from(headerFragment.querySelectorAll('[class^="siteheader megamenu-"]'));
 
-    const [navCtaEl,] = Array.from(headerFragment.querySelector('.siteheader.siteheader-default > div:nth-child(2)').children);
-    const [navUlEl,] = Array.from(headerFragment.querySelector('.siteheader.siteheader-default > div:nth-child(3)').children);
+    const [navCtaEl] = Array.from(headerFragment.querySelector('.siteheader.siteheader-default > div:nth-child(2)').children);
+    const [navUlEl] = Array.from(headerFragment.querySelector('.siteheader.siteheader-default > div:nth-child(3)').children);
 
     const navUl = navUlEl?.querySelector('ul');
 
@@ -146,20 +144,18 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
     let logoWrapperStr = '';
     if (logoInfo) {
       logoWrapperStr = `<div class='siteheader-logo-wrapper'>
-          <a href='${logoInfo.querySelector('a').getAttribute('href')}'>
-              <img src='${
-                logoInfo.querySelector('a').innerHTML
-              }' alt='Wellmark Logo'>
-          </a>
+        <a href='${logoInfo.querySelector('a').getAttribute('href')}'>
+            <img src='${
+              logoInfo.querySelector('a').innerHTML
+            }' alt='Wellmark Logo'>
+        </a>
       </div>`;
     }
 
-    const searchSectionStartStr = `<div class='siteheader-right-section'>`;
-    const searchSectionEndStr = `</div>`;
+    const searchSectionStartStr = '<div class="siteheader-right-section">';
+    const searchSectionEndStr = '</div>';
 
-
-    let searchWrapperStr = searchBuilder(searchInfo, searchToggle);
-
+    const searchWrapperStr = searchBuilder(searchInfo, searchToggle);
     let loginWrapperDesktopStr = '';
     let loginWrapperMobileStr = '';
     let loginFieldsDesktopStr = '<form><div>';
@@ -168,19 +164,16 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
     const loginformDesktop = generateLoginForm(Array.from(loginBody?.children), 0,);
     const loginformMobile = generateLoginForm(Array.from(loginBody?.children), 1,);
 
-    loginFieldsDesktopStr += `${loginformDesktop}</div><div><button type='submit'>${
-      loginCta.children[0].querySelector('p').innerHTML
-    }</button>
-    ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
-
-    loginFieldsMobileStr += `${loginformMobile}</div><div><button type='submit'>${
-      loginCta.children[0].querySelector('p').innerHTML
-    }</button>
-    ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
+    loginFieldsDesktopStr += `${loginformDesktop}</div><div><button type='submit'>
+      ${loginCta.children[0].querySelector('p').innerHTML}</button>
+      ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
+    loginFieldsMobileStr += `${loginformMobile}</div><div><button type='submit'>
+      ${loginCta.children[0].querySelector('p').innerHTML}</button>
+      ${loginCta.children[1].querySelector('p').innerHTML}</div></form>`;
 
     let loginMsgEl;
     const loginMsgSelector = loginMessage?.children[0]?.querySelector('p');
-    
+
     let loginMsgStr = '';
     if (loginMsgSelector) {
       loginMsgEl = alertFragment
