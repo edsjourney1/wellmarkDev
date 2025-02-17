@@ -4,7 +4,8 @@ export default function decorate(block) {
   const description = block.children[1]?.textContent;
   const div = document.createElement('div');
   const div2 = document.createElement('div');
-  const svg = svgIcon;
+  let svg;
+  svg.innerHTML = svgIcon;
   const heading = document.createElement('h2');
   heading.append(title);
   heading.classList.add('title');
