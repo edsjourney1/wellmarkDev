@@ -33,9 +33,7 @@ const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
   const navEl = thisBlock.querySelector('.siteheader-mobile-wrapper > nav');
   const navArr = [];
 
-  const l0Links = Array.from(
-    thisBlock.querySelectorAll('.siteheader-has-subnav')
-  );
+  const l0Links = Array.from(thisBlock.querySelectorAll('.siteheader-has-subnav'));
   l0Links.forEach((link, index) => {
     navArr.push({
       index,
@@ -104,7 +102,7 @@ const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     loginWrapEl,
     navArr,
     navMaskEl,
-    loginMaskEl
+    loginMaskEl,
   );
 };
 

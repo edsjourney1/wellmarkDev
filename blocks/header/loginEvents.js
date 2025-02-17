@@ -4,12 +4,14 @@ import { closeAllBlogMenuItems } from './formBlogMenu.js';
 
 const activeCls = 'siteheader-active';
 
-const loginEventFn = (loginCtaEl,
+const loginEventFn = (
+  loginCtaEl,
   loginCtaWrapEl,
   loginWrapEl,
   navArr,
   navMaskEl,
-  loginMaskEl) => {
+  loginMaskEl,
+) => {
   loginCtaEl?.addEventListener('click', () => {
     if (loginCtaWrapEl.classList.contains(activeCls)) {
       loginCtaWrapEl.classList.remove(activeCls);

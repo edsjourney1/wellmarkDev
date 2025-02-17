@@ -27,7 +27,7 @@ const formMainNavigation = (
   navMaskEl,
   searchMaskEl,
   loginMaskEl,
-  loginWrapperMobileStr
+  loginWrapperMobileStr,
 ) => {
   const mobileBtnWrapperEl = document.createElement('div');
   mobileBtnWrapperEl.className = 'siteheader-mobile-wrapper';
@@ -51,15 +51,12 @@ const formMainNavigation = (
     if (l1Ul) {
       const l0ElSpan = document.createElement('span');
       l0ElSpan.className = 'icon icon-solid--chevron-down';
-      l0ElSpan.innerHTML =
-        '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
+      l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
 
       const l0Anchor = l0El.querySelector('a');
       const currentMegamenuInfo = megamenuInfo.find((infoEl) =>
-        infoEl.classList.contains(
-          `megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`
-        )
-      );
+        infoEl.classList.contains(`megamenu-${l0Anchor.innerHTML.split(' ').join('-').toLowerCase()}`
+      ));
 
       l0Anchor.classList.add('siteheader-has-subnav');
       l0Anchor.append(l0ElSpan);
@@ -98,7 +95,7 @@ const formMainNavigation = (
   addEvents(thisBlock, navMaskEl, searchMaskEl, loginMaskEl);
 };
 
-export const formMainHeader = (thisBlock, fragment, alertFragment) => {
+const formMainHeader = (thisBlock, fragment, alertFragment) => {
   const headerWrapper = thisBlock.closest('.header-wrapper');
   const headerFragment = fragment.querySelector('.siteheader.siteheader-default')?.closest('.siteheader-container');
 
@@ -309,3 +306,5 @@ export const formMainHeader = (thisBlock, fragment, alertFragment) => {
     }
   }
 };
+
+export default formMainHeader;

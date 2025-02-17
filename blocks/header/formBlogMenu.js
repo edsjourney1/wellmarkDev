@@ -1,6 +1,6 @@
 import { slideUp, slideDown } from '../../scripts/tools.js';
 
-let liBlogMenuArr = [];
+const liBlogMenuArr = [];
 const activeCls = 'siteheader-blog-has-subnav-active';
 const bodyEl = document.querySelector('body');
 
@@ -21,7 +21,7 @@ const initiateBlogSubnav = () => {
         closeAllBlogMenuItems();
       } else {
         liBlogMenuArr.forEach((item2) => {
-          if(item2.index === item.index) {
+          if (item2.index === item.index) {
             item2.isActive = true;
             item2.link.classList.add(activeCls);
             slideDown(item2.subnav, 175);
@@ -49,8 +49,7 @@ const attachBlogMenuEvents = (headerSection, bottomColorEl) => {
       }
       const l0ElSpan = document.createElement('span');
       l0ElSpan.className = 'icon icon-solid--chevron-down';
-      l0ElSpan.innerHTML =
-        '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
+      l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
 
       const currentLink = li.querySelector(':scope > a');
       currentLink.append(l0ElSpan);
@@ -94,11 +93,11 @@ const attachBlogMenuEvents = (headerSection, bottomColorEl) => {
 export const formBlogMenu = (blogFragment) => {
   const headerSection = document.createElement('section');
   headerSection.className = blogFragment.className;
-  
+
   const [blogHeaderTop, blogHeaderNavCta, blogHeaderNav] = blogFragment.querySelector('.siteheader')?.children;
 
-  const topColorEl = blogHeaderTop.children[1].querySelector('p');
-  const bottomColorEl = blogHeaderTop.children[2].querySelector('p');
+  const topColorEl = blogHeaderTop.children[1]?.querySelector('p');
+  const bottomColorEl = blogHeaderTop.children[2]?.querySelector('p');
 
   headerSection.classList.add('siteheader-blog');
   headerSection.innerHTML = `<div class='siteheader-blog-top-wrapper'>
