@@ -4,7 +4,12 @@ import { closeAllBlogMenuItems } from './formBlogMenu.js';
 
 const activeCls = 'siteheader-active';
 
-export const loginEventFn = (loginCtaEl, loginCtaWrapEl, loginWrapEl, navArr, navMaskEl, loginMaskEl) => {
+const loginEventFn = (loginCtaEl,
+  loginCtaWrapEl,
+  loginWrapEl,
+  navArr,
+  navMaskEl,
+  loginMaskEl) => {
   loginCtaEl?.addEventListener('click', () => {
     if (loginCtaWrapEl.classList.contains(activeCls)) {
       loginCtaWrapEl.classList.remove(activeCls);
@@ -21,3 +26,5 @@ export const loginEventFn = (loginCtaEl, loginCtaWrapEl, loginWrapEl, navArr, na
     }
   });
 };
+
+export default loginEventFn;

@@ -1,28 +1,17 @@
 import { closeAllBlogMenuItems } from './formBlogMenu.js';
-import { loginEventFn } from './loginEvents.js';
+import loginEventFn from './loginEvents.js';
 import { navClicks, closeAllNavItems } from './navClicks.js';
 
 const bodyElem = document.querySelector('body');
 const activeCls = 'siteheader-active';
 
-export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
-  const loginCtaWrapEl = thisBlock.querySelector(
-    '.siteheader-login-wrapper-cta'
-  );
+const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
+  const loginCtaWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-cta');
   const loginCtaEl = loginCtaWrapEl?.querySelector('button');
-  const loginWrapEl = thisBlock.querySelector(
-    '.siteheader-login-wrapper-outer'
-  );
-
-  const navCtaEl = thisBlock.querySelector(
-    '.siteheader-mobile-wrapper > button'
-  );
-  const searchParent = document.querySelector(
-    '.siteheader-search-wrapper > .siteheader-search-inner'
-  );
-  const searchCtaEl = document.querySelector(
-    '.siteheader-search-wrapper > button'
-  );
+  const loginWrapEl = thisBlock.querySelector('.siteheader-login-wrapper-outer');
+  const navCtaEl = thisBlock.querySelector('.siteheader-mobile-wrapper > button');
+  const searchParent = document.querySelector('.siteheader-search-wrapper > .siteheader-search-inner');
+  const searchCtaEl = document.querySelector('.siteheader-search-wrapper > button');
 
   searchCtaEl.addEventListener('click', () => {
     if (navCtaEl.classList.contains(activeCls)) {
@@ -97,7 +86,7 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     [
       document.querySelector(`.siteheader-mobile-wrapper nav > ul.${activeCls}`),
       document.querySelector(`.siteheader-login-wrapper.${activeCls}`),
-      document.querySelector(`.siteheader-blog-nav ul.siteheader-blog-has-subnav-active`),
+      document.querySelector('.siteheader-blog-nav ul.siteheader-blog-has-subnav-active'),
     ].forEach((container) => {
       if (container && (container !== event.target && !container.contains(event.target))) {
         closeAllNavItems(navArr, navMaskEl);
@@ -118,3 +107,5 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     loginMaskEl
   );
 };
+
+export default addEvents;

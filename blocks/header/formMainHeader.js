@@ -1,4 +1,4 @@
-import { addEvents } from './addEvents.js';
+import addEvents from './addEvents.js';
 import { formBlogMenu } from './formBlogMenu.js';
 import { enableAutocomplete, searchBuilder } from './searchBuilder.js';
 
@@ -110,7 +110,6 @@ export const formMainHeader = (thisBlock, fragment, alertFragment) => {
   } else if (urlArr.indexOf('blue-at-work') !== -1) {
     blogFragment = fragment.querySelector('.siteheader.siteheader-blog-blue-at-work')?.closest('.siteheader-container');
   }
-  // else if (urlArr.indexOf('blueink') !== -1) {}
 
   if (headerFragment) {
     const [logoInfo, searchInfo, searchToggle, loginInfo, logoutInfo] =
@@ -269,14 +268,14 @@ export const formMainHeader = (thisBlock, fragment, alertFragment) => {
     }
 
     headerFragment.innerHTML =
-      '<div class="siteheader-outer"><div class="siteheader-inner">' +
-      logoWrapperStr +
-      searchSectionStartStr +
-      searchWrapperStr +
-      loginWrapperDesktopStr +
-      logoutWrapperStr +
-      searchSectionEndStr +
-      '</div></div>';
+      '<div class="siteheader-outer"><div class="siteheader-inner">'
+      + logoWrapperStr
+      + searchSectionStartStr
+      + searchWrapperStr
+      + loginWrapperDesktopStr
+      + logoutWrapperStr
+      + searchSectionEndStr
+      + '</div></div>';
 
     thisBlock.append(headerFragment);
 
