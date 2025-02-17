@@ -7,12 +7,13 @@ export default function decorate(block) {
   const div2 = document.createElement('div');
   div2.classList.add('heading-icon-div');
   const svg = svgIcon;
-  const heading = document.createElement('h2');
-  heading.classList.add('title');
+  let heading;
   if (svgIcon) {
     div2.append(svg);
   }
   if (title) {
+    heading = document.createElement('h2');
+    heading.classList.add('title');
     heading.append(title);
   }
   div2.append(heading);
