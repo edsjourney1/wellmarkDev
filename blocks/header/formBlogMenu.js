@@ -8,7 +8,8 @@ export const closeAllBlogMenuItems = () => {
   liBlogMenuArr.forEach((item) => {
     item.isActive = false;
     item.link.classList.remove(activeCls);
-    slideUp(item.subnav, 150);
+    slideUp(item.subnav, 175);
+    item.link.closest('nav .siteheader-blog-menu > ul').classList.remove(activeCls);
   });
 };
 
@@ -23,13 +24,14 @@ const initiateBlogSubnav = () => {
           if(item2.index === item.index) {
             item2.isActive = true;
             item2.link.classList.add(activeCls);
-            slideDown(item2.subnav, 150);
+            slideDown(item2.subnav, 175);
           } else {
             item2.isActive = false;
             item2.link.classList.remove(activeCls);
-            slideUp(item2.subnav, 150);
+            slideUp(item2.subnav, 175);
           }
         });
+        item.link.closest('nav .siteheader-blog-menu > ul').classList.add(activeCls);
       }
     });
   });
@@ -71,7 +73,7 @@ const attachBlogMenuEvents = (headerSection, bottomColorEl) => {
     navBtn.addEventListener('click', () => {
       if (headerSection.classList.contains('siteheader-blog-menu-active')) {
         headerSection.classList.remove('siteheader-blog-menu-active');
-        slideUp(navParent, 100);
+        slideUp(navParent, 175);
         bodyEl.classList.remove('siteheader-blog-nav-active');
         setTimeout(() => {
           allHeaderSectionEl.forEach((el) => {
@@ -83,7 +85,7 @@ const attachBlogMenuEvents = (headerSection, bottomColorEl) => {
       } else {
         headerSection.classList.add('siteheader-blog-menu-active');
         bodyEl.classList.add('siteheader-blog-nav-active');
-        slideDown(navParent, 100);
+        slideDown(navParent, 175);
       }
     });
   }

@@ -366,7 +366,7 @@
         position: fixed;
         top: 0;
         transform: translate(0, -100%);
-        transition: all 0.15s ease;
+        transition: all 0.175s ease;
         visibility: hidden;
         width: 100%;
         z-index: 90;
@@ -530,7 +530,7 @@
         &-cta {
             height: 84px;
             padding: 16px 0;
-            transition: padding 0.15s ease;
+            transition: padding 0.175s ease;
             &.siteheader-active {
                 padding: 0;
                 button {
@@ -570,7 +570,7 @@
             height: 52px;
             padding: 5px 36px;
             text-decoration: none;
-            transition: height 0.15s ease;
+            transition: height 0.175s ease;
             &:hover {
                 background-color: $--blue-775;
             }

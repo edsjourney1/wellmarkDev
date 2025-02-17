@@ -28,15 +28,15 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     if (navCtaEl.classList.contains(activeCls)) {
       navCtaEl.dispatchEvent(new MouseEvent('click'));
     }
-    if (searchParent.classList.contains('siteheader-active')) {
-      searchCtaEl.classList.remove('siteheader-active');
-      searchParent.classList.remove('siteheader-active');
-      searchMaskEl.classList.remove('siteheader-active');
+    if (searchParent.classList.contains(activeCls)) {
+      searchCtaEl.classList.remove(activeCls);
+      searchParent.classList.remove(activeCls);
+      searchMaskEl.classList.remove(activeCls);
       bodyElem.classList.remove('siteheader-search-active');
     } else {
-      searchCtaEl.classList.add('siteheader-active');
-      searchParent.classList.add('siteheader-active');
-      searchMaskEl.classList.add('siteheader-active');
+      searchCtaEl.classList.add(activeCls);
+      searchParent.classList.add(activeCls);
+      searchMaskEl.classList.add(activeCls);
       bodyElem.classList.add('siteheader-search-active');
     }
   });
@@ -63,7 +63,7 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
   });
 
   navCtaEl?.addEventListener('click', () => {
-    if (searchCtaEl.classList.contains('siteheader-active')) {
+    if (searchCtaEl.classList.contains(activeCls)) {
       searchCtaEl.dispatchEvent(new MouseEvent('click'));
     }
     if (navCtaEl.classList.contains(activeCls)) {
@@ -79,12 +79,13 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
   });
 
   const loginWrapper = document.querySelector('.siteheader-login-wrapper');
+  const loginWrapperCta = loginWrapper.querySelector('.siteheader-login-wrapper-cta');
 
   window.addEventListener('scroll', () => {
-    if (loginWrapper.querySelector('.siteheader-login-wrapper-cta').classList.contains('siteheader-active')) {
-      loginWrapper.querySelector('.siteheader-login-wrapper-cta > button').dispatchEvent(new MouseEvent('click'));
+    if (loginWrapperCta?.classList.contains(activeCls)) {
+      loginWrapperCta?.querySelector(':scope > button').dispatchEvent(new MouseEvent('click'));
     }
-    if (document.querySelector('.siteheader-nav-mask.siteheader-active')) {
+    if (document.querySelector(`.siteheader-nav-mask.${activeCls}`)) {
       closeAllNavItems(navArr, navMaskEl);
     }
     if (document.querySelector('.siteheader-blog-has-subnav-active')) {
@@ -93,7 +94,19 @@ export const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
   });
 
   document.addEventListener('click', (event) => {
-    console.log('============event', event.target);
+    [
+      document.querySelector(`.siteheader-mobile-wrapper nav > ul.${activeCls}`),
+      document.querySelector(`.siteheader-login-wrapper.${activeCls}`),
+      document.querySelector(`.siteheader-blog-nav ul.siteheader-blog-has-subnav-active`),
+    ].forEach((container) => {
+      if (container && (container !== event.target && !container.contains(event.target))) {
+        closeAllNavItems(navArr, navMaskEl);
+        closeAllBlogMenuItems();
+        if (loginWrapper.querySelector('.siteheader-login-wrapper-cta').classList.contains(activeCls)) {
+          loginWrapper.querySelector('.siteheader-login-wrapper-cta > button').dispatchEvent(new MouseEvent('click'));
+        }
+      }
+    });
   });
 
   loginEventFn(
