@@ -586,6 +586,9 @@
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li.siteheader-subnav-info h3 {
   border-bottom: 1px solid #d6e5f1;
 }
+.siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li.siteheader-subnav-info h4 {
+  margin: 0 0 16px 0;
+}
 .siteheader-mobile-wrapper nav > ul > li .siteheader-subnav > div > ul > li.siteheader-subnav-info .siteheader-subnav-grid {
   column-gap: 16px;
   display: flex;
