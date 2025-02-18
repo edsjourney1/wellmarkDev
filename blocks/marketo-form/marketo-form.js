@@ -33,7 +33,10 @@ export default function decorate(block) {
     const idstringValue = divId.split('_')[1];
     const cForm = document.createElement('form');
     cForm.classList.add('eds-mkto-form');
+    const divIDkebab = divId.toLowerCase().replace('_', '-');
+    cForm.classList.add(divIDkebab);
     cForm.setAttribute('id', divId);
+    cForm.setAttribute('style', 'display: none;');
     section.insertAdjacentElement('afterend', cForm);
     setTimeout(() => {
       const formId = parseInt(idstringValue, 10);
@@ -42,4 +45,25 @@ export default function decorate(block) {
       window.MktoForms2.loadForm('//pages.wellmark.com', '464-UUV-172', formId);
     }, 1000);
   });
+  const loader = document.createElement('div');
+  loader.classList.add('loader');
+  document.querySelector('.eds-mkto-form').insertAdjacentElement('beforebegin', loader);
+  const forms = document.querySelectorAll('form.eds-mkto-form');
+  setTimeout(() => {
+    forms.forEach((form) => {
+      form.removeAttribute('style');
+      const childElements = form.querySelectorAll('*');
+      childElements.forEach((element) => {
+        element.removeAttribute('style');
+      });
+      loader.style.display = 'none';
+      forms.style.display = 'block';
+    });
+  }, 3000);
+  setInterval(() => {
+    const errors = document.querySelectorAll('div.mktoError');
+    errors.forEach((error) => {
+      error.removeAttribute('style');
+    });
+  }, 1000);
 }
