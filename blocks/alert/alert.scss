@@ -4,6 +4,15 @@
 .alert {
     &-wrapper{
         position: relative;
+        @include for-laptop{
+            width: calc(100% - 72px);
+        }
+        @include for-tablet{
+            width: calc(100% - 72px);
+        }
+        @include for-mobile{
+            width: calc(100% - 32px);
+        }
         h5 {
             margin: 0 0 5px 0;
         }
@@ -17,6 +26,7 @@
             border-radius: 0 2px 2px 0;
             padding: 24px 24px 24px 80px;
             position: relative;
+            margin: 24px 0;
             &::before {
                 border-radius: 2px 0 0 2px;
                 content: '';
