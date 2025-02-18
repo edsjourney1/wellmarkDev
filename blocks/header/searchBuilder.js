@@ -16,8 +16,8 @@ export const searchBuilder = (searchInfo, searchToggle) => {
           </label>
           <div class='siteheader-search-input-wrapper'>
             <input type='search' name='header_search' id='header_search'
-              autocorrect='off' autocomplete='off' autocapitalize='off' maxlength='2048' placeholder='
-              ${searchInfo.querySelector('p:nth-child(2) em').innerHTML}'/>
+              autocorrect='off' autocomplete='off' autocapitalize='off' maxlength='2048'
+              placeholder='${searchInfo.querySelector('p:nth-child(2) em').innerHTML}'/>
             <button type='submit' aria-label='Search'>
               ${searchInfo.querySelector('p:last-child em').innerHTML}
             </button>
