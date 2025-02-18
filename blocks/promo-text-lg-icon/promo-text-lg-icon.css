@@ -194,6 +194,9 @@
     display: none;
   }
 }
+.promo-text-lg-icon-wrapper > .promo-text-lg-icon > div > div .none {
+  display: none;
+}
 .promo-text-lg-icon-wrapper > .promo-text-lg-icon > div > .button {
   margin: 0;
   border-radius: 2px;

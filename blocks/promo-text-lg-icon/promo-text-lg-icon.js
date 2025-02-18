@@ -1,14 +1,22 @@
 export default function decorate(block) {
-  const svgIcon = block.children[0]?.children[0]?.children[0];
+  const svgIcon = block.children[3]?.children[0]?.children[0];
   const title = block.children[0]?.textContent;
   const description = block.children[1]?.textContent;
   const div = document.createElement('div');
+  div.classList.add('main-div');
   const div2 = document.createElement('div');
+  div2.classList.add('heading-icon-div');
   const svg = svgIcon;
-  const heading = document.createElement('h2');
-  heading.append(title);
-  heading.classList.add('title');
-  div2.append(svg, heading);
+  let heading;
+  if (svgIcon) {
+    div2.append(svg);
+  }
+  if (title) {
+    heading = document.createElement('h2');
+    heading.classList.add('title');
+    heading.append(title);
+  }
+  div2.append(heading);
   const paragraph = document.createElement('p');
   paragraph.classList.add('description');
   paragraph.append(description);
