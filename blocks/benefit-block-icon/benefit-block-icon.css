@@ -43,6 +43,9 @@
   }
 }
 .benefit-block-icon-container .benefit-block-icon-wrapper .benefit-block-icon .block-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
   border-radius: 4px;
   background-color: #f3f9ff;

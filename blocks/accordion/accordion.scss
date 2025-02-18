@@ -166,7 +166,7 @@ main {
                 width: calc(((100% / 12) * 9) - 10px);
             }
             @include for-laptop{
-                width: calc(((100% / 12) * 9) - 60px);
+                width: calc((100% / 12) * 9);
             }
             @include for-tablet{
                 width: 100%;
@@ -185,7 +185,7 @@ main {
                 width: calc(((100% / 12) * 8));
             }
             @include for-laptop{
-                width: calc(((100% / 12) * 8) - 60px);
+                width: calc((100% / 12) * 8);
             }
             @include for-tablet{
                 width: 100%;

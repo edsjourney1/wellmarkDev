@@ -28,10 +28,13 @@ export default function decorate(block) {
   const textContDiv = document.createElement('div');
   textContDiv.classList.add('tbnr-textcont');
   // Create the picture div
-  const picDiv = document.createElement('div');
-  picDiv.classList.add('tbnr-pic');
-  // Append the image to the picture div
-  picDiv.append(image);
+  if (image) {
+    const picDiv = document.createElement('div');
+    picDiv.classList.add('tbnr-pic');
+    // Append the image to the picture div
+    picDiv.append(image);
+    mainDiv.append(picDiv);
+  }
   // Append the title and description to the text container div
   if (titleClass) {
     textContDiv.append(titleClass);
@@ -47,7 +50,7 @@ export default function decorate(block) {
     textContDiv.append(btnDiv);
   }
   // Append the text container div and picture div to the main div
-  mainDiv.append(textContDiv, picDiv);
+  mainDiv.prepend(textContDiv);
   // Clear the block's inner HTML and append the main div
   block.innerHTML = '';
   block.append(mainDiv);

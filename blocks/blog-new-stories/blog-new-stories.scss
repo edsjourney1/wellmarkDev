@@ -23,7 +23,7 @@
     }
     @include for-mobile {
       flex-direction: column;
-      gap: 24px;
+      gap: 16px;
     }
     @include for-tablet {
       flex-direction: column;
