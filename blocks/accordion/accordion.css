@@ -174,7 +174,7 @@ main .section .accordion-wrapper {
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .nine-column-layout.accordion-container .accordion-wrapper details {
-    width: calc(75% - 60px);
+    width: 75%;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
@@ -198,7 +198,7 @@ main .section .accordion-wrapper {
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .eight-column-layout.accordion-container .accordion-wrapper details {
-    width: calc(66.6666666667% - 60px);
+    width: 66.6666666667%;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
