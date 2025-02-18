@@ -325,6 +325,9 @@
         text-align: left;
         padding-bottom: $--spacing-s;
         padding-left: 14px;
+        p {
+          width: 100%;
+        }
         .icon{
           height: auto;
           width: auto;
@@ -336,6 +339,20 @@
         }
         &:last-child{
           padding-bottom: 0;
+        }
+        p ~ ul{
+          padding-top: 0;
+        }
+        ul {
+          padding-top: 16px;
+          padding-bottom: 0;
+          width: 100%;
+          :last-child{
+            padding-bottom: 0;
+          }
+          li{
+            list-style-type: circle;
+          }
         }
       }
     }
@@ -362,6 +379,9 @@
         text-align: left;
         padding-bottom: $--spacing-s;
         padding-left: 14px;
+        p {
+          width: 100%;
+        }
         .icon{
           height: auto;
           width: auto;
@@ -373,6 +393,17 @@
         }
         &:last-child{
           padding-bottom: 0;
+        }
+        p ~ ol{
+          padding-top: 0;
+        }
+        ol {
+          padding-top: 16px;
+          padding-bottom: 0;
+          width: 100%;
+          li{
+            list-style-type: circle;
+          }
         }
       }
     }
