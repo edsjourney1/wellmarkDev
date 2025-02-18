@@ -757,6 +757,9 @@ input, textarea, select {
   padding-bottom: 12px;
   padding-left: 14px;
 }
+.section .default-content-wrapper ul li p {
+  width: 100%;
+}
 .section .default-content-wrapper ul li .icon {
   height: auto;
   width: auto;
@@ -768,6 +771,20 @@ input, textarea, select {
 }
 .section .default-content-wrapper ul li:last-child {
   padding-bottom: 0;
+}
+.section .default-content-wrapper ul li p ~ ul {
+  padding-top: 0;
+}
+.section .default-content-wrapper ul li ul {
+  padding-top: 16px;
+  padding-bottom: 0;
+  width: 100%;
+}
+.section .default-content-wrapper ul li ul :last-child {
+  padding-bottom: 0;
+}
+.section .default-content-wrapper ul li ul li {
+  list-style-type: circle;
 }
 .section .default-content-wrapper ol {
   padding-bottom: 24px;
@@ -800,6 +817,9 @@ input, textarea, select {
   padding-bottom: 12px;
   padding-left: 14px;
 }
+.section .default-content-wrapper ol li p {
+  width: 100%;
+}
 .section .default-content-wrapper ol li .icon {
   height: auto;
   width: auto;
@@ -811,6 +831,17 @@ input, textarea, select {
 }
 .section .default-content-wrapper ol li:last-child {
   padding-bottom: 0;
+}
+.section .default-content-wrapper ol li p ~ ol {
+  padding-top: 0;
+}
+.section .default-content-wrapper ol li ol {
+  padding-top: 16px;
+  padding-bottom: 0;
+  width: 100%;
+}
+.section .default-content-wrapper ol li ol li {
+  list-style-type: circle;
 }
 .section.body-small .default-content-wrapper p {
   opacity: 1;

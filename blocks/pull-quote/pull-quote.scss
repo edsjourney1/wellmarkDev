@@ -27,29 +27,46 @@
             }
             .main-content{
                 .quote-content{
-                    p{
+                    text-align: center;
+                    padding: 52px 108px 52px 107px;
+                    font-family: $--font-museo;
+                    @include for-laptop{
+                        padding: 52px 82px;
+                    }
+                    @include for-tablet{
+                        padding: 52px 163px;
+                    }
+                    @include for-tablet-smallest {
+                        padding: 52px 73px;
+                    }
+                    @include for-mobile{
+                        padding: 36px 0;
+                    }
+                    p:first-child:not(:only-child) {
+                        padding-bottom: 24px;
+                    }
+                    .content {
                         color: $--gray-700;
-                        font-family: $--font-museo;
                         font-size: 32px;
                         line-height: 36px;
                         font-weight: 700;
-                        text-align: center;
-                        padding: 52px 108px 52px 107px;
                         margin: 0;
-                        @include for-laptop{
-                            padding: 52px 82px;
-                        }
-                        @include for-tablet{
-                            padding: 52px 163px;
-                        }
-                        @include for-tablet-smallest {
-                            padding: 52px 73px;
-                        }
                         @include for-mobile{
                             font-size: 28px;
                             line-height: 33px;
-                            padding: 36px 0;
                         }
+                    }
+                    .authorname{
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 25px;
+                        text-transform: uppercase;
+                        margin: 0;
+                    }
+                    .authorposition{
+                        font-size: 18px;
+                        line-height: 25px;
+                        margin: 0;
                     }
                 }
                 .icon-top, .icon-bottom{

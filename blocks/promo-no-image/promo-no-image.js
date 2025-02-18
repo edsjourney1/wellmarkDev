@@ -1,12 +1,16 @@
 export default function decorate(block) {
   /* change to ul, li */
-  const title = block.children[0].innerText;
-  const ul = document.createElement('ul');
   const imageWrapperDiv = block.parentElement;
+  const title = block.children[0].textContent;
   const mainHeading = document.createElement('h3');
   mainHeading.classList.add('promo-no-image-heading');
   mainHeading.textContent = `${title}`;
   imageWrapperDiv.prepend(mainHeading);
+  if (mainHeading.textContent.trim() === '') {
+    const headingCheck = document.querySelector('.promo-no-image-heading');
+    headingCheck.remove();
+  }
+  const ul = document.createElement('ul');
   const promoClass = `promo-no-image-${block.children.length - 1}-column`;
   ul.classList.add(promoClass);
   [...block.children].forEach((row, index) => {
@@ -20,9 +24,6 @@ export default function decorate(block) {
       ul.append(li);
     }
   });
-  // ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(
-  //   createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]),
-  // ));
-  block.textContent = '';
+  block.innerHTML = '';
   block.append(ul);
 }
