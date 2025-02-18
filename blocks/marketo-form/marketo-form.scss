@@ -1,5 +1,5 @@
-@import "../../styles/include/tokens.scss";
-@import "../../styles/include/mq.scss";
+@import '../../styles/include/tokens.scss';
+@import '../../styles/include/mq.scss';
 
 .marketo-form.block {
   div {
@@ -39,7 +39,7 @@ form.eds-mkto-form {
     width: 100%;
   }
   @include for-xlarge {
-    &#mktoForm_589 {
+    &.mktoform-589 {
       > :nth-child(4) {
         width: 45%;
         margin-right: 50%;
@@ -63,7 +63,7 @@ form.eds-mkto-form {
         margin-right: auto;
       }
     }
-    &#mktoForm_314 {
+    &.mktoform-314 {
       > :nth-child(5),
       > :nth-child(6),
       > :nth-child(7),
@@ -77,7 +77,7 @@ form.eds-mkto-form {
       > :nth-child(5),
       > :nth-child(7),
       > :nth-child(9),
-      > :nth-child(11){
+      > :nth-child(11) {
         margin-right: 10%;
       }
       > :nth-child(13),
@@ -92,7 +92,7 @@ form.eds-mkto-form {
       > :nth-child(13),
       > :nth-child(14),
       > :nth-child(16),
-      > :nth-child(17){
+      > :nth-child(17) {
         margin-right: 5%;
       }
       > :nth-child(19) {
@@ -102,21 +102,21 @@ form.eds-mkto-form {
         width: 100%;
       }
     }
-    &#mktoForm_595 {
-      >:nth-child(7),
-      >:nth-child(8),
-      >:nth-child(9),
-      >:nth-child(10) {
+    &.mktoform-595 {
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
         width: 45%;
       }
-      >:nth-child(7),
-      >:nth-child(9) {
+      > :nth-child(7),
+      > :nth-child(9) {
         margin-right: 10%;
       }
     }
   }
   @include for-large {
-    &#mktoForm_589 {
+    &.mktoform-589 {
       > :nth-child(4) {
         width: 45%;
         margin-right: 50%;
@@ -140,7 +140,7 @@ form.eds-mkto-form {
         margin-right: auto;
       }
     }
-    &#mktoForm_314 {
+    &.mktoform-314 {
       > :nth-child(5),
       > :nth-child(6),
       > :nth-child(7),
@@ -154,7 +154,7 @@ form.eds-mkto-form {
       > :nth-child(5),
       > :nth-child(7),
       > :nth-child(9),
-      > :nth-child(11){
+      > :nth-child(11) {
         margin-right: 10%;
       }
       > :nth-child(13),
@@ -169,7 +169,7 @@ form.eds-mkto-form {
       > :nth-child(13),
       > :nth-child(14),
       > :nth-child(16),
-      > :nth-child(17){
+      > :nth-child(17) {
         margin-right: 5%;
       }
       > :nth-child(19) {
@@ -179,21 +179,21 @@ form.eds-mkto-form {
         width: 100%;
       }
     }
-    &#mktoForm_595 {
-      >:nth-child(7),
-      >:nth-child(8),
-      >:nth-child(9),
-      >:nth-child(10) {
+    &.mktoform-595 {
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
         width: 45%;
       }
-      >:nth-child(7),
-      >:nth-child(9) {
+      > :nth-child(7),
+      > :nth-child(9) {
         margin-right: 10%;
       }
     }
   }
   @include for-laptop {
-    &#mktoForm_589 {
+    &.mktoform-589 {
       > :nth-child(4) {
         width: 45%;
         margin-right: 50%;
@@ -217,7 +217,7 @@ form.eds-mkto-form {
         margin-right: auto;
       }
     }
-    &#mktoForm_314 {
+    &.mktoform-314 {
       > :nth-child(5),
       > :nth-child(6),
       > :nth-child(7),
@@ -231,7 +231,7 @@ form.eds-mkto-form {
       > :nth-child(5),
       > :nth-child(7),
       > :nth-child(9),
-      > :nth-child(11){
+      > :nth-child(11) {
         margin-right: 10%;
       }
       > :nth-child(13),
@@ -246,7 +246,7 @@ form.eds-mkto-form {
       > :nth-child(13),
       > :nth-child(14),
       > :nth-child(16),
-      > :nth-child(17){
+      > :nth-child(17) {
         margin-right: 5%;
       }
       > :nth-child(19) {
@@ -256,15 +256,15 @@ form.eds-mkto-form {
         width: 100%;
       }
     }
-    &#mktoForm_595 {
-      >:nth-child(7),
-      >:nth-child(8),
-      >:nth-child(9),
-      >:nth-child(10) {
+    &.mktoform-595 {
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
         width: 45%;
       }
-      >:nth-child(7),
-      >:nth-child(9) {
+      > :nth-child(7),
+      > :nth-child(9) {
         margin-right: 10%;
       }
     }
@@ -347,10 +347,6 @@ form.eds-mkto-form {
               border: 2px solid rgba(117, 117, 117, 1);
               // prevent red bleeding
               box-shadow: none;
-            }
-            // when input validation errors
-            &:has(+ .mktoError) {
-              border: 2px solid rgba(180, 66, 66, 1);
             }
             &.mktoField {
               float: none;
