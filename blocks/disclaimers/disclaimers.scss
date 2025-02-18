@@ -1,0 +1,51 @@
+@import "../../styles/include/mq.scss";
+@import "../../styles/include/tokens.scss";
+
+.disclaimers-wrapper{
+    @include for-xlarge {
+        width: calc(100% - 104px);
+    }
+    @include for-large {
+        width: calc(100% - 104px);
+    }
+    @include for-laptop {
+        width: calc(100% - 72px);
+    }
+    @include for-tablet {
+        width: calc(100% - 72px);
+    }
+    @include for-mobile {
+        width: calc(100% - 32px);
+    }
+    .disclaimers {
+        .disclaimers-body { 
+            border-top: 2px solid $--gray-225;
+            @include for-xlarge {
+                margin-bottom: 120px;
+            }
+            @include for-large {
+                margin-bottom: 120px;
+            }
+            @include for-laptop {
+                margin-bottom: 120px;
+            }
+            @include for-tablet {
+                margin-bottom: 96px;
+            }
+            @include for-mobile {
+                margin-bottom: 72px;
+            }
+            p:first-child {
+                margin: 16px 0;
+            }
+            p {
+                margin: 0;
+                font-size: 12px;
+                font-weight: 400;
+                text-align: left;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
