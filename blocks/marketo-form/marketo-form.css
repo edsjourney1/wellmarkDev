@@ -23,7 +23,7 @@
 }
 
 form.eds-mkto-form {
-  display: flex !important;
+  display: flex;
   flex-wrap: wrap;
 }
 form.eds-mkto-form .mktoFormRow {
@@ -373,6 +373,7 @@ form.eds-mkto-form.mktoForm .mktoFormRow div div .mktoError .mktoErrorMsg {
   border-left: 4px solid rgb(180, 66, 66);
   box-shadow: none;
   margin-top: 8px;
+  max-width: unset;
 }
 form.eds-mkto-form.mktoForm .mktoFormRow .mktoRadioList {
   width: 100%;
