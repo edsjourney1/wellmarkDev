@@ -286,11 +286,6 @@
         }
       }
     }
-    p:not(:has(a)){
-      &:has(i){
-        display: flex;
-      }
-    }
     p:has(a){
       .icon{
         height: auto;

@@ -708,9 +708,6 @@ a:any-link {
   color: #005589;
   margin-left: 6px;
 }
-.section .default-content-wrapper p:not(:has(a)):has(i) {
-  display: flex;
-}
 .section .default-content-wrapper p:has(a) .icon {
   height: auto;
   width: auto;
