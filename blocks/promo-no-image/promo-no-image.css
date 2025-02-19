@@ -148,7 +148,6 @@
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-4-column > li {
-  background-color: var(--background-color);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -207,7 +206,6 @@
   font-size: 20px;
   color: #005589;
   text-align: center;
-  text-decoration: underline;
   margin: 0;
   padding-top: 24px;
 }
@@ -283,7 +281,6 @@
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-  background-color: var(--background-color);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -331,7 +328,6 @@
   font-size: 20px;
   color: #005589;
   text-align: center;
-  text-decoration: underline;
   margin: 0;
   padding-top: 24px;
 }
@@ -403,7 +399,6 @@
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li {
-  background-color: var(--background-color);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -456,7 +451,6 @@
   font-size: 20px;
   color: #005589;
   text-align: center;
-  text-decoration: underline;
   margin: 0;
   padding-top: 24px;
 }
@@ -485,4 +479,7 @@
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li .cards-card-body p h3 ~ p:has(span) i {
   font-size: 16px;
+}
+.promo-no-image-container .promo-no-image-wrapper ~ .default-content-wrapper:has(> .button-container:only-child) {
+  text-align: center;
 }
