@@ -413,4 +413,7 @@
       }
     }
   }
+  .promo-no-image-wrapper ~ .default-content-wrapper:has(.button-container){
+    text-align: center;
+  }
 }
