@@ -28,7 +28,6 @@ export default function decorate(block) {
   // function for last-modified date append dynamically
   setTimeout(() => {
     const queryModify = block.querySelector('.date');
-    console.log(queryModify);
     if (queryModify) {
       const publishedElement = Array.from(queryModify.children).find((child) => child.innerText === 'Last Updated:');
       const published = publishedElement ? publishedElement.innerText : null;
@@ -36,12 +35,10 @@ export default function decorate(block) {
       // Check if date element exists
       if (updated) {
         const modifiedDate = window.BlogLastModified;
-        console.log(modifiedDate, 'hello-1');
         // Check if modifiedDate exists
         if (modifiedDate) {
           const spanmodified = document.createElement('span');
           spanmodified.innerHTML = modifiedDate;
-          console.log(modifiedDate, 'hello');
           publishedElement.append(spanmodified);
         }
       }
