@@ -664,8 +664,8 @@ async function loadHeader(header) {
 }
 
 /**
- * Loads a block named 'header' into header
- * @param {Element} header header element
+ * Loads a block named 'external-link-popup' into header
+ * @param {Element} bodyElem body element
  * @returns {Promise}
  */
 async function loadExternalPopup(bodyElem) {
@@ -673,6 +673,18 @@ async function loadExternalPopup(bodyElem) {
   bodyElem.append(externalPopupBlock);
   decorateBlock(externalPopupBlock);
   return loadBlock(externalPopupBlock);
+}
+
+/**
+ * Loads a block named 'external-link-popup' into header
+ * @param {Element} bodyElem body element
+ * @returns {Promise}
+ */
+async function loadBlogSocial(bodyElem) {
+  const blogSocial = buildBlock('blog-social', '');
+  bodyElem.append(blogSocial);
+  decorateBlock(blogSocial);
+  return loadBlock(blogSocial);
 }
 
 /**
@@ -806,4 +818,5 @@ export {
   wrapTextNodes,
   loadPublishedDate,
   loadExternalPopup,
+  loadBlogSocial,
 };
