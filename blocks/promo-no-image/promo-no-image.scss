@@ -413,7 +413,7 @@
       }
     }
   }
-  .promo-no-image-wrapper ~ .default-content-wrapper:has(.button-container){
+  .promo-no-image-wrapper ~ .default-content-wrapper:has-only(.button-container){
     text-align: center;
   }
 }

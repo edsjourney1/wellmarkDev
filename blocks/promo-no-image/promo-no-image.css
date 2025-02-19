@@ -480,6 +480,6 @@
 .promo-no-image-container .promo-no-image > .promo-no-image-2-column > li .cards-card-body p h3 ~ p:has(span) i {
   font-size: 16px;
 }
-.promo-no-image-container .promo-no-image-wrapper ~ .default-content-wrapper:has(.button-container) {
+.promo-no-image-container .promo-no-image-wrapper ~ .default-content-wrapper:has-only(.button-container) {
   text-align: center;
 }
