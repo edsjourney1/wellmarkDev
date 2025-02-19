@@ -2,3 +2,7 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.spacer {
+  color: transparent;
+  font-size: 0;
+}

@@ -1,13 +1,3 @@
-// function addScript(src) {
-//   const script = document.createElement('script');
-//   script.src = src;
-//   document.head.appendChild(script);
-// }
-// (() => {
-//   // addScript('//899-BTB-436.mktoweb.com/js/forms2/js/forms2.min.js');
-//   addScript('//pages.wellmark.com/js/forms2/js/forms2.min.js');
-// })();
-
 function addScript(src, id) {
   const script = document.createElement('script');
   script.src = src;
@@ -27,19 +17,34 @@ function addScript(src, id) {
 
 // creation of block for marketo form
 export default function decorate(block) {
+  const loader = document.createElement('div');
+  loader.classList.add('loader');
   [...block.children].forEach((row) => {
     const section = row.querySelector('p');
     const divId = section.innerHTML;
     const idstringValue = divId.split('_')[1];
     const cForm = document.createElement('form');
     cForm.classList.add('eds-mkto-form');
+    const divIDkebab = divId.toLowerCase().replace('_', '-');
+    cForm.classList.add(divIDkebab);
     cForm.setAttribute('id', divId);
+    cForm.setAttribute('style', 'display: none;');
     section.insertAdjacentElement('afterend', cForm);
     setTimeout(() => {
       const formId = parseInt(idstringValue, 10);
       window.MktoForms2.loadForm('//899-BTB-436.mktoweb.com', '899-BTB-436', formId);
-      //  new line
       window.MktoForms2.loadForm('//pages.wellmark.com', '464-UUV-172', formId);
+      window.MktoForms2.whenReady((prop) => {
+        const mktoform = prop.getFormElem();
+        mktoform[0].removeAttribute('style');
+        const allchildren = mktoform[0].querySelectorAll('*');
+        allchildren.forEach((elm) => {
+          elm.removeAttribute('style');
+        });
+        loader.style.display = 'none';
+        mktoform[0].style.display = 'flex';
+      });
     }, 1000);
   });
+  document.querySelector('.eds-mkto-form').insertAdjacentElement('beforebegin', loader);
 }
