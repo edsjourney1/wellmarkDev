@@ -14,7 +14,7 @@
             width: calc(100% - 32px);
         }
         h5 {
-            margin: 0 0 5px 0;
+            margin: 0 0 4px 0;
         }
         p {
             margin: 0 0 10px 0;
@@ -24,9 +24,27 @@
         }
         .alert {
             border-radius: 0 2px 2px 0;
-            padding: 24px 24px 24px 80px;
+            padding: 24px 24px 24px 69px;
             position: relative;
             margin: 24px 0;
+            @include for-xlarge{
+                padding: 24px 125px 24px 69px;
+            }
+            @include for-large{
+                padding: 24px 125px 24px 69px;
+            }
+            @include for-laptop{
+                padding: 24px 91px 24px 69px;
+            }
+            @include for-tablet{
+                padding: 24px 91px 24px 69px;
+            }
+            @include for-tablet-smallest{
+                padding: 24px 35px 24px 69px;
+            }
+            @include for-mobile{
+                padding: 24px 27px 24px 69px;
+            }
             &::before {
                 border-radius: 2px 0 0 2px;
                 content: '';
@@ -38,7 +56,7 @@
                 width: 10px;
             }
             > div:first-child {
-                left: 34px;
+                left: 24px;
                 position: absolute;
                 top: 24px;
                 p {

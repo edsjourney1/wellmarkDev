@@ -584,7 +584,7 @@ function generateUrl(dataArray, index) {
   const locateIndex = index - 1;
   const dynamicString = dataArray.slice(0, index).join().replaceAll(',', '/');
   const breadcrumbUrl = window.location.origin.concat('/', dynamicString);
-  const productElement = document.querySelector(`[data-breadcrumb-value=${dataArray[locateIndex]}]`);
+  const productElement = document.querySelector(`[data-breadcrumb-value='${dataArray[locateIndex]}']`);
   productElement.setAttribute('href', breadcrumbUrl);
 }
 
