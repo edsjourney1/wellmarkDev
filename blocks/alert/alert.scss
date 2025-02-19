@@ -15,9 +15,20 @@
         }
         h5 {
             margin: 0 0 4px 0;
+            color: $--gray-700;
+            font-size: 20px;
+            line-height: 24px;
+            font-family: $--font-roboto;
+            font-weight: 700;
+            opacity: 1;
         }
         p {
             margin: 0 0 10px 0;
+            font-family: $--font-roboto;
+            color: $--gray-700;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
             &:last-child {
                 margin: 0;
             }
@@ -57,7 +68,7 @@
                 @include for-mobile{
                     padding: 24px 27px 24px 34px;
                 }
-                p {
+                p:has(.icon) {
                     line-height: 1;
                 }
                 > div:first-child{
