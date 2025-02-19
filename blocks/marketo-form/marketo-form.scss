@@ -33,7 +33,7 @@
 }
 
 form.eds-mkto-form {
-  display: flex !important;
+  display: flex;
   flex-wrap: wrap;
   .mktoFormRow {
     width: 100%;
@@ -377,6 +377,7 @@ form.eds-mkto-form {
               border-left: 4px solid rgba(180, 66, 66, 1);
               box-shadow: none;
               margin-top: 8px;
+              max-width: unset;
             }
           }
         }

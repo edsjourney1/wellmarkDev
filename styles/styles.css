@@ -852,7 +852,6 @@ input, textarea, select {
   letter-spacing: 0px;
   text-align: left;
   line-height: 20px;
-  display: flex;
   padding-bottom: 8px;
 }
 .section.body-small .default-content-wrapper p .icon {
@@ -1031,6 +1030,20 @@ input, textarea, select {
     float: unset;
     min-width: 100%;
   }
+}
+
+sup {
+  line-height: 1px;
+}
+
+.block-padding-bottom ul:last-child {
+  padding-bottom: 0;
+}
+.block-padding-bottom ol:last-child {
+  padding-bottom: 0;
+}
+.block-padding-bottom p:last-child {
+  padding-bottom: 0;
 }
 
 /* wellmark color start */

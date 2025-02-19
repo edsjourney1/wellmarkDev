@@ -335,7 +335,7 @@
             font-size: 16px;
             color: $--blue-675;
             margin: 0 6px;
-          }
+          } 
         }
         &:last-child{
           padding-bottom: 0;
@@ -419,7 +419,6 @@
         letter-spacing: 0px;
         text-align: left;
         line-height: 20px;
-        display: flex;
         padding-bottom: 8px;
         .icon{
           height: auto;
@@ -625,6 +624,26 @@
           }
         }
       }
+    }
+  }
+}
+sup {
+  line-height: 1px;
+}
+.block-padding-bottom{
+  ul{
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+  ol{
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+  p{
+    &:last-child{
+      padding-bottom: 0;
     }
   }
 }

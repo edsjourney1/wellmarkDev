@@ -50,7 +50,7 @@ export default function decorate(block) {
     textContDiv.append(btnDiv);
   }
   // Append the text container div and picture div to the main div
-  mainDiv.append(textContDiv);
+  mainDiv.prepend(textContDiv);
   // Clear the block's inner HTML and append the main div
   block.innerHTML = '';
   block.append(mainDiv);
