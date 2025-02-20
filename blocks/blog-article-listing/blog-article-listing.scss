@@ -226,87 +226,99 @@
     }
   }
   .pagination {
-    .pagination-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 38px;
-      @include for-tablet {
-        flex-direction: column;
-      }
-      @include for-mobile {
-        flex-direction: column;
-      }
-      .count-list {
+    border-top: 2px solid $--gray-225;
+    padding-bottom: $--spacing-max;
+    @include for-tablet{
+      padding-bottom: $--spacing-jumbo;
+    }
+    @include for-mobile{
+      padding-bottom: $--spacing-huge;
+    }
+      .pagination-container{
         display: flex;
         align-items: center;
-        @include for-tablet {
-          padding-bottom: 24px;
+        justify-content: space-between;
+        margin-top: 38px;
+        @include for-tablet{
+            flex-direction: column;
         }
-        @include for-mobile {
-          padding-bottom: 24px;
+        @include for-mobile{
+            flex-direction: column;
         }
-        p {
-          margin: 0;
-        }
-        span {
-          margin: 0 5px;
-        }
-      }
-      .count-result {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        button {
-          margin: 0;
-          width: 32px;
-          text-align: center;
-          border: 1px solid #757575;
-          color: $--gray-700;
-          padding: 5px 0;
-          font-size: 16px;
-          line-height: 24px;
-          border-radius: 2px;
-          text-decoration: none;
-          font-weight: 700;
-          font-family: $--font-roboto;
-          background-color: transparent;
-          margin-right: 12px;
-          &:last-of-type {
-            margin-right: 0;
-          }
-          &.active {
-            background-color: $--blue-675;
-            color: $--white;
-          }
-        }
-        p {
-          i {
-            color: $--blue-675;
-            font-size: 20px;
-            font-weight: 700;
-            padding: 0 15px;
-          }
-          &:first-child {
-            i {
-              padding: 0;
+        .count-list{
+            display: flex;
+            align-items: center;
+            @include for-tablet{
+                padding-bottom: 24px;
             }
-          }
-          &:last-child {
-            i {
-              padding: 0;
+            @include for-mobile{
+                padding-bottom: 24px;
             }
-          }
+            p{
+                margin: 0;
+            }
+            span{
+                margin: 0 5px;
+            }
         }
-        .dp-none {
-          display: none;
+        .count-result{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 31px;
+            button{
+                margin: 0;
+                width: 32px;
+                text-align: center;
+                border: 1px solid #757575;
+                color: $--gray-700;
+                padding: 4px 0 3px 0;
+                font-size: 16px;
+                line-height: 24px;
+                border-radius: 2px;
+                text-decoration: none;
+                font-weight: 700;
+                font-family: $--font-roboto;
+                background-color: transparent;
+                margin-right: 12px;
+                &:last-of-type{
+                    margin-right: 0;
+                }
+                &.active{
+                    background-color: $--blue-675;
+                    color: $--white;
+                }
+            }
+            p{
+                &:has(i){
+                    margin: 6px 0 5px 0;
+                }
+                i{
+                    color: $--blue-675;
+                    font-size: 20px;
+                    font-weight: 700;
+                    padding: 0 20px;
+                }
+                &:first-child{
+                    i{
+                        padding: 0;
+                    }
+                }
+                &:last-child{
+                    i{
+                        padding: 0;
+                    }
+                }
+            }
+            .dp-none{
+                display: none;
+            }
+            .dp-blur{
+                i{
+                    color: $--gray-225;
+                }
+            }
         }
-        .dp-blur {
-          i {
-            color: $--gray-225;
-          }
-        }
-      }
     }
   }
 }
