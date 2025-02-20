@@ -4,7 +4,7 @@ import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const thisBlock = block;
 
-  const socialMeta = getMetadata('footer');
+  const socialMeta = getMetadata('/content-fragments/blog-social-fragment');
   const socialPath = socialMeta
     ? new URL(socialMeta, window.location).pathname
     : '/content-fragments/blog-social-fragment';

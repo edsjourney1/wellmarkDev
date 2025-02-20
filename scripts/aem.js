@@ -680,11 +680,11 @@ async function loadExternalPopup(bodyElem) {
  * @param {Element} bodyElem body element
  * @returns {Promise}
  */
-async function loadBlogSocial(bodyElem) {
-  const blogSocial = buildBlock('blog-social', '');
-  bodyElem.append(blogSocial);
-  decorateBlock(blogSocial);
-  return loadBlock(blogSocial);
+async function loadCommonFragments(bodyElem) {
+  const commonFragments = buildBlock('common-fragments', '');
+  bodyElem.append(commonFragments);
+  decorateBlock(commonFragments);
+  return loadBlock(commonFragments);
 }
 
 /**
@@ -818,5 +818,5 @@ export {
   wrapTextNodes,
   loadPublishedDate,
   loadExternalPopup,
-  loadBlogSocial,
+  loadCommonFragments,
 };
