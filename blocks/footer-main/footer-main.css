@@ -344,6 +344,9 @@
   line-height: 20px;
   margin: 0;
 }
+.footer-main-wrapper .footer-main > .copyright-div > div > p:first-child {
+  padding-bottom: 12px;
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-main-wrapper .footer-main > .copyright-div > div > ul {
     gap: 0;

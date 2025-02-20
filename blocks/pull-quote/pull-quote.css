@@ -70,10 +70,31 @@
   font-weight: 700;
   margin: 0;
 }
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content a {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content a span.icon {
+  margin-left: 6px;
+}
+.pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content a span.icon i {
+  font-size: 32px;
+}
 @media (max-width: 480px) {
   .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content {
     font-size: 28px;
     line-height: 33px;
+  }
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content a {
+    font-size: 28px;
+    line-height: 33px;
+  }
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content a span.icon {
+    margin-left: 6px;
+  }
+  .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .content a span.icon i {
+    font-size: 28px;
   }
 }
 .pull-quote-container .pull-quote-wrapper .pull-quote.block .main-content .quote-content .authorname {
