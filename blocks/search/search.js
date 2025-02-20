@@ -4,8 +4,7 @@ const searchParent = document.querySelector('.search-container');
 const allSearchItems = Array.from(document.querySelectorAll('.search-wrapper'));
 const allSearchBlocks = [];
 
-const buildSearchBanner = () => { //bannerBlock, bannerEl, searchGrid
-
+const buildSearchBanner = () => { // bannerBlock, bannerEl, searchGrid
   console.log('===========bannerBlock', sampleData);
   // const [bannerH1, bannerP] = Array.from(bannerBlock.children);
 

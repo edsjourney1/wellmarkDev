@@ -1,7 +1,7 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-export default async function decorate() { //block
+export default async function decorate() { // block
   const socialMeta = getMetadata('/content-fragments/blog-social-fragment');
   const socialPath = socialMeta
     ? new URL(socialMeta, window.location).pathname
