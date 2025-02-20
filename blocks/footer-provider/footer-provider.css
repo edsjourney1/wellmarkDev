@@ -282,6 +282,9 @@
   line-height: 20px;
   margin: 0;
 }
+.footer-provider-wrapper .footer-provider > .copyright-div > div > p:first-child {
+  padding-bottom: 12px;
+}
 @media (max-width: 480px) {
   .footer-provider-wrapper .footer-provider > .copyright-div > div > p {
     font-size: 14px;
