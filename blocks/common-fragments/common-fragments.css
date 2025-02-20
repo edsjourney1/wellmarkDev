@@ -1,0 +1,117 @@
+/* wellmark color start */
+/* wellmark color end */
+/* wellmark spacing size start */
+/* wellmark spacing size start */
+.blog-social-links em {
+  display: none;
+}
+.blog-social-links h4 {
+  color: #4b4c4d;
+  font-size: 20px;
+  width: 100%;
+  margin: 0 0 16px 0;
+}
+.blog-social-links > div {
+  display: flex;
+  align-items: flex-start;
+  margin: 56px 0 0 0;
+}
+.blog-social-links > div:nth-child(2) {
+  margin: 0 0 56px 0;
+}
+.blog-social-links > div:nth-child(2) p {
+  display: none;
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .blog-social-links > div {
+    flex-direction: column;
+  }
+  .blog-social-links > div > div:nth-child(2) {
+    margin-top: 36px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-social-links > div {
+    flex-direction: column;
+  }
+  .blog-social-links > div > div:nth-child(2) {
+    margin-top: 36px;
+  }
+}
+@media (max-width: 480px) {
+  .blog-social-links > div {
+    flex-direction: column;
+  }
+  .blog-social-links > div > div:nth-child(2) {
+    margin-top: 36px;
+  }
+}
+.blog-social-links > div > div {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog-social-links > div > div:nth-child(1) {
+  column-gap: 24px;
+  width: 114px;
+  margin-right: 72px;
+}
+.blog-social-links > div > div:nth-child(2) {
+  column-gap: 12px;
+  width: 290px;
+}
+.blog-social-links > div > div:nth-child(2) a {
+  align-items: center;
+  border-radius: 4px;
+  border: 2px solid #4b4c4d;
+  display: flex;
+  font-size: 21px;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+.blog-social-links > div > div:nth-child(2) a:hover {
+  background-color: #d6e5f1;
+  color: #4b4c4d;
+}
+.blog-social-links a {
+  background: transparent;
+  border: 0;
+  color: #4b4c4d;
+  cursor: pointer;
+  font-size: 32px;
+  padding: 0;
+}
+.blog-social-links a:hover {
+  color: #4a7390;
+}
+.blog-social-links a .icon {
+  height: auto;
+  width: auto;
+  vertical-align: top;
+}
+.blog-social-links a .icon > i {
+  font-size: inherit;
+  color: inherit;
+  line-height: 1;
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .blog-social-links {
+    width: calc(100% - 104px);
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .blog-social-links {
+    width: calc(100% - 72px);
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-social-links {
+    width: calc(100% - 72px);
+  }
+}
+@media (max-width: 480px) {
+  .blog-social-links {
+    width: calc(100% - 48px);
+  }
+}
