@@ -51,9 +51,30 @@
                         line-height: 36px;
                         font-weight: 700;
                         margin: 0;
+                        a{
+                            font-size: 32px;
+                            font-weight: 700;
+                            line-height: 36px;
+                            span.icon{
+                                margin-left: 6px;
+                                i{
+                                    font-size: 32px;
+                                }
+                            }
+                        }
                         @include for-mobile{
                             font-size: 28px;
                             line-height: 33px;
+                            a{
+                                font-size: 28px;
+                                line-height: 33px;
+                                span.icon{
+                                    margin-left: 6px;
+                                    i{
+                                        font-size: 28px;
+                                    }
+                                }
+                            }
                         }
                     }
                     .authorname{
