@@ -15,6 +15,7 @@ import {
   sampleRUM,
   loadPublishedDate,
   loadExternalPopup,
+  loadBlogSocial,
 } from './aem.js';
 import { decorateExternalImages } from './externalImage.js';
 
@@ -257,6 +258,7 @@ async function loadLazy(doc) {
   if (hash && element) element.scrollIntoView();
   loadHeader(doc.querySelector('header'));
   loadExternalPopup(doc.querySelector('body'));
+  loadBlogSocial(doc.querySelector('body'));
   loadFooter(doc.querySelector('footer'));
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();

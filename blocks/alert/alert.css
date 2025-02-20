@@ -22,48 +22,28 @@
 }
 .alert-wrapper h5 {
   margin: 0 0 4px 0;
+  color: #4b4c4d;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  opacity: 1;
 }
 .alert-wrapper p {
   margin: 0 0 10px 0;
+  font-family: roboto, sans-serif;
+  color: #4b4c4d;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 .alert-wrapper p:last-child {
   margin: 0;
 }
 .alert-wrapper .alert {
   border-radius: 0 2px 2px 0;
-  padding: 24px 24px 24px 69px;
   position: relative;
   margin: 24px 0;
-}
-@media (min-width: 1379px) {
-  .alert-wrapper .alert {
-    padding: 24px 125px 24px 69px;
-  }
-}
-@media (min-width: 1201px) and (max-width: 1379px) {
-  .alert-wrapper .alert {
-    padding: 24px 125px 24px 69px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .alert-wrapper .alert {
-    padding: 24px 91px 24px 69px;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .alert-wrapper .alert {
-    padding: 24px 91px 24px 69px;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 752.5px) {
-  .alert-wrapper .alert {
-    padding: 24px 35px 24px 69px;
-  }
-}
-@media (max-width: 480px) {
-  .alert-wrapper .alert {
-    padding: 24px 27px 24px 69px;
-  }
 }
 .alert-wrapper .alert::before {
   border-radius: 2px 0 0 2px;
@@ -76,12 +56,44 @@
   width: 10px;
 }
 .alert-wrapper .alert > div:first-child {
-  left: 24px;
-  position: absolute;
-  top: 24px;
+  display: flex;
+  gap: 16px;
 }
-.alert-wrapper .alert > div:first-child p {
+@media (min-width: 1379px) {
+  .alert-wrapper .alert > div:first-child {
+    padding: 24px 125px 24px 34px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .alert-wrapper .alert > div:first-child {
+    padding: 24px 125px 24px 34px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .alert-wrapper .alert > div:first-child {
+    padding: 24px 91px 24px 34px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .alert-wrapper .alert > div:first-child {
+    padding: 24px 91px 24px 34px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  .alert-wrapper .alert > div:first-child {
+    padding: 24px 35px 24px 34px;
+  }
+}
+@media (max-width: 480px) {
+  .alert-wrapper .alert > div:first-child {
+    padding: 24px 27px 24px 34px;
+  }
+}
+.alert-wrapper .alert > div:first-child p:has(.icon) {
   line-height: 1;
+}
+.alert-wrapper .alert > div:first-child > div:first-child .icon i {
+  font-size: 29px;
 }
 .alert-warning {
   background-color: #fffaee;

@@ -37,30 +37,32 @@
                     .date{
                         width: 50%;
                         display: flex;
-                        p{
-                            &:first-child{
-                                position: relative;
-                                &::after{
-                                    content: "•";
-                                    position: absolute;
-                                    right: -9px;
-                                    top: 55%;
-                                    transform: translateY(-50%);
-                                    font-size: 16px;
-                                    font-weight: 700;
-                                    color: $--gray-700;
-                                }
+                        p {
+                            &:first-child:not(:only-child) {
+                              position: relative;
+                              &::after {
+                                content: "•";
+                                position: absolute;
+                                right: -9px;
+                                top: 55%;
+                                transform: translateY(-50%);
+                                font-size: 16px;
+                                font-weight: 700;
+                                color: $--gray-700;
+                              }
                             }
-                            &:last-child{
-                                margin-left: 13px;
-                                span{
-                                    margin-left: 4px;
-                                }
+                          
+                            &:last-child:not(:only-child) {
+                              margin-left: 13px;
+                              span {
+                                margin-left: 4px;
+                              }
                             }
-                            span:first-child{
-                                margin-right: 4px;
+                          
+                            span:first-child {
+                              margin-right: 4px;
                             }
-                        }
+                          }
                         @include for-tablet{
                             width: 100%;
                             flex-direction: column;
@@ -146,7 +148,7 @@
                     @include for-mobile{
                         padding-bottom: 12px;
                     }
-                    &:first-child{
+                    &:first-child:not(:only-child) {
                         position: relative;
                         margin-right: 13px;
                         &::after{
