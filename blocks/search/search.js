@@ -15,14 +15,13 @@ const buildSearchBanner = (bannerBlock, bannerEl, searchGrid) => {
 const initSearch = () => {
   const searchWrap = document.createElement('section');
   const searchGrid = document.createElement('div');
-  const searchBanner = document.createElement('div');
   const searchLeftCol = document.createElement('div');
   const searchRightCol = document.createElement('div');
   searchWrap.classList.add('search-grid-wrapper');
   searchGrid.classList.add('search-grid');
   // searchBanner.innerHTML = '<div class="search-banner-section"></div>';
 
-  buildSearchBanner(allSearchBlocks[0], searchBanner, searchGrid);
+  buildSearchBanner(allSearchBlocks[0], searchGrid);
 
   searchGrid.append(searchLeftCol);
   searchGrid.append(searchRightCol);
