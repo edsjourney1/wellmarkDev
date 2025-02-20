@@ -114,6 +114,75 @@ form.eds-mkto-form {
         margin-right: 10%;
       }
     }
+    &.mktoform-733 {
+      > :nth-child(5),
+      > :nth-child(6),
+      > :nth-child(7) {
+        width: 30%;
+      }
+      > :nth-child(5),
+      > :nth-child(6) {
+        margin-right: 5%;
+      }
+      > :nth-child(8),
+      > :nth-child(9) {
+        width: 45%;
+      }
+      > :nth-child(8) {
+        margin-right: 10%;
+      }
+      > :nth-child(10),
+      > :nth-child(11),
+      > :nth-child(12) {
+        width: 30%;
+      }
+      > :nth-child(10),
+      > :nth-child(11) {
+        margin-right: 5%;
+      }
+      > :nth-child(16),
+      > :nth-child(17) {
+        width: 45%;
+      }
+      > :nth-child(16) {
+        margin-right: 10%;
+      }
+      > :nth-child(18),
+      > :nth-child(19) {
+        width: 45%;
+      }
+      > :nth-child(18) {
+        margin-right: 10%;
+      }
+      > :nth-child(21),
+      > :nth-child(22) {
+        width: 45%;
+      }
+      > :nth-child(21){
+        margin-right: 10%;
+      }
+      > :nth-child(23),
+      > :nth-child(24),
+      > :nth-child(25) {
+        width: 30%;
+      }
+      > :nth-child(23),
+      > :nth-child(24) {
+        margin-right: 5%;
+      }
+    }
+    &.mktoform-709 {
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
+        width: 45%;
+      }
+      > :nth-child(7),
+      > :nth-child(9) {
+        margin-right: 10%;
+      }
+    }
   }
   @include for-large {
     &.mktoform-589 {
@@ -191,6 +260,75 @@ form.eds-mkto-form {
         margin-right: 10%;
       }
     }
+    &.mktoform-733 {
+      > :nth-child(5),
+      > :nth-child(6),
+      > :nth-child(7) {
+        width: 30%;
+      }
+      > :nth-child(5),
+      > :nth-child(6) {
+        margin-right: 5%;
+      }
+      > :nth-child(8),
+      > :nth-child(9) {
+        width: 45%;
+      }
+      > :nth-child(8) {
+        margin-right: 10%;
+      }
+      > :nth-child(10),
+      > :nth-child(11),
+      > :nth-child(12) {
+        width: 30%;
+      }
+      > :nth-child(10),
+      > :nth-child(11) {
+        margin-right: 5%;
+      }
+      > :nth-child(16),
+      > :nth-child(17) {
+        width: 45%;
+      }
+      > :nth-child(16) {
+        margin-right: 10%;
+      }
+      > :nth-child(18),
+      > :nth-child(19) {
+        width: 45%;
+      }
+      > :nth-child(18) {
+        margin-right: 10%;
+      }
+      > :nth-child(21),
+      > :nth-child(22) {
+        width: 45%;
+      }
+      > :nth-child(21){
+        margin-right: 10%;
+      }
+      > :nth-child(23),
+      > :nth-child(24),
+      > :nth-child(25) {
+        width: 30%;
+      }
+      > :nth-child(23),
+      > :nth-child(24) {
+        margin-right: 5%;
+      }
+    }
+    &.mktoform-709 {
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
+        width: 45%;
+      }
+      > :nth-child(7),
+      > :nth-child(9) {
+        margin-right: 10%;
+      }
+    }
   }
   @include for-laptop {
     &.mktoform-589 {
@@ -257,6 +395,75 @@ form.eds-mkto-form {
       }
     }
     &.mktoform-595 {
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
+        width: 45%;
+      }
+      > :nth-child(7),
+      > :nth-child(9) {
+        margin-right: 10%;
+      }
+    }
+    &.mktoform-733 {
+      > :nth-child(5),
+      > :nth-child(6),
+      > :nth-child(7) {
+        width: 30%;
+      }
+      > :nth-child(5),
+      > :nth-child(6) {
+        margin-right: 5%;
+      }
+      > :nth-child(8),
+      > :nth-child(9) {
+        width: 45%;
+      }
+      > :nth-child(8) {
+        margin-right: 10%;
+      }
+      > :nth-child(10),
+      > :nth-child(11),
+      > :nth-child(12) {
+        width: 30%;
+      }
+      > :nth-child(10),
+      > :nth-child(11) {
+        margin-right: 5%;
+      }
+      > :nth-child(16),
+      > :nth-child(17) {
+        width: 45%;
+      }
+      > :nth-child(16) {
+        margin-right: 10%;
+      }
+      > :nth-child(18),
+      > :nth-child(19) {
+        width: 45%;
+      }
+      > :nth-child(18) {
+        margin-right: 10%;
+      }
+      > :nth-child(21),
+      > :nth-child(22) {
+        width: 45%;
+      }
+      > :nth-child(21){
+        margin-right: 10%;
+      }
+      > :nth-child(23),
+      > :nth-child(24),
+      > :nth-child(25) {
+        width: 30%;
+      }
+      > :nth-child(23),
+      > :nth-child(24) {
+        margin-right: 5%;
+      }
+    }
+    &.mktoform-709 {
       > :nth-child(7),
       > :nth-child(8),
       > :nth-child(9),
@@ -384,16 +591,25 @@ form.eds-mkto-form {
       }
       .mktoRadioList {
         width: 100%;
-        display: flex;
-        align-items: center;
         input.mktoField {
           width: 22px;
           height: 22px;
           // radio select color
           accent-color: rgba(0, 85, 137, 1);
+          display: inline-block;
         }
         label {
+          margin: 0;
           margin-left: 9px;
+          display: inline-block;
+          width: 95%;
+          vertical-align: bottom;
+          @include for-mobile-panel {
+            width: 93%;
+          }
+          @include for-mobile {
+            width: 90%;
+          }
         }
       }
       .mktoFieldWrap {
