@@ -1044,12 +1044,14 @@ div.section:not([class*=" "]) p.button-container a {
   .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
+    padding-bottom: 36px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
+    padding-bottom: 36px;
   }
 }
 .article-page .section.blog-article-information-container + .section .default-content-wrapper {
@@ -1064,12 +1066,14 @@ div.section:not([class*=" "]) p.button-container a {
   .article-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
+    padding-bottom: 36px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .article-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
+    padding-bottom: 36px;
   }
 }
 
@@ -1102,12 +1106,14 @@ div.section:not([class*=" "]) p.button-container a {
   .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
+    padding-bottom: 36px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
+    padding-bottom: 36px;
   }
 }
 .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper {
@@ -1122,12 +1128,14 @@ div.section:not([class*=" "]) p.button-container a {
   .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
+    padding-bottom: 36px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
+    padding-bottom: 36px;
   }
 }
 
