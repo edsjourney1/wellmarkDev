@@ -295,6 +295,9 @@
           text-align: left;
           line-height: 20px;
           margin: 0;
+          &:first-child {
+            padding-bottom: 12px;
+          }
         }
         > ul {
           @include for-laptop {
