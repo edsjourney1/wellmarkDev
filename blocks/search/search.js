@@ -1,11 +1,12 @@
 import sampleData from './sample-data.js';
+
 const searchParent = document.querySelector('.search-container');
 const allSearchItems = Array.from(document.querySelectorAll('.search-wrapper'));
 const allSearchBlocks = [];
 
-const buildSearchBanner = (bannerBlock, bannerEl, searchGrid) => {
+const buildSearchBanner = () => { //bannerBlock, bannerEl, searchGrid
 
-  // console.log('===========bannerBlock', bannerBlock);
+  console.log('===========bannerBlock', sampleData);
   // const [bannerH1, bannerP] = Array.from(bannerBlock.children);
 
   // bannerEl.append(bannerH1.querySelector(':scope > div'));
