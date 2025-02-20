@@ -42,19 +42,19 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .blog-article-listing-description .heading-div {
-    padding-top: 103px;
+    padding-top: 120px;
   }
 }
 @media (max-width: 480px) {
   .blog-article-listing-description .heading-div {
-    padding-top: 96px;
+    padding-top: 72px;
     flex-direction: column;
     gap: 24px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .blog-article-listing-description .heading-div {
-    padding-top: 72px;
+    padding-top: 96px;
     flex-direction: column;
     gap: 24px;
   }
