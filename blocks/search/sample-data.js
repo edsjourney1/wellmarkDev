@@ -1,4 +1,4 @@
-{
+const sampleData = {
     "total": 20,
     "pageSize": 10,
     "currentPage": 1,
@@ -146,4 +146,6 @@
             "isPDF": false
         }
     ]
-}
+};
+
+export default sampleData;
