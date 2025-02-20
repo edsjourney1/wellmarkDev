@@ -5,11 +5,11 @@ const allSearchBlocks = [];
 
 const buildSearchBanner = (bannerBlock, bannerEl, searchGrid) => {
 
-  console.log('===========bannerBlock', bannerBlock);
-  const [bannerH1, bannerP] = Array.from(bannerBlock.children);
+  // console.log('===========bannerBlock', bannerBlock);
+  // const [bannerH1, bannerP] = Array.from(bannerBlock.children);
 
-  bannerEl.append(bannerH1.querySelector(':scope > div'));
-  searchGrid.append(bannerEl);
+  // bannerEl.append(bannerH1.querySelector(':scope > div'));
+  // searchGrid.append(bannerEl);
 };
 
 const initSearch = () => {
@@ -32,8 +32,8 @@ const initSearch = () => {
 
 export default async function decorate(block) {
   const thisBlock = block;
-  thisBlock.classList.add('search-hidden');
-  thisBlock.setAttribute('aria-hidden', true);
+  // thisBlock.classList.add('search-hidden');
+  // thisBlock.setAttribute('aria-hidden', true);
   allSearchBlocks.push(thisBlock);
 
   if (allSearchItems.length === allSearchBlocks.length) {
