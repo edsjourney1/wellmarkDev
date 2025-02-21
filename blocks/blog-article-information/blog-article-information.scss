@@ -54,11 +54,22 @@
                           
                             &:last-child:not(:only-child) {
                               margin-left: 13px;
+                              @include for-tablet{
+                                margin-left: 0;
+                              }
+                              @include for-mobile{
+                                margin-left: 0;
+                              }
                               span {
                                 margin-left: 4px;
+                                @include for-tablet{
+                                  margin-left: 0;
+                                }
+                                @include for-mobile{
+                                  margin-left: 0;
+                                }
                               }
                             }
-                          
                             span:first-child {
                               margin-right: 4px;
                             }
@@ -168,6 +179,9 @@
                             &::after{
                                 display: none;
                             }
+                        }
+                        span{
+                            text-transform: lowercase;
                         }
                     }
                     @media (min-width: 481px) and (max-width: 600px) {
