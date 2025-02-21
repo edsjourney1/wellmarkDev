@@ -395,9 +395,7 @@ function decorateButtons(element) {
         if (
           up.childNodes.length === 1
           && (up.tagName === 'P' || up.tagName === 'DIV')
-        ) {
-          up.classList.add('button-container');
-        }
+        );
         if (
           up.childNodes.length === 1
           && up.tagName === 'STRONG'
@@ -664,8 +662,8 @@ async function loadHeader(header) {
 }
 
 /**
- * Loads a block named 'header' into header
- * @param {Element} header header element
+ * Loads a block named 'external-link-popup' into header
+ * @param {Element} bodyElem body element
  * @returns {Promise}
  */
 async function loadExternalPopup(bodyElem) {
@@ -673,6 +671,18 @@ async function loadExternalPopup(bodyElem) {
   bodyElem.append(externalPopupBlock);
   decorateBlock(externalPopupBlock);
   return loadBlock(externalPopupBlock);
+}
+
+/**
+ * Loads a block named 'external-link-popup' into header
+ * @param {Element} bodyElem body element
+ * @returns {Promise}
+ */
+async function loadCommonFragments(bodyElem) {
+  const commonFragments = buildBlock('common-fragments', '');
+  bodyElem.append(commonFragments);
+  decorateBlock(commonFragments);
+  return loadBlock(commonFragments);
 }
 
 /**
@@ -806,4 +816,5 @@ export {
   wrapTextNodes,
   loadPublishedDate,
   loadExternalPopup,
+  loadCommonFragments,
 };

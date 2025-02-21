@@ -15,36 +15,28 @@
         }
         h5 {
             margin: 0 0 4px 0;
+            color: $--gray-700;
+            font-size: 20px;
+            line-height: 24px;
+            font-family: $--font-roboto;
+            font-weight: 700;
+            opacity: 1;
         }
         p {
             margin: 0 0 10px 0;
+            font-family: $--font-roboto;
+            color: $--gray-700;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
             &:last-child {
                 margin: 0;
             }
         }
         .alert {
             border-radius: 0 2px 2px 0;
-            padding: 24px 24px 24px 69px;
             position: relative;
             margin: 24px 0;
-            @include for-xlarge{
-                padding: 24px 125px 24px 69px;
-            }
-            @include for-large{
-                padding: 24px 125px 24px 69px;
-            }
-            @include for-laptop{
-                padding: 24px 91px 24px 69px;
-            }
-            @include for-tablet{
-                padding: 24px 91px 24px 69px;
-            }
-            @include for-tablet-smallest{
-                padding: 24px 35px 24px 69px;
-            }
-            @include for-mobile{
-                padding: 24px 27px 24px 69px;
-            }
             &::before {
                 border-radius: 2px 0 0 2px;
                 content: '';
@@ -56,11 +48,35 @@
                 width: 10px;
             }
             > div:first-child {
-                left: 24px;
-                position: absolute;
-                top: 24px;
-                p {
+                display: flex;
+                gap: 16px;
+                @include for-xlarge{
+                    padding: 24px 125px 24px 34px;
+                }
+                @include for-large{
+                    padding: 24px 125px 24px 34px;
+                }
+                @include for-laptop{
+                    padding: 24px 91px 24px 34px;
+                }
+                @include for-tablet{
+                    padding: 24px 91px 24px 34px;
+                }
+                @include for-tablet-smallest{
+                    padding: 24px 35px 24px 34px;
+                }
+                @include for-mobile{
+                    padding: 24px 27px 24px 34px;
+                }
+                p:has(.icon) {
                     line-height: 1;
+                }
+                > div:first-child{
+                    .icon {
+                        i{
+                            font-size: 29px;
+                        }
+                    }
                 }
             }
         }

@@ -30,12 +30,12 @@
       padding-top: 120px;
     }
     @include for-mobile {
-      padding-top: 96px;
+      padding-top: 72px;
       flex-direction: column;
       gap: 24px;
     }
     @include for-tablet {
-      padding-top: 72px;
+      padding-top: 96px;
       flex-direction: column;
       gap: 24px;
     }

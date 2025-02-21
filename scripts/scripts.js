@@ -15,13 +15,50 @@ import {
   sampleRUM,
   loadPublishedDate,
   loadExternalPopup,
+  loadCommonFragments,
+  loadScript,
+  toCamelCase,
+  toClassName,
 } from './aem.js';
+
 import { decorateExternalImages } from './externalImage.js';
 
 // eslint-disable-next-line import/no-cycle
 // import initAccessibilityMode from
 // '../tools/sidekick/plugins/accessibility-mode/accessibility-mode.js';
 // let isA11yModeActive = false;
+
+const AUDIENCES = {
+  mobile: () => window.innerWidth < 600,
+  desktop: () => window.innerWidth >= 600,
+  // define your custom audiences here as needed
+};
+
+/**
+ * Gets all the metadata elements that are in the given scope.
+ * @param {String} scope The scope/prefix for the metadata
+ * @returns an array of HTMLElement nodes that match the given scope
+ */
+export function getAllMetadata(scope) {
+  return [...document.head.querySelectorAll(`meta[property^="${scope}:"],meta[name^="${scope}-"]`)]
+    .reduce((res, meta) => {
+      const id = toClassName(meta.name
+        ? meta.name.substring(scope.length + 1)
+        : meta.getAttribute('property').split(':')[1]);
+      res[id] = meta.getAttribute('content');
+      return res;
+    }, {});
+}
+
+const pluginContext = {
+  getAllMetadata,
+  getMetadata,
+  loadCSS,
+  loadScript,
+  sampleRUM,
+  toCamelCase,
+  toClassName,
+};
 
 /**
  * Builds hero block and prepends to main in a new section.
@@ -201,6 +238,39 @@ function orderlist() {
     });
   }
 }
+
+function scrollIdlink() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        let headerOffset;
+        const screenWidth = window.innerWidth;
+        if (screenWidth >= 1920) {
+          // Desktop
+          headerOffset = 170;
+        } else if (screenWidth >= 1024) {
+          // Laptop
+          headerOffset = 170;
+        } else if (screenWidth >= 480) {
+          // Tablet
+          headerOffset = 90;
+        } else {
+          // Mobile
+          headerOffset = 85;
+        }
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      }
+    });
+  });
+}
 /**
  * Decorates the main element.
  * @param {Element} main The main element
@@ -216,12 +286,21 @@ export function decorateMain(main) {
   decorateExternalImages(main);
   decorateExternalImages(main, '//External Image//');
   orderlist();
+  scrollIdlink();
 }
 /**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
+  if (getMetadata('experiment')
+    || Object.keys(getAllMetadata('campaign')).length
+    || Object.keys(getAllMetadata('audience')).length) {
+    // eslint-disable-next-line import/no-relative-packages
+    const { loadEager: runEager } = await import('../plugins/experimentation/src/index.js');
+    await runEager(document, { audiences: AUDIENCES }, pluginContext);
+  }
+
   doc.documentElement.lang = 'en';
   loadPublishedDate();
   decorateTemplateAndTheme();
@@ -257,9 +336,18 @@ async function loadLazy(doc) {
   if (hash && element) element.scrollIntoView();
   loadHeader(doc.querySelector('header'));
   loadExternalPopup(doc.querySelector('body'));
+  loadCommonFragments(doc.querySelector('body'));
   loadFooter(doc.querySelector('footer'));
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+
+  if ((getMetadata('experiment')
+    || Object.keys(getAllMetadata('campaign')).length
+    || Object.keys(getAllMetadata('audience')).length)) {
+    // eslint-disable-next-line import/no-relative-packages
+    const { loadLazy: runLazy } = await import('../plugins/experimentation/src/index.js');
+    await runLazy(document, { audiences: AUDIENCES }, pluginContext);
+  }
 }
 /**
  * Loads everything that happens a lot later,
