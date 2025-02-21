@@ -52,14 +52,12 @@
   flex-wrap: wrap;
 }
 .blog-social-links > div > div:nth-child(1) {
-  -moz-column-gap: 24px;
-       column-gap: 24px;
+  column-gap: 24px;
   width: 114px;
   margin-right: 72px;
 }
 .blog-social-links > div > div:nth-child(2) {
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
   width: 290px;
 }
 .blog-social-links > div > div:nth-child(2) a {

@@ -2,6 +2,9 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+.benefit-blocks-container .benefit-blocks-wrapper p:has(i) a {
+  margin-left: 8px;
+}
 @media (min-width: 1201px) and (max-width: 1379px) {
   .benefit-blocks-container .benefit-blocks-wrapper {
     width: calc(100% - 100px);
@@ -345,8 +348,4 @@
 
 .background-blue-50 .block-left {
   background-color: #ffffff;
-}
-
-p:has(i) a {
-  margin-left: 8px;
 }

@@ -1,10 +1,8 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-export default async function decorate(block) {
-  const thisBlock = block;
-
-  const socialMeta = getMetadata('footer');
+export default async function decorate() { // block
+  const socialMeta = getMetadata('/content-fragments/blog-social-fragment');
   const socialPath = socialMeta
     ? new URL(socialMeta, window.location).pathname
     : '/content-fragments/blog-social-fragment';
@@ -15,14 +13,14 @@ export default async function decorate(block) {
     const lastElem = document.querySelector('.blog-article-listing-curated-wrapper');
     const mainElem = document.querySelector('main');
     const socialEl = fragment?.querySelector('.blog-social-links');
-    
+
     if (socialEl) {
       socialEl.classList.add('blog-social-links');
       const [leftDiv, rightDiv] = Array.from(socialEl.querySelectorAll(':scope > div > div'));
       const emEl = Array.from(socialEl.querySelectorAll(':scope em'));
 
       [...leftDiv.querySelectorAll('p'), ...rightDiv.querySelectorAll('p')].forEach((pTag) => {
-        let btnEl = document.createElement('a');
+        const btnEl = document.createElement('a');
         if (pTag.innerHTML.indexOf('facebook') !== -1) {
           btnEl.href = `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`;
         }
@@ -33,7 +31,7 @@ export default async function decorate(block) {
           btnEl.href = `https://www.linkedin.com/shareArticle?mini=true&url=${window.location.href}`;
         }
         if (pTag.innerHTML.indexOf('Email') !== -1 || pTag.innerHTML.indexOf('email') !== -1) {
-          const h1Str = '';
+          let h1Str = '';
           if (document.querySelector('h1')) {
             h1Str = document.querySelector('h1').innerHTML;
           }
@@ -43,7 +41,7 @@ export default async function decorate(block) {
           btnEl.addEventListener('click', (event) => {
             event.preventDefault();
             window.print();
-          })
+          });
         }
 
         btnEl.append(pTag.querySelector('span'));
@@ -55,7 +53,7 @@ export default async function decorate(block) {
       emEl.forEach((el) => {
         el.setAttribute('aria-hidden', true);
       });
-  
+
       if (lastElem) {
         lastElem.parentNode.insertBefore(socialEl, lastElem);
       } else {
