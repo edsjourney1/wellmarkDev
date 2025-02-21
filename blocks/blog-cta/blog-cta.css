@@ -2,7 +2,42 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
+@media (min-width: 1025px) {
+  .blog-cta-wrapper {
+    width: 43.7vw;
+  }
+  .blog-cta-wrapper .blog-cta {
+    padding-left: 12.87%;
+    padding-right: 12.87%;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1024px) {
+  .blog-cta-wrapper {
+    width: 77.69vw;
+  }
+}
+@media (min-width: 481px) and (max-width: 1022px) {
+  .blog-cta-wrapper {
+    width: 92.96vw;
+  }
+  .blog-cta-wrapper .blog-cta {
+    padding-left: 17.13%;
+    padding-right: 17.13%;
+  }
+}
+@media (min-width: 393px) and (max-width: 480px) {
+  .blog-cta-wrapper {
+    width: 85.23vw;
+  }
+}
+@media (min-width: 100px) and (max-width: 392px) {
+  .blog-cta-wrapper {
+    width: 91.85vw;
+  }
+}
+
 .blog-cta {
+  margin: auto;
   border-bottom: 8px solid #f2f2f3;
   border-top: 8px solid #f2f2f3;
   padding: 52px 0;
@@ -39,3 +74,5 @@
 .blog-cta-btn .button-container .icon > i {
   font-size: inherit;
 }
+
+/*# sourceMappingURL=blog-cta.css.map */
