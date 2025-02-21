@@ -183,6 +183,21 @@ form.eds-mkto-form {
         margin-right: 10%;
       }
     }
+    &.mktoform-744 {
+      > :nth-child(5),
+      > :nth-child(6),
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
+        width: 45%;
+      }
+      > :nth-child(5),
+      > :nth-child(7),
+      > :nth-child(9) {
+        margin-right: 10%;
+      }
+    }
   }
   @include for-large {
     &.mktoform-589 {
@@ -324,6 +339,21 @@ form.eds-mkto-form {
       > :nth-child(10) {
         width: 45%;
       }
+      > :nth-child(7),
+      > :nth-child(9) {
+        margin-right: 10%;
+      }
+    }
+    &.mktoform-744 {
+      > :nth-child(5),
+      > :nth-child(6),
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
+        width: 45%;
+      }
+      > :nth-child(5),
       > :nth-child(7),
       > :nth-child(9) {
         margin-right: 10%;
@@ -475,6 +505,21 @@ form.eds-mkto-form {
         margin-right: 10%;
       }
     }
+    &.mktoform-744 {
+      > :nth-child(5),
+      > :nth-child(6),
+      > :nth-child(7),
+      > :nth-child(8),
+      > :nth-child(9),
+      > :nth-child(10) {
+        width: 45%;
+      }
+      > :nth-child(5),
+      > :nth-child(7),
+      > :nth-child(9) {
+        margin-right: 10%;
+      }
+    }
   }
 
   p {
@@ -604,6 +649,15 @@ form.eds-mkto-form {
           display: inline-block;
           width: 95%;
           vertical-align: bottom;
+          @include for-xlarge {
+            width:97%;
+          }
+          @include for-large {
+            width: 96%;
+          }
+          @include for-laptop {
+            width: 96%;
+          }
           @include for-mobile-panel {
             width: 93%;
           }
