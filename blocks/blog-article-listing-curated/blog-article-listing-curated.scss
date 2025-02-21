@@ -141,7 +141,21 @@
           text-decoration: underline;
           margin: 0;
           padding-bottom: 8px;
-          padding-top: 29px;
+          @include for-xlarge {
+            padding-top: 24px;
+          }
+          @include for-large {
+            padding-top: 24px;
+          }
+          @include for-laptop {
+            padding-top: 26px;
+          }
+          @include for-mobile {
+            padding-top: 26px;
+          }
+          @include for-tablet {
+            padding-top: 26px;
+          }
         }
         > .date-div {
           display: flex;
