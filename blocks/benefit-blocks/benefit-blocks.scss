@@ -3,6 +3,11 @@
 
 .benefit-blocks-container{
   .benefit-blocks-wrapper{
+    p:has(i){
+      a{
+        margin-left: 8px;
+      }
+    }
     @include for-large{
       width: calc(100% - 100px);
     }
@@ -280,10 +285,5 @@
 .background-blue-50{
   .block-left{
     background-color: $--white;
-  }
-}
-p:has(i){
-  a{
-    margin-left: 8px;
   }
 }

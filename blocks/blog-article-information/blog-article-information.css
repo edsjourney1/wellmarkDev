@@ -65,8 +65,28 @@
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child:not(:only-child) {
   margin-left: 13px;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child:not(:only-child) {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child:not(:only-child) {
+    margin-left: 0;
+  }
+}
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child:not(:only-child) span {
   margin-left: 4px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child:not(:only-child) span {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p:last-child:not(:only-child) span {
+    margin-left: 0;
+  }
 }
 .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block div:has(.date) .date p span:first-child {
   margin-right: 4px;
@@ -190,6 +210,9 @@
   .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p:first-child:not(:only-child)::after {
     display: none;
   }
+}
+.blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p:first-child:not(:only-child) span {
+  text-transform: lowercase;
 }
 @media (min-width: 481px) and (max-width: 600px) {
   .blog-article-information-container .blog-article-information-wrapper .blog-article-information.block .article-link p:nth-child(n+4) {
