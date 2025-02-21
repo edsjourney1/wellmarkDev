@@ -153,6 +153,20 @@
                 }
               }
             }
+            ul {
+              margin: 0;
+              padding-bottom: 24px;
+              li {
+                .icon{
+                  height: auto;
+                  width: auto;
+                  i{
+                    font-size: 16px;
+                    padding: 0 0 0 6px;
+                  }
+                }
+              }
+            }
           }
         }
       }
