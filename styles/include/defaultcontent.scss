@@ -1,6 +1,14 @@
 @import 'mq';
 @import 'tokens';
 
+div.section:not([class*=' ']) {
+  p.button-container{
+    padding-bottom: 24px;
+    a {
+      margin: 0;
+    }
+  }
+} 
 .section {
   .text-container {
     .text-wrapper {
@@ -133,6 +141,7 @@
     p {
       &:has(img){
         width: 100%;
+        padding-bottom: 36px;
       }
       margin: 0;
       padding-bottom: $--spacing-l;
@@ -301,13 +310,13 @@
       padding-bottom: $--spacing-l;
       margin: 0;
       @include for-laptop {
-        width: calc((100% - 15px) / 12* 8);
+        width: calc((100% - 60px) / 12* 8);
       }
       @include for-large {
-        width: calc((100% - 15px) / 12* 8);
+        width: calc((100% - 60px) / 12* 8);
       }
       @include for-xlarge {
-        width: calc((100% - 15px) / 12* 8);
+        width: calc((100% - 60px) / 12* 8);
       }
       li{
         color: $--gray-700;
@@ -321,6 +330,15 @@
         padding-bottom: $--spacing-s;
         padding-left: 14px;
         p {
+          width: 100%;
+        }
+        h2 {
+          width: 100%;
+        }
+        h3 {
+          width: 100%;
+        }
+        h4 {
           width: 100%;
         }
         .icon{
@@ -342,6 +360,12 @@
           padding-top: 16px;
           padding-bottom: 0;
           width: 100%;
+          @include for-tablet{
+            width: unset;
+          }
+          @include for-mobile{
+            width: unset;
+          }
           :last-child{
             padding-bottom: 0;
           }
@@ -355,13 +379,13 @@
       padding-bottom: $--spacing-l;
       margin: 0;
       @include for-laptop {
-        width: calc((100% - 15px) / 12* 8);
+        width: calc((100% - 60px) / 12* 8);
       }
       @include for-large {
-        width: calc((100% - 15px) / 12* 8);
+        width: calc((100% - 60px) / 12* 8);
       }
       @include for-xlarge {
-        width: calc((100% - 15px) / 12* 8);
+        width: calc((100% - 60px) / 12* 8);
       }
       li{
         color: $--gray-700;
@@ -375,6 +399,15 @@
         padding-bottom: $--spacing-s;
         padding-left: 14px;
         p {
+          width: 100%;
+        }
+        h2 {
+          width: 100%;
+        }
+        h3 {
+          width: 100%;
+        }
+        h4 {
           width: 100%;
         }
         .icon{
@@ -396,6 +429,15 @@
           padding-top: 16px;
           padding-bottom: 0;
           width: 100%;
+          @include for-tablet{
+            width: unset;
+          }
+          @include for-mobile{
+            width: unset;
+          }
+          :last-child{
+            padding-bottom: 0;
+          }
           li{
             list-style-type: circle;
           }
@@ -517,6 +559,21 @@
   }
 }
 .article-page {
+  .pull-quote-container {
+    .pull-quote-wrapper {
+        .pull-quote.block {
+          @include for-laptop{
+            margin-left: 36px;
+          }
+          @include for-large{
+            margin-left: 52px;
+          }
+          @include for-xlarge{
+            margin: 0;
+          }
+        }
+    }
+  }
   .section {
     .default-content-wrapper{
       h1{
@@ -525,6 +582,7 @@
       p {
         &:has(img){
           width: calc((100% - 15px) / 12* 8);
+          padding-bottom: 36px;
         }
       }
       @include for-mobile{
@@ -548,6 +606,7 @@
         &:first-of-type{
           float: right;
           max-width: calc((100% - 60px) / 12* 4);
+          padding-bottom: 0;
         }
       }
       @include for-mobile{
@@ -555,6 +614,7 @@
           &:first-of-type{
             float: unset;
             min-width: 100%;
+            padding-bottom: 36px;
           }
         }
       }
@@ -563,6 +623,37 @@
           &:first-of-type{
             float: unset;
             min-width: 100%;
+            padding-bottom: 36px;
+          }
+        }
+      }
+    }
+    &.blog-article-information-container + .section {
+      .default-content-wrapper {
+        padding-top: 16px;
+        p:has(picture){
+          &:first-of-type{
+            float: right;
+            max-width: calc((100% - 60px) / 12* 4);
+            padding-bottom: 0;
+          }
+        }
+        @include for-mobile{
+          p:has(picture){
+            &:first-of-type{
+              float: unset;
+              min-width: 100%;
+              padding-bottom: 36px;
+            }
+          }
+        }
+        @include for-tablet{
+          p:has(picture){
+            &:first-of-type{
+              float: unset;
+              min-width: 100%;
+              padding-bottom: 36px;
+            }
           }
         }
       }
@@ -578,6 +669,7 @@
       p {
         &:has(img){
           width: calc((100% - 15px) / 12* 8);
+          padding-bottom: 36px;
         }
       }
       @include for-mobile{
@@ -601,6 +693,7 @@
         &:first-of-type{
           float: right;
           max-width: calc((100% - 60px) / 12* 4);
+          padding-bottom: 0;
         }
       }
       @include for-mobile{
@@ -608,6 +701,7 @@
           &:first-of-type{
             float: unset;
             min-width: 100%;
+            padding-bottom: 36px;
           }
         }
       }
@@ -616,6 +710,37 @@
           &:first-of-type{
             float: unset;
             min-width: 100%;
+            padding-bottom: 36px;
+          }
+        }
+      }
+    }
+    &.blog-article-information-container + .section {
+      .default-content-wrapper {
+        padding-top: 16px;
+        p:has(picture){
+          &:first-of-type{
+            float: right;
+            max-width: calc((100% - 60px) / 12* 4);
+            padding-bottom: 0;
+          }
+        }
+        @include for-mobile{
+          p:has(picture){
+            &:first-of-type{
+              float: unset;
+              min-width: 100%;
+              padding-bottom: 36px;
+            }
+          }
+        }
+        @include for-tablet{
+          p:has(picture){
+            &:first-of-type{
+              float: unset;
+              min-width: 100%;
+              padding-bottom: 36px;
+            }
           }
         }
       }
