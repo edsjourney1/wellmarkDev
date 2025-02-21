@@ -198,3 +198,15 @@
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block p.button-container ~ h2 {
   margin-top: 24px;
 }
+.image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block ul {
+  margin: 0;
+  padding-bottom: 24px;
+}
+.image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block ul li .icon {
+  height: auto;
+  width: auto;
+}
+.image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block ul li .icon i {
+  font-size: 16px;
+  padding: 0 0 0 6px;
+}
