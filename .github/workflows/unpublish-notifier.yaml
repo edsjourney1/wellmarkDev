@@ -1,8 +1,12 @@
+name: Search trigger to notify the Connector - delete
+
 on: 
   repository_dispatch:
-    types: [publish, unpublish]
+    types:
+      - resource-unpublished
+
 jobs:
-  print:
+  check-event-status:
     runs-on: ubuntu-latest
     steps:
     - run: |
