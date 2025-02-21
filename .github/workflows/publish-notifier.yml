@@ -11,3 +11,4 @@ jobs:
     - run: |
         echo "Status: ${{ github.event.client_payload.status }}"
         echo "Path: ${{ github.event.client_payload.path }}"
+        echo "Path: ${{ github.event.action }}"
