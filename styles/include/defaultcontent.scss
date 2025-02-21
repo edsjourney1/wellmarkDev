@@ -218,6 +218,7 @@ div.section:not([class*=' ']) {
                 position: relative;
                 vertical-align: baseline;
                 font-size: 13.5px;
+                line-height: normal;
               }
             }
             &.secondary{
@@ -227,6 +228,7 @@ div.section:not([class*=' ']) {
                 position: relative;
                 vertical-align: baseline;
                 font-size: 13.5px;
+                line-height: normal;
               }
             }
           }
@@ -607,6 +609,9 @@ div.section:not([class*=' ']) {
           float: right;
           max-width: calc((100% - 60px) / 12* 4);
           padding-bottom: 0;
+          img{
+            border-radius: 4px;
+          }
         }
       }
       @include for-mobile{
@@ -636,6 +641,9 @@ div.section:not([class*=' ']) {
             float: right;
             max-width: calc((100% - 60px) / 12* 4);
             padding-bottom: 0;
+            img{
+              border-radius: 4px;
+            }
           }
         }
         @include for-mobile{
@@ -694,6 +702,9 @@ div.section:not([class*=' ']) {
           float: right;
           max-width: calc((100% - 60px) / 12* 4);
           padding-bottom: 0;
+          img{
+            border-radius: 4px;
+          }
         }
       }
       @include for-mobile{
@@ -723,6 +734,9 @@ div.section:not([class*=' ']) {
             float: right;
             max-width: calc((100% - 60px) / 12* 4);
             padding-bottom: 0;
+            img{
+              border-radius: 4px;
+            }
           }
         }
         @include for-mobile{
