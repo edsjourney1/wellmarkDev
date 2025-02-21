@@ -1042,6 +1042,9 @@ div.section:not([class*=" "]) p.button-container a {
   max-width: calc((100% - 60px) / 12 * 4);
   padding-bottom: 0;
 }
+.article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type img {
+  border-radius: 4px;
+}
 @media (max-width: 480px) {
   .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
@@ -1063,6 +1066,9 @@ div.section:not([class*=" "]) p.button-container a {
   float: right;
   max-width: calc((100% - 60px) / 12 * 4);
   padding-bottom: 0;
+}
+.article-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type img {
+  border-radius: 4px;
 }
 @media (max-width: 480px) {
   .article-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
@@ -1104,6 +1110,9 @@ div.section:not([class*=" "]) p.button-container a {
   max-width: calc((100% - 60px) / 12 * 4);
   padding-bottom: 0;
 }
+.newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type img {
+  border-radius: 4px;
+}
 @media (max-width: 480px) {
   .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
@@ -1125,6 +1134,9 @@ div.section:not([class*=" "]) p.button-container a {
   float: right;
   max-width: calc((100% - 60px) / 12 * 4);
   padding-bottom: 0;
+}
+.newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type img {
+  border-radius: 4px;
 }
 @media (max-width: 480px) {
   .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
