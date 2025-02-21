@@ -654,6 +654,7 @@ div.section:not([class*=" "]) p.button-container a {
   position: relative;
   vertical-align: baseline;
   font-size: 13.5px;
+  line-height: normal;
 }
 .section .default-content-wrapper p.button-container a.button.secondary {
   font-size: 18px;
@@ -663,6 +664,7 @@ div.section:not([class*=" "]) p.button-container a {
   position: relative;
   vertical-align: baseline;
   font-size: 13.5px;
+  line-height: normal;
 }
 .section .default-content-wrapper p.button-container a:has(.icon).button.primary {
   padding-bottom: 12px;
