@@ -79,7 +79,7 @@ const sampleData = {
       title: 'Regular Dental Care and Your Overall Health | Wellmark Blue',
       link: '#',
       description:
-        'Regular dental care is an essential part of your overall health, which means your dental hygienist does much more than leave your teeth feeling clean and smooth.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ullamcorper diam. Ut tristique suscipit faucibus. Phasellus nec faucibus sem. Curabitur vulputate tellus at metus rutrum, non scelerisque lectus ultricies.',
       url: 'https://www.wellmark.com/blue/healthy-living/on-the-front-lines-of-dental-care',
       isPDF: false,
     },
@@ -87,7 +87,7 @@ const sampleData = {
       title: 'Choosing a dental plan for your business | Blue at Work',
       link: '#',
       description:
-        'Dental benefits are considered very important to 82 percent of employees External Link.After medical insurance, it\'s their top priority when considering the overall value of a benefits package — so you want to make sure you\'re tailoring coverage to give them the',
+        'Nulla ultricies purus vitae sagittis placerat. Mauris sit amet nisl ut felis tempor facilisis. Nullam laoreet libero fermentum turpis tincidunt, ac malesuada dolor dapibus. Maecenas sit amet rutrum elit. Phasellus est libero, rutrum eget dui quis, vestibulum consequat lorem.',
       url: 'https://www.wellmark.com/blue/healthy-living/on-the-front-lines-of-dental-care',
       isPDF: false,
     },
@@ -95,7 +95,7 @@ const sampleData = {
       title: 'Dental programs and resources | Wellmark',
       link: '#',
       description:
-        'Regular dental care is an essential part of your overall health, which means your dental hygienist does much more than leave your teeth feeling clean and smooth.',
+        'Morbi faucibus rhoncus ligula, ultrices efficitur nibh viverra sit amet. Pellentesque bibendum urna vel orci egestas auctor. Nullam iaculis quam et pulvinar ultricies. Phasellus viverra consectetur est nec pellentesque. Aenean sollicitudin nibh in erat laoreet, sit amet pharetra lorem finibus. Quisque dolor purus, tempor sed sem non, porttitor viverra leo.',
       url: 'https://www.wellmark.com/blue/healthy-living/on-the-front-lines-of-dental-care',
       isPDF: false,
     },
@@ -103,7 +103,7 @@ const sampleData = {
       title: 'Additional benefits: dental, vision and hearing | Wellmark',
       link: '#',
       description:
-        'Dental benefits are considered very important to 82 percent of employees External Link.After medical insurance, it\'s their top priority when considering the overall value of a benefits package — so you want to make sure you\'re tailoring coverage to give them the…',
+        'Nunc pretium justo vitae massa vulputate, non ullamcorper odio posuere. Sed sodales nisi tellus, vel porta sapien porta ac. In consequat lacus id neque porttitor venenatis vel ut nibh.',
       url: 'https://www.wellmark.com/blue-at-work/resources/what-to-consider-in-a-dental-plan',
       isPDF: false,
     },
@@ -111,7 +111,7 @@ const sampleData = {
       title: 'Find a doctor, dentist, pharmacy or facility | Wellmark',
       link: '#',
       description:
-        'Find a dentist . Find a dental care provider in your area, no matter where you are. If you\'re on an Iowa plan, search the Blue Dental network If you\'re on a South Dakota plan, search the Delta Dental® network ',
+        'Nam dapibus iaculis velit in eleifend. Vivamus sit amet dapibus augue. Fusce euismod suscipit nibh tincidunt cursus. Nulla molestie sollicitudin sem. Etiam ac quam id dolor placerat ultrices nec quis neque. Nulla convallis placerat ultricies. Phasellus ut erat vel nisi pretium porta. Etiam urna diam, maximus ac convallis quis, mattis ut neque. Donec interdum, diam ac placerat egestas, dui velit condimentum ligula, vel accumsan est sapien vel enim. Integer nisi diam, fringilla eu tempor nec, fringilla eu justo.',
       url: 'https://www.wellmark.com/finder',
       isPDF: false,
     },
@@ -119,7 +119,7 @@ const sampleData = {
       title: 'Dental Reimbursement Form - Wellmark',
       link: '#',
       description:
-        'Dental Reimbursement Form. Your plan covers dental services from licensed dentists within your service area up to an annual limit. Refer to your Evidence of Coverage for your plan\'s limit. To receive reimbursement, please submit the following: Reimbursement …',
+        'Duis pellentesque erat non sem faucibus, vel efficitur nunc eleifend. Curabitur mi nisi, sodales vel tristique faucibus, dignissim ut tortor.',
       url: 'https://www.wellmark.com/medicare/fulldocumentname_restofURL_documentname.pdf',
       isPDF: true,
     },
@@ -127,7 +127,7 @@ const sampleData = {
       title: 'Shop all Wellmark health insurance plans | Wellmark',
       link: '#',
       description:
-        'Shop Wellmark’s health insurance plans for individuals and families, Medicare with drug, dental and vision options and plans for small to large group employers.',
+        'Sed laoreet condimentum nisl vel lobortis. Sed congue augue et lorem euismod, sed fringilla velit mattis. Aenean feugiat tortor et lorem sollicitudin eleifend. Proin pulvinar ligula eu enim ornare molestie.',
       url: 'https://www.wellmark.com/shop-health-insurance-plans',
       isPDF: false,
     },
@@ -136,7 +136,7 @@ const sampleData = {
         'Dental & Vision Insurance for Iowa and South Dakota Mid-Size Groups ',
       link: '#',
       description:
-        'Maximize your benefits with a specialty plan 2024 Vision and Dental Plans for Iowa and South Dakota groups with 1-50 employees. Attract and retain great employees by offering a comprehensive benefits package—complete with dental and vision coverage.',
+        'Ut sodales, mi in convallis blandit, nisl augue accumsan nulla, et hendrerit nulla erat id sapien. Cras pulvinar mollis cursus.',
       url: 'https://www.wellmark.com/employer/small-group/dental-and-vision-plans',
       isPDF: false,
     },
@@ -145,7 +145,7 @@ const sampleData = {
         'Dental & Vision Insurance for Iowa and South Dakota Mid-Size Groups ',
       link: '#',
       description:
-        'Maximize your benefits with a specialty plan 2024 Vision and Dental Plans for Iowa and South Dakota groups with 1-50 employees. Attract and retain great employees by offering a comprehensive benefits package—complete with dental and vision coverage.',
+        'Fusce fermentum tellus dolor, sit amet auctor lectus malesuada ut. Proin non cursus nisl. Sed quis arcu lobortis, pellentesque orci et, eleifend sem. Nunc interdum tortor risus, at aliquet orci fringilla ut. Nulla eu bibendum odio. In in accumsan nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       url: 'https://www.wellmark.com/employer/small-group/dental-and-vision-plans',
       isPDF: false,
     },
@@ -154,7 +154,16 @@ const sampleData = {
         'Dental & Vision Insurance for Iowa and South Dakota Mid-Size Groups ',
       link: '#',
       description:
-        'Maximize your benefits with a specialty plan 2024 Vision and Dental Plans for Iowa and South Dakota groups with 1-50 employees. Attract and retain great employees by offering a comprehensive benefits package—complete with dental and vision coverage.',
+        'Maecenas commodo ligula in arcu laoreet, nec vulputate velit pretium. Fusce tincidunt, est nec ultrices efficitur, enim neque efficitur ligula, ac porttitor lectus arcu ac diam. Nulla vel convallis arcu. Donec pellentesque a felis ut dictum. Nam ornare massa nec eros rhoncus, nec suscipit eros ullamcorper. Maecenas vitae lorem convallis nisi viverra facilisis sed at risus. Nam luctus tempus aliquet. Morbi molestie aliquet hendrerit. Fusce vulputate cursus libero id facilisis.',
+      url: 'https://www.wellmark.com/employer/small-group/dental-and-vision-plans',
+      isPDF: false,
+    },
+    {
+      title:
+        'Dental & Vision Insurance for Iowa and South Dakota Mid-Size Groups ',
+      link: '#',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac ullamcorper diam. Ut tristique suscipit faucibus. Phasellus nec faucibus sem. Curabitur vulputate tellus at metus rutrum, non scelerisque lectus ultricies. Nulla ultricies purus vitae sagittis placerat. Mauris sit amet nisl ut felis tempor facilisis. Nullam laoreet libero fermentum turpis tincidunt, ac malesuada dolor dapibus. Maecenas sit amet rutrum elit.',
       url: 'https://www.wellmark.com/employer/small-group/dental-and-vision-plans',
       isPDF: false,
     },

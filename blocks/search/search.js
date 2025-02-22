@@ -10,13 +10,23 @@ let searchRightCol;
 const buildSearchGrid = () => {
   if (searchGrid && searchLeftCol && searchRightCol) {
     const searchList = document.createElement('ul');
+    searchList.className = 'search-results';
     let str = '';
+    let pdfStr = '';
     (sampleData.data || []).forEach((item) => {
+      pdfStr = '';
+      if (item.isPDF) {
+        pdfStr = `<span class="icon icon-regular--file-pdf">
+          <i class="fa-regular fa-file-pdf" data-icon-name="regular--file-pdf"></i>
+        </span>`;
+      }
       str += `<li>
-        <a href='${item.link}'><h3>${item.title}</h3></a>
+        <a href='${item.link}'><h3>${item.title} ${pdfStr}</h3></a>
+        <div class='search-results-desc'><p>${item.description}</p></div>
+        <cite>${item.url}</cite>
       </li>`;
     });
-    searchRightCol.innerHTML = str;
+    searchList.innerHTML = str;
     searchRightCol.append(searchList);
   }
 };

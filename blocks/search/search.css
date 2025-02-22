@@ -65,3 +65,70 @@
     width: calc(100% - 40px);
   }
 }
+.search-results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.search-results > li {
+  display: block;
+  margin: 0 0 52px 0;
+  padding: 0;
+}
+.search-grid {
+  display: flex;
+  width: calc(100% + 30px);
+}
+.search-grid > div {
+  padding: 0 15px;
+}
+.search-grid-wrapper {
+  max-width: 1275px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .search-grid-wrapper {
+    width: calc(100% - 104px);
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .search-grid-wrapper {
+    width: calc(100% - 72px);
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .search-grid-wrapper {
+    width: calc(100% - 72px);
+  }
+}
+@media (max-width: 480px) {
+  .search-grid-wrapper {
+    width: calc(100% - 40px);
+  }
+}
+.search-grid h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: #005589;
+}
+.search-grid h3:hover {
+  color: #0F3659;
+}
+.search-grid h3 .icon {
+  height: auto;
+  width: auto;
+}
+.search-grid h3 .icon > i {
+  color: inherit;
+  font-size: inherit;
+}
+.search-grid p {
+  margin: 0 0 12px 0;
+}
+.search-grid cite {
+  color: #757575;
+  font-size: 12px;
+  font-style: normal;
+}
