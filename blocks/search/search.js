@@ -9,8 +9,20 @@ let searchRightCol;
 
 const buildSearchGrid = () => {
   if (searchGrid && searchLeftCol && searchRightCol) {
+    (sampleData.filters || []).forEach((category) => {
+      const ul = document.createElement('ul');
+      ul.innerHTML = `
+        <li><h3>${category.title}</h3></li>
+        <li><label><input type='checkbox' name='${category.key}' data-value='all'>All</label></li>`;
+      (category.facets || []).forEach((facet) => {
+        ul.innerHTML += `<li><label>
+          <input type='checkbox' name='${category.key}' data-value='${facet.value}'>${facet.title}</label>
+        </li>`;
+      });
+      searchLeftCol.append(ul);
+    });
+
     const searchList = document.createElement('ul');
-    searchList.className = 'search-results';
     let str = '';
     let pdfStr = '';
     (sampleData.data || []).forEach((item) => {
@@ -56,6 +68,9 @@ const initSearch = () => {
   searchRightCol = document.createElement('div');
   searchWrap.classList.add('search-grid-wrapper');
   searchGrid.classList.add('search-grid');
+
+  searchLeftCol.classList.add('search-filters');
+  searchRightCol.classList.add('search-results');
 
   buildSearchBanner(allSearchBlocks[0], searchGrid);
 
