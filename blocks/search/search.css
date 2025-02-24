@@ -5,9 +5,6 @@
 .search-wrapper, .search-wrapper * {
   box-sizing: border-box;
 }
-.search-hidden {
-  display: none !important;
-}
 .search-container {
   background-image: linear-gradient(270deg, #a6c6dd 0%, #94b6ce 0%, #4a7390 100%);
   padding: 78px 0;
@@ -42,6 +39,38 @@
   position: absolute;
   width: 0;
 }
+.search-form-grid button[type=submit] {
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 2px solid #005589;
+  color: #005589;
+  cursor: pointer;
+  font-weight: 500;
+  height: 52px;
+  text-decoration: none;
+  width: 100%;
+}
+.search-form-input {
+  background-color: #ffffff;
+  border-radius: 2px;
+  display: flex;
+  height: 52px;
+  position: relative;
+}
+.search-form-input i {
+  font-size: 18px;
+  left: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.search-form-input input[type=search] {
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid #757575;
+  height: 52px;
+  padding: 16px 16px 16px 60px;
+}
 .search-banner > div {
   margin: 0 auto;
 }
@@ -65,18 +94,53 @@
     width: calc(100% - 40px);
   }
 }
+.search-filters input[type=checkbox] {
+  height: 0;
+  left: -10px;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+.search-filters input[type=checkbox]:checked + label i {
+  display: block;
+}
+.search-filters label {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  overflow: hidden;
+  padding: 4px 0 4px 30px;
+  position: relative;
+}
+.search-filters label::before {
+  border-radius: 2px;
+  border: 2px solid #757575;
+  content: "";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+.search-filters label i {
+  color: #005589;
+  display: none;
+  left: 5px;
+  position: absolute;
+  top: 4px;
+}
 .search-filters ul {
   list-style: none;
   margin: 0 0 52px 0;
   padding: 0;
 }
-.search-filters ul:first-child {
-  padding-top: 72px;
-}
 .search-filters ul > li {
   display: block;
   margin: 0 0 12px 0;
+  overflow: hidden;
   padding: 0;
+  position: relative;
 }
 .search-filters h3 {
   font-size: 20px;
@@ -123,7 +187,7 @@
   width: calc(100% + 30px);
 }
 .search-grid > div {
-  padding: 0 15px;
+  padding: 72px 15px;
 }
 .search-grid > div:first-child {
   width: 25%;
