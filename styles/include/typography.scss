@@ -136,20 +136,37 @@ a:any-link {
   }
 }
 
-.eight-column{
+.section.eight-column{
   @include for-xlarge{
-    width: calc((100% / 12) * 8);
+    max-width: 1275px;
+    margin: 0 auto;
+    div:first-child{
+      width: calc((100% / 12) * 8);
+      margin: 0;
+    }
   }
   @include for-large{
-    width: calc((100% / 12) * 8);
+    max-width: 1275px;
+    margin: 0 auto;
+    div:first-child{
+      width: calc((100% / 12) * 8);
+      margin: 0;
+    }
   }
   @include for-laptop{
-    width: calc((100% / 12) * 8);
+    max-width: 1275px;
+    margin: 0 auto;
+    div:first-child{
+      width: calc((100% / 12) * 8);
+      margin: 0;
+    }
   }
   @include for-tablet{
-    width: 100%;
+    width: calc(100% - 72px);
+    margin: auto;
   }
   @include for-mobile{
-    width: 100%;
+    width: calc(100% - 32px);
+    margin: auto;
   }
 }
