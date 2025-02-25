@@ -21,7 +21,6 @@
   top: 0;
   transition: all 0.25s ease;
   visibility: hidden;
-  width: -moz-max-content;
   width: max-content;
   z-index: 125;
 }
