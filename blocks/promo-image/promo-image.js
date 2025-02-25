@@ -2,7 +2,8 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function decorate(block) {
   /* change to ul, li */
-  const backgroundImage = block.children[0].innerText;
+  const backgroundImage = document.querySelector('.button-container p a').innerText;
+  console.log(backgroundImage, 'hello');
   const title = block.children[1].innerText;
   const ul = document.createElement('ul');
   const imageWrapperDiv = block.parentElement;
