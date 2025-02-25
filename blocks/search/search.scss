@@ -9,7 +9,7 @@
         }
     }
     &-hidden {
-        // display: none !important;
+        display: none !important;
     }
     &-container {
         background-image: linear-gradient(270deg, rgba(#A6C6DD, 1) 0%, rgba(#94B6CE, 1) 0%, rgba($--blue-550, 1) 100%);
@@ -154,6 +154,16 @@
         }
     }
     &-results {
+        > div:first-child {
+            border-bottom: 2px solid $--gray-100;
+            margin-bottom: 52px;
+            padding-bottom: 16px;
+        }
+        > div:last-child {
+            border-top: 2px solid $--gray-100;
+            margin-top: 52px;
+            padding-top: 16px;
+        }
         ul {
             list-style: none;
             margin: 0;

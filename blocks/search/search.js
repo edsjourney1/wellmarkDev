@@ -51,15 +51,21 @@ const buildSearchGrid = () => {
     const [searchHeadTerm, searchFootTerm] = allSearchBlocks[1].children;
 
     let searchHeadTermStr = searchHeadTerm.querySelector('p')?.innerHTML || '';
-    const searchFootTermStr = searchFootTerm.querySelector('p')?.innerHTML || '';
+    let searchFootTermStr = searchFootTerm.querySelector('p')?.innerHTML || '';
 
-    searchHeadTermStr = searchHeadTermStr.replaceAll('{{1}}', sampleData.currentPage);
-    searchHeadTermStr = searchHeadTermStr.replaceAll('{{2}}', sampleData.currentPage);
-    searchHeadTermStr = searchHeadTermStr.replaceAll('{{4}}', `<strong>'${sampleData.q}'</strong>`);
+    const { currentPage, pageSize, totalSize } = sampleData;
+
+    searchHeadTermStr = searchHeadTermStr.replaceAll('{{1}}', ((currentPage - 1) * pageSize) + 1);
+    searchHeadTermStr = searchHeadTermStr.replaceAll('{{2}}', (currentPage * pageSize) > totalSize ? totalSize : (currentPage * pageSize));
+    searchHeadTermStr = searchHeadTermStr.replaceAll('{{3}}', totalSize);
+    searchHeadTermStr = searchHeadTermStr.replaceAll('{{4}}', `<strong>"${sampleData.q}"</strong>`);
+
+    searchFootTermStr = searchFootTermStr.replaceAll('{{1}}', ((currentPage - 1) * pageSize) + 1);
+    searchFootTermStr = searchFootTermStr.replaceAll('{{2}}', (currentPage * pageSize) > totalSize ? totalSize : (currentPage * pageSize));
+    searchFootTermStr = searchFootTermStr.replaceAll('{{3}}', totalSize);
 
     searchHeadTerm.innerHTML = searchHeadTermStr;
-
-    console.log('=============searchFootTermStr', searchFootTermStr);
+    searchFootTerm.innerHTML = searchFootTermStr;
 
     const searchList = document.createElement('ul');
     let str = '';
@@ -81,6 +87,7 @@ const buildSearchGrid = () => {
 
     searchRightCol.append(searchHeadTerm);
     searchRightCol.append(searchList);
+    searchRightCol.append(searchFootTerm);
   }
 };
 

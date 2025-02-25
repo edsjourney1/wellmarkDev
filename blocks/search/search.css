@@ -5,6 +5,9 @@
 .search-wrapper, .search-wrapper * {
   box-sizing: border-box;
 }
+.search-hidden {
+  display: none !important;
+}
 .search-container {
   background-image: linear-gradient(270deg, #a6c6dd 0%, #94b6ce 0%, #4a7390 100%);
   padding: 78px 0;
@@ -146,6 +149,16 @@
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 16px 0;
+}
+.search-results > div:first-child {
+  border-bottom: 2px solid #f2f2f3;
+  margin-bottom: 52px;
+  padding-bottom: 16px;
+}
+.search-results > div:last-child {
+  border-top: 2px solid #f2f2f3;
+  margin-top: 52px;
+  padding-top: 16px;
 }
 .search-results ul {
   list-style: none;
