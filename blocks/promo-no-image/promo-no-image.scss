@@ -223,7 +223,7 @@
       }
       @include for-tablet {
         padding: 0;
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
         flex-direction: column;
         gap: 52px;
       }
