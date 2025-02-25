@@ -410,6 +410,49 @@ a:any-link {
   }
 }
 
+@media (min-width: 1379px) {
+  .section.eight-column {
+    max-width: 1275px;
+    margin: 0 auto;
+  }
+  .section.eight-column div:first-child {
+    width: 66.6666666667%;
+    margin: 0;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .section.eight-column {
+    max-width: 1275px;
+    margin: 0 auto;
+  }
+  .section.eight-column div:first-child {
+    width: 66.6666666667%;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .section.eight-column {
+    max-width: 1275px;
+    margin: 0 auto;
+  }
+  .section.eight-column div:first-child {
+    width: 66.6666666667%;
+    margin: 0;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .section.eight-column {
+    width: calc(100% - 72px);
+    margin: auto;
+  }
+}
+@media (max-width: 480px) {
+  .section.eight-column {
+    width: calc(100% - 32px);
+    margin: auto;
+  }
+}
+
 /* wellmark color start */
 /* wellmark color end */
 /* wellmark spacing size start */
