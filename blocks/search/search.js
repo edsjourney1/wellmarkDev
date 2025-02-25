@@ -23,15 +23,22 @@ const generateFacetId = (key1, num1, key2, num2) => {
 
 const updateHeights = () => {
   setTimeout(() => {
-    Array.from(searchRightCol.querySelectorAll('ul > li p')).forEach((pTag) => {
-      if (pTag.clientHeight > 50) {
-        while (pTag.clientHeight > 50) {
-          pTag.innerHTML = pTag.innerHTML.substr(0, pTag.innerHTML.length - 1);
+    let pTag;
+    let hiddenTag;
+    Array.from(searchRightCol.querySelectorAll('ul > li')).forEach((liTag) => {
+      pTag = liTag.querySelector('p');
+      hiddenTag = liTag.querySelector('input[type=hidden');
+      if (pTag && hiddenTag) {
+        pTag.innerHTML = hiddenTag.value;
+        if (pTag.clientHeight > 50) {
+          while (pTag.clientHeight > 50) {
+            pTag.innerHTML = pTag.innerHTML.substr(0, pTag.innerHTML.length - 1);
+          }
+          pTag.innerHTML = `${pTag.innerHTML.substr(0, pTag.innerHTML.length - 5)}...`;
         }
-        pTag.innerHTML = `${pTag.innerHTML.substr(0, pTag.innerHTML.length - 5)}...`;
       }
     });
-  }, 10);
+  }, 5);
 };
 
 const buildSearchGrid = () => {
@@ -164,3 +171,5 @@ export default async function decorate(block) {
     initSearch();
   }
 }
+
+window.addEventListener('resize', updateHeights);
