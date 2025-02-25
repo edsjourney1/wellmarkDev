@@ -21,6 +21,19 @@ const generateFacetId = (key1, num1, key2, num2) => {
   return str;
 };
 
+const updateHeights = () => {
+  setTimeout(() => {
+    Array.from(searchRightCol.querySelectorAll('ul > li p')).forEach((pTag) => {
+      if (pTag.clientHeight > 50) {
+        while (pTag.clientHeight > 50) {
+          pTag.innerHTML = pTag.innerHTML.substr(0, pTag.innerHTML.length - 1);
+        }
+        pTag.innerHTML = `${pTag.innerHTML.substr(0, pTag.innerHTML.length - 5)}...`;
+      }
+    });
+  }, 10);
+};
+
 const buildSearchGrid = () => {
   if (searchGrid && searchLeftCol && searchRightCol) {
     (sampleData.filters || []).forEach((category, i1) => {
@@ -79,6 +92,7 @@ const buildSearchGrid = () => {
       }
       str += `<li>
         <a href='${item.link}'><h3>${item.title} ${pdfStr}</h3></a>
+        <input type='hidden' value='${item.description}'/>
         <div class='search-results-desc'><p>${item.description}</p></div>
         <cite>${item.url}</cite>
       </li>`;
@@ -88,6 +102,8 @@ const buildSearchGrid = () => {
     searchRightCol.append(searchHeadTerm);
     searchRightCol.append(searchList);
     searchRightCol.append(searchFootTerm);
+
+    updateHeights();
   }
 };
 

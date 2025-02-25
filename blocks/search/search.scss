@@ -38,6 +38,9 @@
             }
             input[type=search] {
                 width: 100%;
+                &::placeholder {
+                    font-style: italic;
+                }
             }
             label {
                 color: transparent;
@@ -202,6 +205,7 @@
     }
     &-grid {
         display: flex;
+        margin: 0 -15px;
         width: calc(100% + 30px);
         > div {
             padding: 72px 15px;

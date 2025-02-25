@@ -36,6 +36,12 @@
 .search-form-grid input[type=search] {
   width: 100%;
 }
+.search-form-grid input[type=search]::-moz-placeholder {
+  font-style: italic;
+}
+.search-form-grid input[type=search]::placeholder {
+  font-style: italic;
+}
 .search-form-grid label {
   color: transparent;
   height: 0;
@@ -197,6 +203,7 @@
 }
 .search-grid {
   display: flex;
+  margin: 0 -15px;
   width: calc(100% + 30px);
 }
 .search-grid > div {
