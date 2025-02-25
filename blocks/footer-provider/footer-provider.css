@@ -262,7 +262,7 @@
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .footer-provider-wrapper .footer-provider > .copyright-div {
-    padding: 36px 52px 52px 52px;
+    padding: 36px 36px 52px 36px;
   }
 }
 .footer-provider-wrapper .footer-provider > .copyright-div > div {
