@@ -51,7 +51,7 @@ const buildSearchGrid = () => {
     const [searchHeadTerm, searchFootTerm] = allSearchBlocks[1].children;
 
     let searchHeadTermStr = searchHeadTerm.querySelector('p')?.innerHTML || '';
-    let searchFootTermStr = searchFootTerm.querySelector('p')?.innerHTML || '';
+    const searchFootTermStr = searchFootTerm.querySelector('p')?.innerHTML || '';
 
     searchHeadTermStr = searchHeadTermStr.replaceAll('{{1}}', sampleData.currentPage);
     searchHeadTermStr = searchHeadTermStr.replaceAll('{{2}}', sampleData.currentPage);
@@ -59,7 +59,7 @@ const buildSearchGrid = () => {
 
     searchHeadTerm.innerHTML = searchHeadTermStr;
 
-    console.log('=============searchHeadTermStr 123', searchHeadTermStr);
+    console.log('=============searchFootTermStr', searchFootTermStr);
 
     const searchList = document.createElement('ul');
     let str = '';
