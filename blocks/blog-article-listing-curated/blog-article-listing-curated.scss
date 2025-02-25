@@ -95,17 +95,14 @@
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 36px;
-    padding-bottom: 58px;
-    @include for-laptop {
-      padding-bottom: 52px;
-    }
+    padding-bottom: 120px;
     @include for-mobile {
       flex-direction: column;
-      padding-bottom: 52px;
+      padding-bottom: 72px;
     }
     @include for-tablet {
       flex-direction: column;
-      padding-bottom: 52px;
+      padding-bottom: 96px;
     }
     > .card-div {
       @include for-xlarge {
