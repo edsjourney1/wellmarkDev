@@ -849,6 +849,9 @@ div.section:not([class*=" "]) p.button-container a {
 .section .default-content-wrapper ul li ul li {
   list-style-type: circle;
 }
+.section .default-content-wrapper ul li ol {
+  width: 100%;
+}
 .section .default-content-wrapper ol {
   padding-bottom: 24px;
   margin: 0;
@@ -927,6 +930,9 @@ div.section:not([class*=" "]) p.button-container a {
 }
 .section .default-content-wrapper ol li ol li {
   list-style-type: circle;
+}
+.section .default-content-wrapper ol li ul {
+  width: 100%;
 }
 .section.body-small .default-content-wrapper p {
   opacity: 1;
