@@ -2,7 +2,222 @@
 @import '../../styles/include/tokens.scss';
 
 .search {
+    $this: &;
+    &-wrapper {
+        &, * {
+            box-sizing: border-box;
+        }
+    }
     &-hidden {
-        // display: none;
+        // display: none !important;
+    }
+    &-container {
+        background-image: linear-gradient(270deg, rgba(#A6C6DD, 1) 0%, rgba(#94B6CE, 1) 0%, rgba($--blue-550, 1) 100%);
+        padding: 78px 0;
+    }
+    h1 {
+        color: $--white;
+        font-size: 60px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 0 0 20px 0;
+    }
+    &-form {
+        &-grid {
+            display: flex;
+            margin: 0 -15px;
+            width: calc(100% + 30px);
+            > div {
+                padding: 0 15px;
+                &:first-child {
+                    width: 100%;
+                }
+                &:last-child {
+                    width: 130px;
+                }
+            }
+            input[type=search] {
+                width: 100%;
+            }
+            label {
+                color: transparent;
+                height: 0;
+                position: absolute;
+                width: 0;
+            }
+            button[type=submit] {
+                background-color: $--white;
+                border-radius: 2px;
+                border: 2px solid $--blue-675;
+                color: $--blue-675;;
+                cursor: pointer;
+                font-weight: 500;
+                height: 52px;
+                text-decoration: none;
+                width: 100%;
+            }
+        }
+        &-input {
+            background-color: $--white;
+            border-radius: 2px;
+            display: flex;
+            height: 52px;
+            position: relative;
+            i {
+                font-size: 18px;
+                left: 20px;
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            input[type=search] {
+                background-color: transparent;
+                border-radius: 2px;
+                border: 1px solid $--gray-500;
+                height: 52px;
+                padding: 16px 16px 16px 60px;
+            }
+        }
+    }
+    &-banner {
+        > div {
+            margin: 0 auto;
+            @include for-large{
+                width: calc(100% - 104px);
+            }
+            @include for-laptop{
+                width: calc(100% - 72px);
+            }
+            @include for-tablet{
+                width: calc(100% - 72px);
+            }
+            @include for-mobile{
+                width: calc(100% - 40px);
+            }
+        }
+    }
+    &-filters {
+        input[type=checkbox] {
+            height: 0;
+            left: -10px;
+            opacity: 0;
+            position: absolute;
+            width: 0;
+            &:checked + label {
+                i {
+                    display: block;
+                }
+            }
+        }
+        label {
+            cursor: pointer;
+            display: inline-block;
+            line-height: 1;
+            overflow: hidden;
+            padding: 4px 0 4px 30px;
+            position: relative;
+            &::before {
+                border-radius: 2px;
+                border: 2px solid $--gray-500;
+                content: '';
+                display: block;
+                height: 20px;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 20px;
+            }
+            i {
+                color: $--blue-675;
+                display: none;
+                left: 5px;
+                position: absolute;
+                top: 4px;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0 0 52px 0;
+            padding: 0;
+            > li {
+                display: block;
+                margin: 0 0 12px 0;
+                overflow: hidden;
+                padding: 0;
+                position: relative;
+            }
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+        }
+    }
+    &-results {
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            > li {
+                display: block;
+                margin: 0 0 52px 0;
+                padding: 0;
+            }
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 0 12px 0;
+            color: $--blue-675;
+            &:hover {
+                color: $--blue-775;
+            }
+            .icon {
+                height: auto;
+                width: auto;
+                > i {
+                    color: inherit;
+                    font-size: inherit;
+                }
+            }
+        }
+        p {
+            margin: 0 0 12px 0;
+        }
+        cite {
+            color: $--gray-500;
+            font-size: 12px;
+            font-style: normal;
+        }
+    }
+    &-grid {
+        display: flex;
+        width: calc(100% + 30px);
+        > div {
+            padding: 72px 15px;
+            &:first-child {
+                width: 25%;
+            }
+            &:last-child {
+                width: 75%;
+            }
+        }
+        &-wrapper {
+            max-width: 1275px;
+            width: 100%;
+            margin: 0 auto;
+            @include for-large{
+                width: calc(100% - 104px);
+            }
+            @include for-laptop{
+                width: calc(100% - 72px);
+            }
+            @include for-tablet{
+                width: calc(100% - 72px);
+            }
+            @include for-mobile{
+                width: calc(100% - 40px);
+            }
+        }
     }
 }
