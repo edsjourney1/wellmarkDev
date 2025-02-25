@@ -136,8 +136,37 @@ a:any-link {
   }
 }
 
-input, textarea, select { 
-  font-family: $--font-roboto;
-  font-size: 16px;
-  line-height: 1;
+.section.eight-column{
+  @include for-xlarge{
+    max-width: 1275px;
+    margin: 0 auto;
+    div:first-child{
+      width: calc((100% / 12) * 8);
+      margin: 0;
+    }
+  }
+  @include for-large{
+    max-width: 1275px;
+    margin: 0 auto;
+    div:first-child{
+      width: calc((100% / 12) * 8);
+      margin: 0;
+    }
+  }
+  @include for-laptop{
+    max-width: 1275px;
+    margin: 0 auto;
+    div:first-child{
+      width: calc((100% / 12) * 8);
+      margin: 0;
+    }
+  }
+  @include for-tablet{
+    width: calc(100% - 72px);
+    margin: auto;
+  }
+  @include for-mobile{
+    width: calc(100% - 32px);
+    margin: auto;
+  }
 }

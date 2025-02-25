@@ -2,28 +2,46 @@
 @import '../../styles/include/tokens.scss';
 
 .blog-cta-wrapper {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  .blog-cta-body {
+    margin: auto;
+    width: 31.35vw;
+  }
   @media (min-width: 1025px) {
     width: 43.7vw;
-    .blog-cta {
-      padding-left: 12.87%;
-      padding-right: 12.87%;
+    .blog-cta-body {
+      margin: auto;
+      width: 31.35vw;
     }
   }
   @media (min-width: 1023px) and (max-width: 1024px) {
-    width: 77.69vw;
+    width: 77.05vw;
+    .blog-cta-body {
+      margin: auto;
+      width: 61.03vw;
+    }
   }
   @media (min-width: 481px) and (max-width: 1022px) {
     width: 92.96vw;
-    .blog-cta {
-      padding-left: 17.13%;
-      padding-right: 17.13%;
+    .blog-cta-body {
+      margin: auto;
+      width: 61.09vw;
     }
   }
   @media (min-width: 393px) and (max-width: 480px) {
     width: 85.23vw;
+    .blog-cta-body {
+      margin: auto;
+      width: 100%;
+    }
   }
   @media (min-width: 100px) and (max-width: 392px) {
     width: 91.85vw;
+    .blog-cta-body {
+      margin: auto;
+      width: 100%;
+    }
   }
 }
 .blog-cta {

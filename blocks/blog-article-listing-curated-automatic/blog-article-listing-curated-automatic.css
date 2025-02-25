@@ -169,6 +169,7 @@
 .blog-article-listing-curated-automatic .cards-div > .card-div > img {
   width: 100%;
   border-radius: 4px;
+  vertical-align: top;
   aspect-ratio: 4/3;
 }
 .blog-article-listing-curated-automatic .cards-div > .card-div > .content-div > .card-title {
