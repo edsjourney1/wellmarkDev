@@ -239,7 +239,6 @@
   list-style: none;
   display: flex;
   align-items: stretch;
-  justify-content: center;
   text-align: center;
   flex-direction: row;
   margin: 0;
@@ -276,8 +275,9 @@
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column {
     padding: 0;
-    flex-direction: column;
-    gap: 52px;
+    flex-wrap: wrap;
+    row-gap: 52px;
+    column-gap: 30px;
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
@@ -305,7 +305,7 @@
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li {
-    width: 100%;
+    width: calc((100% - 105px) / 2);
   }
 }
 .promo-no-image-container .promo-no-image > .promo-no-image-3-column > li .cards-card-image {
