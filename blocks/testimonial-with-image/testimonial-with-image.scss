@@ -162,17 +162,7 @@
               picture{
                 img{
                   width: 100%;
-                  height: 600px;
                   border-radius: 5px;
-                  @include for-laptop{
-                    height: 331px;
-                  }
-                  @include for-tablet{
-                    height: 926px;
-                  }
-                  @include for-mobile{
-                    height: 361px;
-                  }
                 }
               }
             }

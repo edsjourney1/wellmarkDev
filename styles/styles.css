@@ -415,7 +415,7 @@ a:any-link {
     max-width: 1275px;
     margin: 0 auto;
   }
-  .section.eight-column div:first-child {
+  .section.eight-column > div:first-child {
     width: 66.6666666667%;
     margin: 0;
   }
@@ -425,7 +425,7 @@ a:any-link {
     max-width: 1275px;
     margin: 0 auto;
   }
-  .section.eight-column div:first-child {
+  .section.eight-column > div:first-child {
     width: 66.6666666667%;
     margin: 0;
   }
@@ -435,7 +435,7 @@ a:any-link {
     max-width: 1275px;
     margin: 0 auto;
   }
-  .section.eight-column div:first-child {
+  .section.eight-column > div:first-child {
     width: 66.6666666667%;
     margin: 0;
   }
