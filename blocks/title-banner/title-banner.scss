@@ -125,7 +125,7 @@
                   }
                 }
               }
-              p:has(span.icon) {
+              p:has(span.icon):not(.button-container) {
                 padding: 0 6px;
               }
             }

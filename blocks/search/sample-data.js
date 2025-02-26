@@ -1,5 +1,5 @@
 const sampleData = {
-  total: 88,
+  totalSize: 88,
   pageSize: 10,
   currentPage: 1,
   q: 'sample search term',
