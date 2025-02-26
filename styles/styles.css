@@ -962,7 +962,6 @@ div.section:not([class*=" "]) p.button-container a {
 }
 .section.body-small .default-content-wrapper p a {
   opacity: 1;
-  display: flex;
   color: #005589;
   font-family: roboto, sans-serif;
   font-size: 14px;
