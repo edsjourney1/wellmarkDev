@@ -130,6 +130,12 @@ const createOptimizedPicture = (
   return picture;
 };
 
+const getFileExtension = (url) => {
+  const extensionValid = url.split(/[#?]/)[0].split('.').pop().trim();
+  const geturlvalid = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(extensionValid.toLowerCase());
+  return geturlvalid ? extensionValid : '';
+};
+
 /**
  * Gets the extension of a URL.
  * @param {string} url The URL
@@ -146,18 +152,18 @@ const createOptimizedPicture = (
  * // returns 'jpg'
  */
 const getUrlExtension = (url) => {
-  const extensionValid = url.split(/[#?]/)[0].split('.').pop().trim();
-  const geturlvalid = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(extensionValid.toLowerCase());
-  let setreturn = '';
-  if (geturlvalid) {
-    setreturn = url.split(/[#?]/)[0].split('.').pop().trim();
-  } else {
-    const aaidURL = url.split(/[:]/);
-    if (aaidURL.includes('/adobe/assets/urn:aaid')) {
-      setreturn = '/adobe/assets/urn:aaid';
-    }
+  const extn = getFileExtension(url);
+
+  if (extn.length) {
+    return extn;
   }
-  return setreturn;
+
+  const aaidURL = url.split(/[:]/);
+  if (aaidURL.includes('/adobe/assets/urn:aaid')) {
+    return '/adobe/assets/urn:aaid';
+  }
+
+  return '';
 };
 
 const returnExtension = (element) => {
@@ -200,7 +206,8 @@ const isExternalImage = (element, externalImageMarker) => {
 const decorateExternalImages = (ele, deliveryMarker) => {
   const extImages = ele.querySelectorAll('a');
   extImages.forEach((extImage) => {
-    if (extImage.innerHTML === extImage.getAttribute('href')) {
+    const extn = getFileExtension(extImage.innerHTML);
+    if (extImage.innerHTML === extImage.getAttribute('href') || extn.length) {
       const externalImgvalidate = isExternalImage(extImage, deliveryMarker);
       if (externalImgvalidate.isVisible) {
         const extImageSrc = extImage.getAttribute('href');
