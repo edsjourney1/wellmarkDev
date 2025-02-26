@@ -17,7 +17,6 @@
     }
     @include for-laptop{
       padding: 0 $--spacing-xl;
-      height: 575px;
       background-position: 9%;
     }
     @include for-large{
@@ -44,6 +43,7 @@
           border-radius: 0 0 5px 5px;
           @include for-laptop{
             width: calc((100% / 2) - 15px);
+            margin-bottom: 12px;
           }
           @include for-large{
             width: calc((100% - 30px) / 12* 5);
