@@ -21,7 +21,7 @@ import {
   toClassName,
 } from './aem.js';
 
-import { decorateExternalImages } from './externalImage.js';
+import decorateExternalImages from './externalImage.js';
 
 // eslint-disable-next-line import/no-cycle
 // import initAccessibilityMode from
@@ -239,9 +239,9 @@ function orderlist() {
   }
 }
 
-function scrollIdlink() {
+const scrollIdlink = () => {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
@@ -270,7 +270,8 @@ function scrollIdlink() {
       }
     });
   });
-}
+};
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element
