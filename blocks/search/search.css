@@ -36,9 +36,6 @@
 .search-form-grid input[type=search] {
   width: 100%;
 }
-.search-form-grid input[type=search]::-moz-placeholder {
-  font-style: italic;
-}
 .search-form-grid input[type=search]::placeholder {
   font-style: italic;
 }
