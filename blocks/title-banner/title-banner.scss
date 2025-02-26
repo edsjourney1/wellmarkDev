@@ -133,15 +133,15 @@
           .tbnr-pic{
             @include for-laptop{
               max-width: calc((100% - 30px) / 12* 6);
-              max-height: 446px;
+              height: 446px;
             }
               @include for-large {
                 max-width: calc((100% - 30px) / 12* 6);
-                max-height: 600px;
+                height: 600px;
               }
               @include for-xlarge {
                 max-width: calc((100% - 30px) / 12* 6);
-                max-height: 600px;
+                height: 600px;
               }
               @include for-tablet{
                 display: none;

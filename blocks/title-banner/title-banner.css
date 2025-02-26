@@ -175,19 +175,19 @@
 @media (min-width: 1024px) and (max-width: 1200px) {
   .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-pic {
     max-width: calc((100% - 30px) / 12 * 6);
-    max-height: 446px;
+    height: 446px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-pic {
     max-width: calc((100% - 30px) / 12 * 6);
-    max-height: 600px;
+    height: 600px;
   }
 }
 @media (min-width: 1379px) {
   .title-banner-container .title-banner-wrapper .title-banner.block .tbnr-maindiv .tbnr-pic {
     max-width: calc((100% - 30px) / 12 * 6);
-    max-height: 600px;
+    height: 600px;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
