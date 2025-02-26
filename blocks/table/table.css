@@ -2,29 +2,54 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-main .table-high-padding .table-wrapper {
-  padding: 120px;
-}
-@media (max-width: 480px) {
+@media (max-width: 394px) {
   main .table-high-padding .table-wrapper {
     padding: 72px 16px 72px 16px;
   }
 }
-@media (min-width: 481px) and (max-width: 1023px) {
+@media (min-width: 394px) and (max-width: 480px) {
+  main .table-high-padding .table-wrapper {
+    padding: 72px 36px 72px 36px;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
   main .table-high-padding .table-wrapper {
     padding: 96px 36px 96px 36px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1024px) {
   main .table-high-padding .table-wrapper {
-    padding: 120px 323px 120px 323px;
+    padding: 120px 36px 120px 36px;
+  }
+}
+@media (min-width: 1025px) {
+  main .table-high-padding .table-wrapper {
+    padding: 120px 322px 120px 322px;
   }
 }
 
 main .table-no-padding .table-wrapper {
   padding-bottom: 10px;
 }
-@media (min-width: 1024px) {
+@media (max-width: 394px) {
+  main .table-no-padding .table-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 394px) and (max-width: 480px) {
+  main .table-no-padding .table-wrapper {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  main .table-no-padding .table-wrapper {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media (min-width: 1025px) {
   main .table-no-padding .table-wrapper {
     padding-left: 322px;
     padding-right: 322px;
@@ -92,3 +117,5 @@ main .table-no-padding .table-wrapper {
 .table table tbody tr:nth-child(even) td:first-child {
   border-radius: 2px 0px 0px 2px;
 }
+
+/*# sourceMappingURL=table.css.map */
