@@ -206,7 +206,6 @@
           display: flex;
           @include for-laptop{
             flex-direction: row-reverse;
-            align-items: flex-start !important;
           }
           @include for-tablet{
             flex-direction: column-reverse;
