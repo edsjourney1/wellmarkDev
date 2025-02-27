@@ -77,7 +77,7 @@ export default async function decorate(block) {
 
       const pubDate = document.createElement('p');
       pubDate.classList.add('date');
-      pubDate.textContent = excelDateToDate(publishedDate);
+      pubDate.textContent = publishedDate.includes('/') ? publishedDate : excelDateToDate(publishedDate);
       datetimeDiv.appendChild(pubDate);
 
       const arcretime = document.createElement('p');
