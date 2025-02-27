@@ -46,7 +46,7 @@ export default async function decorate(block) {
       return dateA - dateB;
     });
     sortedJSON.forEach(({
-      image, category, publishedDate, readTime, title,
+      image, category, publishedDate, readTime, title, url,
     }) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('card-div');
@@ -54,6 +54,9 @@ export default async function decorate(block) {
       const imageSrc = document.createElement('img');
       imageSrc.src = image;
       imageSrc.alt = 'thumbnail';
+      imageSrc.addEventListener('click', () => {
+        window.location.href = `${url}`;
+      });
       mainDiv.appendChild(imageSrc);
 
       const contentDiv = document.createElement('div');
@@ -63,6 +66,9 @@ export default async function decorate(block) {
       const mainTitle = document.createElement('h3');
       mainTitle.classList.add('card-title');
       mainTitle.textContent = title;
+      mainTitle.addEventListener('click', () => {
+        window.location.href = `${url}`;
+      });
       contentDiv.appendChild(mainTitle);
 
       const datetimeDiv = document.createElement('div');
@@ -71,7 +77,7 @@ export default async function decorate(block) {
 
       const pubDate = document.createElement('p');
       pubDate.classList.add('date');
-      pubDate.textContent = excelDateToDate(publishedDate);
+      pubDate.textContent = publishedDate.includes('/') ? publishedDate : excelDateToDate(publishedDate);
       datetimeDiv.appendChild(pubDate);
 
       const arcretime = document.createElement('p');
