@@ -30,6 +30,9 @@ export default async function decorate(block) {
     const imageSrc = document.createElement('img');
     imageSrc.src = postArticle1.image;
     imageSrc.alt = 'thumbnail';
+    imageSrc.addEventListener('click', () => {
+      window.location.href = `${postArticle1.url}`;
+    });
     mainDiv.appendChild(imageSrc);
 
     const contentDiv = document.createElement('div');
@@ -39,6 +42,9 @@ export default async function decorate(block) {
     const mainTitle = document.createElement('h3');
     mainTitle.classList.add('card-title');
     mainTitle.textContent = postArticle1.title;
+    mainTitle.addEventListener('click', () => {
+      window.location.href = `${postArticle1.url}`;
+    });
     contentDiv.appendChild(mainTitle);
 
     const datetimeDiv = document.createElement('div');
@@ -77,6 +83,9 @@ export default async function decorate(block) {
     const imageSrc = document.createElement('img');
     imageSrc.src = postArticle2.image;
     imageSrc.alt = 'thumbnail';
+    imageSrc.addEventListener('click', () => {
+      window.location.href = `${postArticle2.url}`;
+    });
     mainDiv.appendChild(imageSrc);
 
     const contentDiv = document.createElement('div');
@@ -86,6 +95,9 @@ export default async function decorate(block) {
     const mainTitle = document.createElement('h3');
     mainTitle.classList.add('card-title');
     mainTitle.textContent = postArticle2.title;
+    mainTitle.addEventListener('click', () => {
+      window.location.href = `${postArticle2.url}`;
+    });
     contentDiv.appendChild(mainTitle);
 
     const datetimeDiv = document.createElement('div');
@@ -123,6 +135,9 @@ export default async function decorate(block) {
     const imageSrc = document.createElement('img');
     imageSrc.src = postArticle3.image;
     imageSrc.alt = 'thumbnail';
+    imageSrc.addEventListener('click', () => {
+      window.location.href = `${postArticle3.url}`;
+    });
     mainDiv.appendChild(imageSrc);
 
     const contentDiv = document.createElement('div');
@@ -132,6 +147,9 @@ export default async function decorate(block) {
     const mainTitle = document.createElement('h3');
     mainTitle.classList.add('card-title');
     mainTitle.textContent = postArticle3.title;
+    mainTitle.addEventListener('click', () => {
+      window.location.href = `${postArticle3.url}`;
+    });
     contentDiv.appendChild(mainTitle);
 
     const datetimeDiv = document.createElement('div');
