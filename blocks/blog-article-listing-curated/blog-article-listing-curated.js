@@ -61,10 +61,10 @@ export default async function decorate(block) {
       categorySpan.append(item);
       categoryPara.append(categorySpan);
     });
-    blockDiv.appendChild(mainDiv);
-    blockDiv.addEventListener('click', () => {
+    imageSrc.addEventListener('click', () => {
       window.location.href = `${postArticle1.url}`;
     });
+    blockDiv.appendChild(mainDiv);
   }
   const postArticle2 = json.data.find((item) => item.url === articleTwo);
   if (postArticle2) {
@@ -107,10 +107,10 @@ export default async function decorate(block) {
       categorySpan.append(item);
       categoryPara.append(categorySpan);
     });
-    blockDiv.appendChild(mainDiv);
-    blockDiv.addEventListener('click', () => {
+    imageSrc.addEventListener('click', () => {
       window.location.href = `${postArticle2.url}`;
     });
+    blockDiv.appendChild(mainDiv);
   }
   const postArticle3 = json.data.find((item) => item.url === articleThree);
   if (postArticle3) {
@@ -148,14 +148,14 @@ export default async function decorate(block) {
     const categoryPara = document.createElement('p');
     categoryPara.classList.add('category-list');
     contentDiv.appendChild(categoryPara);
+    imageSrc.addEventListener('click', () => {
+      window.location.href = `${postArticle3.url}`;
+    });
     postArticle3.category.split(',').forEach((item) => {
       const categorySpan = document.createElement('a');
       categorySpan.append(item);
       categoryPara.append(categorySpan);
     });
     blockDiv.appendChild(mainDiv);
-    blockDiv.addEventListener('click', () => {
-      window.location.href = `${postArticle3.url}`;
-    });
   }
 }
