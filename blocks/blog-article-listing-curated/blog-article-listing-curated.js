@@ -1,6 +1,8 @@
 // import { getMetadata } from '../../scripts/aem.js';
-// import { loadFragment } from '../fragment/fragment.js';
 
+import { excelDateToDate } from '../../scripts/scripts.js';
+
+// import { loadFragment } from '../fragment/fragment.js';
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
   const articleOne = block.children[1].children[0].textContent;
@@ -46,6 +48,7 @@ export default async function decorate(block) {
     const pubDate = document.createElement('p');
     pubDate.classList.add('date');
     pubDate.textContent = postArticle1.publishedDate;
+    pubDate.textContent = postArticle1.includes('/') ? postArticle1.publishedDate : excelDateToDate(postArticle1.publishedDate);
     datetimeDiv.appendChild(pubDate);
 
     const arcretime = document.createElement('p');
@@ -91,7 +94,7 @@ export default async function decorate(block) {
 
     const pubDate = document.createElement('p');
     pubDate.classList.add('date');
-    pubDate.textContent = postArticle2.publishedDate;
+    pubDate.textContent = postArticle2.includes('/') ? postArticle2.publishedDate : excelDateToDate(postArticle2.publishedDate);
     datetimeDiv.appendChild(pubDate);
 
     const arcretime = document.createElement('p');
@@ -137,7 +140,7 @@ export default async function decorate(block) {
 
     const pubDate = document.createElement('p');
     pubDate.classList.add('date');
-    pubDate.textContent = postArticle3.publishedDate;
+    pubDate.textContent = postArticle3.includes('/') ? postArticle3.publishedDate : excelDateToDate(postArticle3.publishedDate);
     datetimeDiv.appendChild(pubDate);
 
     const arcretime = document.createElement('p');
