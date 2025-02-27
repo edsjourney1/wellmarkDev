@@ -204,9 +204,10 @@
 }
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block ul li .icon {
   height: auto;
-  width: auto;
+  width: 26px;
 }
 .image-text-container .image-text-wrapper .image-text.block.columns-2-cols.block ul li .icon i {
   font-size: 16px;
   padding: 0 0 0 6px;
+  width: 20px;
 }

@@ -850,7 +850,25 @@ div.section:not([class*=" "]) p.button-container a {
   list-style-type: circle;
 }
 .section .default-content-wrapper ul li ol {
+  padding-top: 16px;
+  padding-bottom: 0;
   width: 100%;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .section .default-content-wrapper ul li ol {
+    width: unset;
+  }
+}
+@media (max-width: 480px) {
+  .section .default-content-wrapper ul li ol {
+    width: unset;
+  }
+}
+.section .default-content-wrapper ul li ol :last-child {
+  padding-bottom: 0;
+}
+.section .default-content-wrapper ul li ol li {
+  list-style-type: circle;
 }
 .section .default-content-wrapper ol {
   padding-bottom: 24px;
@@ -932,7 +950,25 @@ div.section:not([class*=" "]) p.button-container a {
   list-style-type: circle;
 }
 .section .default-content-wrapper ol li ul {
+  padding-top: 16px;
+  padding-bottom: 0;
   width: 100%;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .section .default-content-wrapper ol li ul {
+    width: unset;
+  }
+}
+@media (max-width: 480px) {
+  .section .default-content-wrapper ol li ul {
+    width: unset;
+  }
+}
+.section .default-content-wrapper ol li ul :last-child {
+  padding-bottom: 0;
+}
+.section .default-content-wrapper ol li ul li {
+  list-style-type: circle;
 }
 .section.body-small .default-content-wrapper p {
   opacity: 1;
@@ -1053,6 +1089,7 @@ div.section:not([class*=" "]) p.button-container a {
 @media (min-width: 1024px) and (max-width: 1200px) {
   .article-page .pull-quote-container .pull-quote-wrapper .pull-quote.block {
     margin-left: 36px;
+    width: calc((100% - 72px) / 12 * 8);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
@@ -1071,25 +1108,43 @@ div.section:not([class*=" "]) p.button-container a {
     max-width: 1275px;
   }
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .article-page .blog-cta-container .blog-cta-wrapper {
+    width: calc(100% - 72px);
+  }
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
   .article-page .blog-cta-container .blog-cta-wrapper {
     margin-left: 36px;
+    width: calc((100% - 72px) / 12 * 8);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .article-page .blog-cta-container .blog-cta-wrapper {
     margin-left: 52px;
+    width: calc((100% - 15px) / 12 * 8);
   }
 }
 @media (min-width: 1379px) {
   .article-page .blog-cta-container .blog-cta-wrapper {
     margin: 0;
+    width: calc((100% - 15px) / 12 * 8);
+  }
+}
+@media (max-width: 480px) {
+  .article-page .video-embed-container .video-embed-wrapper .video-embed {
+    max-width: calc(100% - 32px);
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .article-page .video-embed-container .video-embed-wrapper .video-embed {
+    max-width: calc(100% - 72px);
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .article-page .video-embed-container .video-embed-wrapper .video-embed {
-    width: calc((100% - 15px) / 12 * 8);
-    max-width: calc((100% - 15px) / 12 * 8);
+    width: calc((100% - 72px) / 12 * 8);
+    max-width: calc((100% - 72px) / 12 * 8);
     margin-left: 36px;
   }
 }
@@ -1124,8 +1179,8 @@ div.section:not([class*=" "]) p.button-container a {
     width: 100%;
   }
 }
-.article-page .section .blog-article-information-wrapper ~ .default-content-wrapper {
-  padding-top: 16px;
+.article-page .section .blog-article-information-wrapper + .default-content-wrapper {
+  margin-top: 16px;
 }
 .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
   float: right;
@@ -1150,7 +1205,7 @@ div.section:not([class*=" "]) p.button-container a {
   }
 }
 .article-page .section.blog-article-information-container + .section .default-content-wrapper {
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .article-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
   float: right;
@@ -1178,6 +1233,7 @@ div.section:not([class*=" "]) p.button-container a {
 @media (min-width: 1024px) and (max-width: 1200px) {
   .newsroom-page .pull-quote-container .pull-quote-wrapper .pull-quote.block {
     margin-left: 36px;
+    width: calc((100% - 72px) / 12 * 8);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
@@ -1196,25 +1252,43 @@ div.section:not([class*=" "]) p.button-container a {
     max-width: 1275px;
   }
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .newsroom-page .blog-cta-container .blog-cta-wrapper {
+    width: calc(100% - 72px);
+  }
+}
 @media (min-width: 1024px) and (max-width: 1200px) {
   .newsroom-page .blog-cta-container .blog-cta-wrapper {
     margin-left: 36px;
+    width: calc((100% - 72px) / 12 * 8);
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .newsroom-page .blog-cta-container .blog-cta-wrapper {
     margin-left: 52px;
+    width: calc((100% - 15px) / 12 * 8);
   }
 }
 @media (min-width: 1379px) {
   .newsroom-page .blog-cta-container .blog-cta-wrapper {
     margin: 0;
+    width: calc((100% - 15px) / 12 * 8);
+  }
+}
+@media (max-width: 480px) {
+  .newsroom-page .video-embed-container .video-embed-wrapper .video-embed {
+    max-width: calc(100% - 32px);
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .newsroom-page .video-embed-container .video-embed-wrapper .video-embed {
+    max-width: calc(100% - 72px);
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .newsroom-page .video-embed-container .video-embed-wrapper .video-embed {
-    width: calc((100% - 15px) / 12 * 8);
-    max-width: calc((100% - 15px) / 12 * 8);
+    width: calc((100% - 72px) / 12 * 8);
+    max-width: calc((100% - 72px) / 12 * 8);
     margin-left: 36px;
   }
 }
@@ -1249,8 +1323,8 @@ div.section:not([class*=" "]) p.button-container a {
     width: 100%;
   }
 }
-.newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper {
-  padding-top: 16px;
+.newsroom-page .section .blog-article-information-wrapper + .default-content-wrapper {
+  margin-top: 16px;
 }
 .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
   float: right;
@@ -1275,7 +1349,7 @@ div.section:not([class*=" "]) p.button-container a {
   }
 }
 .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper {
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
   float: right;
