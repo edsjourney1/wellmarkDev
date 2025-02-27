@@ -132,7 +132,7 @@
                 width: auto;
                 i{
                   font-size: 16px;
-                  padding: 0 6px;
+                  margin: 0 6px;
                 }
               }
               &.button-container {
@@ -161,11 +161,10 @@
               li {
                 .icon{
                   height: auto;
-                  width: 26px;
+                  width: auto;
                   i{
                     font-size: 16px;
-                    padding: 0 0 0 6px;
-                    width: 20px;
+                    margin: 0 0 0 6px;
                   }
                 }
               }
