@@ -1,3 +1,5 @@
+const r = /^(?:[a-z+]+:)?\/\//i;
+
 /*
   * Appends query params to a URL
   * @param {string} url The URL to append query params to
@@ -211,7 +213,12 @@ const decorateExternalImages = (ele, deliveryMarker) => {
     if (validatedImage || extn.length) {
       const externalImgvalidate = isExternalImage(extImage, deliveryMarker);
       if (externalImgvalidate.isVisible) {
-        const extImageSrc = extImage.getAttribute('href');
+        let extImageSrc = extImage.getAttribute('href');
+        if (!r.test(extImageSrc)) {
+          const tempLink = document.createElement('a');
+          tempLink.href = extImageSrc;
+          extImageSrc = `${tempLink.protocol}//${tempLink.host}${extImageSrc}`;
+        }
         const extPicture = createOptimizedPicture(extImageSrc);
 
         /* copy query params from link to img */

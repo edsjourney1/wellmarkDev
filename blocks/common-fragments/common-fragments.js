@@ -10,11 +10,11 @@ export default async function decorate() { // block
   const socialfragment = await loadFragment(socialPath);
   generateSocial(socialfragment);
 
-  // const blueSubscribeMeta = getMetadata('/content-fragments/subscribe-newsletter-blue-fragment');
-  // const blueSubscribePath = blueSubscribeMeta
-  //   ? new URL(blueSubscribeMeta, window.location).pathname
-  //   : '/content-fragments/subscribe-newsletter-blue-fragment';
-  // const blueSubscribefragment = await loadFragment(blueSubscribePath);
+  const blueSubscribeMeta = getMetadata('/content-fragments/subscribe-newsletter-blue-fragment');
+  const blueSubscribePath = blueSubscribeMeta
+    ? new URL(blueSubscribeMeta, window.location).pathname
+    : '/content-fragments/subscribe-newsletter-blue-fragment';
+  const blueSubscribefragment = await loadFragment(blueSubscribePath);
 
-  // console.log('==============blueSubscribefragment', blueSubscribefragment);
+  console.log('==============blueSubscribefragment', blueSubscribefragment);
 }
