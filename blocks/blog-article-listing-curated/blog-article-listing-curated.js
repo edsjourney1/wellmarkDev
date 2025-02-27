@@ -54,7 +54,7 @@ export default async function decorate(block) {
     const pubDate = document.createElement('p');
     pubDate.classList.add('date');
     pubDate.textContent = postArticle1.publishedDate;
-    pubDate.textContent = postArticle1.includes('/') ? postArticle1.publishedDate : excelDateToDate(postArticle1.publishedDate);
+    pubDate.textContent = postArticle1.publishedDate.includes('/') ? postArticle1.publishedDate : excelDateToDate(postArticle1.publishedDate);
     datetimeDiv.appendChild(pubDate);
 
     const arcretime = document.createElement('p');
@@ -106,7 +106,7 @@ export default async function decorate(block) {
 
     const pubDate = document.createElement('p');
     pubDate.classList.add('date');
-    pubDate.textContent = postArticle2.includes('/') ? postArticle2.publishedDate : excelDateToDate(postArticle2.publishedDate);
+    pubDate.textContent = postArticle2.publishedDate.includes('/') ? postArticle2.publishedDate : excelDateToDate(postArticle2.publishedDate);
     datetimeDiv.appendChild(pubDate);
 
     const arcretime = document.createElement('p');
@@ -158,7 +158,7 @@ export default async function decorate(block) {
 
     const pubDate = document.createElement('p');
     pubDate.classList.add('date');
-    pubDate.textContent = postArticle3.includes('/') ? postArticle3.publishedDate : excelDateToDate(postArticle3.publishedDate);
+    pubDate.textContent = postArticle3.publishedDate.includes('/') ? postArticle3.publishedDate : excelDateToDate(postArticle3.publishedDate);
     datetimeDiv.appendChild(pubDate);
 
     const arcretime = document.createElement('p');
