@@ -207,7 +207,8 @@ const decorateExternalImages = (ele, deliveryMarker) => {
   const extImages = ele.querySelectorAll('a');
   extImages.forEach((extImage) => {
     const extn = getFileExtension(extImage.innerHTML);
-    if (extImage.innerHTML === extImage.getAttribute('href') || extn.length) {
+    const validatedImage = (extImage.getAttribute('href') || '').indexOf(extImage.innerText) > -1;
+    if (validatedImage || extn.length) {
       const externalImgvalidate = isExternalImage(extImage, deliveryMarker);
       if (externalImgvalidate.isVisible) {
         const extImageSrc = extImage.getAttribute('href');
