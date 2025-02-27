@@ -1,4 +1,7 @@
 // import { getMetadata } from '../../scripts/aem.js';
+
+import { excelDateToDate } from '../../scripts/scripts.js';
+
 // import { loadFragment } from '../fragment/fragment.js';
 
 export default async function decorate(block) {
@@ -58,7 +61,7 @@ export default async function decorate(block) {
 
       const pubDate = document.createElement('p');
       pubDate.classList.add('date');
-      pubDate.textContent = publishedDate;
+      pubDate.textContent = publishedDate.includes('/') ? publishedDate : excelDateToDate(publishedDate);
       datetimeDiv.appendChild(pubDate);
 
       const arcretime = document.createElement('p');

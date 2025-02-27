@@ -1,3 +1,5 @@
+import { excelDateToDate } from '../../scripts/scripts.js';
+
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
   const itemsPerPage = Number(block.children[0].children[1].innerText);
@@ -66,7 +68,7 @@ export default async function decorate(block) {
 
       const pubDate = document.createElement('p');
       pubDate.classList.add('date');
-      pubDate.textContent = publishedDate;
+      pubDate.textContent = publishedDate.includes('/') ? publishedDate : excelDateToDate(publishedDate);
       datetimeDiv.appendChild(pubDate);
 
       const arcretime = document.createElement('p');
