@@ -80,8 +80,7 @@ function buildHeroBlock(main) {
 }
 
 export function excelDateToDate(date) {
-  const startDate = new Date(1900, 0, 1);
-  return new Date(startDate.getTime() + (date - 2) * 86400000);
+  return new Date((date - (25567 + 1)) * 86400 * 1000).toLocaleDateString();
 }
 
 /**
