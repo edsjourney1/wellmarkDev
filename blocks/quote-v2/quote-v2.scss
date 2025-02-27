@@ -155,8 +155,9 @@
             }
         }
         #{$this}-img {
-            position: relative;
+            border-radius: 4px;
             overflow: hidden;
+            position: relative;
             img {
                 height: 100%;
                 left: 50%;

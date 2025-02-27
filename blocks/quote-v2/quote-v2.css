@@ -155,8 +155,9 @@
   }
 }
 .quote-v2-image-large .quote-v2-img, .quote-v2-image-small .quote-v2-img {
-  position: relative;
+  border-radius: 4px;
   overflow: hidden;
+  position: relative;
 }
 .quote-v2-image-large .quote-v2-img img, .quote-v2-image-small .quote-v2-img img {
   height: 100%;
