@@ -17,9 +17,7 @@ main {
                 font-weight: 500;
             }
             span.icon{
-                width: 16px;
-                height: 16px;
-                padding: 0 8px 0 12px;
+                padding: 0 6px 0 6px;
                 i{
                     font-size: 16px;
                     color: $--blue-675;
@@ -94,20 +92,25 @@ main {
                     color: $--gray-700;
                     text-decoration: none;
                     a{
-                        color: $--blue-675;
                         font-weight: 500;
                     }
                     span.icon{
-                        width: 16px;
-                        height: 16px;
-                        padding: 0 8px 0 12px;
                         i{
                             font-size: 16px;
-                            color: $--blue-675;
                         }
                     }
                     &:has(a){
                         margin-top: 12px;
+                    }
+                    &:not(.button-container) {
+                        a{
+                            color: $--blue-675;
+                        }
+                        span.icon{
+                            i{
+                                color: $--blue-675;
+                            }
+                        }
                     }
                 }
                 p.button-container {
