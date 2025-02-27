@@ -581,6 +581,44 @@ div.section:not([class*=' ']) {
         }
     }
   }
+  .blog-cta-container {
+    @include for-xlarge{
+      margin: 0 auto;
+      max-width: 1275px;
+    }
+    .blog-cta-wrapper {
+      @include for-laptop{
+        margin-left: 36px;
+      }
+      @include for-large{
+        margin-left: 52px;
+      }
+      @include for-xlarge{
+        margin: 0;
+      }
+    }
+  }
+  .video-embed-container {
+    .video-embed-wrapper {
+      .video-embed {
+        @include for-laptop{
+          width: calc((100% - 15px) / 12* 8);
+          max-width: calc((100% - 15px) / 12* 8);
+          margin-left: 36px;
+        }
+        @include for-large{
+          width: calc((100% - 15px) / 12* 8);
+          max-width: calc((100% - 15px) / 12* 8);
+          margin-left: 52px;
+        }
+        @include for-xlarge{
+          width: calc((100% - 15px) / 12* 8);
+          max-width: calc((100% - 15px) / 12* 8);
+          margin: 0;
+        }
+      }
+    }
+  }
   .section {
     .default-content-wrapper{
       h1{
@@ -674,6 +712,59 @@ div.section:not([class*=' ']) {
   }
 }
 .newsroom-page{
+  .pull-quote-container {
+    .pull-quote-wrapper {
+        .pull-quote.block {
+          @include for-laptop{
+            margin-left: 36px;
+          }
+          @include for-large{
+            margin-left: 52px;
+          }
+          @include for-xlarge{
+            margin: 0;
+          }
+        }
+    }
+  }
+  .blog-cta-container {
+    @include for-xlarge{
+      margin: 0 auto;
+      max-width: 1275px;
+    }
+    .blog-cta-wrapper {
+      @include for-laptop{
+        margin-left: 36px;
+      }
+      @include for-large{
+        margin-left: 52px;
+      }
+      @include for-xlarge{
+        margin: 0;
+      }
+    }
+  }
+  .video-embed-container {
+    .video-embed-wrapper {
+      .video-embed {
+        @include for-laptop{
+          width: calc((100% - 15px) / 12* 8);
+          max-width: calc((100% - 15px) / 12* 8);
+          margin-left: 36px;
+        }
+        @include for-large{
+          width: calc((100% - 15px) / 12* 8);
+          max-width: calc((100% - 15px) / 12* 8);
+          margin-left: 52px;
+        }
+        @include for-xlarge{
+          width: calc((100% - 15px) / 12* 8);
+          max-width: calc((100% - 15px) / 12* 8);
+          margin: 0;
+        }
+      }
+    }
+  }
   .section {
     .default-content-wrapper{
       h1{
