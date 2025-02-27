@@ -116,6 +116,11 @@ main {
                 p.button-container {
                     display: inline-flex;
                     padding: 0 24px 12px 0;
+                    a{
+                        span.icon{
+                            padding-left: 6px;
+                        }
+                    }
                 }
             }
             summary {
