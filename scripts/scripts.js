@@ -79,6 +79,11 @@ function buildHeroBlock(main) {
   }
 }
 
+export function excelDateToDate(date) {
+  const startDate = new Date(1900, 0, 1);
+  return new Date(startDate.getTime() + (date - 2) * 86400000);
+}
+
 /**
  * create an element.
  * @param {string} tagName the tag for the element
