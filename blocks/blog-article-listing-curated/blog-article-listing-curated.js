@@ -22,7 +22,10 @@ export default async function decorate(block) {
   block.append(headDiv, blockDiv);
   const data = await fetch('/query-index.json');
   const json = await data.json();
-  const postArticle1 = json.data.find((item) => item.url === articleOne);
+  const postArticle1 = json.data.find((item) => {
+    const relativeUrl = new URL(item.url.trim()).pathname;
+    return relativeUrl === articleOne.trim() ? relativeUrl : '';
+  });
   if (postArticle1) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
@@ -75,7 +78,10 @@ export default async function decorate(block) {
     });
     blockDiv.appendChild(mainDiv);
   }
-  const postArticle2 = json.data.find((item) => item.url === articleTwo);
+  const postArticle2 = json.data.find((item) => {
+    const relativeUrl = new URL(item.url.trim()).pathname;
+    return relativeUrl === articleTwo.trim() ? relativeUrl : '';
+  });
   if (postArticle2) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
@@ -127,7 +133,10 @@ export default async function decorate(block) {
     });
     blockDiv.appendChild(mainDiv);
   }
-  const postArticle3 = json.data.find((item) => item.url === articleThree);
+  const postArticle3 = json.data.find((item) => {
+    const relativeUrl = new URL(item.url.trim()).pathname;
+    return relativeUrl === articleThree.trim() ? relativeUrl : '';
+  });
   if (postArticle3) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
