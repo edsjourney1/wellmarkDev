@@ -228,7 +228,7 @@ div.section:not([class*=' ']) {
                   i{
                     font-size: 15px;
                     color: #fff;
-                    margin: 0;
+                    margin: 0 6px 0 0;
                   }
                 }
               }
@@ -240,7 +240,7 @@ div.section:not([class*=' ']) {
                   i{
                     font-size: 15px;
                     color: $--blue-675;
-                    margin: 0;
+                    margin: 0 6px 0 0;
                   }
                 }
                 &:hover{
