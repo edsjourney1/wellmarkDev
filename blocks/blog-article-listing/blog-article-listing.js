@@ -50,12 +50,13 @@ export default async function decorate(block) {
     }) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('card-div');
-
+      const relativeUrl = url.split('.com/');
+      console.log(relativeUrl);
       const imageSrc = document.createElement('img');
       imageSrc.src = image;
       imageSrc.alt = 'thumbnail';
       imageSrc.addEventListener('click', () => {
-        window.location.href = `${url}`;
+        window.location.href = `${relativeUrl[1]}`;
       });
       mainDiv.appendChild(imageSrc);
 
