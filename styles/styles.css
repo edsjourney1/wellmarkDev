@@ -1086,6 +1086,7 @@ div.section:not([class*=" "]) p.button-container a {
 @media (min-width: 1201px) and (max-width: 1379px) {
   .article-page .pull-quote-container .pull-quote-wrapper .pull-quote.block {
     margin-left: 52px;
+    width: calc((100% - 120px) / 12 * 8);
   }
 }
 @media (min-width: 1379px) {
@@ -1113,7 +1114,7 @@ div.section:not([class*=" "]) p.button-container a {
 @media (min-width: 1201px) and (max-width: 1379px) {
   .article-page .blog-cta-container .blog-cta-wrapper {
     margin-left: 52px;
-    width: calc((100% - 15px) / 12 * 8);
+    width: calc((100% - 120px) / 12 * 8);
   }
 }
 @media (min-width: 1379px) {
@@ -1182,6 +1183,16 @@ div.section:not([class*=" "]) p.button-container a {
   border-radius: 4px;
 }
 @media (max-width: 480px) {
+  .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type img {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type img {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
   .article-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
@@ -1207,6 +1218,16 @@ div.section:not([class*=" "]) p.button-container a {
   border-radius: 4px;
 }
 @media (max-width: 480px) {
+  .article-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type img {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .article-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type img {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
   .article-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
@@ -1230,6 +1251,7 @@ div.section:not([class*=" "]) p.button-container a {
 @media (min-width: 1201px) and (max-width: 1379px) {
   .newsroom-page .pull-quote-container .pull-quote-wrapper .pull-quote.block {
     margin-left: 52px;
+    width: calc((100% - 120px) / 12 * 8);
   }
 }
 @media (min-width: 1379px) {
@@ -1257,7 +1279,7 @@ div.section:not([class*=" "]) p.button-container a {
 @media (min-width: 1201px) and (max-width: 1379px) {
   .newsroom-page .blog-cta-container .blog-cta-wrapper {
     margin-left: 52px;
-    width: calc((100% - 15px) / 12 * 8);
+    width: calc((100% - 120px) / 12 * 8);
   }
 }
 @media (min-width: 1379px) {
@@ -1326,6 +1348,16 @@ div.section:not([class*=" "]) p.button-container a {
   border-radius: 4px;
 }
 @media (max-width: 480px) {
+  .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type img {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type img {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
   .newsroom-page .section .blog-article-information-wrapper ~ .default-content-wrapper p:has(picture):first-of-type {
     float: unset;
     min-width: 100%;
@@ -1349,6 +1381,16 @@ div.section:not([class*=" "]) p.button-container a {
 }
 .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type img {
   border-radius: 4px;
+}
+@media (max-width: 480px) {
+  .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type img {
+    width: 100%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type img {
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .newsroom-page .section.blog-article-information-container + .section .default-content-wrapper p:has(picture):first-of-type {
