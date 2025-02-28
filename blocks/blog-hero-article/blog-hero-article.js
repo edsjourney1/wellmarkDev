@@ -42,7 +42,7 @@ export default async function decorate(block) {
   pubDate.classList.add('date');
   pubDate.textContent = postArticle.publishedDate.includes('/') ? postArticle.publishedDate : excelDateToDate(postArticle.publishedDate);
   console.log(postArticle.publishedDate);
-  span.append(postArticle.pubDate);
+  span.append(pubDate);
   const articletime = document.createElement('span');
   articletime.append(`${postArticle.readTime} min read`);
   dateandtime.append(span, articletime);
