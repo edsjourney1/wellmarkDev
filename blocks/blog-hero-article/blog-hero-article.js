@@ -5,7 +5,11 @@ export default async function decorate(block) {
   block.innerHTML = '';
   const data = await fetch('/query-index.json');
   const json = await data.json();
-  const postArticle = json.data.find((item) => item.url.trim() === mainPageURL.trim());
+  const postArticle = json.data.find((item) => {
+    const relativeUrl = new URL(item.url.trim());
+    return relativeUrl === mainPageURL.trim() ? relativeUrl : '';
+  });
+  console.log(postArticle);
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
