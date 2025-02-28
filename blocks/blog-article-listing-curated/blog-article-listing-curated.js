@@ -29,12 +29,12 @@ export default async function decorate(block) {
   if (postArticle1) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
-
+    const relativeUrl = new URL(postArticle1.url.trim()).pathname;
     const imageSrc = document.createElement('img');
     imageSrc.src = postArticle1.image;
     imageSrc.alt = 'thumbnail';
     imageSrc.addEventListener('click', () => {
-      window.location.href = `${postArticle1.url}`;
+      window.location.href = `${relativeUrl}`;
     });
     mainDiv.appendChild(imageSrc);
 
@@ -85,12 +85,12 @@ export default async function decorate(block) {
   if (postArticle2) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
-
+    const relativeUrl = new URL(postArticle2.url.trim()).pathname;
     const imageSrc = document.createElement('img');
     imageSrc.src = postArticle2.image;
     imageSrc.alt = 'thumbnail';
     imageSrc.addEventListener('click', () => {
-      window.location.href = `${postArticle2.url}`;
+      window.location.href = `${relativeUrl}`;
     });
     mainDiv.appendChild(imageSrc);
 
@@ -140,12 +140,12 @@ export default async function decorate(block) {
   if (postArticle3) {
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('card-div');
-
+    const relativeUrl = new URL(postArticle3.url.trim()).pathname;
     const imageSrc = document.createElement('img');
     imageSrc.src = postArticle3.image;
     imageSrc.alt = 'thumbnail';
     imageSrc.addEventListener('click', () => {
-      window.location.href = `${postArticle3.url}`;
+      window.location.href = `${relativeUrl}`;
     });
     mainDiv.appendChild(imageSrc);
 
