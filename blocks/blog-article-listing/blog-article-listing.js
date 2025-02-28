@@ -50,7 +50,7 @@ export default async function decorate(block) {
     }) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('card-div');
-      const relativeUrl = url.split('.com/');
+      const relativeUrl = new URL(url);
       console.log(relativeUrl);
       const imageSrc = document.createElement('img');
       imageSrc.src = image;
