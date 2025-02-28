@@ -103,9 +103,24 @@ const formImageLinks = (extImages) => {
     if (assetSelected && isEMChild) {
       const associatedImg = extImage.parentNode.previousElementSibling;
       if (associatedImg && associatedImg.classList.contains('eds-asset-image')) {
-        console.log('==========associatedImg', associatedImg);
         const link = document.createElement('a');
-      };
+        const [linkURL, linkHash] = extImageHref.split('#') || [];
+        const [linkTitle, windowType, jumpId] = linkHash?.split('--') || [];
+        if (linkTitle) {
+          link.title = decodeURIComponent(linkTitle);
+        }
+        if (windowType === 'new') {
+          link.href = linkURL;
+          link.target = '_blank';
+        } else if (windowType === 'jump' && jumpId) {
+          link.href = `#${jumpId}`;
+        } else {
+          link.href = extImageHref;
+        }
+        extImage.remove();
+        associatedImg.parentNode.insertBefore(link, associatedImg);
+        link.append(associatedImg);
+      }
     }
   });
 };
