@@ -50,8 +50,9 @@ export default async function decorate(block) {
     }) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('card-div');
-      const relativeUrl = new URL(url);
-      console.log(relativeUrl);
+      const relativeUrl = new URL(url).pathname;
+      const originUrl = new URL(url).host;
+      console.log(relativeUrl, originUrl);
       const imageSrc = document.createElement('img');
       imageSrc.src = image;
       imageSrc.alt = 'thumbnail';
