@@ -6,7 +6,7 @@ export default async function decorate(block) {
   const data = await fetch('/query-index.json');
   const json = await data.json();
   const postArticle = json.data.find((item) => {
-    const relativeUrl = new URL(item.url.trim());
+    const relativeUrl = new URL(item.url.trim()).pathname;
     return relativeUrl === mainPageURL.trim() ? relativeUrl : '';
   });
   console.log(postArticle);
