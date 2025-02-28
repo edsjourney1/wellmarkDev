@@ -57,7 +57,7 @@ export default async function decorate(block) {
       imageSrc.src = image;
       imageSrc.alt = 'thumbnail';
       imageSrc.addEventListener('click', () => {
-        window.location.href = `${relativeUrl[1]}`;
+        window.location.href = `${relativeUrl}`;
       });
       mainDiv.appendChild(imageSrc);
 
