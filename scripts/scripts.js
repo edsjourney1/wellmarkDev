@@ -21,7 +21,7 @@ import {
   toClassName,
 } from './aem.js';
 
-import { decorateExternalImages } from './externalImage.js';
+import decorateExternalImages from './externalImage.js';
 
 // eslint-disable-next-line import/no-cycle
 // import initAccessibilityMode from
@@ -77,6 +77,18 @@ function buildHeroBlock(main) {
     section.append(buildBlock('hero', { elems: [picture, h1] }));
     main.prepend(section);
   }
+}
+
+export function excelDateToDate(date) {
+  const myDate = new Date((date - (25567 + 1)) * 86400 * 1000).toLocaleDateString();
+  const formatter = new Intl.DateTimeFormat('en-GB', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  });
+  const calcDate = new Date(myDate);
+  const result = formatter.format(calcDate);
+  return result;
 }
 
 /**
@@ -196,52 +208,53 @@ function buildAutoBlocks(main) {
 }
 /** Order and Unorder list */
 function orderlist() {
-  const orderedWrapper = document.querySelector('.heading-ordered');
-  const unorderedWrapper = document.querySelector('.heading-unordered');
-  if (orderedWrapper) {
-    const orderedDiv = orderedWrapper.children[0];
-    const ol = document.createElement('ol');
-    const orderChildren = [...orderedDiv.children];
-    orderChildren.forEach((child, index) => {
-      if (/^H[2-6]$/.test(child.tagName)) {
-        const li = document.createElement('li');
-        li.appendChild(child); // Append the heading
-        // Append the following elements (p or img) until the next heading or end of children
-        while (orderChildren[index + 1] && !/^H[2-6]$/.test(orderChildren[index + 1].tagName)) {
-          li.appendChild(orderChildren[index + 1]);
-          // eslint-disable-next-line no-plusplus, no-param-reassign
-          index++;
+  const orderedWrapperList = document.querySelectorAll('.heading-ordered');
+  const unorderedWrappersList = document.querySelectorAll('.heading-unordered');
+  if (unorderedWrappersList) {
+    unorderedWrappersList.forEach((unorderedWrapper) => {
+      const unorderedDiv = unorderedWrapper.children[0];
+      const ul = document.createElement('ul');
+      const unorderChildren = Array.from(unorderedDiv.children);
+      unorderChildren.forEach((child, index) => {
+        if (/^H[2-6]$/.test(child.tagName)) {
+          const li = document.createElement('li');
+          li.appendChild(child);
+          while (unorderChildren[index + 1] && !/^H[2-6]$/.test(unorderChildren[index + 1].tagName)) {
+            li.appendChild(unorderChildren[index + 1]);
+            // eslint-disable-next-line no-plusplus, no-param-reassign
+            index++;
+          }
+          ul.appendChild(li);
+          unorderedDiv.appendChild(ul);
         }
-        ol.appendChild(li);
-        orderedDiv.appendChild(ol);
-      }
+      });
     });
   }
-  if (unorderedWrapper) {
-    const unorderedDiv = unorderedWrapper.children[0];
-    const ul = document.createElement('ul');
-    // const unorderChildren = [...unorderedDiv.children];
-    const unorderChildren = Array.from(unorderedDiv.children);
-    unorderChildren.forEach((child, index) => {
-      if (/^H[2-6]$/.test(child.tagName)) {
-        const li = document.createElement('li');
-        li.appendChild(child); // Append the heading
-        // Append the following elements (p or img) until the next heading or end of children
-        while (unorderChildren[index + 1] && !/^H[2-6]$/.test(unorderChildren[index + 1].tagName)) {
-          li.appendChild(unorderChildren[index + 1]);
-          // eslint-disable-next-line no-plusplus, no-param-reassign
-          index++;
+  if (orderedWrapperList) {
+    orderedWrapperList.forEach((orderedWrapper) => {
+      const orderedDiv = orderedWrapper.children[0];
+      const ol = document.createElement('ol');
+      const orderChildren = Array.from(orderedDiv.children);
+      orderChildren.forEach((child, index) => {
+        if (/^H[2-6]$/.test(child.tagName)) {
+          const li = document.createElement('li');
+          li.appendChild(child);
+          while (orderChildren[index + 1] && !/^H[2-6]$/.test(orderChildren[index + 1].tagName)) {
+            li.appendChild(orderChildren[index + 1]);
+            // eslint-disable-next-line no-plusplus, no-param-reassign
+            index++;
+          }
+          ol.appendChild(li);
+          orderedDiv.appendChild(ol);
         }
-        ul.appendChild(li);
-        unorderedDiv.appendChild(ul);
-      }
+      });
     });
   }
 }
 
-function scrollIdlink() {
+const scrollIdlink = () => {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
@@ -270,7 +283,8 @@ function scrollIdlink() {
       }
     });
   });
-}
+};
+
 /**
  * Decorates the main element.
  * @param {Element} main The main element

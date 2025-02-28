@@ -69,9 +69,16 @@
           color: $--gray-700;
           display: flex;
           gap: 30px;
-          align-items: center;
+          align-items: stretch;
+          @include for-xlarge{
+            max-height: 600px;
+          }
           @include for-large{
             padding: 0 $--spacing-xl;
+            max-height: 600px;
+          }
+          @include for-laptop{
+            max-height: 600px;
           }
           @include for-tablet{
             flex-direction: column-reverse;
@@ -101,7 +108,6 @@
               border-radius: 4px;
               @include for-xlarge{
                 width: calc((100% / 12) * 4 - 85px);
-                min-height: 600px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -112,7 +118,6 @@
               }
               @include for-large{
                 width: calc((100% / 12) * 4 - 85px);
-                min-height: 600px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -142,6 +147,7 @@
             }
             &:last-child{
               width: calc((100% / 12) *8);
+              flex: 1;
               @include for-xlarge{
                 width: calc((100% / 12) *8);
               }
@@ -162,17 +168,8 @@
               picture{
                 img{
                   width: 100%;
-                  height: 600px;
+                  height: 100%;
                   border-radius: 5px;
-                  @include for-laptop{
-                    height: 331px;
-                  }
-                  @include for-tablet{
-                    height: 926px;
-                  }
-                  @include for-mobile{
-                    height: 361px;
-                  }
                 }
               }
             }
@@ -209,7 +206,6 @@
           display: flex;
           @include for-laptop{
             flex-direction: row-reverse;
-            align-items: flex-start !important;
           }
           @include for-tablet{
             flex-direction: column-reverse;
@@ -224,7 +220,6 @@
               background-color: $--blue-50;
               @include for-xlarge{
                 width: calc((100% / 12) * 8 ) !important;
-                min-height: 600px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -234,7 +229,7 @@
                 }
               }
               @include for-large{
-                width: calc((100% / 12) *8 - 38%) !important;
+                width: calc((100% / 12) * 8 ) !important;
               }
               @include for-laptop{
                 width: calc((100% / 12) *6 - 75px) !important;
@@ -277,16 +272,7 @@
               picture{
                 img{
                   width: 100%;
-                  height: 600px;
-                  @include for-laptop{
-                    height: 331px;
-                  }
-                  @include for-tablet{
-                    height: 926px;
-                  }
-                  @include for-mobile{
-                    height: 361px;
-                  }
+                  height: 100%;
                 }
               }
             }

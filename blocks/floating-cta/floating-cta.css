@@ -39,7 +39,7 @@
   width: auto;
 }
 .floating-cta-wrapper .floating-cta .button-container a .icon > i {
-  color: #ffffff;
+  color: #ffffff !important;
   font-size: inherit;
 }
 .floating-cta-wrapper .floating-cta-light .button-container a {

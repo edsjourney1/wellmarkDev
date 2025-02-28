@@ -171,6 +171,7 @@
   border-radius: 4px;
   aspect-ratio: 4/3;
   vertical-align: top;
+  cursor: pointer;
 }
 .blog-article-listing .cards-div > .card-div > .content-div > .card-title {
   opacity: 1;
@@ -184,6 +185,7 @@
   text-decoration: underline;
   margin: 0;
   padding-bottom: 8px;
+  cursor: pointer;
 }
 @media (min-width: 1379px) {
   .blog-article-listing .cards-div > .card-div > .content-div > .card-title {

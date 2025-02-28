@@ -140,7 +140,7 @@ a:any-link {
   @include for-xlarge{
     max-width: 1275px;
     margin: 0 auto;
-    div:first-child{
+    > div:first-child{
       width: calc((100% / 12) * 8);
       margin: 0;
     }
@@ -148,7 +148,7 @@ a:any-link {
   @include for-large{
     max-width: 1275px;
     margin: 0 auto;
-    div:first-child{
+    > div:first-child{
       width: calc((100% / 12) * 8);
       margin: 0;
     }
@@ -156,7 +156,7 @@ a:any-link {
   @include for-laptop{
     max-width: 1275px;
     margin: 0 auto;
-    div:first-child{
+    > div:first-child{
       width: calc((100% / 12) * 8);
       margin: 0;
     }
