@@ -7,10 +7,8 @@ export default async function decorate(block) {
   const json = await data.json();
   const postArticle = json.data.find((item) => {
     const relativeUrl = new URL(item.url.trim()).pathname;
-    console.log(relativeUrl);
     return relativeUrl === mainPageURL.trim() ? relativeUrl : '';
   });
-  console.log(postArticle);
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
@@ -41,7 +39,6 @@ export default async function decorate(block) {
   const pubDate = document.createElement('p');
   pubDate.classList.add('date');
   pubDate.textContent = postArticle.publishedDate.includes('/') ? postArticle.publishedDate : excelDateToDate(postArticle.publishedDate);
-  console.log(postArticle.publishedDate);
   span.append(pubDate);
   const articletime = document.createElement('span');
   articletime.append(`${postArticle.readTime} min read`);
