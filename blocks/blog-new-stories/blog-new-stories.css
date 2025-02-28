@@ -94,6 +94,7 @@
 .blog-new-stories .new-cards > .new-card-div > img {
   width: calc((100% - 45px) / 8 * 3);
   border-radius: 4px;
+  cursor: pointer;
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .blog-new-stories .new-cards > .new-card-div > img {
@@ -140,6 +141,7 @@
   text-decoration: underline;
   margin: 0;
   padding-bottom: 8px;
+  cursor: pointer;
 }
 .blog-new-stories .new-cards > .new-card-div > .content-div > .description {
   margin: 0;
@@ -194,4 +196,7 @@
 }
 .blog-new-stories .new-cards > .new-card-div > .content-div > .category-list > a {
   font-weight: 500;
+  color: #005589;
+  cursor: pointer;
+  text-decoration: underline;
 }

@@ -27,6 +27,30 @@
 [class^="quote-v2 quote-v2-image"] figure picture {
   display: none;
 }
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  [class^="quote-v2 quote-v2-image"] .quote-v2-article {
+    flex-direction: column;
+  }
+  [class^="quote-v2 quote-v2-image"] figure {
+    margin-top: 30px !important;
+    order: 2;
+  }
+  [class^="quote-v2 quote-v2-image"] .quote-v2-img {
+    order: 1;
+  }
+}
+@media (max-width: 480px) {
+  [class^="quote-v2 quote-v2-image"] .quote-v2-article {
+    flex-direction: column;
+  }
+  [class^="quote-v2 quote-v2-image"] figure {
+    margin-top: 30px !important;
+    order: 2;
+  }
+  [class^="quote-v2 quote-v2-image"] .quote-v2-img {
+    order: 1;
+  }
+}
 
 .quote-v2 {
   margin: 0 0 52px 0;
@@ -117,136 +141,87 @@
 .quote-v2 figcaption {
   margin-top: 25px;
 }
-.quote-v2-image-large .quote-v2-img > div, .quote-v2-image-small .quote-v2-img > div {
+.quote-v2-image-large .quote-v2-article figure, .quote-v2-image-small .quote-v2-article figure {
+  min-height: 600px;
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .quote-v2-image-large .quote-v2-article figure, .quote-v2-image-small .quote-v2-article figure {
+    min-height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .quote-v2-image-large .quote-v2-article figure, .quote-v2-image-small .quote-v2-article figure {
+    min-height: auto;
+  }
+}
+.quote-v2-image-large .quote-v2-img, .quote-v2-image-small .quote-v2-img {
   border-radius: 4px;
-  height: 0;
   overflow: hidden;
-  padding-bottom: 100%;
   position: relative;
 }
-.quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
-  border-radius: 4px;
-  height: 100.5%;
+.quote-v2-image-large .quote-v2-img img, .quote-v2-image-small .quote-v2-img img {
+  height: 100%;
   left: 50%;
   object-fit: cover;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 100.5%;
-}
-@media (max-width: 480px) {
-  .quote-v2-image-large figure, .quote-v2-image-large .quote-v2-img, .quote-v2-image-small figure, .quote-v2-image-small .quote-v2-img {
-    width: 100%;
-    margin: 15px 0;
-  }
-  .quote-v2-image-large figure, .quote-v2-image-small figure {
-    order: 2;
-  }
-}
-@media (min-width: 480.5px) and (max-width: 752.5px) {
-  .quote-v2-image-large figure, .quote-v2-image-large .quote-v2-img, .quote-v2-image-small figure, .quote-v2-image-small .quote-v2-img {
-    width: 100%;
-    margin: 15px 0;
-  }
-  .quote-v2-image-large figure, .quote-v2-image-small figure {
-    order: 2;
-  }
+  vertical-align: top;
+  width: 100%;
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
-  .quote-v2-image-large figure, .quote-v2-image-small figure {
-    min-height: 600px;
-  }
-  .quote-v2-image-large figure, .quote-v2-image-large .quote-v2-img, .quote-v2-image-small figure, .quote-v2-image-small .quote-v2-img {
-    width: calc(50% - 15px);
+  .quote-v2-image-large .quote-v2-img img, .quote-v2-image-small .quote-v2-img img {
+    position: static;
+    transform: none;
   }
 }
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .quote-v2-image-large .quote-v2-img > div, .quote-v2-image-small .quote-v2-img > div {
-    height: 100%;
-    overflow: hidden;
-    padding-bottom: 0;
-    position: relative;
-  }
-  .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
-    height: 100.5%;
-    left: 50%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100.5%;
-  }
-  .quote-v2-image-large figure {
-    min-height: 600px;
-    width: calc(33.3334% - 15px);
-  }
-  .quote-v2-image-large .quote-v2-img {
-    width: calc(66.6666% - 15px);
-  }
-  .quote-v2-image-small figure {
-    min-height: 600px;
-    width: calc(66.6666% - 15px);
-  }
-  .quote-v2-image-small .quote-v2-img {
-    width: calc(33.3334% - 15px);
+@media (max-width: 480px) {
+  .quote-v2-image-large .quote-v2-img img, .quote-v2-image-small .quote-v2-img img {
+    position: static;
+    transform: none;
   }
 }
-@media (min-width: 1201px) and (max-width: 1379px) {
-  .quote-v2-image-large .quote-v2-img > div, .quote-v2-image-small .quote-v2-img > div {
-    height: 100%;
-    overflow: hidden;
-    padding-bottom: 0;
-    position: relative;
+.quote-v2-image-large .quote-v2-article figure {
+  width: calc(33.3334% - 15px);
+}
+.quote-v2-image-large .quote-v2-article .quote-v2-img {
+  width: calc(66.6664% - 15px);
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .quote-v2-image-large .quote-v2-article figure {
+    width: 100%;
   }
-  .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
-    height: 100.5%;
-    left: 50%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100.5%;
-  }
-  .quote-v2-image-large figure {
-    width: calc(33.3334% - 15px);
-    min-height: 600px;
-  }
-  .quote-v2-image-large .quote-v2-img {
-    width: calc(66.6666% - 15px);
-  }
-  .quote-v2-image-small figure {
-    width: calc(66.6666% - 15px);
-    min-height: 600px;
-  }
-  .quote-v2-image-small .quote-v2-img {
-    width: calc(33.3334% - 15px);
+  .quote-v2-image-large .quote-v2-article .quote-v2-img {
+    width: 100%;
   }
 }
-@media (min-width: 1379px) {
-  .quote-v2-image-large .quote-v2-img > div, .quote-v2-image-small .quote-v2-img > div {
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+@media (max-width: 480px) {
+  .quote-v2-image-large .quote-v2-article figure {
+    width: 100%;
   }
-  .quote-v2-image-large .quote-v2-img > div img, .quote-v2-image-small .quote-v2-img > div img {
-    height: 100.5%;
-    left: 50%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100.5%;
+  .quote-v2-image-large .quote-v2-article .quote-v2-img {
+    width: 100%;
   }
-  .quote-v2-image-large figure {
-    width: calc(33.3334% - 15px);
+}
+.quote-v2-image-small .quote-v2-article figure {
+  width: calc(66.6664% - 15px);
+}
+.quote-v2-image-small .quote-v2-article .quote-v2-img {
+  width: calc(33.3334% - 15px);
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
+  .quote-v2-image-small .quote-v2-article figure {
+    width: 100%;
   }
-  .quote-v2-image-large .quote-v2-img {
-    width: calc(66.6666% - 15px);
+  .quote-v2-image-small .quote-v2-article .quote-v2-img {
+    width: 100%;
   }
-  .quote-v2-image-small figure {
-    width: calc(66.6666% - 15px);
+}
+@media (max-width: 480px) {
+  .quote-v2-image-small .quote-v2-article figure {
+    width: 100%;
   }
-  .quote-v2-image-small .quote-v2-img {
-    width: calc(33.3334% - 15px);
+  .quote-v2-image-small .quote-v2-article .quote-v2-img {
+    width: 100%;
   }
 }

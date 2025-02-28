@@ -28,6 +28,34 @@
             display: none;
         }
     }
+    @include for-tablet{
+        .quote-v2 {
+            &-article {
+                flex-direction: column;
+            }
+        }
+        figure {
+            margin-top: 30px !important;
+            order: 2;
+        }
+        .quote-v2-img {
+            order: 1;
+        }
+    }
+    @include for-mobile{
+        .quote-v2 {
+            &-article {
+                flex-direction: column;
+            }
+        }
+        figure {
+            margin-top: 30px !important;
+            order: 2;
+        }
+        .quote-v2-img {
+            order: 1;
+        }
+    }
 }
 .quote-v2 {
     $this: &;
@@ -113,163 +141,104 @@
         margin-top: 25px;
     }
     &-image-large, &-image-small {
+        #{$this}-article figure {
+            min-height: 600px;
+        }
+        @include for-tablet{
+            #{$this}-article figure {
+                min-height: auto;
+            }
+        }
+        @include for-mobile{
+            #{$this}-article figure {
+                min-height: auto;
+            }
+        }
         #{$this}-img {
-            > div {
-                border-radius: 4px;
-                height: 0;
-                overflow: hidden;
-                padding-bottom: 100%;
-                position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            img {
+                height: 100%;
+                left: 50%;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                vertical-align: top;
+                width: 100%;
+            }
+            @include for-tablet {
                 img {
-                    border-radius: 4px;
-                    height: 100.5%;
-                    left: 50%;
-                    object-fit: cover;
-                    position: absolute;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 100.5%;
+                    position: static;
+                    transform: none;
                 }
             }
-        }
-        @include for-mobile {
-            figure, #{$this}-img {
-                width: 100%;
-                margin: 15px 0;
-            }
-            figure {
-                order: 2;
-            }
-        }
-        @include for-tablet-smallest {
-            figure, #{$this}-img {
-                width: 100%;
-                margin: 15px 0;
-            }
-            figure {
-                order: 2;
-            }
-        }
-        @include for-tablet {
-            figure {
-                min-height: 600px;
-            }
-            figure, #{$this}-img {
-                width: calc(50% - 15px);
+            @include for-mobile {
+                img {
+                    position: static;
+                    transform: none;
+                }
             }
         }
     }
-    @include for-laptop {
-        &-image-large, &-image-small {
+    &-image-large {
+        #{$this}-article {
+            figure {
+                width: calc(33.3334% - 15px);
+            }
             #{$this}-img {
-                > div {
-                    height: 100%;
-                    overflow: hidden;
-                    padding-bottom: 0;
-                    position: relative;
-                    img {
-                        height: 100.5%;
-                        left: 50%;
-                        object-fit: cover;
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 100.5%;
-                    }
+                width: calc(66.6664% - 15px);
+            }
+        }
+        @include for-tablet{
+            #{$this}-article {
+                figure {
+                    width: 100%;
+                }
+                #{$this}-img {
+                    width: 100%;
                 }
             }
         }
-        &-image-large {
-            figure {
-                min-height: 600px;
-                width: calc(33.3334% - 15px);
-            }
-            #{$this}-img {
-                width: calc(66.6666% - 15px);
-            }
-        }
-        &-image-small {
-            figure {
-                min-height: 600px;
-                width: calc(66.6666% - 15px);
-            }
-            #{$this}-img {
-                width: calc(33.3334% - 15px);
+        @include for-mobile{
+            #{$this}-article {
+                figure {
+                    width: 100%;
+                }
+                #{$this}-img {
+                    width: 100%;
+                }
             }
         }
     }
-    @include for-large {
-        &-image-large, &-image-small {
+    &-image-small {
+        #{$this}-article {
+            figure {
+                width: calc(66.6664% - 15px);
+            }
             #{$this}-img {
-                > div {
-                    height: 100%;
-                    overflow: hidden;
-                    padding-bottom: 0;
-                    position: relative;
-                    img {
-                        height: 100.5%;
-                        left: 50%;
-                        object-fit: cover;
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 100.5%;
-                    }
+                width: calc(33.3334% - 15px);
+            }
+        }
+        @include for-tablet{
+            #{$this}-article {
+                figure {
+                    width: 100%;
+                }
+                #{$this}-img {
+                    width: 100%;
                 }
             }
         }
-        &-image-large {
-            figure {
-                width: calc(33.3334% - 15px);
-                min-height: 600px;
-            }
-            #{$this}-img {
-                width: calc(66.6666% - 15px);
-            }
-        }
-        &-image-small {
-            figure {
-                width: calc(66.6666% - 15px);
-                min-height: 600px;
-            }
-            #{$this}-img {
-                width: calc(33.3334% - 15px);
-            }
-        }
-    }
-    @include for-xlarge {
-        &-image-large, &-image-small {
-            #{$this}-img {
-                > div {
-                    height: 100%;
-                    overflow: hidden;
-                    position: relative;
-                    img {
-                        height: 100.5%;
-                        left: 50%;
-                        object-fit: cover;
-                        position: absolute;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        width: 100.5%;
-                    }
+        @include for-mobile{
+            #{$this}-article {
+                figure {
+                    width: 100%;
                 }
-            }
-        }
-        &-image-large {
-            figure {
-                width: calc(33.3334% - 15px);
-            }
-            #{$this}-img {
-                width: calc(66.6666% - 15px);
-            }
-        }
-        &-image-small {
-            figure {
-                width: calc(66.6666% - 15px);
-            }
-            #{$this}-img {
-                width: calc(33.3334% - 15px);
+                #{$this}-img {
+                    width: 100%;
+                }
             }
         }
     }

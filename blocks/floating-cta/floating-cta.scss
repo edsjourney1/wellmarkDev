@@ -33,7 +33,7 @@
           height: auto;
           width: auto;
           > i {
-            color: $--white;
+            color: $--white !important;
             font-size: inherit;
           }
         }

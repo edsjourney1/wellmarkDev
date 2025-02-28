@@ -179,7 +179,7 @@
 }
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p .icon i {
   font-size: 16px;
-  padding-left: 6px;
+  margin-left: 6px;
 }
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container {
   margin-top: 0;
@@ -203,7 +203,7 @@
 }
 .image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block ul li .icon i {
   font-size: 16px;
-  padding: 0 0 0 6px;
+  margin: 0 0 0 6px;
 }
 
 .background-blue-550.image-text-overlap-container .image-text-overlap-wrapper {
@@ -237,7 +237,7 @@
 }
 .background-blue-550.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p .icon i {
   font-size: 16px;
-  padding-left: 6px;
+  margin-left: 6px;
 }
 .background-blue-550.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block p.button-container {
   margin-top: 0;
@@ -261,5 +261,5 @@
 }
 .background-blue-550.image-text-overlap-container .image-text-overlap-wrapper .image-text-overlap.block.columns-2-cols.block ul li .icon i {
   font-size: 16px;
-  padding: 0 0 0 6px;
+  margin: 0 0 0 6px;
 }

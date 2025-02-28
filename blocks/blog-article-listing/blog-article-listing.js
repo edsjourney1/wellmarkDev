@@ -1,6 +1,6 @@
 // import { getMetadata } from '../../scripts/aem.js';
+import { excelDateToDate } from '../../scripts/scripts.js';
 // import { loadFragment } from '../fragment/fragment.js';
-
 export default async function decorate(block) {
   const categoryByauthor = block.children[1].children[1].innerText;
   const heading = block.children[0].children[0].innerText;
@@ -46,14 +46,17 @@ export default async function decorate(block) {
       return dateA - dateB;
     });
     sortedJSON.forEach(({
-      image, category, publishedDate, readTime, title,
+      image, category, publishedDate, readTime, title, url,
     }) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('card-div');
-
+      const relativeUrl = new URL(url).pathname;
       const imageSrc = document.createElement('img');
       imageSrc.src = image;
       imageSrc.alt = 'thumbnail';
+      imageSrc.addEventListener('click', () => {
+        window.location.href = `${relativeUrl}`;
+      });
       mainDiv.appendChild(imageSrc);
 
       const contentDiv = document.createElement('div');
@@ -63,6 +66,9 @@ export default async function decorate(block) {
       const mainTitle = document.createElement('h3');
       mainTitle.classList.add('card-title');
       mainTitle.textContent = title;
+      mainTitle.addEventListener('click', () => {
+        window.location.href = `${relativeUrl}`;
+      });
       contentDiv.appendChild(mainTitle);
 
       const datetimeDiv = document.createElement('div');
@@ -71,7 +77,7 @@ export default async function decorate(block) {
 
       const pubDate = document.createElement('p');
       pubDate.classList.add('date');
-      pubDate.textContent = publishedDate;
+      pubDate.textContent = publishedDate.includes('/') ? publishedDate : excelDateToDate(publishedDate);
       datetimeDiv.appendChild(pubDate);
 
       const arcretime = document.createElement('p');

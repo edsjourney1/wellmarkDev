@@ -40,6 +40,18 @@
     padding: 0 36px;
   }
 }
+@media (min-width: 1379px) {
+  .footer-main-wrapper .footer-main > .logo-social-div > div > img {
+    height: 37px;
+    width: 186px;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1379px) {
+  .footer-main-wrapper .footer-main > .logo-social-div > div > img {
+    height: 37px;
+    width: 186px;
+  }
+}
 .footer-main-wrapper .footer-main > .logo-social-div > .social-div {
   display: flex;
   gap: 12px;
