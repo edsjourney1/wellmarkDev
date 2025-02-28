@@ -705,7 +705,7 @@ div.section:not([class*=" "]) p.button-container a {
 .section .default-content-wrapper p.button-container a:has(.icon).button.primary .icon i {
   font-size: 15px;
   color: #fff;
-  margin: 0;
+  margin: 0 6px 0 0;
 }
 .section .default-content-wrapper p.button-container a:has(.icon).button.secondary {
   padding-bottom: 10px;
@@ -717,7 +717,7 @@ div.section:not([class*=" "]) p.button-container a {
 .section .default-content-wrapper p.button-container a:has(.icon).button.secondary .icon i {
   font-size: 15px;
   color: #005589;
-  margin: 0;
+  margin: 0 6px 0 0;
 }
 .section .default-content-wrapper p.button-container a:has(.icon).button.secondary:hover .icon {
   height: auto;
