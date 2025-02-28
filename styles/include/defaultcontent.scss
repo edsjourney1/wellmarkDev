@@ -596,6 +596,7 @@ div.section:not([class*=' ']) {
           }
           @include for-large{
             margin-left: 52px;
+            width: calc((100% - 120px) / 12* 8);
           }
           @include for-xlarge{
             margin: 0;
@@ -618,7 +619,7 @@ div.section:not([class*=' ']) {
       }
       @include for-large{
         margin-left: 52px;
-        width: calc((100% - 15px) / 12* 8);
+        width: calc((100% - 120px) / 12* 8);
       }
       @include for-xlarge{
         margin: 0;
@@ -690,6 +691,12 @@ div.section:not([class*=' ']) {
           padding-bottom: 0;
           img{
             border-radius: 4px;
+            @include for-mobile{
+              width: 100%;
+            }
+            @include for-tablet{
+              width: 100%;
+            }
           }
         }
       }
@@ -722,6 +729,12 @@ div.section:not([class*=' ']) {
             padding-bottom: 0;
             img{
               border-radius: 4px;
+              @include for-mobile{
+                width: 100%;
+              }
+              @include for-tablet{
+                width: 100%;
+              }
             }
           }
         }
@@ -757,6 +770,7 @@ div.section:not([class*=' ']) {
           }
           @include for-large{
             margin-left: 52px;
+            width: calc((100% - 120px) / 12* 8);
           }
           @include for-xlarge{
             margin: 0;
@@ -779,7 +793,7 @@ div.section:not([class*=' ']) {
       }
       @include for-large{
         margin-left: 52px;
-        width: calc((100% - 15px) / 12* 8);
+        width: calc((100% - 120px) / 12* 8);
       }
       @include for-xlarge{
         margin: 0;
@@ -851,6 +865,12 @@ div.section:not([class*=' ']) {
           padding-bottom: 0;
           img{
             border-radius: 4px;
+            @include for-mobile{
+              width: 100%;
+            }
+            @include for-tablet{
+              width: 100%;
+            }
           }
         }
       }
@@ -883,6 +903,12 @@ div.section:not([class*=' ']) {
             padding-bottom: 0;
             img{
               border-radius: 4px;
+              @include for-mobile{
+                width: 100%;
+              }
+              @include for-tablet{
+                width: 100%;
+              }
             }
           }
         }
