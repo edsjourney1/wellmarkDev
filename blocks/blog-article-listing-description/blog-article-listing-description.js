@@ -1,3 +1,5 @@
+import { excelDateToDate } from '../../scripts/scripts.js';
+
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
   const itemsPerPage = Number(block.children[0].children[1].innerText);
@@ -36,14 +38,17 @@ export default async function decorate(block) {
       return dateA - dateB;
     });
     sortedJSON.forEach(({
-      image, category, publishedDate, readTime, title, description,
+      image, category, publishedDate, readTime, title, description, url,
     }) => {
       const mainDiv = document.createElement('div');
       mainDiv.classList.add('card-div');
-
+      const relativeUrl = new URL(url).pathname;
       const imageSrc = document.createElement('img');
       imageSrc.src = image;
       imageSrc.alt = 'thumbnail';
+      imageSrc.addEventListener('click', () => {
+        window.location.href = `${relativeUrl}`;
+      });
       mainDiv.appendChild(imageSrc);
 
       const contentDiv = document.createElement('div');
@@ -53,6 +58,9 @@ export default async function decorate(block) {
       const mainTitle = document.createElement('h3');
       mainTitle.classList.add('card-title');
       mainTitle.textContent = title;
+      mainTitle.addEventListener('click', () => {
+        window.location.href = `${relativeUrl}`;
+      });
       contentDiv.appendChild(mainTitle);
 
       const cardDesc = document.createElement('p');
@@ -66,7 +74,7 @@ export default async function decorate(block) {
 
       const pubDate = document.createElement('p');
       pubDate.classList.add('date');
-      pubDate.textContent = publishedDate;
+      pubDate.textContent = publishedDate.includes('/') ? publishedDate : excelDateToDate(publishedDate);
       datetimeDiv.appendChild(pubDate);
 
       const arcretime = document.createElement('p');

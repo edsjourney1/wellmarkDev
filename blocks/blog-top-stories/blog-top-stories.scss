@@ -42,6 +42,7 @@
           text-decoration: underline;
           margin: 0;
           padding-bottom: 8px;
+          cursor: pointer;
         }
 
         > .date-div {
@@ -78,6 +79,9 @@
           flex-wrap: wrap;
           > a {
             font-weight: 500;
+            color: $--blue-675;
+            cursor: pointer;
+            text-decoration: underline;
           }
         }
       }
