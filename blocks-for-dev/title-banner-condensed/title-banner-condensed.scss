@@ -1,0 +1,96 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.title-banner-condensed-container {
+  background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
+  @include for-xlarge{
+    background-image: linear-gradient(270deg, rgba(166, 198, 221, 1) 0%, rgba(148, 182, 206, 1) 0%, rgba(73, 115, 144, 1) 100%);
+  }
+  @include for-tablet{
+    background: $--blue-550;
+  }
+  @include for-mobile{
+    background: $--blue-550;
+  }
+  .title-banner-condensed-wrapper {
+    @include for-large{
+      width: calc(100% - 100px);
+    }
+    .title-banner-condensed {
+      &.block {
+        padding: 71px 0 51px 0;
+        @include for-tablet {
+          padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
+        }
+        @include for-laptop {
+          padding: 71px 0 71px 35px;
+        }
+        @include for-mobile{
+          width: 100%;
+          padding: $--spacing-xxl 0 $--spacing-xxl 0;
+        }
+        .tbnr-maindiv{
+          @include for-xlarge{
+            width: calc(((100% / 12) * 8) - 10px);
+          }
+          @include for-large{
+            width: calc(((100% / 12) * 8) - 10px);
+          }
+          @include for-laptop{
+            width: calc(((100% / 12) * 9) - 30px);
+          }
+          @include for-tablet{
+            width: calc(((100% / 6) * 5) - 30px);
+          }
+          .tbnr-textcont{
+            @include for-mobile{
+              padding: 0 16px;
+            }
+            .title {
+              color: $--white;
+              font-family: $--font-museo;
+              font-size: 60px;
+              line-height: 72px;
+              font-weight: 300;
+              margin-top: 0;
+              margin-bottom: $--spacing-l;
+              @include for-mobile {
+                margin-bottom: $--spacing-s;
+                font-size: 40px;
+                line-height: 48px;
+              }
+              @include for-tablet {
+                margin-bottom: $--spacing-s;
+              }
+            }
+            .description {
+              color: $--white;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 400;
+              font-style: normal;
+              margin: 0;
+            }
+            .tbnr-btn{
+              padding-top: $--spacing-xl;
+              display: flex;
+              gap: 24px;
+              @include for-tablet{
+                padding-top: $--spacing-l;
+              }
+              @include for-mobile{
+                flex-direction: column;
+                gap: 16px;
+                padding-top: $--spacing-l;
+              }
+              .button-container{
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

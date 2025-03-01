@@ -1,0 +1,244 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+.image-text-overlap-container {
+  .image-text-overlap-wrapper {
+    padding: 0;
+    @include for-large{
+      width: calc(100% - 104px);
+    }
+    .image-text-overlap {
+      &.block {
+        h3{
+          margin: 12px 0;
+        }
+        ul{
+          margin: 0;
+          margin-bottom: 24px;
+        }
+        ol{
+          margin: 0;
+          margin-bottom: 24px;
+        }
+        .icon{
+          height: auto;
+          width: auto;
+          i{
+            font-size: 16px;
+            color: $--blue-675;
+          }
+        }
+        &.columns-2-cols {
+          >div {
+            display: flex;
+            flex-direction: column;
+            @include for-nonmobile {
+              align-items: center;
+              flex-direction: row;
+              gap: 30px;
+            }
+            @include for-large {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            @include for-xlarge {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            >div:has(h2) {
+              order: 1;
+              position: relative;
+              @include for-mobile {
+                padding: 0 $--spacing-m $--spacing-huge $--spacing-m;
+              }
+              @include for-tablet {
+                max-width: calc(50% - 51px);
+                padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
+              }
+              @include for-laptop {
+                max-width: calc(50% - 51px);
+                padding: $--spacing-huge 0 $--spacing-huge $--spacing-xl;
+              }
+              @include for-large {
+                padding: $--spacing-max 0 $--spacing-max 0;
+                max-width: calc((100% - 30px) / 12* 5);
+              }
+              @include for-xlarge {
+                padding: $--spacing-max 0 $--spacing-max 0;
+                max-width: calc((100% - 30px) / 12* 5);
+              }
+              @include for-nonmobile {
+                flex: 1;
+                order: unset;
+                display: flex;
+                flex-flow: row wrap;
+                text-align: left;
+                column-gap: 24px;
+              }
+            }
+            >.columns-img-col {
+              order: 0;
+              @include for-mobile {
+                padding: 0;
+                width: 100%;
+              }
+              @include for-tablet {
+                padding: 0 $--spacing-xl 0 0;
+                width: calc(50% - 51px);
+              }
+              @include for-laptop {
+                padding: 0 $--spacing-xl 0 0;
+                width: calc(50% - 51px);
+              }
+              @include for-large {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+              @include for-xlarge {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+            }
+            >.columns-col img {
+              display: block;
+            }
+          }
+          img {
+            width: 100%;
+            display: flex;
+            @include for-laptop {
+              margin: -27px 0 -28px 0;
+            }
+            @include for-large {
+              margin: -68px 0 -70px 0;
+            }
+            @include for-xlarge {
+              margin: -68px 0 -70px 0;
+            }
+          }
+          &.block {
+            h2 {
+              color: $--gray-700;
+              width: 100%;
+              margin: 0 0 $--spacing-l 0;
+              @include for-mobile {
+                margin: $--spacing-xxl 0 $--spacing-l 0;
+              }
+            }
+            p {
+              width: 100%;
+              color: $--gray-700;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: 0px;
+              text-align: left;
+              line-height: 24px;
+              margin: 0 0 $--spacing-l 0;
+              a{
+                font-weight: 500;
+              }
+              .icon{
+                height: auto;
+                width: auto;
+                i{
+                  font-size: 16px;
+                  margin-left: 6px;
+                }
+              }
+              &.button-container {
+                margin-top: 0;
+                margin-bottom: 0;
+                @include for-nonmobile {
+                  width: max-content;
+                }
+                a.button {
+                  margin-top: $--spacing-s;
+                }
+              }
+            }
+            ul {
+              margin: 0;
+              padding-bottom: 24px;
+              li {
+                .icon{
+                  height: auto;
+                  width: auto;
+                  i{
+                    font-size: 16px;
+                    margin: 0 0 0 6px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.background-blue-550{
+  &.image-text-overlap-container {
+    .image-text-overlap-wrapper {
+      padding: 0;
+      .image-text-overlap {
+        &.block {
+          &.columns-2-cols {
+            &.block {
+              h2 {
+                color: $--white;
+                width: 100%;
+                margin: 0 0 $--spacing-l 0;
+                @include for-mobile {
+                  margin: $--spacing-xxl 0 $--spacing-l 0;
+                }
+              }
+              p {
+                width: 100%;
+                color: $--white;
+                font-family: $--font-roboto;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 0px;
+                text-align: left;
+                line-height: 24px;
+                margin: 0 0 20px 0;
+                .icon{
+                  height: auto;
+                  width: auto;
+                  i{
+                    font-size: 16px;
+                    margin-left: 6px;
+                  }
+                }
+                &.button-container {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  @include for-nonmobile {
+                    width: max-content;
+                  }
+                  a.button {
+                    margin-top: $--spacing-m;
+                  }
+                }
+              }
+              ul {
+                margin: 0;
+                padding-bottom: 24px;
+                li {
+                  .icon{
+                    height: auto;
+                    width: auto;
+                    i{
+                      font-size: 16px;
+                      margin: 0 0 0 6px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

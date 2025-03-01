@@ -1,0 +1,95 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.blog-cta-wrapper {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  .blog-cta-body {
+    margin: auto;
+    width: 31.35vw;
+  }
+  @media (min-width: 1025px) {
+    width: 43.7vw;
+    .blog-cta-body {
+      margin: auto;
+      width: 31.35vw;
+    }
+  }
+  @media (min-width: 1023px) and (max-width: 1024px) {
+    width: 77.05vw;
+    .blog-cta-body {
+      margin: auto;
+      width: 61.03vw;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 1022px) {
+    width: 92.96vw;
+    .blog-cta-body {
+      margin: auto;
+      width: 61.09vw;
+    }
+  }
+  @media (min-width: 393px) and (max-width: 480px) {
+    width: 85.23vw;
+    .blog-cta-body {
+      margin: auto;
+      width: 100%;
+    }
+  }
+  @media (min-width: 100px) and (max-width: 392px) {
+    width: 91.85vw;
+    .blog-cta-body {
+      margin: auto;
+      width: 100%;
+    }
+  }
+}
+.blog-cta {
+  * {
+    text-align: center;
+  }
+  margin: auto;
+  border-bottom: 8px solid $--gray-100;
+  border-top: 8px solid $--gray-100;
+  padding: 52px 0;
+  text-align: center;
+  h3 {
+    margin: 0 0 12px 0;
+  }
+  p {
+    margin: 0 0 24px 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &-btn {
+    .button-container {
+      opacity: 1;
+      font-family: $--font-roboto;
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.18px;
+      text-align: center;
+      line-height: 28px;
+      justify-content: center;
+      margin-top: 24px;
+      justify-content: center;
+      margin-top: 24px;
+      a {
+        display: inline-block;
+        border-radius: 2px;
+        border: 2px solid $--blue-675;
+        padding: 10px 34px;
+        text-decoration: none;
+      }
+      .icon {
+        height: auto;
+        width: auto;
+        margin-left: 5px;
+        > i {
+          font-size: inherit;
+        }
+      }
+    }
+  }
+}

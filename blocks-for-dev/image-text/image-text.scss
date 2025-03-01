@@ -1,0 +1,177 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+.image-text-container {
+  .image-text-wrapper {
+    @include for-large{
+      width: calc(100% - 104px);
+    }
+    .image-text {
+      &.block {
+        &.columns-2-cols {
+          padding: $--spacing-huge $--spacing-m;
+          @include for-tablet {
+            padding: $--spacing-jumbo $--spacing-xl;
+          }
+          @include for-laptop {
+            padding: $--spacing-max $--spacing-xl;
+          }
+          @include for-large {
+            padding: $--spacing-max 0;
+          }
+          @include for-xlarge {
+            padding: $--spacing-max 0;
+          }
+          >div {
+            display: flex;
+            flex-direction: column;
+            @include for-nonmobile {
+              align-items: center;
+              flex-direction: row;
+            }
+            @include for-tablet {
+              gap: 30px;
+            }
+            @include for-laptop {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            @include for-large {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            @include for-xlarge {
+              gap: calc(((100% - (11 * 30px)) / 12) + 60px);
+            }
+            >div {
+              order: 1;
+              display: flex;
+              flex-flow: row wrap;
+              @include for-nonmobile {
+                flex: 1;
+                order: unset;
+                text-align: left;
+                column-gap: 24px;
+              }
+              @include for-tablet {
+                max-width: calc((100% - 30px) / 2);
+              }
+              @include for-laptop {
+                max-width: calc((100% - 30px) / 2);
+              }
+              @include for-large {
+                max-width: calc((100% - 30px) / 12* 5);
+              }
+              @include for-xlarge {
+                max-width: calc((100% - 30px) / 12* 5);
+              }
+            }
+            >.columns-img-col {
+              order: 0;
+              align-self: flex-start;
+              @include for-tablet {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+              @include for-laptop {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+              @include for-large {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+              @include for-xlarge {
+                width: calc((100% - 30px) / 2);
+                min-width: calc((100% - 30px) / 2);
+              }
+            }
+            >.columns-col img {
+              display: block;
+            }
+          }
+          img {
+            width: 100%;
+            display: flex;
+            border-radius: 5px;
+          }
+          &.block {
+            h2 {
+              color: $--gray-700;
+              width: 100%;
+              font-family: $--font-museo;
+              font-weight: 700;
+              opacity: 1;
+              text-align: left;
+              margin: 0 0 24px 0;
+              @include for-tablet {
+                font-size: 28px;
+                line-height: 28px;
+              }
+              @include for-tablet-smallest{
+                margin-bottom: $--spacing-m;
+              }
+              @include for-mobile {
+                margin: $--spacing-xl 0 $--spacing-m 0;
+              }
+            }
+            p {
+              color: $--gray-700;
+              width: 100%;
+              font-family: $--font-roboto;
+              font-size: 16px;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: 0px;
+              text-align: left;
+              line-height: 24px;
+              margin: 0 0 $--spacing-l 0;
+              a{
+                font-weight: 500;
+              }
+              .icon{
+                height: auto;
+                width: auto;
+                i{
+                  font-size: 16px;
+                  margin: 0 6px;
+                }
+              }
+              &.button-container {
+                margin-top: 0;
+                margin-bottom: 0;
+                @include for-nonmobile {
+                  width: max-content;
+                }
+                a.button {
+                  margin-top: $--spacing-s;
+                }
+              }
+              &.button-container ~ p:not(.button-container){
+                margin-top: 24px;
+                &:last-child{
+                  margin-bottom: 0;
+                }
+              }
+              &.button-container ~ h2{
+                margin-top: 24px;
+              }
+            }
+            ul {
+              margin: 0;
+              padding-bottom: 24px;
+              li {
+                .icon{
+                  height: auto;
+                  width: auto;
+                  i{
+                    font-size: 16px;
+                    margin: 0 0 0 6px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

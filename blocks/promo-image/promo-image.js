@@ -1,39 +1,6 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
-export default function decorate(block) {
-  /* change to ul, li */
-  const backgroundImage = block.children[0].innerText;
-  const title = block.children[1].innerText;
-  const ul = document.createElement('ul');
-  const imageWrapperDiv = block.parentElement;
-  imageWrapperDiv.style.backgroundImage = `url(${backgroundImage}) , linear-gradient(
+import{createOptimizedPicture}from"../../scripts/aem.js";export default function decorate(e){var t=e.children[0].innerText,r=e.children[1].innerText;let a=document.createElement("ul");var c=e.parentElement,t=(c.style.backgroundImage=`url(${t}) , linear-gradient(
       181deg,
       rgba(75, 76, 77, 1) 0%,
       rgba(93, 93, 93, 0.65) 29%,
       rgba(115, 115, 115, 0.2) 100%
-    )`;
-  imageWrapperDiv.style.backgroundSize = 'cover';
-  imageWrapperDiv.style.backgroundPosition = 'center';
-  imageWrapperDiv.style.backgroundRepeat = 'no-repeat';
-  imageWrapperDiv.style.position = 'relative';
-  const mainHeading = document.createElement('h2');
-  mainHeading.classList.add('promo-image-heading');
-  mainHeading.textContent = `${title}`;
-  imageWrapperDiv.prepend(mainHeading);
-  const promoClass = `promo-${block.children.length - 2}-column`;
-  ul.classList.add(promoClass);
-  [...block.children].forEach((row, index) => {
-    if (index > 1) {
-      const li = document.createElement('li');
-      while (row.firstElementChild) li.append(row.firstElementChild);
-      [...li.children].forEach((div) => {
-        if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
-        else div.className = 'cards-card-body';
-      });
-      ul.append(li);
-    }
-  });
-  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
-  block.textContent = '';
-  block.append(ul);
-}
+    )`,c.style.backgroundSize="cover",c.style.backgroundPosition="center",c.style.backgroundRepeat="no-repeat",c.style.position="relative",document.createElement("h2")),r=(t.classList.add("promo-image-heading"),t.textContent=""+r,c.prepend(t),`promo-${e.children.length-2}-column`);a.classList.add(r),[...e.children].forEach((e,t)=>{if(1<t){for(var r=document.createElement("li");e.firstElementChild;)r.append(e.firstElementChild);[...r.children].forEach(e=>{1===e.children.length&&e.querySelector("picture")?e.className="cards-card-image":e.className="cards-card-body"}),a.append(r)}}),a.querySelectorAll("picture > img").forEach(e=>e.closest("picture").replaceWith(createOptimizedPicture(e.src,e.alt,!1,[{width:"750"}]))),e.textContent="",e.append(a)}

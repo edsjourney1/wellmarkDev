@@ -1,0 +1,245 @@
+@import '../../styles/include/mq.scss';
+@import '../../styles/include/tokens.scss';
+
+[class^='quote-v2 quote-v2-grid'] {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    row-gap: 52px;
+    width: calc(100% + 30px);
+    > div {
+        padding: 0 15px;
+        width: 100%;
+    }
+}
+[class^='quote-v2 quote-v2-image'] {
+    .quote-v2 {
+        &-article {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    figure {
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        picture {
+            display: none;
+        }
+    }
+    @include for-tablet{
+        .quote-v2 {
+            &-article {
+                flex-direction: column;
+            }
+        }
+        figure {
+            margin-top: 30px !important;
+            order: 2;
+        }
+        .quote-v2-img {
+            order: 1;
+        }
+    }
+    @include for-mobile{
+        .quote-v2 {
+            &-article {
+                flex-direction: column;
+            }
+        }
+        figure {
+            margin-top: 30px !important;
+            order: 2;
+        }
+        .quote-v2-img {
+            order: 1;
+        }
+    }
+}
+.quote-v2 {
+    $this: &;
+    margin: 0 0 52px 0;
+    * {
+        box-sizing: border-box;
+    }
+    &-hidden {
+        display: none;
+    }
+    &-grid {
+        &-4-col {
+            > div {
+                width: 25%;
+                @include for-tablet {
+                    width: 50%;
+                }
+                @include for-tablet-smallest {
+                    width: 50%;
+                }
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+        &-3-col {
+            > div {
+                width: 33.3333%;
+                @include for-tablet {
+                    width: 50%;
+                }
+                @include for-tablet-smallest {
+                    width: 50%;
+                }
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+        &-2-col {
+            > div {
+                width: 50%;
+                @include for-mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    figure {
+        border-radius: 4px;
+        background-color: $--blue-50;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0;
+        padding: 36px;
+    }
+    blockquote {
+        margin: 0;
+        padding: 0;
+        .icon {
+            display: inline-block;
+            font-size: 73.5px;
+            height: auto;
+            margin: 0 0 36px 0;
+            width: auto;
+            > i {
+                font-size: inherit;
+            }
+        }
+        p {
+            font-family: $--font-museo;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.25;
+            margin: 0 0 24px 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+    figcaption {
+        margin-top: 25px;
+    }
+    &-image-large, &-image-small {
+        #{$this}-article figure {
+            min-height: 600px;
+        }
+        @include for-tablet{
+            #{$this}-article figure {
+                min-height: auto;
+            }
+        }
+        @include for-mobile{
+            #{$this}-article figure {
+                min-height: auto;
+            }
+        }
+        #{$this}-img {
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            img {
+                height: 100%;
+                left: 50%;
+                object-fit: cover;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                vertical-align: top;
+                width: 100%;
+            }
+            @include for-tablet {
+                img {
+                    position: static;
+                    transform: none;
+                }
+            }
+            @include for-mobile {
+                img {
+                    position: static;
+                    transform: none;
+                }
+            }
+        }
+    }
+    &-image-large {
+        #{$this}-article {
+            figure {
+                width: calc(33.3334% - 15px);
+            }
+            #{$this}-img {
+                width: calc(66.6664% - 15px);
+            }
+        }
+        @include for-tablet{
+            #{$this}-article {
+                figure {
+                    width: 100%;
+                }
+                #{$this}-img {
+                    width: 100%;
+                }
+            }
+        }
+        @include for-mobile{
+            #{$this}-article {
+                figure {
+                    width: 100%;
+                }
+                #{$this}-img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-image-small {
+        #{$this}-article {
+            figure {
+                width: calc(66.6664% - 15px);
+            }
+            #{$this}-img {
+                width: calc(33.3334% - 15px);
+            }
+        }
+        @include for-tablet{
+            #{$this}-article {
+                figure {
+                    width: 100%;
+                }
+                #{$this}-img {
+                    width: 100%;
+                }
+            }
+        }
+        @include for-mobile{
+            #{$this}-article {
+                figure {
+                    width: 100%;
+                }
+                #{$this}-img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

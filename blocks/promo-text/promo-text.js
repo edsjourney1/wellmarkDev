@@ -1,16 +1,1 @@
-export default function decorate(block) {
-  const title = block.children[0].textContent;
-  const description = block.children[1].textContent;
-  const button = block.children[2].children[0].children[0].children[0].children[0];
-  button.classList.add('button', 'primary');
-  const div = document.createElement('div');
-  const heading = document.createElement('h2');
-  heading.append(title);
-  heading.classList.add('title');
-  const paragraph = document.createElement('p');
-  paragraph.classList.add('description');
-  paragraph.append(description);
-  div.append(heading, paragraph, button);
-  block.innerHTML = '';
-  block.append(div);
-}
+export default function decorate(e){var t=e.children[0].textContent,n=e.children[1].textContent,d=e.children[2].children[0].children[0].children[0].children[0],c=(d.classList.add("button","primary"),document.createElement("div")),a=document.createElement("h2"),t=(a.append(t),a.classList.add("title"),document.createElement("p"));t.classList.add("description"),t.append(n),c.append(a,t,d),e.innerHTML="",e.append(c)}
