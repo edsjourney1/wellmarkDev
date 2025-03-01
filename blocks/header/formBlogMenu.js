@@ -37,7 +37,7 @@ const initiateBlogSubnav = () => {
   });
 };
 
-const attachBlogMenuEvents = (headerSection) => { // bottomColorEl
+const attachBlogMenuEvents = (headerSection) => {
   const navBtn = headerSection.querySelector('.siteheader-blog-nav-toggle > button');
   const navParent = headerSection.querySelector('.siteheader-blog-menu');
   const liItems = Array.from(headerSection.querySelectorAll('nav > div > ul > li'));
@@ -104,7 +104,7 @@ export const formBlogMenu = (blogFragment) => {
   }
 
   const topColorEl = blogHeaderTop?.children[1]?.querySelector('p');
-  // const bottomColorEl = blogHeaderTop?.children[2]?.querySelector('p');
+  const bottomColorEl = blogHeaderTop?.children[2]?.querySelector('p');
 
   headerSection.classList.add('siteheader-blog');
   headerSection.innerHTML = `<div class='siteheader-blog-top-wrapper'>
@@ -147,11 +147,16 @@ export const formBlogMenu = (blogFragment) => {
       ${blogHeaderNav.innerHTML}
     `;
     headerSection.querySelector('nav > div:last-child').classList.add('siteheader-blog-menu');
-    attachBlogMenuEvents(headerSection); // bottomColorEl
+    attachBlogMenuEvents(headerSection);
   }
 
   if (topColorEl.innerHTML.length) {
-    headerSection.classList.add(topColorEl.innerHTML);
+    headerSection.querySelector('.siteheader-blog-top-wrapper').classList.add(topColorEl.innerHTML);
+  }
+  if (bottomColorEl.innerHTML.length) {
+    headerSection
+      .querySelector('.siteheader-blog-bottom-wrapper')
+      .classList.add(bottomColorEl.innerHTML);
   }
 
   const currentHeaderEl = document.querySelector('header');
