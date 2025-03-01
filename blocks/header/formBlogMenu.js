@@ -1,6 +1,7 @@
 import { slideUp, slideDown } from '../../scripts/tools.js';
 
 const liBlogMenuArr = [];
+const activeClsMain = 'siteheader-active';
 const activeCls = 'siteheader-blog-has-subnav-active';
 const bodyEl = document.querySelector('body');
 
@@ -163,4 +164,7 @@ export const formBlogMenu = (blogFragment) => {
   const currentMainEl = document.querySelector('main');
   currentHeaderEl.classList.add('header-has-blogmenu');
   currentMainEl.insertBefore(headerSection, currentMainEl.firstChild);
+  setTimeout(() => {
+    headerSection.classList.add(activeClsMain);
+  }, 250);
 };

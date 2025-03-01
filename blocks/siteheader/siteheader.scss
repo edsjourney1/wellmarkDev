@@ -967,9 +967,18 @@
 .siteheader-blog {
     box-shadow: 1px 7px 9px -4px rgba($--gray-700, 0.2);
     color: $--white;
+    opacity: 0;
     position: sticky;
     top: 0;
+    transform: translate(0, -25%);
+    transition: all 0.175s ease;
+    visibility: hidden;
     width: 100%;
+    &.siteheader-active {
+        opacity: 1;
+        transform: unset;
+        visibility: visible;
+    }
     * {
         box-sizing: border-box;
     }

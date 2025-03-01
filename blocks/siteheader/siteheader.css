@@ -1185,9 +1185,18 @@
 .siteheader-blog {
   box-shadow: 1px 7px 9px -4px rgba(75, 76, 77, 0.2);
   color: #ffffff;
+  opacity: 0;
   position: sticky;
   top: 0;
+  transform: translate(0, -25%);
+  transition: all 0.175s ease;
+  visibility: hidden;
   width: 100%;
+}
+.siteheader-blog.siteheader-active {
+  opacity: 1;
+  transform: unset;
+  visibility: visible;
 }
 .siteheader-blog * {
   box-sizing: border-box;
