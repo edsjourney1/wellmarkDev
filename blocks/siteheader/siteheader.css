@@ -1192,7 +1192,13 @@
 .siteheader-blog.palette-primary {
   background-color: #0074B3;
 }
+.siteheader-blog.palette-primary .siteheader-blog-menu > ul ul {
+  background-color: #0074B3;
+}
 .siteheader-blog.palette-secondary {
+  background-color: #26415A;
+}
+.siteheader-blog.palette-secondary .siteheader-blog-menu > ul ul {
   background-color: #26415A;
 }
 .siteheader-blog * {

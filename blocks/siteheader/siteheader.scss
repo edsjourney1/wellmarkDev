@@ -972,9 +972,15 @@
     width: 100%;
     &.palette-primary {
         background-color: $--blog-palette-primary;
+        .siteheader-blog-menu > ul ul {
+            background-color: $--blog-palette-primary;
+        }
     }
     &.palette-secondary {
         background-color: $--blog-palette-secondary;
+        .siteheader-blog-menu > ul ul {
+            background-color: $--blog-palette-secondary;
+        }
     }
     * {
         box-sizing: border-box;

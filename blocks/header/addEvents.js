@@ -96,6 +96,16 @@ const addEvents = (thisBlock, navMaskEl, searchMaskEl, loginMaskEl) => {
     });
   });
 
+  document.addEventListener('keyup', (event) => {
+    if (event.key === 'Escape') {
+      closeAllNavItems(navArr, navMaskEl);
+      closeAllBlogMenuItems();
+      if (loginWrapper.querySelector('.siteheader-login-wrapper-cta').classList.contains(activeCls)) {
+        loginWrapper.querySelector('.siteheader-login-wrapper-cta > button').dispatchEvent(new MouseEvent('click'));
+      }
+    }
+  });
+
   loginEventFn(
     loginCtaEl,
     loginCtaWrapEl,
