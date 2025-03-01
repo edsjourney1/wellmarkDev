@@ -44,9 +44,6 @@ const attachBlogMenuEvents = (headerSection, bottomColorEl) => {
 
   liItems.forEach((li, index) => {
     if (li.querySelector('ul')) {
-      if (bottomColorEl.innerHTML.length) {
-        li.querySelector('ul').style.backgroundColor = bottomColorEl.innerHTML;
-      }
       const l0ElSpan = document.createElement('span');
       l0ElSpan.className = 'icon icon-solid--chevron-down';
       l0ElSpan.innerHTML = '<i class="fa-solid fa-chevron-down" data-icon-name="solid--chevron-down"></i>';
@@ -138,7 +135,7 @@ export const formBlogMenu = (blogFragment) => {
       </div>
     `;
     headerSection.querySelector('.siteheader-blog-header-col:last-child').innerHTML = `
-          ${blogHeaderTop.children[4].innerHTML}
+          <button type='button'>${blogHeaderTop.children[4]?.querySelector('p').innerHTML}</button>
     `;
   }
 
@@ -149,19 +146,12 @@ export const formBlogMenu = (blogFragment) => {
       </div>
       ${blogHeaderNav.innerHTML}
     `;
-    headerSection.querySelector('.siteheader-blog-header-col:last-child').innerHTML = `
-          ${blogHeaderTop.children[4].innerHTML}
-    `;
     headerSection.querySelector('nav > div:last-child').classList.add('siteheader-blog-menu');
     attachBlogMenuEvents(headerSection, bottomColorEl);
   }
 
   if (topColorEl.innerHTML.length) {
-    headerSection.querySelector('.siteheader-blog-top-wrapper').style.backgroundColor = topColorEl.innerHTML;
-  }
-  if (bottomColorEl.innerHTML.length) {
-    headerSection.querySelector('.siteheader-blog-bottom-wrapper').style.backgroundColor = bottomColorEl.innerHTML;
-    headerSection.querySelector('.siteheader-blog-menu').style.backgroundColor = bottomColorEl.innerHTML;
+    // headerSection.querySelector('.siteheader-blog-top-wrapper').style.backgroundColor = topColorEl.innerHTML;
   }
 
   const currentHeaderEl = document.querySelector('header');
