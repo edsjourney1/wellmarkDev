@@ -1,3 +1,473 @@
+const myJson = [
+  {
+    publishedDate: '10/02/1901',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 1,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1998',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 2,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1997',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 3,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/01/1900',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 4,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 5,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 6,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 7,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 9,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 10,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 11,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 12,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 13,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 14,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 15,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 16,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 17,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 18,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 19,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 20,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 21,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 22,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 23,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 24,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 25,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 26,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 27,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 28,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 29,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 30,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 31,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 32,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 33,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 34,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 35,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 36,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 37,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 38,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 39,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+  {
+    publishedDate: '10/02/1999',
+    ImageUrl:
+      'https://delivery-p140377-e1434145.adobeaemcloud.com/adobe/assets/urn:aaid:aem:9cb0d343-762e-4625-a3eb-1a0b5d1dd53d/as/old-ladoes.jpeg?width=400&height=400',
+    title: 'Type something',
+    category: ['category one', 'category two', 'category three'],
+    articleReadTime: '5 min read',
+    id: 40,
+    articleUrl: 'https://abcd.com',
+    description: 'description copy',
+    categoryTitle: 'Medi-Assistance',
+  },
+];
 export default async function decorate(block) {
   const heading = block.children[0].children[0].innerText;
   const itemsPerPage = Number(block.children[0].children[1].innerText);
@@ -22,88 +492,85 @@ export default async function decorate(block) {
   paginationDiv.append(paginationContainer);
   block.append(headDiv, blockDiv, paginationDiv);
   let currentPage = 1;
-  const data = await fetch('/query-index.json');
-  const json = await data.json();
-  const categoryBasedJson = json.data.filter((article) => article.category.includes(heading));
   function renderItems() {
     blockDiv.innerHTML = '';
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const jsonVar = categoryBasedJson.slice(startIndex, endIndex);
+    const jsonVar = myJson.slice(startIndex, endIndex);
     const sortedJSON = jsonVar.sort((a, b) => {
       const dateA = new Date(a.publishedDate?.split('/').reverse().join('/'));
       const dateB = new Date(b.publishedDate?.split('/').reverse().join('/'));
       return dateA - dateB;
     });
-    sortedJSON.forEach(({
-      image, category, publishedDate, readTime, title, description,
-    }) => {
-      const mainDiv = document.createElement('div');
-      mainDiv.classList.add('card-div');
+    sortedJSON.forEach(
+      ({ ImageUrl, category, publishedDate, articleReadTime, title, description }) => {
+        const mainDiv = document.createElement('div');
+        mainDiv.classList.add('card-div');
 
-      const imageSrc = document.createElement('img');
-      imageSrc.src = image;
-      imageSrc.alt = 'thumbnail';
-      mainDiv.appendChild(imageSrc);
+        const image = document.createElement('img');
+        image.src = ImageUrl;
+        image.alt = 'thumbnail';
+        mainDiv.appendChild(image);
 
-      const contentDiv = document.createElement('div');
-      contentDiv.classList.add('content-div');
-      mainDiv.appendChild(contentDiv);
+        const contentDiv = document.createElement('div');
+        contentDiv.classList.add('content-div');
+        mainDiv.appendChild(contentDiv);
 
-      const mainTitle = document.createElement('h3');
-      mainTitle.classList.add('card-title');
-      mainTitle.textContent = title;
-      contentDiv.appendChild(mainTitle);
+        const mainTitle = document.createElement('h3');
+        mainTitle.classList.add('card-title');
+        mainTitle.textContent = title;
+        contentDiv.appendChild(mainTitle);
 
-      const cardDesc = document.createElement('p');
-      cardDesc.classList.add('description');
-      cardDesc.textContent = description;
-      contentDiv.appendChild(cardDesc);
+        const cardDesc = document.createElement('p');
+        cardDesc.classList.add('description');
+        cardDesc.textContent = description;
+        contentDiv.appendChild(cardDesc);
 
-      const datetimeDiv = document.createElement('div');
-      datetimeDiv.classList.add('date-div');
-      contentDiv.appendChild(datetimeDiv);
+        const datetimeDiv = document.createElement('div');
+        datetimeDiv.classList.add('date-div');
+        contentDiv.appendChild(datetimeDiv);
 
-      const pubDate = document.createElement('p');
-      pubDate.classList.add('date');
-      pubDate.textContent = publishedDate;
-      datetimeDiv.appendChild(pubDate);
+        const pubDate = document.createElement('p');
+        pubDate.classList.add('date');
+        pubDate.textContent = publishedDate;
+        datetimeDiv.appendChild(pubDate);
 
-      const arcretime = document.createElement('p');
-      arcretime.classList.add('read-time');
-      arcretime.textContent = `${readTime} min read`;
-      datetimeDiv.appendChild(arcretime);
+        const arcretime = document.createElement('p');
+        arcretime.classList.add('read-time');
+        arcretime.textContent = articleReadTime;
+        datetimeDiv.appendChild(arcretime);
 
-      const categoryPara = document.createElement('p');
-      categoryPara.classList.add('category-list');
-      contentDiv.appendChild(categoryPara);
+        const categoryPara = document.createElement('p');
+        categoryPara.classList.add('category-list');
+        contentDiv.appendChild(categoryPara);
 
-      category.split(',').forEach((item) => {
-        const anchor = document.createElement('a');
-        anchor.href = 'www.google.com';
-        anchor.textContent = item;
-        categoryPara.appendChild(anchor);
-      });
+        category.forEach((item) => {
+          const anchor = document.createElement('a');
+          anchor.href = 'www.google.com';
+          anchor.textContent = item;
+          categoryPara.appendChild(anchor);
+        });
 
-      blockDiv.appendChild(mainDiv);
-    });
+        blockDiv.appendChild(mainDiv);
+      },
+    );
     countList.innerHTML = '';
     const showingText = document.createElement('p');
     showingText.textContent = 'Showing';
     countList.appendChild(showingText);
     const showingSpan = document.createElement('span');
-    showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, categoryBasedJson.length)}`;
+    showingSpan.textContent = `${startIndex + 1} - ${Math.min(endIndex, myJson.length)}`;
     countList.appendChild(showingSpan);
     const ofText = document.createElement('p');
     ofText.textContent = 'of';
     countList.appendChild(ofText);
     const ofSpan = document.createElement('span');
-    ofSpan.textContent = categoryBasedJson.length;
+    ofSpan.textContent = myJson.length;
     countList.appendChild(ofSpan);
   }
 
   function renderPagination() {
-    const totalPages = Math.ceil(categoryBasedJson.length / itemsPerPage);
+    const totalPages = Math.ceil(myJson.length / itemsPerPage);
     countResult.innerHTML = '';
 
     // Function to create a pagination button
@@ -202,10 +669,18 @@ export default async function decorate(block) {
 
     renderItems();
     // Get the p tag with the i tag that has the class "fa-chevrons-left"
-    const doublePreviousPageButton = block.querySelector('.count-result p i.fa-chevrons-left').parentElement;
-    const doubleforwardPageButton = block.querySelector('.count-result p i.fa-chevrons-right').parentElement;
-    const PreviousPageButton = block.querySelector('.count-result p i.fa-chevron-left').parentElement;
-    const forwardPageButton = block.querySelector('.count-result p i.fa-chevron-right').parentElement;
+    const doublePreviousPageButton = block.querySelector(
+      '.count-result p i.fa-chevrons-left',
+    ).parentElement;
+    const doubleforwardPageButton = block.querySelector(
+      '.count-result p i.fa-chevrons-right',
+    ).parentElement;
+    const PreviousPageButton = block.querySelector(
+      '.count-result p i.fa-chevron-left',
+    ).parentElement;
+    const forwardPageButton = block.querySelector(
+      '.count-result p i.fa-chevron-right',
+    ).parentElement;
 
     // Get the first button
     const firstButton = block.querySelector('.count-result button');
@@ -244,7 +719,10 @@ export default async function decorate(block) {
     }
 
     // Check if the first button has the class "active"
-    if (lastButton.classList.contains('active') || lastButtonBeforeLast.classList.contains('active')) {
+    if (
+      lastButton.classList.contains('active') ||
+      lastButtonBeforeLast.classList.contains('active')
+    ) {
       // Add the class "dp-none" to the p tag
       doubleforwardPageButton.classList.add('dp-none');
     } else {
@@ -252,7 +730,7 @@ export default async function decorate(block) {
       doubleforwardPageButton.classList.remove('dp-none');
     }
   }
-  if (json.data.length > 10) {
+  if (myJson.length > 10) {
     renderPagination();
   } else {
     renderItems();
