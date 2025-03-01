@@ -970,11 +970,20 @@
     position: sticky;
     top: 0;
     width: 100%;
+    &.palette-primary {
+        background-color: $--blog-palette-primary;
+    }
+    &.palette-secondary {
+        background-color: $--blog-palette-secondary;
+    }
     * {
         box-sizing: border-box;
     }
     &-header-bottom {
         position: relative;
+    }
+    &-bottom-wrapper {
+        background-color: rgba($--black, 0.25);
     }
     &-top-wrapper, &-bottom-wrapper {
         max-width: none !important;
