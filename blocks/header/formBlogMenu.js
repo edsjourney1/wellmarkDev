@@ -128,7 +128,7 @@ export const formBlogMenu = (blogFragment) => {
     headerSection.querySelector('.siteheader-blog-header-col:first-child').innerHTML = `
       <div class="siteheader-blog-logo-wrap">
         <div class="siteheader-blog-logo-img">
-          <img src='${blogHeaderTop.children[0].querySelector('a').innerHTML}' alt=''>
+          <a href='${blogHeaderTop.children[0].querySelector('a')?.href}'><img src='${blogHeaderTop.children[0].querySelector('a')?.innerHTML}' alt=''></a>
         </div>
         ${blogHeaderTop.children[0].querySelector('.button-container + p') ? `<div class="siteheader-blog-logo-tagline">
           ${blogHeaderTop.children[0].querySelector('.button-container + p').innerHTML}

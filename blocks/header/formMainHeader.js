@@ -1,5 +1,6 @@
 import addEvents from './addEvents.js';
 import { formBlogMenu } from './formBlogMenu.js';
+import formBreadcrumbs from './formBreadcrumbs.js';
 import { enableAutocomplete, searchBuilder } from './searchBuilder.js';
 
 const generateLoginForm = (loginElArr, formCount) => {
@@ -294,6 +295,8 @@ const formMainHeader = (thisBlock, fragment, alertFragment) => {
     if (blogFragment) {
       formBlogMenu(blogFragment);
     }
+
+    formBreadcrumbs();
   }
 };
 
