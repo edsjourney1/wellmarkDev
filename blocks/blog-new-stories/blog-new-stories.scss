@@ -75,6 +75,7 @@
       > img {
         width: calc((100% - 45px) / 8 * 3);
         border-radius: 4px;
+        cursor: pointer;
         @include for-laptop{
           width: calc((100% - 30px) / 8* 4);
         }
@@ -106,6 +107,7 @@
           text-decoration: underline;
           margin: 0;
           padding-bottom: 8px;
+          cursor: pointer;
         }
         > .description {
           margin: 0;
@@ -152,6 +154,9 @@
           }
           > a {
             font-weight: 500;
+            color: $--blue-675;
+            cursor: pointer;
+            text-decoration: underline;
           }
         }
       }

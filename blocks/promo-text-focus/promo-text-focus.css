@@ -25,7 +25,6 @@
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-text-focus-container .promo-text-focus-wrapper {
     padding: 0 36px;
-    height: 575px;
     background-position: 9%;
   }
 }
@@ -61,6 +60,7 @@
 @media (min-width: 1024px) and (max-width: 1200px) {
   .promo-text-focus-container .promo-text-focus-wrapper .promo-text-focus.block .promo-focus-block {
     width: calc(50% - 15px);
+    margin-bottom: 12px;
   }
 }
 @media (min-width: 1201px) and (max-width: 1379px) {

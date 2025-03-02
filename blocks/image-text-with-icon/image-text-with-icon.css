@@ -182,7 +182,7 @@
 }
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p .icon i {
   font-size: 16px;
-  padding: 0 6px;
+  margin: 0 6px;
 }
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block p.button-container {
   margin-top: 0;
@@ -206,5 +206,5 @@
 }
 .image-text-with-icon-container .image-text-with-icon-wrapper .image-text-with-icon.block.columns-2-cols.block ul li .icon i {
   font-size: 16px;
-  padding: 0 0 0 6px;
+  margin: 0 0 0 6px;
 }

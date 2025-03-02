@@ -118,3 +118,19 @@
   color: inherit;
   font-size: inherit;
 }
+.bulleted-recipe {
+  background-color: #f3f9ff;
+  padding: 24px;
+}
+.bulleted-recipe h3 {
+  text-align: center;
+}
+.bulleted-recipe ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.bulleted-recipe ul li {
+  border-bottom: 1px solid #757575;
+  padding: 10px 0;
+}

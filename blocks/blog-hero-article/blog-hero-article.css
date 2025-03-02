@@ -133,6 +133,9 @@
   font-size: 16px;
   color: #4b4c4d;
 }
+.blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div .date-div > p span p {
+  margin: 0;
+}
 .blog-hero-article-container .blog-hero-article-wrapper .blog-hero-article > div > .content-div .date-div > p > a {
   opacity: 1;
   color: #005589;

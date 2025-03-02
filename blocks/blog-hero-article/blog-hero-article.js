@@ -1,9 +1,14 @@
+import { excelDateToDate } from '../../scripts/scripts.js';
+
 export default async function decorate(block) {
   const mainPageURL = String(block.children[0].textContent);
   block.innerHTML = '';
   const data = await fetch('/query-index.json');
   const json = await data.json();
-  const postArticle = json.data.find((item) => item.url.trim() === mainPageURL.trim());
+  const postArticle = json.data.find((item) => {
+    const relativeUrl = new URL(item.url.trim()).pathname;
+    return relativeUrl === mainPageURL.trim() ? relativeUrl : '';
+  });
   const blogHero = document.createElement('div');
   const imgDiv = document.createElement('div');
   imgDiv.classList.add('image-div');
@@ -31,7 +36,10 @@ export default async function decorate(block) {
   descriptionDiv.classList.add('description');
   const dateandtime = document.createElement('p');
   const span = document.createElement('span');
-  span.append(postArticle.publishedDate);
+  const pubDate = document.createElement('p');
+  pubDate.classList.add('date');
+  pubDate.textContent = postArticle.publishedDate.includes('/') ? postArticle.publishedDate : excelDateToDate(postArticle.publishedDate);
+  span.append(pubDate);
   const articletime = document.createElement('span');
   articletime.append(`${postArticle.readTime} min read`);
   dateandtime.append(span, articletime);

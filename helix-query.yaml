@@ -2,6 +2,8 @@ indices:
   search:
     include:
       - /article-page/**
+      - /blue/**
+      - /blue-at-work/**
     exclude:
       - /documents/snippets/**
     target: /query-index.json
@@ -13,6 +15,8 @@ indices:
   mysite:
     include:
       - /article-page/**
+      - /blue/**
+      - /blue-at-work/**
     exclude:
       - /documents/snippets/**
     target: /query-index.json

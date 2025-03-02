@@ -126,7 +126,9 @@
       > img {
         width: 100%;
         border-radius: 4px;
+        vertical-align: top;
         aspect-ratio: 4/3;
+        cursor: pointer;
       }
       > .content-div {
         > .card-title {
@@ -141,6 +143,7 @@
           text-decoration: underline;
           margin: 0;
           padding-bottom: 8px;
+          cursor: pointer;
           @include for-xlarge {
             padding-top: 24px;
           }

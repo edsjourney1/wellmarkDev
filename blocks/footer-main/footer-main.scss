@@ -28,6 +28,16 @@
       @include for-laptop {
         padding: 0 36px;
       }
+      > div > img {
+        @include for-xlarge {
+          height: 37px;
+          width: 186px;
+        }
+        @include for-large {
+          height: 37px;
+          width: 186px;
+        }
+      }
       > .social-div {
         display: flex;
         gap: 12px;

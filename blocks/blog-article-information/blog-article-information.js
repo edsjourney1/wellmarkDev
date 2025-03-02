@@ -72,7 +72,7 @@ export default function decorate(block) {
   // create a p tag for reading timez
   const readTime = document.createElement('p');
   // create a tag for the links
-  const categoryMetaTag = document.querySelector('meta[name="category"]');
+  const categoryMetaTag = document.querySelector('meta[name="tag"]');
   if (categoryMetaTag) {
     const categoryValues = categoryMetaTag.content;
     if (categoryValues) {
