@@ -15,90 +15,106 @@
 .bulleted-3-col ol ol, .bulleted-2-col ul ul, .bulleted-2-col ul ol,
 .bulleted-2-col ol ul,
 .bulleted-2-col ol ol {
-  columns: unset;
+  -moz-columns: unset;
+       columns: unset;
 }
 .bulleted-4-col ul,
 .bulleted-4-col ol {
-  columns: 4;
+  -moz-columns: 4;
+       columns: 4;
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .bulleted-4-col ul,
   .bulleted-4-col ol {
-    columns: 4;
+    -moz-columns: 4;
+         columns: 4;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .bulleted-4-col ul,
   .bulleted-4-col ol {
-    columns: 4;
+    -moz-columns: 4;
+         columns: 4;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .bulleted-4-col ul,
   .bulleted-4-col ol {
-    columns: 2;
+    -moz-columns: 2;
+         columns: 2;
   }
 }
 @media (max-width: 480px) {
   .bulleted-4-col ul,
   .bulleted-4-col ol {
-    columns: 1;
+    -moz-columns: 1;
+         columns: 1;
   }
 }
 .bulleted-3-col ul,
 .bulleted-3-col ol {
-  columns: 3;
+  -moz-columns: 3;
+       columns: 3;
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .bulleted-3-col ul,
   .bulleted-3-col ol {
-    columns: 3;
+    -moz-columns: 3;
+         columns: 3;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .bulleted-3-col ul,
   .bulleted-3-col ol {
-    columns: 3;
+    -moz-columns: 3;
+         columns: 3;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .bulleted-3-col ul,
   .bulleted-3-col ol {
-    columns: 1;
+    -moz-columns: 1;
+         columns: 1;
   }
 }
 @media (max-width: 480px) {
   .bulleted-3-col ul,
   .bulleted-3-col ol {
-    columns: 1;
+    -moz-columns: 1;
+         columns: 1;
   }
 }
 .bulleted-2-col ul,
 .bulleted-2-col ol {
-  columns: 2;
+  -moz-columns: 2;
+       columns: 2;
 }
 @media (min-width: 1201px) and (max-width: 1379px) {
   .bulleted-2-col ul,
   .bulleted-2-col ol {
-    columns: 2;
+    -moz-columns: 2;
+         columns: 2;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .bulleted-2-col ul,
   .bulleted-2-col ol {
-    columns: 2;
+    -moz-columns: 2;
+         columns: 2;
   }
 }
 @media (min-width: 480.5px) and (max-width: 1023.5px) {
   .bulleted-2-col ul,
   .bulleted-2-col ol {
-    columns: 1;
+    -moz-columns: 1;
+         columns: 1;
   }
 }
 @media (max-width: 480px) {
   .bulleted-2-col ul,
   .bulleted-2-col ol {
-    columns: 1;
+    -moz-columns: 1;
+         columns: 1;
   }
 }
 .bulleted-icon ul {
@@ -133,4 +149,11 @@
 .bulleted-recipe ul li {
   border-bottom: 1px solid #757575;
   padding: 10px 0;
+}
+.bulleted-first-letter-bold li::first-letter {
+  font-weight: 700;
+}
+.bulleted [data-align=right] ul {
+  direction: rtl;
+  text-align: right;
 }
