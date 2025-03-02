@@ -2,54 +2,88 @@
 /* wellmark color end */
 /* wellmark spacing size start */
 /* wellmark spacing size start */
-@media (max-width: 394px) {
-  main .table-high-padding .table-wrapper {
-    padding: 72px 16px 72px 16px;
-  }
-}
-@media (min-width: 394px) and (max-width: 480px) {
+@media (max-width: 480px) {
   main .table-high-padding .table-wrapper {
     padding: 72px 36px 72px 36px;
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (max-width: 393.5px) {
+  main .table-high-padding .table-wrapper {
+    padding: 72px 16px 72px 16px;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  main .table-high-padding .table-wrapper {
+    padding: 72px 36px 72px 36px;
+  }
+  main .table-high-padding .table-wrapper table {
+    width: 200%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
   main .table-high-padding .table-wrapper {
     padding: 96px 36px 96px 36px;
   }
 }
-@media (min-width: 1024px) and (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   main .table-high-padding .table-wrapper {
     padding: 120px 36px 120px 36px;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1201px) and (max-width: 1379px) {
+  main .table-high-padding .table-wrapper {
+    padding: 120px 322px 120px 322px;
+  }
+}
+@media (min-width: 1379px) {
   main .table-high-padding .table-wrapper {
     padding: 120px 322px 120px 322px;
   }
 }
 
 main .table-no-padding .table-wrapper {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
-@media (max-width: 394px) {
+@media (max-width: 480px) {
+  main .table-no-padding .table-wrapper {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+@media (max-width: 393.5px) {
   main .table-no-padding .table-wrapper {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
-@media (min-width: 394px) and (max-width: 480px) {
+@media (min-width: 480.5px) and (max-width: 752.5px) {
+  main .table-no-padding .table-wrapper {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  main .table-no-padding .table-wrapper table {
+    width: 200%;
+  }
+}
+@media (min-width: 480.5px) and (max-width: 1023.5px) {
   main .table-no-padding .table-wrapper {
     padding-left: 36px;
     padding-right: 36px;
   }
 }
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   main .table-no-padding .table-wrapper {
     padding-left: 36px;
     padding-right: 36px;
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1201px) and (max-width: 1379px) {
+  main .table-no-padding .table-wrapper {
+    padding-left: 322px;
+    padding-right: 322px;
+  }
+}
+@media (min-width: 1379px) {
   main .table-no-padding .table-wrapper {
     padding-left: 322px;
     padding-right: 322px;
