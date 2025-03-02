@@ -102,4 +102,17 @@
       }
     }
   }
+  &-first-letter-bold {
+    li {
+      &::first-letter {
+        font-weight: 700;
+      }
+    }
+  }
+  & [data-align=right] {
+    ul {
+      direction: rtl;
+      text-align: right;
+    }
+  }
 }

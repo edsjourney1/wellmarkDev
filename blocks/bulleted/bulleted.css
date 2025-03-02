@@ -134,3 +134,10 @@
   border-bottom: 1px solid #757575;
   padding: 10px 0;
 }
+.bulleted-first-letter-bold li::first-letter {
+  font-weight: 700;
+}
+.bulleted [data-align=right] ul {
+  direction: rtl;
+  text-align: right;
+}
