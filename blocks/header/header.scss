@@ -1,0 +1,19 @@
+@import '../../styles/include/tokens.scss';
+@import '../../styles/include/mq.scss';
+// @import 'breadcrumb.scss';
+
+.header {
+    box-shadow: 1px 7px 9px -4px rgba($--gray-700, 0.2);
+    position: relative;
+    z-index: 98;
+    &-wrapper {
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+        &.header-has-blogmenu {
+            position: absolute;
+        }
+    }
+}
