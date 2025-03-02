@@ -84,7 +84,7 @@
   padding: 52px 0;
   text-align: center;
   h3 {
-    font-family: 'Roboto-Bold';
+    font-family: $--font-roboto;
     margin: 0 0 12px 0;
     opacity: 1;
     font-size: 24px;
@@ -93,24 +93,6 @@
     text-align: center;
   }
   p {
-    // margin: 0 0 24px 0;
-    // opacity: 1;
-    // font-family: 'Roboto-Regular';
-    // font-size: 16px;
-    // font-weight: 400;
-    // letter-spacing: 0px;
-
-    /*
-    opacity: 1;
-color: rgba(0, 85, 137, 1);
-font-family: "Roboto-Medium";
-font-size: 18px;
-font-weight: 500;
-font-style: Medium;
-letter-spacing: -0.18px;
-text-align: center;
-line-height: 28px;
-    */
     font-weight: 500;
     text-align: center;
     line-height: 24px;
@@ -121,9 +103,8 @@ line-height: 28px;
   }
   &-btn {
     .button-container {
-      // width: 208px;
       opacity: 1;
-      font-family: 'Roboto-Medium';
+      font-family: $--font-roboto;
       font-size: 18px;
 
       letter-spacing: -0.18px;
