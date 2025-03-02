@@ -10,10 +10,11 @@
     "lint:js": "eslint .",
     "lint": "npm run lint:js && npm run lint:css",
     "start": "",
+    "test:coverage": "jest --collectCoverage",
     "test:watch": "npm test -- --watch",
-    "test": "wtr \"./test/**/*.test.js\" --node-resolve --port=2000 --coverage",
-    "up": "aem up",
-    "test2": "jest"
+    "test": "jest",
+    "test2": "wtr \"./test/**/*.test.js\" --node-resolve --port=2000 --coverage",
+    "up": "aem up"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/adobe/aem-boilerplate#readme",
   "dependencies": {
+    "@babel/preset-env": "^7.26.9",
     "gulp": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^6.0.0",
