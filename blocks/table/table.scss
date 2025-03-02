@@ -4,19 +4,28 @@
 main {
   .table-high-padding {
     .table-wrapper {
-      @media (max-width: 394px) {
-        padding: 72px 16px 72px 16px;
-      }
-      @media (min-width: 394px) and (max-width: 480px) {
+      @include for-mobile {
         padding: 72px 36px 72px 36px;
       }
-      @media (min-width: 481px) and (max-width: 1024px) {
+      @media (max-width: 393.5px) {
+        padding: 72px 16px 72px 16px;
+      }
+      @include for-tablet-smallest {
+        padding: 72px 36px 72px 36px;
+        table {
+          width: 200%;
+        }
+      }
+      @include for-tablet {
         padding: 96px 36px 96px 36px;
       }
-      @media (min-width: 1024px) and (max-width: 1024px) {
+      @include for-laptop {
         padding: 120px 36px 120px 36px;
       }
-      @media (min-width: 1025px) {
+      @include for-large {
+        padding: 120px 322px 120px 322px;
+      }
+      @include for-xlarge {
         padding: 120px 322px 120px 322px;
       }
     }
@@ -25,20 +34,37 @@ main {
 main {
   .table-no-padding {
     .table-wrapper {
-      padding-bottom: 10px;
-      @media (max-width: 394px) {
+      padding-bottom: 20px;
+      @include for-mobile {
+        padding-left: 36px;
+        padding-right: 36px;
+      }
+      @media (max-width: 393.5px) {
         padding-left: 16px;
         padding-right: 16px;
       }
-      @media (min-width: 394px) and (max-width: 480px) {
+
+      @include for-tablet-smallest {
+        padding-left: 36px;
+        padding-right: 36px;
+        table {
+          width: 200%;
+        }
+      }
+      @include for-tablet {
         padding-left: 36px;
         padding-right: 36px;
       }
-      @media (min-width: 481px) and (max-width: 1024px) {
+
+      @include for-laptop {
         padding-left: 36px;
         padding-right: 36px;
       }
-      @media (min-width: 1025px) {
+      @include for-large {
+        padding-left: 322px;
+        padding-right: 322px;
+      }
+      @include for-xlarge {
         padding-left: 322px;
         padding-right: 322px;
       }
@@ -108,91 +134,3 @@ main {
     }
   }
 }
-// .table {
-//     width: 100%;
-//     overflow-x: auto;
-//   }
-
-//   .table table {
-//     width: 100%;
-//     max-width: 100%;
-//     border-collapse: collapse;
-//     font-size: var(--body-font-size-xs);
-//   }
-
-//   @media (width >= 600px) {
-//     .table table {
-//       font-size: var(--body-font-size-s);
-//     }
-//   }
-
-//   @media (width >= 900px) {
-//     .table table {
-//       font-size: var(--body-font-size-m);
-//     }
-//   }
-
-//   .table table thead tr {
-//     border-top: 2px solid #dadada;
-//     border-bottom: 2px solid #dadada;
-//   }
-
-//   .table table tbody tr {
-//     border-bottom: 1px solid #dadada;
-//   }
-
-//   .table table th {
-//     font-weight: 700;
-//   }
-
-//   .table table th,
-//   .table table td {
-//     padding: 0.5em;
-//     text-align: left;
-//   }
-
-//   .table table th p,
-//   .table table td p {
-//     margin: 0;
-//   }
-
-//   .table table td p + p {
-//     margin-top: 0.25em;
-//   }
-
-//   /* no header variant */
-//   .table.no-header table tbody tr {
-//     border-top: 1px solid #dadada;
-//   }
-
-//   /* striped variant */
-//   .table.striped tbody tr:nth-child(odd) {
-//     background-color: var(--light-color);
-//   }
-
-//   /* bordered variant */
-//   .table.bordered table th,
-//   .table.bordered table td {
-//     border: 1px solid #dadada;
-//   }
-
-// main {
-//   .high-padding {
-//     .table-wrapper {
-//       padding: 120px;
-//       table {
-//       @include for-large {
-
-//           width: 713px;
-//           margin: auto;
-
-//       }
-//       @include for-laptop {
-
-//           width: 713px;
-//           margin: auto;
-//         }
-//       }
-//     }
-//   }
-// }
