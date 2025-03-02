@@ -532,7 +532,7 @@
             padding: 16px 0;
             position: relative;
             transition: padding 0.175s ease;
-            &:after {
+            &::after {
                 border-style: solid;
                 border-width: 0 12px 16px 12px;
                 border-color: transparent transparent $--blue-550 transparent;
@@ -558,7 +558,7 @@
             //     }
             // }
             &.siteheader-active {
-                &:after {
+                &::after {
                     opacity: 1;
                     visibility: visible;
                 }
@@ -1152,7 +1152,7 @@
                 padding: 16px 26px;
                 position: relative;
                 text-decoration: none;
-                &:after {
+                &::after {
                     background-color: $--white;
                     bottom: 8px;
                     content: '';
@@ -1179,7 +1179,7 @@
                     }
                 }
                 &.siteheader-active-nav {
-                    &:after {
+                    &::after {
                         display: block;
                     }
                 }
@@ -1195,7 +1195,7 @@
                 width: 240px;
                 a {
                     padding: 8px 40px 8px 50px;
-                    &:after {
+                    &::after {
                         bottom: 0;
                         left: 30px;
                         width: calc(100% - 60px);
